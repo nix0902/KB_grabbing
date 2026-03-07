@@ -1,0 +1,8 @@
+# Progress files
+.vlm_progress.json
+.images_list.txt
+.images_to_process.json
+
+# OS files
+.DS_Store
+Thumbs.db
