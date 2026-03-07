@@ -6,62 +6,111 @@ Comprehensive Binance API documentation for AI agent reference. This documentati
 
 ## 📊 Statistics
 
-- **Total Files:** 113+ markdown files
+- **Total Files:** 370+
+- **Markdown Files:** 138+
+- **Postman Collections:** 25 APIs
+- **Swagger Specs:** Spot API
 - **Last Updated:** March 2025
 
-## 📂 Sections
+---
+
+## 📂 Complete API Reference
 
 ### Trading APIs
 
-| Section | Files | Description |
-|---------|-------|-------------|
-| [Spot API](./spot/) | 60+ | Spot trading REST API, WebSocket streams |
-| [Futures API](./binance-futures-api/) | 7 | USDT-M and Coin-M futures |
-| [Options API](./binance-options-api/) | 2 | European options trading |
-| [Margin API](./margin/) | 2 | Margin trading endpoints |
-| [FIX API](./fix-api/) | 1 | FIX protocol for institutional traders |
+| API | Endpoints | Description | Documentation |
+|-----|-----------|-------------|---------------|
+| **Spot API** | 44+ | Spot trading REST API, WebSocket streams | [spot/](./spot/) • [spot-rest/](./spot-rest/) |
+| **Margin Trading** | 61+ | Margin trading endpoints | [margin/](./margin/) • [margin-rest/](./margin-rest/) |
 
-### Account & Authentication
+### Derivatives APIs
 
-| Section | Files | Description |
-|---------|-------|-------------|
-| [Login/OAuth](./login/) | 3 | OAuth 2.0 authentication flows |
-| [OAuth](./oauth/) | 2 | OAuth integration details |
-| [Sub Account](./sub-account/) | 1 | Sub-account management |
+| API | Endpoints | Description | Documentation |
+|-----|-----------|-------------|---------------|
+| **USDS Futures** | 95+ | USDT-Margined Futures | [binance-futures-api/](./binance-futures-api/) • [derivatives-usds-futures-rest/](./derivatives-usds-futures-rest/) |
+| **COIN Futures** | 65+ | Coin-Margined Futures | [derivatives/coin-futures/](./derivatives/coin-futures/) • [derivatives-coin-futures-rest/](./derivatives-coin-futures-rest/) |
+| **Options** | 43+ | European Options Trading | [binance-options-api/](./binance-options-api/) • [derivatives-options-rest/](./derivatives-options-rest/) |
+| **Portfolio Margin** | 102+ | Portfolio Margin Trading | [derivatives-portfolio-margin-rest/](./derivatives-portfolio-margin-rest/) |
+| **Portfolio Margin Pro** | 21+ | Professional Portfolio Margin | [derivatives-portfolio-margin-pro-rest/](./derivatives-portfolio-margin-pro-rest/) |
 
-### Market Data
+### Financial Services APIs
 
-| Section | Files | Description |
-|---------|-------|-------------|
-| [WebSocket](./websocket/) | 2 | Real-time market data streams |
-| [REST API](./rest-api/) | 2 | General REST API information |
-| [SBE](./sbe/) | 1 | Simple Binary Encoding streams |
+| API | Endpoints | Description | Documentation |
+|-----|-----------|-------------|---------------|
+| **Simple Earn** | 40+ | Staking and Savings Products | [simple-earn/](./simple-earn/) • [simple-earn-rest/](./simple-earn-rest/) |
+| **Staking** | 37+ | On-chain Staking | [staking-rest/](./staking-rest/) |
+| **Crypto Loan** | 17+ | Crypto-backed Loans | [crypto-loan/](./crypto-loan/) • [crypto-loan-rest/](./crypto-loan-rest/) |
+| **VIP Loan** | 11+ | VIP Loan Services | [vip-loan-rest/](./vip-loan-rest/) |
+| **Dual Investment** | 5+ | Dual Investment Products | [dual-investment-rest/](./dual-investment-rest/) |
 
-### Financial Services
+### Payment & Conversion APIs
 
-| Section | Files | Description |
-|---------|-------|-------------|
-| [Simple Earn](./simple-earn/) | 1 | Staking and savings products |
-| [Crypto Loan](./crypto-loan/) | 1 | Crypto-backed loans |
+| API | Endpoints | Description | Documentation |
+|-----|-----------|-------------|---------------|
+| **Pay API** | 1+ | Binance Pay Integration | [pay-api/](./pay-api/) • [pay-rest/](./pay-rest/) |
+| **Convert API** | 9+ | Convert/Cryptocurrency Exchange | [convert-rest/](./convert-rest/) |
+| **Fiat API** | 5+ | Fiat Deposit/Withdrawal | [fiat-rest/](./fiat-rest/) |
+| **Gift Card** | 6+ | Binance Gift Card | [gift-card-rest/](./gift-card-rest/) |
+| **Rebate API** | 1+ | Commission Rebate | [rebate-rest/](./rebate-rest/) |
 
-### Reference
+### Account & Sub-Account APIs
 
-| Section | Files | Description |
-|---------|-------|-------------|
-| [FAQs](./faqs/) | 12 | Frequently asked questions |
-| [Enums](./spot/enums.md) | - | API enumerations |
-| [Errors](./spot/errors.md) | - | Error codes and messages |
-| [Filters](./spot/filters.md) | - | Trading filters |
+| API | Endpoints | Description | Documentation |
+|-----|-----------|-------------|---------------|
+| **Sub Account** | 45+ | Sub-account Management | [sub-account/](./sub-account/) • [sub-account-rest/](./sub-account-rest/) |
+| **Wallet API** | 47+ | Wallet Operations | [wallet-rest/](./wallet-rest/) |
+
+### Other Services APIs
+
+| API | Endpoints | Description | Documentation |
+|-----|-----------|-------------|---------------|
+| **Algo API** | 11+ | Algorithmic Trading | [algo-rest/](./algo-rest/) |
+| **Alpha API** | 5+ | Alpha Trading Strategies | [alpha-rest/](./alpha-rest/) |
+| **C2C API** | 1+ | Peer-to-Peer Trading | [c2c-rest/](./c2c-rest/) |
+| **Copy Trading** | 2+ | Copy Trading Services | [copy-rest/](./copy-rest/) |
+| **Mining API** | 13+ | Binance Pool Mining | [mining-rest/](./mining-rest/) |
+| **NFT API** | 4+ | NFT Marketplace | [nft-rest/](./nft-rest/) |
+
+### Authentication & Authorization
+
+| Section | Description |
+|---------|-------------|
+| [Login/OAuth](./login/) | OAuth 2.0 Authentication Flows |
+| [OAuth Integration](./oauth/) | OAuth Integration Details |
+| [Binance Open API](./binance-open-api/) | Open API Scopes |
+
+### Reference Documentation
+
+| Section | Description |
+|---------|-------------|
+| [FAQs](./faqs/) | Frequently Asked Questions |
+| [Demo Mode](./demo-mode/) | Demo Trading Environment |
+| [FIX API](./fix-api/) | FIX Protocol Documentation |
+| [WebSocket](./websocket/) | WebSocket Market Streams |
+| [REST API General](./rest-api/) | General REST API Info |
+| [SBE Encoding](./sbe/) | Simple Binary Encoding |
+
+### Resources
+
+| Resource | Description |
+|----------|-------------|
+| [Postman Collections](./postman-collections/) | All API Postman Collections (25 APIs) |
+| [Swagger Specs](./swagger-specs/) | OpenAPI/Swagger Specifications |
+| [Python SDK - Futures](./futures/python-sdk/) | Official Python SDK for Futures |
+
+---
 
 ## 🔑 API Endpoints
 
 ### Base URLs
 
 ```
-Spot:        https://api.binance.com
-Futures USDT: https://fapi.binance.com
-Futures Coin: https://dapi.binance.com
-Options:     https://eapi.binance.com
+Spot:           https://api.binance.com
+Spot Testnet:   https://testnet.binance.vision
+Futures USDT:   https://fapi.binance.com
+Futures Coin:   https://dapi.binance.com
+Options:        https://eapi.binance.com
+Portfolio:      https://papi.binance.com
 ```
 
 ### Authentication
@@ -113,6 +162,8 @@ response = requests.post(
 )
 ```
 
+---
+
 ## 📡 WebSocket Streams
 
 ### Public Streams
@@ -138,6 +189,8 @@ ws.onmessage = (event) => {
 };
 ```
 
+---
+
 ## ⚡ Rate Limits
 
 | Type | Limit | Window |
@@ -146,7 +199,9 @@ ws.onmessage = (event) => {
 | Order Rate | 50-300 | 10 seconds |
 | Orders | 200,000 | 1 day |
 
-## 🚨 Error Codes
+---
+
+## 🚨 Common Error Codes
 
 | Code | Message | Description |
 |------|---------|-------------|
@@ -154,49 +209,26 @@ ws.onmessage = (event) => {
 | -1001 | DISCONNECTED | Internal error |
 | -1002 | UNAUTHORIZED | Invalid API key |
 | -1003 | TOO_MANY_REQUESTS | Rate limit exceeded |
-| -1006 | UNEXPECTED_RESP | Unexpected response |
-| -1007 | TIMEOUT | Request timeout |
 | -1013 | INVALID_MESSAGE | Invalid quantity/price |
 | -1015 | TOO_MANY_REQUESTS | Too much request weight |
 | -1021 | INVALID_TIMESTAMP | Timestamp outside recvWindow |
 | -1022 | INVALID_SIGNATURE | Invalid signature |
 | -2010 | NEW_ORDER_REJECTED | Order rejected |
-| -2011 | CANCEL_REJECTED | Cancel rejected |
 | -2013 | NO_SUCH_ORDER | Order does not exist |
 
-## 📚 Key Documentation Files
-
-### Spot Trading
-- [REST API](./spot/rest-api.md) - Complete REST API reference
-- [WebSocket Streams](./spot/web-socket-streams.md) - Market data streams
-- [WebSocket API](./spot/web-socket-api.md) - Trading via WebSocket
-- [User Data Stream](./spot/user-data-stream.md) - Account updates
-- [Errors](./spot/errors.md) - Error codes reference
-- [Enums](./spot/enums.md) - Enumeration values
-
-### Futures
-- [Futures Overview](./binance-futures-api/overview.md)
-- [Public API](./binance-futures-api/public-api.md)
-- [Trade REST API](./binance-futures-api/trade-rest-api.md)
-- [WebSocket Streams](./binance-futures-api/websocket-market-streams.md)
-
-### Authentication
-- [Login Introduction](./login/introduction.md)
-- [Web Integration](./login/web-integration.md)
-- [App Integration](./login/app-integration.md)
+---
 
 ## 🔗 Official Resources
 
 - [Binance API Announcements](https://t.me/binance_api_announcements)
 - [Binance API Telegram](https://t.me/binance_api_english)
 - [Spot Testnet](https://testnet.binance.vision/)
-- [Postman Collection](https://github.com/binance/binance-api-postman)
+- [Futures Testnet](https://testnet.binancefuture.com/)
 
-## 📝 SDKs & Connectors
+## 📝 Official SDKs & Connectors
 
-Official connectors available for:
 - [Python](https://github.com/binance/binance-connector-python)
-- [Node.js](https://github.com/binance/binance-connector-node)
+- [Node.js](https://github.com/binance/binance-connector-js)
 - [Java](https://github.com/binance/binance-connector-java)
 - [C#](https://github.com/binance/binance-connector-dotnet)
 - [Go](https://github.com/binance/binance-connector-go)
@@ -207,5 +239,5 @@ Official connectors available for:
 
 ---
 
-*Documentation scraped for AI agent reference*
-*Source: https://github.com/binance/binance-spot-api-docs*
+*Documentation compiled from Binance official sources for AI agent reference*
+*Sources: https://developers.binance.com, https://github.com/binance*
