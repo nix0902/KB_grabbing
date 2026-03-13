@@ -1,0 +1,39 @@
+using System.Text.Json.Serialization;
+using CryptoExchange.Net.Converters.SystemTextJson;
+using CryptoExchange.Net.Attributes;
+
+namespace Bitget.Net.Enums.V2
+{
+    /// <summary>
+    /// Plan type
+    /// </summary>
+    [JsonConverter(typeof(EnumConverter<PlanType>))]
+    public enum PlanType
+    {
+        /// <summary>
+        /// ["<c>profit_plan</c>"] Take profit
+        /// </summary>
+        [Map("profit_plan")]
+        TakeProfit,
+        /// <summary>
+        /// ["<c>loss_plan</c>"] Stop loss
+        /// </summary>
+        [Map("loss_plan")]
+        StopLoss,
+        /// <summary>
+        /// ["<c>moving_plan</c>"] Trailing stop
+        /// </summary>
+        [Map("moving_plan")]
+        TailingStop,
+        /// <summary>
+        /// ["<c>pos_profit</c>"] Position take profit
+        /// </summary>
+        [Map("pos_profit")]
+        PositionTakeProfit,
+        /// <summary>
+        /// ["<c>pos_loss</c>"] Position stop loss
+        /// </summary>
+        [Map("pos_loss")]
+        PositionStopLoss
+    }
+}
