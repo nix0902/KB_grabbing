@@ -1,0 +1,4350 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="defaultLanguage" content="en">
+    <meta name="availableLanguages"
+          content="en, es, fr, ja, pt_BR, uk, el, de, zh_Hans, zh_Hant, ru, he, eo, ko">
+    <title>bybit-api · PyPI</title>
+    <meta name="description"
+          content="bybit crypto exchange api client">
+    <link rel="stylesheet"
+          href="/static/css/warehouse-ltr.4d5618e4.css">
+    <link rel="stylesheet"
+          href="/static/css/fontawesome.379f9724.css">
+    <link rel="stylesheet"
+          href="/static/css/fonts.616f3bde.css">
+    <noscript>
+      <link rel="stylesheet"
+            href="/static/css/noscript.0673c9ea.css">
+    </noscript>
+    <link rel="icon"
+          href="/static/images/favicon.35549fe8.ico"
+          type="image/x-icon">
+    <link rel="alternate"
+          type="application/rss+xml"
+          title="RSS: 40 latest updates"
+          href="/rss/updates.xml">
+    <link rel="alternate"
+          type="application/rss+xml"
+          title="RSS: 40 newest packages"
+          href="/rss/packages.xml">
+<link rel="alternate"
+        type="application/rss+xml"
+        title="RSS: latest releases for bybit-api"
+        href="/rss/project/bybit-api/releases.xml">      <link rel="canonical" href="https://pypi.org/project/bybit-api/">
+    <meta property="og:url"
+          content="https://pypi.org/project/bybit-api/">
+    <meta property="og:site_name" content="PyPI">
+    <meta property="og:type" content="website">
+    <meta property="og:image"
+          content="https://pypi.org/static/images/twitter.abaf4b19.webp">
+    <meta property="og:title"
+          content="bybit-api">
+    <meta property="og:description" content="bybit crypto exchange api client">
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          title="PyPI"
+          href="/opensearch.xml">
+    <script defer src="/static/js/warehouse.b72f9687.js">
+    </script>
+  <script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+};
+  </script>
+  <script async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-svg.js"
+          integrity="sha256-1CldwzdEg2k1wTmf7s5RWVd7NMXI/7nxxjJM2C4DqII="
+          crossorigin="anonymous"></script>
+      <script defer
+              data-domain="pypi.org"
+              src="https://analytics.python.org/js/script.js"></script>
+    <script async
+            src="https://media.ethicalads.io/media/client/v1.4.0/ethicalads.min.js"
+            integrity="sha256-U3hKDidudIaxBDEzwGJApJgPEf2mWk6cfMWghrAa6i0= sha384-UcmsCqcNRSLW/dV3Lo1oCi2/VaurXbib6p4HyUEOeIa/4OpsrnucrugAefzVZJfI sha512-q4t1L4xEjGV2R4hzqCa41P8jrgFUS8xTb8rdNv4FGvw7FpydVj/kkxBJHOiaoxHa8olCcx1Slk9K+3sNbsM4ug=="
+            crossorigin="anonymous"></script>
+  </head>
+  <body data-controller="viewport-toggle">
+      <!-- Accessibility: this link should always be the first piece of content inside the body-->
+      <a href="#content" class="skip-to-content">Skip to main content</a>
+      <button type="button"
+              class="button button--primary button--switch-to-mobile hidden"
+              data-viewport-toggle-target="switchToMobile"
+              data-action="viewport-toggle#switchToMobile">Switch to mobile version</button>
+      <div id="sticky-notifications" class="stick-to-top js-stick-to-top">
+        <!-- Add browser warning. Will show for ie9 and below -->
+        <!--[if IE]>
+      <div class="notification-bar notification-bar--warning" role="status">
+        <span class="notification-bar__icon">
+          <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+          <span class="sr-only">Warning</span>
+        </span>
+        <span class="notification-bar__message">You are using an unsupported browser, upgrade to a newer version.</span>
+      </div>
+      <![endif]-->
+        <noscript>
+          <div class="notification-bar notification-bar--warning" role="status">
+            <span class="notification-bar__icon">
+              <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+              <span class="sr-only">Warning</span>
+            </span>
+            <span class="notification-bar__message">Some features may not work without JavaScript. Please try enabling it if you encounter problems.</span>
+          </div>
+        </noscript>
+<div data-html-include="/_includes/unauthed/notification-banners/"></div>    </div>
+<div data-html-include="/_includes/unauthed/flash-messages/"></div><div data-html-include="/_includes/authed/session-notifications/"></div><header class="site-header ">
+  <div class="site-container">
+    <div class="split-layout">
+        <div class="split-layout">
+          <div>
+            <a class="site-header__logo" href="/">
+              <img alt="PyPI"
+                   src="/static/images/logo-small.8998e9d1.svg">
+            </a>
+          </div>
+          <form class="search-form search-form--primary"
+                action="/search/"
+                role="search">
+            <label for="search" class="sr-only">Search PyPI</label>
+            <input id="search"
+                   class="search-form__search"
+                   type="text"
+                   name="q"
+                   placeholder="Type '/' to search projects"
+                   value=""
+                   autocomplete="off"
+                   autocapitalize="off"
+                   spellcheck="false"
+                   data-controller="search-focus"
+                   data-action="keydown@window->search-focus#focusSearchField"
+                   data-search-focus-target="searchField">
+            <button type="submit" class="search-form__button">
+              <i class="fa fa-search" aria-hidden="true"></i>
+              <span class="sr-only">Search</span>
+            </button>
+          </form>
+        </div>
+<div data-html-include="/_includes/authed/current-user-indicator/">        <div id="user-indicator"
+       class="horizontal-menu horizontal-menu--light horizontal-menu--tall">
+    <nav class="horizontal-menu horizontal-menu--light horizontal-menu--tall hide-on-tablet"
+         aria-label="Main navigation">
+      <ul>
+        <li class="horizontal-menu__item">
+          <a href="/help/" class="horizontal-menu__link">Help</a>
+        </li>
+        <li class="horizontal-menu__item">
+          <a href="https://docs.pypi.org/" class="horizontal-menu__link">Docs</a>
+        </li>
+        <li class="horizontal-menu__item">
+          <a href="/sponsors/"
+             class="horizontal-menu__link">Sponsors</a>
+        </li>
+        <li class="horizontal-menu__item">
+          <a href="/account/login/?next=https%3A%2F%2Fpypi.org%2Fproject%2Fbybit-api%2F" class="horizontal-menu__link">Log in</a>
+        </li>
+        <li class="horizontal-menu__item">
+          <a href="/account/register/"
+             class="horizontal-menu__link">Register</a>
+        </li>
+      </ul>
+    </nav>
+    <nav class="dropdown dropdown--on-menu hidden show-on-tablet"
+         aria-label="Main navigation">
+      <button type="button"
+              class="horizontal-menu__link dropdown__trigger"
+              aria-haspopup="true"
+              aria-expanded="false"
+              aria-label="View menu">
+Menu        <span class="dropdown__trigger-caret">
+          <i class="fa fa-caret-down" aria-hidden="true"></i>
+        </span>
+      </button>
+      <ul class="dropdown__content"
+          aria-hidden="true"
+          aria-label="Main menu">
+        <li>
+          <a class="dropdown__link" href="/help/">Help</a>
+        </li>
+        <li>
+          <a class="dropdown__link" href="https://docs.pypi.org/">Docs</a>
+        </li>
+        <li>
+          <a class="dropdown__link" href="/sponsors/">Sponsors</a>
+        </li>
+        <li>
+          <a class="dropdown__link" href="/account/login/?next=https%3A%2F%2Fpypi.org%2Fproject%2Fbybit-api%2F">Log in</a>
+        </li>
+        <li>
+          <a class="dropdown__link"
+             href="/account/register/">Register</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>  </div>
+</div>
+</header>
+  <div class="mobile-search">
+    <form class="search-form search-form--fullwidth"
+          action="/search/"
+          role="search">
+      <label for="mobile-search" class="sr-only">Search PyPI</label>
+      <input id="mobile-search"
+             class="search-form__search"
+             type="text"
+             name="q"
+             placeholder="Search projects"
+             value=""
+             autocomplete="off"
+             autocapitalize="off"
+             spellcheck="false">
+      
+      <button type="submit" class="search-form__button">
+        <i class="fa fa-search" aria-hidden="true"></i>
+        <span class="sr-only">Search</span>
+      </button>
+    </form>
+  </div>
+<main id="content">
+  <div class="banner">
+    <div class="package-header">
+      <div class="package-header__left">
+        <h1 class="package-header__name">bybit-api 0.0.127</h1>
+          <div data-controller="clipboard">
+            <p class="package-header__pip-instructions">
+              <span id="pip-command" data-clipboard-target="source">pip install bybit-api</span>
+              <button type="button"
+                      class="copy-tooltip copy-tooltip-s"
+                      data-action="clipboard#copy"
+                      data-clipboard-target="tooltip"
+                      data-clipboard-tooltip-value="Copy to clipboard">
+                <i class="fa fa-copy" aria-hidden="true"></i>
+                <span class="sr-only">Copy PIP instructions</span>
+              </button>
+            </p>
+          </div>
+      </div>
+      <div class="package-header__right">
+            <a class="status-badge status-badge--good"
+               href="/project/bybit-api/">
+              <span>Latest version</span>
+            </a>
+        <p class="package-header__date">
+Released: <time datetime="2026-03-06T06:02:07+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Mar 6, 2026
+  </time>        </p>
+      </div>
+    </div>
+  </div>
+  <div class="horizontal-section horizontal-section--grey horizontal-section--thin">
+    <div class="site-container">
+<div data-html-include="/_includes/authed/administer-project-include/bybit-api"></div>    <div class="split-layout split-layout--middle package-description">
+        <p class="package-description__summary">bybit crypto exchange api client</p>
+<div data-html-include="/_includes/authed/edit-project-button/bybit-api"></div>  </div>
+</div>
+</div>
+<div data-controller="project-tabs">
+  <div class="tabs-container">
+    <div class="vertical-tabs">
+      <div class="vertical-tabs__tabs">
+        <div class="sidebar-section">
+          <h3 class="sidebar-section__title">Navigation</h3>
+          <nav aria-label="Navigation for bybit-api">
+            <ul class="vertical-tabs__list" role="tablist">
+              <li role="tab">
+                <a id="description-tab"
+                   href="#description"
+                   data-project-tabs-target="tab"
+                   data-action="project-tabs#onTabClick"
+                   class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--is-active"
+                   aria-selected="true"
+                   aria-label="Project description. Focus will be moved to the description.">
+                  <i class="fa fa-align-left" aria-hidden="true"></i>
+Project description                </a>
+              </li>
+              <li role="tab">
+                <a id="history-tab"
+                   href="#history"
+                   data-project-tabs-target="tab"
+                   data-action="project-tabs#onTabClick"
+                   class="vertical-tabs__tab vertical-tabs__tab--with-icon"
+                   aria-label="Release history. Focus will be moved to the history panel.">
+                  <i class="fa fa-history" aria-hidden="true"></i>
+Release history                </a>
+              </li>
+                <li role="tab">
+                  <a id="files-tab"
+                     href="#files"
+                     data-project-tabs-target="tab"
+                     data-action="project-tabs#onTabClick"
+                     class="vertical-tabs__tab vertical-tabs__tab--with-icon"
+                     aria-label="Download files. Focus will be moved to the project files.">
+                    <i class="fa fa-download" aria-hidden="true"></i>
+Download files                  </a>
+                </li>
+            </ul>
+          </nav>
+        </div>
+<div class="sidebar-section verified">
+  <h3 class="sidebar-section__title">
+Verified details    <i class="fa fa-circle-check check"
+       title="Verified by PyPI on 2026-03-06"></i>
+  </h3>
+  <small><i>These details have been <a href="https://docs.pypi.org/project_metadata/#verified-details">verified by PyPI</a></i></small>
+    <h6>Maintainers</h6>
+      <span class="sidebar-section__maintainer">
+        <a href="/user/carlosmiei/"
+           aria-label="">
+          <span class="sidebar-section__user-gravatar">
+            <img src="https://pypi-camo.freetls.fastly.net/ad168d58dcef736cd5749ad024af4c300eded21e/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f61643736363239663439656234633262393838316261326561663135306332333f73697a653d3530"
+                 height="50"
+                 width="50"
+                 alt="Avatar for carlosmiei from gravatar.com"
+                 title="Avatar for carlosmiei from gravatar.com">
+          </span>
+          <span class="sidebar-section__user-gravatar-text">carlosmiei</span>
+        </a>
+      </span>
+      <span class="sidebar-section__maintainer">
+        <a href="/user/ttodua/"
+           aria-label="">
+          <span class="sidebar-section__user-gravatar">
+            <img src="https://pypi-camo.freetls.fastly.net/03fb58770b45aeb51e27995d34a80d1e4f6f063d/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f61616166333864633038663861626166626139373836616261343962613631643f73697a653d3530"
+                 height="50"
+                 width="50"
+                 alt="Avatar for ttodua from gravatar.com"
+                 title="Avatar for ttodua from gravatar.com">
+          </span>
+          <span class="sidebar-section__user-gravatar-text">ttodua</span>
+        </a>
+      </span>
+      <span class="sidebar-section__maintainer">
+        <a href="/user/x84/"
+           aria-label="">
+          <span class="sidebar-section__user-gravatar">
+            <img src="https://pypi-camo.freetls.fastly.net/3aad1e6d82e5081d241e9b0c46ed99b46880e180/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f66373561353432613865653437396337663530383065623532333562666266303f73697a653d3530"
+                 height="50"
+                 width="50"
+                 alt="Avatar for x84 from gravatar.com"
+                 title="Avatar for x84 from gravatar.com">
+          </span>
+          <span class="sidebar-section__user-gravatar-text">x84</span>
+        </a>
+      </span>
+</div>
+<div class="sidebar-section unverified">
+  <h3 class="sidebar-section__title">Unverified details</h3>
+  <small><i>These details have <b>not</b> been verified by PyPI</i></small>
+    <h6>Project links</h6>
+    <ul class="vertical-tabs__list">
+          <li>
+            <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed"
+               href="https://github.com/ccxt/ccxt"
+               rel="nofollow">  <i class="fas fa-home" aria-hidden="true"></i>Homepage</a>
+          </li>
+          <li>
+            <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed"
+               href="https://github.com/ccxt/ccxt"
+               rel="nofollow">  <i class="fas fa-bug" aria-hidden="true"></i>Issues</a>
+          </li>
+    </ul>
+    <div class="sidebar-section unverified">
+      <h6>Meta</h6>
+      <ul>
+          <li>
+            <span>
+              <strong>License:</strong> MIT License (MIT)
+            </span>
+          </li>
+          <li>
+            <span>
+              <strong>Author:</strong> <a href="mailto:info@ccxt.trade">CCXT</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <strong>Requires:</strong> Python &gt;=3.8
+            </span>
+          </li>
+      </ul>
+    </div>
+    <div class="sidebar-section unverified">
+      <h6 class="sidebar-section__title">Classifiers</h6>
+      <ul class="sidebar-section__classifiers">
+          <li>
+            <strong>Intended Audience</strong>
+            <ul>
+                <li>
+                  <a href="/search/?c=Intended+Audience+%3A%3A+Developers">
+                    Developers
+                  </a>
+                </li>
+                <li>
+                  <a href="/search/?c=Intended+Audience+%3A%3A+Financial+and+Insurance+Industry">
+                    Financial and Insurance Industry
+                  </a>
+                </li>
+                <li>
+                  <a href="/search/?c=Intended+Audience+%3A%3A+Information+Technology">
+                    Information Technology
+                  </a>
+                </li>
+            </ul>
+          </li>
+          <li>
+            <strong>License</strong>
+            <ul>
+                <li>
+                  <a href="/search/?c=License+%3A%3A+OSI+Approved+%3A%3A+MIT+License">
+                    OSI Approved :: MIT License
+                  </a>
+                </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Operating System</strong>
+            <ul>
+                <li>
+                  <a href="/search/?c=Operating+System+%3A%3A+OS+Independent">
+                    OS Independent
+                  </a>
+                </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Programming Language</strong>
+            <ul>
+                <li>
+                  <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3">
+                    Python :: 3
+                  </a>
+                </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Topic</strong>
+            <ul>
+                <li>
+                  <a href="/search/?c=Topic+%3A%3A+Office%2FBusiness+%3A%3A+Financial+%3A%3A+Investment">
+                    Office/Business :: Financial :: Investment
+                  </a>
+                </li>
+                <li>
+                  <a href="/search/?c=Topic+%3A%3A+Software+Development+%3A%3A+Build+Tools">
+                    Software Development :: Build Tools
+                  </a>
+                </li>
+            </ul>
+          </li>
+      </ul>
+    </div>
+</div>  <div class="sidebar-section"
+       data-ea-publisher="psf"
+       data-ea-type="psf"
+       data-ea-keywords="pypi-sidebar"></div>
+        <div class="sidebar-section">
+          <a class="button button--full-width button--warning"
+             href="https://pypi.org/project/bybit-api/submit-malware-report/"
+             role="button">Report project as malware</a>
+        </div>
+      </div>
+      <div class="vertical-tabs__panel">
+        <!-- mobile menu -->
+        <nav aria-label="Navigation for bybit-api">
+          <ul class="vertical-tabs__list" role="tablist">
+            <li role="tab">
+              <a id="mobile-description-tab"
+                 href="#description"
+                 data-project-tabs-target="mobileTab"
+                 data-action="project-tabs#onTabClick"
+                 class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--mobile vertical-tabs__tab--no-top-border vertical-tabs__tab--is-active"
+                 aria-selected="true"
+                 aria-label="Project description. Focus will be moved to the description.">
+                <i class="fa fa-align-left" aria-hidden="true"></i>
+Project description              </a>
+            </li>
+            <li role="tab">
+              <a id="mobile-data-tab"
+                 href="#data"
+                 data-project-tabs-target="mobileTab"
+                 data-action="project-tabs#onTabClick"
+                 class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--mobile"
+                 aria-label="Project details. Focus will be moved to the project details.">
+                <i class="fa fa-info-circle" aria-hidden="true"></i>
+Project details              </a>
+            </li>
+            <li role="tab">
+              <a id="mobile-history-tab"
+                 href="#history"
+                 data-project-tabs-target="mobileTab"
+                 data-action="project-tabs#onTabClick"
+                 class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--mobile"
+                 aria-label="Release history. Focus will be moved to the history panel.">
+                <i class="fa fa-history" aria-hidden="true"></i>
+Release history              </a>
+            </li>
+              <li role="tab">
+                <a id="mobile-files-tab"
+                   href="#files"
+                   data-project-tabs-target="mobileTab"
+                   data-action="project-tabs#onTabClick"
+                   class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--mobile"
+                   aria-label="Download files. Focus will be moved to the project files.">
+                  <i class="fa fa-download" aria-hidden="true"></i>
+Download files                </a>
+              </li>
+          </ul>
+        </nav>
+        <div id="description"
+             data-project-tabs-target="content"
+             class="vertical-tabs__content"
+             role="tabpanel"
+             aria-labelledby="description-tab mobile-description-tab"
+             tabindex="-1">
+    <h2 class="page-title">Project description</h2>
+      <div class="project-description"><h1>bybit-python</h1>
+<p>Python SDK (sync and async) for Bybit cryptocurrency exchange with Rest and WS capabilities.</p>
+<ul>
+<li>You can check the SDK docs here: <a href="https://docs.ccxt.com/#/exchanges/bybit" rel=nofollow>SDK</a></li>
+<li>You can check Bybit's docs here: <a href="https://bybit.com/apidocs1" rel=nofollow>Docs</a></li>
+<li>Github repo: <a href="https://github.com/ccxt/bybit-python" rel=nofollow>https://github.com/ccxt/bybit-python</a></li>
+<li>Pypi package: <a href="https://pypi.org/project/bybit-api" rel=nofollow>https://pypi.org/project/bybit-api</a></li>
+</ul>
+<h2>Installation</h2>
+<pre><code>pip install bybit-api
+</code></pre>
+<h2>Usage</h2>
+<h3>Sync</h3>
+<pre lang=Python><span class=kn>from</span><span class=w> </span><span class=nn>bybit</span><span class=w> </span><span class=kn>import</span> <span class=n>BybitSync</span>
+
+<span class=k>def</span><span class=w> </span><span class=nf>main</span><span class=p>():</span>
+    <span class=n>instance</span> <span class=o>=</span> <span class=n>BybitSync</span><span class=p>({})</span>
+    <span class=n>ob</span> <span class=o>=</span>  <span class=n>instance</span><span class=o>.</span><span class=n>fetch_order_book</span><span class=p>(</span><span class=s2>"BTC/USDC"</span><span class=p>)</span>
+    <span class=nb>print</span><span class=p>(</span><span class=n>ob</span><span class=p>)</span>
+    <span class=c1>#</span>
+    <span class=c1># balance = instance.fetch_balance()</span>
+    <span class=c1># order = instance.create_order("BTC/USDC", "limit", "buy", 1, 100000)</span>
+
+<span class=n>main</span><span class=p>()</span>
+</pre>
+<h3>Async</h3>
+<pre lang=Python><span class=kn>import</span><span class=w> </span><span class=nn>sys</span>
+<span class=kn>import</span><span class=w> </span><span class=nn>asyncio</span>
+<span class=kn>from</span><span class=w> </span><span class=nn>bybit</span><span class=w> </span><span class=kn>import</span> <span class=n>BybitAsync</span>
+
+<span class=c1>### on Windows, uncomment below:</span>
+<span class=c1># if sys.platform == 'win32':</span>
+<span class=c1># 	asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())</span>
+
+<span class=k>async</span> <span class=k>def</span><span class=w> </span><span class=nf>main</span><span class=p>():</span>
+    <span class=n>instance</span> <span class=o>=</span> <span class=n>BybitAsync</span><span class=p>({})</span>
+    <span class=n>ob</span> <span class=o>=</span>  <span class=k>await</span> <span class=n>instance</span><span class=o>.</span><span class=n>fetch_order_book</span><span class=p>(</span><span class=s2>"BTC/USDC"</span><span class=p>)</span>
+    <span class=nb>print</span><span class=p>(</span><span class=n>ob</span><span class=p>)</span>
+    <span class=c1>#</span>
+    <span class=c1># balance = await instance.fetch_balance()</span>
+    <span class=c1># order = await instance.create_order("BTC/USDC", "limit", "buy", 1, 100000)</span>
+
+    <span class=c1># once you are done with the exchange</span>
+    <span class=k>await</span> <span class=n>instance</span><span class=o>.</span><span class=n>close</span><span class=p>()</span>
+
+<span class=n>asyncio</span><span class=o>.</span><span class=n>run</span><span class=p>(</span><span class=n>main</span><span class=p>())</span>
+</pre>
+<h3>Websockets</h3>
+<pre lang=Python><span class=kn>import</span><span class=w> </span><span class=nn>sys</span>
+<span class=kn>from</span><span class=w> </span><span class=nn>bybit</span><span class=w> </span><span class=kn>import</span> <span class=n>BybitWs</span>
+
+<span class=c1>### on Windows, uncomment below:</span>
+<span class=c1># if sys.platform == 'win32':</span>
+<span class=c1># 	asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())</span>
+
+<span class=k>async</span> <span class=k>def</span><span class=w> </span><span class=nf>main</span><span class=p>():</span>
+    <span class=n>instance</span> <span class=o>=</span> <span class=n>BybitWs</span><span class=p>({})</span>
+    <span class=k>while</span> <span class=kc>True</span><span class=p>:</span>
+        <span class=n>ob</span> <span class=o>=</span> <span class=k>await</span> <span class=n>instance</span><span class=o>.</span><span class=n>watch_order_book</span><span class=p>(</span><span class=s2>"BTC/USDC"</span><span class=p>)</span>
+        <span class=nb>print</span><span class=p>(</span><span class=n>ob</span><span class=p>)</span>
+        <span class=c1># orders = await instance.watch_orders("BTC/USDC")</span>
+
+    <span class=c1># once you are done with the exchange</span>
+    <span class=k>await</span> <span class=n>instance</span><span class=o>.</span><span class=n>close</span><span class=p>()</span>
+
+<span class=n>asyncio</span><span class=o>.</span><span class=n>run</span><span class=p>(</span><span class=n>main</span><span class=p>())</span>
+</pre>
+<h4>Raw call</h4>
+<p>You can also construct custom requests to available "implicit" endpoints</p>
+<pre lang=Python>        <span class=n>request</span> <span class=o>=</span> <span class=p>{</span>
+            <span class=s1>'type'</span><span class=p>:</span> <span class=s1>'candleSnapshot'</span><span class=p>,</span>
+            <span class=s1>'req'</span><span class=p>:</span> <span class=p>{</span>
+                <span class=s1>'coin'</span><span class=p>:</span> <span class=n>coin</span><span class=p>,</span>
+                <span class=s1>'interval'</span><span class=p>:</span> <span class=n>tf</span><span class=p>,</span>
+                <span class=s1>'startTime'</span><span class=p>:</span> <span class=n>since</span><span class=p>,</span>
+                <span class=s1>'endTime'</span><span class=p>:</span> <span class=n>until</span><span class=p>,</span>
+            <span class=p>},</span>
+        <span class=p>}</span>
+        <span class=n>response</span> <span class=o>=</span> <span class=k>await</span> <span class=n>instance</span><span class=o>.</span><span class=n>public_post_info</span><span class=p>(</span><span class=n>request</span><span class=p>)</span>
+</pre>
+<h2>Available methods</h2>
+<h3>REST Unified</h3>
+<ul>
+<li><code>create_convert_trade(self, id: str, fromCode: str, toCode: str, amount: Num = None, params={})</code></li>
+<li><code>create_expired_option_market(self, symbol: str)</code></li>
+<li><code>create_market_buy_order_with_cost(self, symbol: str, cost: float, params={})</code></li>
+<li><code>create_market_sell_order_with_cost(self, symbol: str, cost: float, params={})</code></li>
+<li><code>create_order_request(self, symbol: str, type: OrderType, side: OrderSide, amount: float, price: Num = None, params={}, isUTA=True)</code></li>
+<li><code>create_order(self, symbol: str, type: OrderType, side: OrderSide, amount: float, price: Num = None, params={})</code></li>
+<li><code>create_orders(self, orders: List[OrderRequest], params={})</code></li>
+<li><code>fetch_all_greeks(self, symbols: Strings = None, params={})</code></li>
+<li><code>fetch_balance(self, params={})</code></li>
+<li><code>fetch_bids_asks(self, symbols: Strings = None, params={})</code></li>
+<li><code>fetch_borrow_interest(self, code: Str = None, symbol: Str = None, since: Int = None, limit: Int = None, params={})</code></li>
+<li><code>fetch_borrow_rate_history(self, code: str, since: Int = None, limit: Int = None, params={})</code></li>
+<li><code>fetch_canceled_and_closed_orders(self, symbol: Str = None, since: Int = None, limit: Int = None, params={})</code></li>
+<li><code>fetch_canceled_orders(self, symbol: Str = None, since: Int = None, limit: Int = None, params={})</code></li>
+<li><code>fetch_closed_order(self, id: str, symbol: Str = None, params={})</code></li>
+<li><code>fetch_closed_orders(self, symbol: Str = None, since: Int = None, limit: Int = None, params={})</code></li>
+<li><code>fetch_convert_currencies(self, params={})</code></li>
+<li><code>fetch_convert_quote(self, fromCode: str, toCode: str, amount: Num = None, params={})</code></li>
+<li><code>fetch_convert_trade_history(self, code: Str = None, since: Int = None, limit: Int = None, params={})</code></li>
+<li><code>fetch_convert_trade(self, id: str, code: Str = None, params={})</code></li>
+<li><code>fetch_cross_borrow_rate(self, code: str, params={})</code></li>
+<li><code>fetch_currencies(self, params={})</code></li>
+<li><code>fetch_deposit_address(self, code: str, params={})</code></li>
+<li><code>fetch_deposit_addresses_by_network(self, code: str, params={})</code></li>
+<li><code>fetch_deposit_withdraw_fees(self, codes: Strings = None, params={})</code></li>
+<li><code>fetch_deposits(self, code: Str = None, since: Int = None, limit: Int = None, params={})</code></li>
+<li><code>fetch_derivatives_market_leverage_tiers(self, symbol: str, params={})</code></li>
+<li><code>fetch_derivatives_open_interest_history(self, symbol: str, timeframe='1h', since: Int = None, limit: Int = None, params={})</code></li>
+<li><code>fetch_funding_history(self, symbol: Str = None, since: Int = None, limit: Int = None, params={})</code></li>
+<li><code>fetch_funding_rate_history(self, symbol: Str = None, since: Int = None, limit: Int = None, params={})</code></li>
+<li><code>fetch_funding_rates(self, symbols: Strings = None, params={})</code></li>
+<li><code>fetch_future_markets(self, params)</code></li>
+<li><code>fetch_greeks(self, symbol: str, params={})</code></li>
+<li><code>fetch_ledger(self, code: Str = None, since: Int = None, limit: Int = None, params={})</code></li>
+<li><code>fetch_leverage_tiers(self, symbols: Strings = None, params={})</code></li>
+<li><code>fetch_leverage(self, symbol: str, params={})</code></li>
+<li><code>fetch_long_short_ratio_history(self, symbol: Str = None, timeframe: Str = None, since: Int = None, limit: Int = None, params={})</code></li>
+<li><code>fetch_margin_mode(self, symbol: str, params={})</code></li>
+<li><code>fetch_market_leverage_tiers(self, symbol: str, params={})</code></li>
+<li><code>fetch_markets(self, params={})</code></li>
+<li><code>fetch_my_liquidations(self, symbol: Str = None, since: Int = None, limit: Int = None, params={})</code></li>
+<li><code>fetch_my_settlement_history(self, symbol: Str = None, since: Int = None, limit: Int = None, params={})</code></li>
+<li><code>fetch_my_trades(self, symbol: Str = None, since: Int = None, limit: Int = None, params={})</code></li>
+<li><code>fetch_ohlcv(self, symbol: str, timeframe: str = '1m', since: Int = None, limit: Int = None, params={})</code></li>
+<li><code>fetch_open_interest_history(self, symbol: str, timeframe='1h', since: Int = None, limit: Int = None, params={})</code></li>
+<li><code>fetch_open_interest(self, symbol: str, params={})</code></li>
+<li><code>fetch_open_order(self, id: str, symbol: Str = None, params={})</code></li>
+<li><code>fetch_open_orders(self, symbol: Str = None, since: Int = None, limit: Int = None, params={})</code></li>
+<li><code>fetch_option_chain(self, code: str, params={})</code></li>
+<li><code>fetch_option_markets(self, params)</code></li>
+<li><code>fetch_option(self, symbol: str, params={})</code></li>
+<li><code>fetch_order_book(self, symbol: str, limit: Int = None, params={})</code></li>
+<li><code>fetch_order_classic(self, id: str, symbol: Str = None, params={})</code></li>
+<li><code>fetch_order_trades(self, id: str, symbol: Str = None, since: Int = None, limit: Int = None, params={})</code></li>
+<li><code>fetch_order(self, id: str, symbol: Str = None, params={})</code></li>
+<li><code>fetch_orders_classic(self, symbol: Str = None, since: Int = None, limit: Int = None, params={})</code></li>
+<li><code>fetch_orders(self, symbol: Str = None, since: Int = None, limit: Int = None, params={})</code></li>
+<li><code>fetch_position(self, symbol: str, params={})</code></li>
+<li><code>fetch_positions_adl_rank(self, symbols: Strings = None, params={})</code></li>
+<li><code>fetch_positions_history(self, symbols: Strings = None, since: Int = None, limit: Int = None, params={})</code></li>
+<li><code>fetch_positions(self, symbols: Strings = None, params={})</code></li>
+<li><code>fetch_settlement_history(self, symbol: Str = None, since: Int = None, limit: Int = None, params={})</code></li>
+<li><code>fetch_spot_markets(self, params)</code></li>
+<li><code>fetch_ticker(self, symbol: str, params={})</code></li>
+<li><code>fetch_tickers(self, symbols: Strings = None, params={})</code></li>
+<li><code>fetch_time(self, params={})</code></li>
+<li><code>fetch_trades(self, symbol: str, since: Int = None, limit: Int = None, params={})</code></li>
+<li><code>fetch_trading_fee(self, symbol: str, params={})</code></li>
+<li><code>fetch_trading_fees(self, params={})</code></li>
+<li><code>fetch_transfers(self, code: Str = None, since: Int = None, limit: Int = None, params={})</code></li>
+<li><code>fetch_volatility_history(self, code: str, params={})</code></li>
+<li><code>fetch_withdrawals(self, code: Str = None, since: Int = None, limit: Int = None, params={})</code></li>
+<li><code>add_pagination_cursor_to_result(self, response)</code></li>
+<li><code>borrow_cross_margin(self, code: str, amount: float, params={})</code></li>
+<li><code>cancel_all_orders_after(self, timeout: Int, params={})</code></li>
+<li><code>cancel_all_orders(self, symbol: Str = None, params={})</code></li>
+<li><code>cancel_order_request(self, id: str, symbol: Str = None, params={})</code></li>
+<li><code>cancel_order(self, id: str, symbol: Str = None, params={})</code></li>
+<li><code>cancel_orders_for_symbols(self, orders: List[CancellationRequest], params={})</code></li>
+<li><code>cancel_orders(self, ids: List[str], symbol: Str = None, params={})</code></li>
+<li><code>describe(self)</code></li>
+<li><code>edit_order_request(self, id: str, symbol: str, type: OrderType, side: OrderSide, amount: Num = None, price: Num = None, params={})</code></li>
+<li><code>edit_order(self, id: str, symbol: str, type: OrderType, side: OrderSide, amount: Num = None, price: Num = None, params={})</code></li>
+<li><code>edit_orders(self, orders: List[OrderRequest], params={})</code></li>
+<li><code>enable_demo_trading(self, enable: bool)</code></li>
+<li><code>get_amount(self, symbol: str, amount: float)</code></li>
+<li><code>get_bybit_type(self, method, market, params={})</code></li>
+<li><code>get_cost(self, symbol: str, cost: str)</code></li>
+<li><code>get_leverage_tiers_paginated(self, symbol: Str = None, params={})</code></li>
+<li><code>get_price(self, symbol: str, price: str)</code></li>
+<li><code>is_unified_enabled(self, params={})</code></li>
+<li><code>nonce(self)</code></li>
+<li><code>repay_cross_margin(self, code: str, amount, params={})</code></li>
+<li><code>safe_market(self, marketId: Str = None, market: Market = None, delimiter: Str = None, marketType: Str = None)</code></li>
+<li><code>set_leverage(self, leverage: int, symbol: Str = None, params={})</code></li>
+<li><code>set_margin_mode(self, marginMode: str, symbol: Str = None, params={})</code></li>
+<li><code>set_position_mode(self, hedged: bool, symbol: Str = None, params={})</code></li>
+<li><code>transfer(self, code: str, amount: float, fromAccount: str, toAccount: str, params={})</code></li>
+<li><code>upgrade_unified_trade_account(self, params={})</code></li>
+<li><code>withdraw(self, code: str, amount: float, address: str, tag: Str = None, params={})</code></li>
+</ul>
+<h3>REST Raw</h3>
+<ul>
+<li><code>public_get_spot_v3_public_symbols(request)</code></li>
+<li><code>public_get_spot_v3_public_quote_depth(request)</code></li>
+<li><code>public_get_spot_v3_public_quote_depth_merged(request)</code></li>
+<li><code>public_get_spot_v3_public_quote_trades(request)</code></li>
+<li><code>public_get_spot_v3_public_quote_kline(request)</code></li>
+<li><code>public_get_spot_v3_public_quote_ticker_24hr(request)</code></li>
+<li><code>public_get_spot_v3_public_quote_ticker_price(request)</code></li>
+<li><code>public_get_spot_v3_public_quote_ticker_bookticker(request)</code></li>
+<li><code>public_get_spot_v3_public_server_time(request)</code></li>
+<li><code>public_get_spot_v3_public_infos(request)</code></li>
+<li><code>public_get_spot_v3_public_margin_product_infos(request)</code></li>
+<li><code>public_get_spot_v3_public_margin_ensure_tokens(request)</code></li>
+<li><code>public_get_v3_public_time(request)</code></li>
+<li><code>public_get_contract_v3_public_copytrading_symbol_list(request)</code></li>
+<li><code>public_get_derivatives_v3_public_order_book_l2(request)</code></li>
+<li><code>public_get_derivatives_v3_public_kline(request)</code></li>
+<li><code>public_get_derivatives_v3_public_tickers(request)</code></li>
+<li><code>public_get_derivatives_v3_public_instruments_info(request)</code></li>
+<li><code>public_get_derivatives_v3_public_mark_price_kline(request)</code></li>
+<li><code>public_get_derivatives_v3_public_index_price_kline(request)</code></li>
+<li><code>public_get_derivatives_v3_public_funding_history_funding_rate(request)</code></li>
+<li><code>public_get_derivatives_v3_public_risk_limit_list(request)</code></li>
+<li><code>public_get_derivatives_v3_public_delivery_price(request)</code></li>
+<li><code>public_get_derivatives_v3_public_recent_trade(request)</code></li>
+<li><code>public_get_derivatives_v3_public_open_interest(request)</code></li>
+<li><code>public_get_derivatives_v3_public_insurance(request)</code></li>
+<li><code>public_get_v5_announcements_index(request)</code></li>
+<li><code>public_get_v5_market_time(request)</code></li>
+<li><code>public_get_v5_market_kline(request)</code></li>
+<li><code>public_get_v5_market_mark_price_kline(request)</code></li>
+<li><code>public_get_v5_market_index_price_kline(request)</code></li>
+<li><code>public_get_v5_market_premium_index_price_kline(request)</code></li>
+<li><code>public_get_v5_market_instruments_info(request)</code></li>
+<li><code>public_get_v5_market_orderbook(request)</code></li>
+<li><code>public_get_v5_market_tickers(request)</code></li>
+<li><code>public_get_v5_market_funding_history(request)</code></li>
+<li><code>public_get_v5_market_recent_trade(request)</code></li>
+<li><code>public_get_v5_market_open_interest(request)</code></li>
+<li><code>public_get_v5_market_historical_volatility(request)</code></li>
+<li><code>public_get_v5_market_insurance(request)</code></li>
+<li><code>public_get_v5_market_risk_limit(request)</code></li>
+<li><code>public_get_v5_market_delivery_price(request)</code></li>
+<li><code>public_get_v5_market_account_ratio(request)</code></li>
+<li><code>public_get_v5_spot_lever_token_info(request)</code></li>
+<li><code>public_get_v5_spot_lever_token_reference(request)</code></li>
+<li><code>public_get_v5_spot_margin_trade_data(request)</code></li>
+<li><code>public_get_v5_spot_margin_trade_collateral(request)</code></li>
+<li><code>public_get_v5_spot_cross_margin_trade_data(request)</code></li>
+<li><code>public_get_v5_spot_cross_margin_trade_pledge_token(request)</code></li>
+<li><code>public_get_v5_spot_cross_margin_trade_borrow_token(request)</code></li>
+<li><code>public_get_v5_crypto_loan_collateral_data(request)</code></li>
+<li><code>public_get_v5_crypto_loan_loanable_data(request)</code></li>
+<li><code>public_get_v5_crypto_loan_common_loanable_data(request)</code></li>
+<li><code>public_get_v5_crypto_loan_common_collateral_data(request)</code></li>
+<li><code>public_get_v5_crypto_loan_fixed_supply_order_quote(request)</code></li>
+<li><code>public_get_v5_crypto_loan_fixed_borrow_order_quote(request)</code></li>
+<li><code>public_get_v5_ins_loan_product_infos(request)</code></li>
+<li><code>public_get_v5_ins_loan_ensure_tokens_convert(request)</code></li>
+<li><code>public_get_v5_earn_product(request)</code></li>
+<li><code>private_get_v5_market_instruments_info(request)</code></li>
+<li><code>private_get_v2_private_wallet_fund_records(request)</code></li>
+<li><code>private_get_spot_v3_private_order(request)</code></li>
+<li><code>private_get_spot_v3_private_open_orders(request)</code></li>
+<li><code>private_get_spot_v3_private_history_orders(request)</code></li>
+<li><code>private_get_spot_v3_private_my_trades(request)</code></li>
+<li><code>private_get_spot_v3_private_account(request)</code></li>
+<li><code>private_get_spot_v3_private_reference(request)</code></li>
+<li><code>private_get_spot_v3_private_record(request)</code></li>
+<li><code>private_get_spot_v3_private_cross_margin_orders(request)</code></li>
+<li><code>private_get_spot_v3_private_cross_margin_account(request)</code></li>
+<li><code>private_get_spot_v3_private_cross_margin_loan_info(request)</code></li>
+<li><code>private_get_spot_v3_private_cross_margin_repay_history(request)</code></li>
+<li><code>private_get_spot_v3_private_margin_loan_infos(request)</code></li>
+<li><code>private_get_spot_v3_private_margin_repaid_infos(request)</code></li>
+<li><code>private_get_spot_v3_private_margin_ltv(request)</code></li>
+<li><code>private_get_asset_v3_private_transfer_inter_transfer_list_query(request)</code></li>
+<li><code>private_get_asset_v3_private_transfer_sub_member_list_query(request)</code></li>
+<li><code>private_get_asset_v3_private_transfer_sub_member_transfer_list_query(request)</code></li>
+<li><code>private_get_asset_v3_private_transfer_universal_transfer_list_query(request)</code></li>
+<li><code>private_get_asset_v3_private_coin_info_query(request)</code></li>
+<li><code>private_get_asset_v3_private_deposit_address_query(request)</code></li>
+<li><code>private_get_contract_v3_private_copytrading_order_list(request)</code></li>
+<li><code>private_get_contract_v3_private_copytrading_position_list(request)</code></li>
+<li><code>private_get_contract_v3_private_copytrading_wallet_balance(request)</code></li>
+<li><code>private_get_contract_v3_private_position_limit_info(request)</code></li>
+<li><code>private_get_contract_v3_private_order_unfilled_orders(request)</code></li>
+<li><code>private_get_contract_v3_private_order_list(request)</code></li>
+<li><code>private_get_contract_v3_private_position_list(request)</code></li>
+<li><code>private_get_contract_v3_private_execution_list(request)</code></li>
+<li><code>private_get_contract_v3_private_position_closed_pnl(request)</code></li>
+<li><code>private_get_contract_v3_private_account_wallet_balance(request)</code></li>
+<li><code>private_get_contract_v3_private_account_fee_rate(request)</code></li>
+<li><code>private_get_contract_v3_private_account_wallet_fund_records(request)</code></li>
+<li><code>private_get_unified_v3_private_order_unfilled_orders(request)</code></li>
+<li><code>private_get_unified_v3_private_order_list(request)</code></li>
+<li><code>private_get_unified_v3_private_position_list(request)</code></li>
+<li><code>private_get_unified_v3_private_execution_list(request)</code></li>
+<li><code>private_get_unified_v3_private_delivery_record(request)</code></li>
+<li><code>private_get_unified_v3_private_settlement_record(request)</code></li>
+<li><code>private_get_unified_v3_private_account_wallet_balance(request)</code></li>
+<li><code>private_get_unified_v3_private_account_transaction_log(request)</code></li>
+<li><code>private_get_unified_v3_private_account_borrow_history(request)</code></li>
+<li><code>private_get_unified_v3_private_account_borrow_rate(request)</code></li>
+<li><code>private_get_unified_v3_private_account_info(request)</code></li>
+<li><code>private_get_user_v3_private_frozen_sub_member(request)</code></li>
+<li><code>private_get_user_v3_private_query_sub_members(request)</code></li>
+<li><code>private_get_user_v3_private_query_api(request)</code></li>
+<li><code>private_get_user_v3_private_get_member_type(request)</code></li>
+<li><code>private_get_asset_v3_private_transfer_transfer_coin_list_query(request)</code></li>
+<li><code>private_get_asset_v3_private_transfer_account_coin_balance_query(request)</code></li>
+<li><code>private_get_asset_v3_private_transfer_account_coins_balance_query(request)</code></li>
+<li><code>private_get_asset_v3_private_transfer_asset_info_query(request)</code></li>
+<li><code>private_get_asset_v3_public_deposit_allowed_deposit_list_query(request)</code></li>
+<li><code>private_get_asset_v3_private_deposit_record_query(request)</code></li>
+<li><code>private_get_asset_v3_private_withdraw_record_query(request)</code></li>
+<li><code>private_get_v5_order_realtime(request)</code></li>
+<li><code>private_get_v5_order_history(request)</code></li>
+<li><code>private_get_v5_order_spot_borrow_check(request)</code></li>
+<li><code>private_get_v5_position_list(request)</code></li>
+<li><code>private_get_v5_execution_list(request)</code></li>
+<li><code>private_get_v5_position_closed_pnl(request)</code></li>
+<li><code>private_get_v5_position_move_history(request)</code></li>
+<li><code>private_get_v5_pre_upgrade_order_history(request)</code></li>
+<li><code>private_get_v5_pre_upgrade_execution_list(request)</code></li>
+<li><code>private_get_v5_pre_upgrade_position_closed_pnl(request)</code></li>
+<li><code>private_get_v5_pre_upgrade_account_transaction_log(request)</code></li>
+<li><code>private_get_v5_pre_upgrade_asset_delivery_record(request)</code></li>
+<li><code>private_get_v5_pre_upgrade_asset_settlement_record(request)</code></li>
+<li><code>private_get_v5_account_wallet_balance(request)</code></li>
+<li><code>private_get_v5_account_borrow_history(request)</code></li>
+<li><code>private_get_v5_account_instruments_info(request)</code></li>
+<li><code>private_get_v5_account_collateral_info(request)</code></li>
+<li><code>private_get_v5_asset_coin_greeks(request)</code></li>
+<li><code>private_get_v5_account_fee_rate(request)</code></li>
+<li><code>private_get_v5_account_info(request)</code></li>
+<li><code>private_get_v5_account_transaction_log(request)</code></li>
+<li><code>private_get_v5_account_contract_transaction_log(request)</code></li>
+<li><code>private_get_v5_account_smp_group(request)</code></li>
+<li><code>private_get_v5_account_mmp_state(request)</code></li>
+<li><code>private_get_v5_account_withdrawal(request)</code></li>
+<li><code>private_get_v5_asset_exchange_query_coin_list(request)</code></li>
+<li><code>private_get_v5_asset_exchange_convert_result_query(request)</code></li>
+<li><code>private_get_v5_asset_exchange_query_convert_history(request)</code></li>
+<li><code>private_get_v5_asset_exchange_order_record(request)</code></li>
+<li><code>private_get_v5_asset_delivery_record(request)</code></li>
+<li><code>private_get_v5_asset_settlement_record(request)</code></li>
+<li><code>private_get_v5_asset_transfer_query_asset_info(request)</code></li>
+<li><code>private_get_v5_asset_transfer_query_account_coins_balance(request)</code></li>
+<li><code>private_get_v5_asset_transfer_query_account_coin_balance(request)</code></li>
+<li><code>private_get_v5_asset_transfer_query_transfer_coin_list(request)</code></li>
+<li><code>private_get_v5_asset_transfer_query_inter_transfer_list(request)</code></li>
+<li><code>private_get_v5_asset_transfer_query_sub_member_list(request)</code></li>
+<li><code>private_get_v5_asset_transfer_query_universal_transfer_list(request)</code></li>
+<li><code>private_get_v5_asset_deposit_query_allowed_list(request)</code></li>
+<li><code>private_get_v5_asset_deposit_query_record(request)</code></li>
+<li><code>private_get_v5_asset_deposit_query_sub_member_record(request)</code></li>
+<li><code>private_get_v5_asset_deposit_query_internal_record(request)</code></li>
+<li><code>private_get_v5_asset_deposit_query_address(request)</code></li>
+<li><code>private_get_v5_asset_deposit_query_sub_member_address(request)</code></li>
+<li><code>private_get_v5_asset_coin_query_info(request)</code></li>
+<li><code>private_get_v5_asset_withdraw_query_address(request)</code></li>
+<li><code>private_get_v5_asset_withdraw_query_record(request)</code></li>
+<li><code>private_get_v5_asset_withdraw_withdrawable_amount(request)</code></li>
+<li><code>private_get_v5_asset_withdraw_vasp_list(request)</code></li>
+<li><code>private_get_v5_asset_convert_small_balance_list(request)</code></li>
+<li><code>private_get_v5_asset_convert_small_balance_history(request)</code></li>
+<li><code>private_get_v5_fiat_query_coin_list(request)</code></li>
+<li><code>private_get_v5_fiat_reference_price(request)</code></li>
+<li><code>private_get_v5_fiat_trade_query(request)</code></li>
+<li><code>private_get_v5_fiat_query_trade_history(request)</code></li>
+<li><code>private_get_v5_fiat_balance_query(request)</code></li>
+<li><code>private_get_v5_user_query_sub_members(request)</code></li>
+<li><code>private_get_v5_user_query_api(request)</code></li>
+<li><code>private_get_v5_user_sub_apikeys(request)</code></li>
+<li><code>private_get_v5_user_get_member_type(request)</code></li>
+<li><code>private_get_v5_user_aff_customer_info(request)</code></li>
+<li><code>private_get_v5_user_del_submember(request)</code></li>
+<li><code>private_get_v5_user_submembers(request)</code></li>
+<li><code>private_get_v5_affiliate_aff_user_list(request)</code></li>
+<li><code>private_get_v5_spot_lever_token_order_record(request)</code></li>
+<li><code>private_get_v5_spot_margin_trade_interest_rate_history(request)</code></li>
+<li><code>private_get_v5_spot_margin_trade_state(request)</code></li>
+<li><code>private_get_v5_spot_margin_trade_max_borrowable(request)</code></li>
+<li><code>private_get_v5_spot_margin_trade_position_tiers(request)</code></li>
+<li><code>private_get_v5_spot_margin_trade_coinstate(request)</code></li>
+<li><code>private_get_v5_spot_margin_trade_repayment_available_amount(request)</code></li>
+<li><code>private_get_v5_spot_margin_trade_get_auto_repay_mode(request)</code></li>
+<li><code>private_get_v5_spot_cross_margin_trade_loan_info(request)</code></li>
+<li><code>private_get_v5_spot_cross_margin_trade_account(request)</code></li>
+<li><code>private_get_v5_spot_cross_margin_trade_orders(request)</code></li>
+<li><code>private_get_v5_spot_cross_margin_trade_repay_history(request)</code></li>
+<li><code>private_get_v5_crypto_loan_borrowable_collateralisable_number(request)</code></li>
+<li><code>private_get_v5_crypto_loan_ongoing_orders(request)</code></li>
+<li><code>private_get_v5_crypto_loan_repayment_history(request)</code></li>
+<li><code>private_get_v5_crypto_loan_borrow_history(request)</code></li>
+<li><code>private_get_v5_crypto_loan_max_collateral_amount(request)</code></li>
+<li><code>private_get_v5_crypto_loan_adjustment_history(request)</code></li>
+<li><code>private_get_v5_crypto_loan_common_max_collateral_amount(request)</code></li>
+<li><code>private_get_v5_crypto_loan_common_adjustment_history(request)</code></li>
+<li><code>private_get_v5_crypto_loan_common_position(request)</code></li>
+<li><code>private_get_v5_crypto_loan_flexible_ongoing_coin(request)</code></li>
+<li><code>private_get_v5_crypto_loan_flexible_borrow_history(request)</code></li>
+<li><code>private_get_v5_crypto_loan_flexible_repayment_history(request)</code></li>
+<li><code>private_get_v5_crypto_loan_fixed_borrow_contract_info(request)</code></li>
+<li><code>private_get_v5_crypto_loan_fixed_supply_contract_info(request)</code></li>
+<li><code>private_get_v5_crypto_loan_fixed_borrow_order_info(request)</code></li>
+<li><code>private_get_v5_crypto_loan_fixed_renew_info(request)</code></li>
+<li><code>private_get_v5_crypto_loan_fixed_supply_order_info(request)</code></li>
+<li><code>private_get_v5_crypto_loan_fixed_repayment_history(request)</code></li>
+<li><code>private_get_v5_ins_loan_product_infos(request)</code></li>
+<li><code>private_get_v5_ins_loan_ensure_tokens_convert(request)</code></li>
+<li><code>private_get_v5_ins_loan_loan_order(request)</code></li>
+<li><code>private_get_v5_ins_loan_repaid_history(request)</code></li>
+<li><code>private_get_v5_ins_loan_ltv_convert(request)</code></li>
+<li><code>private_get_v5_lending_info(request)</code></li>
+<li><code>private_get_v5_lending_history_order(request)</code></li>
+<li><code>private_get_v5_lending_account(request)</code></li>
+<li><code>private_get_v5_broker_earning_record(request)</code></li>
+<li><code>private_get_v5_broker_earnings_info(request)</code></li>
+<li><code>private_get_v5_broker_account_info(request)</code></li>
+<li><code>private_get_v5_broker_asset_query_sub_member_deposit_record(request)</code></li>
+<li><code>private_get_v5_earn_product(request)</code></li>
+<li><code>private_get_v5_earn_order(request)</code></li>
+<li><code>private_get_v5_earn_position(request)</code></li>
+<li><code>private_get_v5_earn_yield(request)</code></li>
+<li><code>private_get_v5_earn_hourly_yield(request)</code></li>
+<li><code>private_post_spot_v3_private_order(request)</code></li>
+<li><code>private_post_spot_v3_private_cancel_order(request)</code></li>
+<li><code>private_post_spot_v3_private_cancel_orders(request)</code></li>
+<li><code>private_post_spot_v3_private_cancel_orders_by_ids(request)</code></li>
+<li><code>private_post_spot_v3_private_purchase(request)</code></li>
+<li><code>private_post_spot_v3_private_redeem(request)</code></li>
+<li><code>private_post_spot_v3_private_cross_margin_loan(request)</code></li>
+<li><code>private_post_spot_v3_private_cross_margin_repay(request)</code></li>
+<li><code>private_post_asset_v3_private_transfer_inter_transfer(request)</code></li>
+<li><code>private_post_asset_v3_private_withdraw_create(request)</code></li>
+<li><code>private_post_asset_v3_private_withdraw_cancel(request)</code></li>
+<li><code>private_post_asset_v3_private_transfer_sub_member_transfer(request)</code></li>
+<li><code>private_post_asset_v3_private_transfer_transfer_sub_member_save(request)</code></li>
+<li><code>private_post_asset_v3_private_transfer_universal_transfer(request)</code></li>
+<li><code>private_post_user_v3_private_create_sub_member(request)</code></li>
+<li><code>private_post_user_v3_private_create_sub_api(request)</code></li>
+<li><code>private_post_user_v3_private_update_api(request)</code></li>
+<li><code>private_post_user_v3_private_delete_api(request)</code></li>
+<li><code>private_post_user_v3_private_update_sub_api(request)</code></li>
+<li><code>private_post_user_v3_private_delete_sub_api(request)</code></li>
+<li><code>private_post_contract_v3_private_copytrading_order_create(request)</code></li>
+<li><code>private_post_contract_v3_private_copytrading_order_cancel(request)</code></li>
+<li><code>private_post_contract_v3_private_copytrading_order_close(request)</code></li>
+<li><code>private_post_contract_v3_private_copytrading_position_close(request)</code></li>
+<li><code>private_post_contract_v3_private_copytrading_position_set_leverage(request)</code></li>
+<li><code>private_post_contract_v3_private_copytrading_wallet_transfer(request)</code></li>
+<li><code>private_post_contract_v3_private_copytrading_order_trading_stop(request)</code></li>
+<li><code>private_post_contract_v3_private_order_create(request)</code></li>
+<li><code>private_post_contract_v3_private_order_cancel(request)</code></li>
+<li><code>private_post_contract_v3_private_order_cancel_all(request)</code></li>
+<li><code>private_post_contract_v3_private_order_replace(request)</code></li>
+<li><code>private_post_contract_v3_private_position_set_auto_add_margin(request)</code></li>
+<li><code>private_post_contract_v3_private_position_switch_isolated(request)</code></li>
+<li><code>private_post_contract_v3_private_position_switch_mode(request)</code></li>
+<li><code>private_post_contract_v3_private_position_switch_tpsl_mode(request)</code></li>
+<li><code>private_post_contract_v3_private_position_set_leverage(request)</code></li>
+<li><code>private_post_contract_v3_private_position_trading_stop(request)</code></li>
+<li><code>private_post_contract_v3_private_position_set_risk_limit(request)</code></li>
+<li><code>private_post_contract_v3_private_account_setmarginmode(request)</code></li>
+<li><code>private_post_unified_v3_private_order_create(request)</code></li>
+<li><code>private_post_unified_v3_private_order_replace(request)</code></li>
+<li><code>private_post_unified_v3_private_order_cancel(request)</code></li>
+<li><code>private_post_unified_v3_private_order_create_batch(request)</code></li>
+<li><code>private_post_unified_v3_private_order_replace_batch(request)</code></li>
+<li><code>private_post_unified_v3_private_order_cancel_batch(request)</code></li>
+<li><code>private_post_unified_v3_private_order_cancel_all(request)</code></li>
+<li><code>private_post_unified_v3_private_position_set_leverage(request)</code></li>
+<li><code>private_post_unified_v3_private_position_tpsl_switch_mode(request)</code></li>
+<li><code>private_post_unified_v3_private_position_set_risk_limit(request)</code></li>
+<li><code>private_post_unified_v3_private_position_trading_stop(request)</code></li>
+<li><code>private_post_unified_v3_private_account_upgrade_unified_account(request)</code></li>
+<li><code>private_post_unified_v3_private_account_setmarginmode(request)</code></li>
+<li><code>private_post_fht_compliance_tax_v3_private_registertime(request)</code></li>
+<li><code>private_post_fht_compliance_tax_v3_private_create(request)</code></li>
+<li><code>private_post_fht_compliance_tax_v3_private_status(request)</code></li>
+<li><code>private_post_fht_compliance_tax_v3_private_url(request)</code></li>
+<li><code>private_post_v5_order_create(request)</code></li>
+<li><code>private_post_v5_order_amend(request)</code></li>
+<li><code>private_post_v5_order_cancel(request)</code></li>
+<li><code>private_post_v5_order_cancel_all(request)</code></li>
+<li><code>private_post_v5_order_create_batch(request)</code></li>
+<li><code>private_post_v5_order_amend_batch(request)</code></li>
+<li><code>private_post_v5_order_cancel_batch(request)</code></li>
+<li><code>private_post_v5_order_disconnected_cancel_all(request)</code></li>
+<li><code>private_post_v5_position_set_leverage(request)</code></li>
+<li><code>private_post_v5_position_switch_isolated(request)</code></li>
+<li><code>private_post_v5_position_set_tpsl_mode(request)</code></li>
+<li><code>private_post_v5_position_switch_mode(request)</code></li>
+<li><code>private_post_v5_position_set_risk_limit(request)</code></li>
+<li><code>private_post_v5_position_trading_stop(request)</code></li>
+<li><code>private_post_v5_position_set_auto_add_margin(request)</code></li>
+<li><code>private_post_v5_position_add_margin(request)</code></li>
+<li><code>private_post_v5_position_move_positions(request)</code></li>
+<li><code>private_post_v5_position_confirm_pending_mmr(request)</code></li>
+<li><code>private_post_v5_account_upgrade_to_uta(request)</code></li>
+<li><code>private_post_v5_account_quick_repayment(request)</code></li>
+<li><code>private_post_v5_account_set_margin_mode(request)</code></li>
+<li><code>private_post_v5_account_set_hedging_mode(request)</code></li>
+<li><code>private_post_v5_account_mmp_modify(request)</code></li>
+<li><code>private_post_v5_account_mmp_reset(request)</code></li>
+<li><code>private_post_v5_account_borrow(request)</code></li>
+<li><code>private_post_v5_account_repay(request)</code></li>
+<li><code>private_post_v5_account_no_convert_repay(request)</code></li>
+<li><code>private_post_v5_account_set_limit_px_action(request)</code></li>
+<li><code>private_post_v5_asset_exchange_quote_apply(request)</code></li>
+<li><code>private_post_v5_asset_exchange_convert_execute(request)</code></li>
+<li><code>private_post_v5_asset_transfer_inter_transfer(request)</code></li>
+<li><code>private_post_v5_asset_transfer_save_transfer_sub_member(request)</code></li>
+<li><code>private_post_v5_asset_transfer_universal_transfer(request)</code></li>
+<li><code>private_post_v5_asset_deposit_deposit_to_account(request)</code></li>
+<li><code>private_post_v5_asset_withdraw_create(request)</code></li>
+<li><code>private_post_v5_asset_withdraw_cancel(request)</code></li>
+<li><code>private_post_v5_asset_covert_get_quote(request)</code></li>
+<li><code>private_post_v5_asset_covert_small_balance_execute(request)</code></li>
+<li><code>private_post_v5_fiat_quote_apply(request)</code></li>
+<li><code>private_post_v5_fiat_trade_execute(request)</code></li>
+<li><code>private_post_v5_user_create_sub_member(request)</code></li>
+<li><code>private_post_v5_user_create_sub_api(request)</code></li>
+<li><code>private_post_v5_user_frozen_sub_member(request)</code></li>
+<li><code>private_post_v5_user_update_api(request)</code></li>
+<li><code>private_post_v5_user_update_sub_api(request)</code></li>
+<li><code>private_post_v5_user_delete_api(request)</code></li>
+<li><code>private_post_v5_user_delete_sub_api(request)</code></li>
+<li><code>private_post_v5_spot_lever_token_purchase(request)</code></li>
+<li><code>private_post_v5_spot_lever_token_redeem(request)</code></li>
+<li><code>private_post_v5_spot_margin_trade_switch_mode(request)</code></li>
+<li><code>private_post_v5_spot_margin_trade_set_leverage(request)</code></li>
+<li><code>private_post_v5_spot_margin_trade_set_auto_repay_mode(request)</code></li>
+<li><code>private_post_v5_spot_cross_margin_trade_loan(request)</code></li>
+<li><code>private_post_v5_spot_cross_margin_trade_repay(request)</code></li>
+<li><code>private_post_v5_spot_cross_margin_trade_switch(request)</code></li>
+<li><code>private_post_v5_crypto_loan_borrow(request)</code></li>
+<li><code>private_post_v5_crypto_loan_repay(request)</code></li>
+<li><code>private_post_v5_crypto_loan_adjust_ltv(request)</code></li>
+<li><code>private_post_v5_crypto_loan_common_adjust_ltv(request)</code></li>
+<li><code>private_post_v5_crypto_loan_common_max_loan(request)</code></li>
+<li><code>private_post_v5_crypto_loan_flexible_borrow(request)</code></li>
+<li><code>private_post_v5_crypto_loan_flexible_repay(request)</code></li>
+<li><code>private_post_v5_crypto_loan_flexible_repay_collateral(request)</code></li>
+<li><code>private_post_v5_crypto_loan_fixed_borrow(request)</code></li>
+<li><code>private_post_v5_crypto_loan_fixed_renew(request)</code></li>
+<li><code>private_post_v5_crypto_loan_fixed_supply(request)</code></li>
+<li><code>private_post_v5_crypto_loan_fixed_borrow_order_cancel(request)</code></li>
+<li><code>private_post_v5_crypto_loan_fixed_supply_order_cancel(request)</code></li>
+<li><code>private_post_v5_crypto_loan_fixed_fully_repay(request)</code></li>
+<li><code>private_post_v5_crypto_loan_fixed_repay_collateral(request)</code></li>
+<li><code>private_post_v5_ins_loan_association_uid(request)</code></li>
+<li><code>private_post_v5_ins_loan_repay_loan(request)</code></li>
+<li><code>private_post_v5_lending_purchase(request)</code></li>
+<li><code>private_post_v5_lending_redeem(request)</code></li>
+<li><code>private_post_v5_lending_redeem_cancel(request)</code></li>
+<li><code>private_post_v5_account_set_collateral_switch(request)</code></li>
+<li><code>private_post_v5_account_set_collateral_switch_batch(request)</code></li>
+<li><code>private_post_v5_account_demo_apply_money(request)</code></li>
+<li><code>private_post_v5_broker_award_info(request)</code></li>
+<li><code>private_post_v5_broker_award_distribute_award(request)</code></li>
+<li><code>private_post_v5_broker_award_distribution_record(request)</code></li>
+<li><code>private_post_v5_earn_place_order(request)</code></li>
+</ul>
+<h3>WS Unified</h3>
+<ul>
+<li><code>describe(self)</code></li>
+<li><code>get_url_by_market_type(self, symbol: Str = None, isPrivate=False, method: Str = None, params={})</code></li>
+<li><code>clean_params(self, params)</code></li>
+<li><code>create_order_ws(self, symbol: str, type: OrderType, side: OrderSide, amount: float, price: Num = None, params={})</code></li>
+<li><code>edit_order_ws(self, id: str, symbol: str, type: OrderType, side: OrderSide, amount: Num = None, price: Num = None, params={})</code></li>
+<li><code>cancel_order_ws(self, id: str, symbol: Str = None, params={})</code></li>
+<li><code>watch_ticker(self, symbol: str, params={})</code></li>
+<li><code>watch_tickers(self, symbols: Strings = None, params={})</code></li>
+<li><code>un_watch_tickers(self, symbols: Strings = None, params={})</code></li>
+<li><code>un_watch_ticker(self, symbol: str, params={})</code></li>
+<li><code>watch_bids_asks(self, symbols: Strings = None, params={})</code></li>
+<li><code>watch_ohlcv(self, symbol: str, timeframe: str = '1m', since: Int = None, limit: Int = None, params={})</code></li>
+<li><code>watch_ohlcv_for_symbols(self, symbolsAndTimeframes: List[List[str]], since: Int = None, limit: Int = None, params={})</code></li>
+<li><code>un_watch_ohlcv_for_symbols(self, symbolsAndTimeframes: List[List[str]], params={})</code></li>
+<li><code>un_watch_ohlcv(self, symbol: str, timeframe: str = '1m', params={})</code></li>
+<li><code>watch_order_book(self, symbol: str, limit: Int = None, params={})</code></li>
+<li><code>watch_order_book_for_symbols(self, symbols: List[str], limit: Int = None, params={})</code></li>
+<li><code>un_watch_order_book_for_symbols(self, symbols: List[str], params={})</code></li>
+<li><code>un_watch_order_book(self, symbol: str, params={})</code></li>
+<li><code>watch_trades(self, symbol: str, since: Int = None, limit: Int = None, params={})</code></li>
+<li><code>watch_trades_for_symbols(self, symbols: List[str], since: Int = None, limit: Int = None, params={})</code></li>
+<li><code>un_watch_trades_for_symbols(self, symbols: List[str], params={})</code></li>
+<li><code>un_watch_trades(self, symbol: str, params={})</code></li>
+<li><code>get_private_type(self, url)</code></li>
+<li><code>watch_my_trades(self, symbol: Str = None, since: Int = None, limit: Int = None, params={})</code></li>
+<li><code>un_watch_my_trades(self, symbol: Str = None, params={})</code></li>
+<li><code>watch_positions(self, symbols: Strings = None, since: Int = None, limit: Int = None, params={})</code></li>
+<li><code>set_positions_cache(self, client: Client, symbols: Strings = None)</code></li>
+<li><code>load_positions_snapshot(self, client, messageHash)</code></li>
+<li><code>un_watch_positions(self, symbols: Strings = None, params={})</code></li>
+<li><code>watch_liquidations(self, symbol: str, since: Int = None, limit: Int = None, params={})</code></li>
+<li><code>watch_orders(self, symbol: Str = None, since: Int = None, limit: Int = None, params={})</code></li>
+<li><code>un_watch_orders(self, symbol: Str = None, params={})</code></li>
+<li><code>watch_balance(self, params={})</code></li>
+<li><code>watch_topics(self, url, messageHashes, topics, params={})</code></li>
+<li><code>un_watch_topics(self, url: str, topic: str, symbols: Strings, messageHashes: List[str], subMessageHashes: List[str], topics, params={}, subExtension={})</code></li>
+<li><code>authenticate(self, url, params={})</code></li>
+</ul>
+<h2>Contribution</h2>
+<ul>
+<li>Give us a star :star:</li>
+<li>Fork and Clone! Awesome</li>
+<li>Select existing issues or create a new issue.</li>
+</ul>
+</div>
+  </div>
+  <div id="data"
+       data-project-tabs-target="content"
+       class="vertical-tabs__content"
+       role="tabpanel"
+       aria-labelledby="mobile-data-tab"
+       tabindex="-1">
+    <h2 class="page-title">Project details</h2>
+<div class="sidebar-section verified">
+  <h3 class="sidebar-section__title">
+Verified details    <i class="fa fa-circle-check check"
+       title="Verified by PyPI on 2026-03-06"></i>
+  </h3>
+  <small><i>These details have been <a href="https://docs.pypi.org/project_metadata/#verified-details">verified by PyPI</a></i></small>
+    <h6>Maintainers</h6>
+      <span class="sidebar-section__maintainer">
+        <a href="/user/carlosmiei/"
+           aria-label="">
+          <span class="sidebar-section__user-gravatar">
+            <img src="https://pypi-camo.freetls.fastly.net/ad168d58dcef736cd5749ad024af4c300eded21e/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f61643736363239663439656234633262393838316261326561663135306332333f73697a653d3530"
+                 height="50"
+                 width="50"
+                 alt="Avatar for carlosmiei from gravatar.com"
+                 title="Avatar for carlosmiei from gravatar.com">
+          </span>
+          <span class="sidebar-section__user-gravatar-text">carlosmiei</span>
+        </a>
+      </span>
+      <span class="sidebar-section__maintainer">
+        <a href="/user/ttodua/"
+           aria-label="">
+          <span class="sidebar-section__user-gravatar">
+            <img src="https://pypi-camo.freetls.fastly.net/03fb58770b45aeb51e27995d34a80d1e4f6f063d/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f61616166333864633038663861626166626139373836616261343962613631643f73697a653d3530"
+                 height="50"
+                 width="50"
+                 alt="Avatar for ttodua from gravatar.com"
+                 title="Avatar for ttodua from gravatar.com">
+          </span>
+          <span class="sidebar-section__user-gravatar-text">ttodua</span>
+        </a>
+      </span>
+      <span class="sidebar-section__maintainer">
+        <a href="/user/x84/"
+           aria-label="">
+          <span class="sidebar-section__user-gravatar">
+            <img src="https://pypi-camo.freetls.fastly.net/3aad1e6d82e5081d241e9b0c46ed99b46880e180/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f66373561353432613865653437396337663530383065623532333562666266303f73697a653d3530"
+                 height="50"
+                 width="50"
+                 alt="Avatar for x84 from gravatar.com"
+                 title="Avatar for x84 from gravatar.com">
+          </span>
+          <span class="sidebar-section__user-gravatar-text">x84</span>
+        </a>
+      </span>
+</div>
+<div class="sidebar-section unverified">
+  <h3 class="sidebar-section__title">Unverified details</h3>
+  <small><i>These details have <b>not</b> been verified by PyPI</i></small>
+    <h6>Project links</h6>
+    <ul class="vertical-tabs__list">
+          <li>
+            <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed"
+               href="https://github.com/ccxt/ccxt"
+               rel="nofollow">  <i class="fas fa-home" aria-hidden="true"></i>Homepage</a>
+          </li>
+          <li>
+            <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed"
+               href="https://github.com/ccxt/ccxt"
+               rel="nofollow">  <i class="fas fa-bug" aria-hidden="true"></i>Issues</a>
+          </li>
+    </ul>
+    <div class="sidebar-section unverified">
+      <h6>Meta</h6>
+      <ul>
+          <li>
+            <span>
+              <strong>License:</strong> MIT License (MIT)
+            </span>
+          </li>
+          <li>
+            <span>
+              <strong>Author:</strong> <a href="mailto:info@ccxt.trade">CCXT</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <strong>Requires:</strong> Python &gt;=3.8
+            </span>
+          </li>
+      </ul>
+    </div>
+    <div class="sidebar-section unverified">
+      <h6 class="sidebar-section__title">Classifiers</h6>
+      <ul class="sidebar-section__classifiers">
+          <li>
+            <strong>Intended Audience</strong>
+            <ul>
+                <li>
+                  <a href="/search/?c=Intended+Audience+%3A%3A+Developers">
+                    Developers
+                  </a>
+                </li>
+                <li>
+                  <a href="/search/?c=Intended+Audience+%3A%3A+Financial+and+Insurance+Industry">
+                    Financial and Insurance Industry
+                  </a>
+                </li>
+                <li>
+                  <a href="/search/?c=Intended+Audience+%3A%3A+Information+Technology">
+                    Information Technology
+                  </a>
+                </li>
+            </ul>
+          </li>
+          <li>
+            <strong>License</strong>
+            <ul>
+                <li>
+                  <a href="/search/?c=License+%3A%3A+OSI+Approved+%3A%3A+MIT+License">
+                    OSI Approved :: MIT License
+                  </a>
+                </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Operating System</strong>
+            <ul>
+                <li>
+                  <a href="/search/?c=Operating+System+%3A%3A+OS+Independent">
+                    OS Independent
+                  </a>
+                </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Programming Language</strong>
+            <ul>
+                <li>
+                  <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3">
+                    Python :: 3
+                  </a>
+                </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Topic</strong>
+            <ul>
+                <li>
+                  <a href="/search/?c=Topic+%3A%3A+Office%2FBusiness+%3A%3A+Financial+%3A%3A+Investment">
+                    Office/Business :: Financial :: Investment
+                  </a>
+                </li>
+                <li>
+                  <a href="/search/?c=Topic+%3A%3A+Software+Development+%3A%3A+Build+Tools">
+                    Software Development :: Build Tools
+                  </a>
+                </li>
+            </ul>
+          </li>
+      </ul>
+    </div>
+</div>    <br>
+  </div>
+  <div id="history"
+       data-project-tabs-target="content"
+       class="vertical-tabs__content"
+       role="tabpanel"
+       aria-labelledby="history-tab mobile-history-tab"
+       tabindex="-1">
+    <h2 class="page-title split-layout">
+      <span>Release history</span>
+      <span class="reset-text margin-top">
+        <a href="/help/#project-release-notifications">Release notifications</a> |
+        <a href="/rss/project/bybit-api/releases.xml">RSS feed <i class="fa fa-rss" aria-hidden="true"></i></a>
+      </span>
+    </h2>
+    <div class="release-timeline">
+        <div class="release release--latest release--current">
+          <div class="release__meta">
+              <span class="badge">This version</span>
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/blue-cube.572a5bfb.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.127/">
+            <p class="release__version">
+              0.0.127
+            </p>
+            <p class="release__version-date"><time datetime="2026-03-06T06:02:07+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Mar 6, 2026
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.126/">
+            <p class="release__version">
+              0.0.126
+            </p>
+            <p class="release__version-date"><time datetime="2026-03-05T09:28:56+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Mar 5, 2026
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.125/">
+            <p class="release__version">
+              0.0.125
+            </p>
+            <p class="release__version-date"><time datetime="2026-02-23T11:28:37+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Feb 23, 2026
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.124/">
+            <p class="release__version">
+              0.0.124
+            </p>
+            <p class="release__version-date"><time datetime="2026-02-19T10:13:41+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Feb 19, 2026
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.123/">
+            <p class="release__version">
+              0.0.123
+            </p>
+            <p class="release__version-date"><time datetime="2026-02-13T14:14:35+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Feb 13, 2026
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.122/">
+            <p class="release__version">
+              0.0.122
+            </p>
+            <p class="release__version-date"><time datetime="2026-02-09T21:21:08+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Feb 9, 2026
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.121/">
+            <p class="release__version">
+              0.0.121
+            </p>
+            <p class="release__version-date"><time datetime="2026-02-03T17:09:49+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Feb 3, 2026
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.120/">
+            <p class="release__version">
+              0.0.120
+            </p>
+            <p class="release__version-date"><time datetime="2026-01-29T14:04:09+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Jan 29, 2026
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.119/">
+            <p class="release__version">
+              0.0.119
+            </p>
+            <p class="release__version-date"><time datetime="2026-01-20T10:53:55+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Jan 20, 2026
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.118/">
+            <p class="release__version">
+              0.0.118
+            </p>
+            <p class="release__version-date"><time datetime="2026-01-14T17:07:33+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Jan 14, 2026
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.117/">
+            <p class="release__version">
+              0.0.117
+            </p>
+            <p class="release__version-date"><time datetime="2026-01-08T16:56:41+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Jan 8, 2026
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.116/">
+            <p class="release__version">
+              0.0.116
+            </p>
+            <p class="release__version-date"><time datetime="2026-01-06T17:22:28+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Jan 6, 2026
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.115/">
+            <p class="release__version">
+              0.0.115
+            </p>
+            <p class="release__version-date"><time datetime="2025-12-29T14:22:25+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Dec 29, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.114/">
+            <p class="release__version">
+              0.0.114
+            </p>
+            <p class="release__version-date"><time datetime="2025-12-22T19:21:09+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Dec 22, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.113/">
+            <p class="release__version">
+              0.0.113
+            </p>
+            <p class="release__version-date"><time datetime="2025-12-15T12:24:33+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Dec 15, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.112/">
+            <p class="release__version">
+              0.0.112
+            </p>
+            <p class="release__version-date"><time datetime="2025-12-12T13:26:17+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Dec 12, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.111/">
+            <p class="release__version">
+              0.0.111
+            </p>
+            <p class="release__version-date"><time datetime="2025-12-08T09:23:20+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Dec 8, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.110/">
+            <p class="release__version">
+              0.0.110
+            </p>
+            <p class="release__version-date"><time datetime="2025-12-07T19:20:53+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Dec 7, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.109/">
+            <p class="release__version">
+              0.0.109
+            </p>
+            <p class="release__version-date"><time datetime="2025-12-03T14:50:39+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Dec 3, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.108/">
+            <p class="release__version">
+              0.0.108
+            </p>
+            <p class="release__version-date"><time datetime="2025-12-02T23:47:14+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Dec 2, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.107/">
+            <p class="release__version">
+              0.0.107
+            </p>
+            <p class="release__version-date"><time datetime="2025-11-25T19:02:52+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Nov 25, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.106/">
+            <p class="release__version">
+              0.0.106
+            </p>
+            <p class="release__version-date"><time datetime="2025-11-24T15:36:49+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Nov 24, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.105/">
+            <p class="release__version">
+              0.0.105
+            </p>
+            <p class="release__version-date"><time datetime="2025-11-18T17:21:46+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Nov 18, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.104/">
+            <p class="release__version">
+              0.0.104
+            </p>
+            <p class="release__version-date"><time datetime="2025-11-14T17:34:49+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Nov 14, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.103/">
+            <p class="release__version">
+              0.0.103
+            </p>
+            <p class="release__version-date"><time datetime="2025-11-10T17:21:59+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Nov 10, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.102/">
+            <p class="release__version">
+              0.0.102
+            </p>
+            <p class="release__version-date"><time datetime="2025-11-06T19:02:22+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Nov 6, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.101/">
+            <p class="release__version">
+              0.0.101
+            </p>
+            <p class="release__version-date"><time datetime="2025-11-05T17:03:14+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Nov 5, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.100/">
+            <p class="release__version">
+              0.0.100
+            </p>
+            <p class="release__version-date"><time datetime="2025-11-03T18:23:07+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Nov 3, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.99/">
+            <p class="release__version">
+              0.0.99
+            </p>
+            <p class="release__version-date"><time datetime="2025-10-29T16:39:54+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Oct 29, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.98/">
+            <p class="release__version">
+              0.0.98
+            </p>
+            <p class="release__version-date"><time datetime="2025-10-29T07:47:04+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Oct 29, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.97/">
+            <p class="release__version">
+              0.0.97
+            </p>
+            <p class="release__version-date"><time datetime="2025-10-27T17:21:16+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Oct 27, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.96/">
+            <p class="release__version">
+              0.0.96
+            </p>
+            <p class="release__version-date"><time datetime="2025-10-22T09:03:12+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Oct 22, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.95/">
+            <p class="release__version">
+              0.0.95
+            </p>
+            <p class="release__version-date"><time datetime="2025-10-15T16:03:04+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Oct 15, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.94/">
+            <p class="release__version">
+              0.0.94
+            </p>
+            <p class="release__version-date"><time datetime="2025-10-11T18:02:44+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Oct 11, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.93/">
+            <p class="release__version">
+              0.0.93
+            </p>
+            <p class="release__version-date"><time datetime="2025-10-10T15:46:49+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Oct 10, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.92/">
+            <p class="release__version">
+              0.0.92
+            </p>
+            <p class="release__version-date"><time datetime="2025-10-07T15:35:22+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Oct 7, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.91/">
+            <p class="release__version">
+              0.0.91
+            </p>
+            <p class="release__version-date"><time datetime="2025-10-01T18:03:10+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Oct 1, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.90/">
+            <p class="release__version">
+              0.0.90
+            </p>
+            <p class="release__version-date"><time datetime="2025-09-26T15:33:50+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Sep 26, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.89/">
+            <p class="release__version">
+              0.0.89
+            </p>
+            <p class="release__version-date"><time datetime="2025-09-22T06:41:25+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Sep 22, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.88/">
+            <p class="release__version">
+              0.0.88
+            </p>
+            <p class="release__version-date"><time datetime="2025-09-22T06:23:23+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Sep 22, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.87/">
+            <p class="release__version">
+              0.0.87
+            </p>
+            <p class="release__version-date"><time datetime="2025-09-17T17:21:08+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Sep 17, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.86/">
+            <p class="release__version">
+              0.0.86
+            </p>
+            <p class="release__version-date"><time datetime="2025-09-11T17:02:09+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Sep 11, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.85/">
+            <p class="release__version">
+              0.0.85
+            </p>
+            <p class="release__version-date"><time datetime="2025-09-03T20:02:50+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Sep 3, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.84/">
+            <p class="release__version">
+              0.0.84
+            </p>
+            <p class="release__version-date"><time datetime="2025-08-25T16:50:18+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Aug 25, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.83/">
+            <p class="release__version">
+              0.0.83
+            </p>
+            <p class="release__version-date"><time datetime="2025-08-19T17:02:29+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Aug 19, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.82/">
+            <p class="release__version">
+              0.0.82
+            </p>
+            <p class="release__version-date"><time datetime="2025-08-13T18:02:47+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Aug 13, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.81/">
+            <p class="release__version">
+              0.0.81
+            </p>
+            <p class="release__version-date"><time datetime="2025-08-12T16:51:34+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Aug 12, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.80/">
+            <p class="release__version">
+              0.0.80
+            </p>
+            <p class="release__version-date"><time datetime="2025-08-06T17:04:50+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Aug 6, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.79/">
+            <p class="release__version">
+              0.0.79
+            </p>
+            <p class="release__version-date"><time datetime="2025-08-01T12:02:57+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Aug 1, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.78/">
+            <p class="release__version">
+              0.0.78
+            </p>
+            <p class="release__version-date"><time datetime="2025-07-30T15:49:46+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Jul 30, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.77/">
+            <p class="release__version">
+              0.0.77
+            </p>
+            <p class="release__version-date"><time datetime="2025-07-29T17:38:08+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Jul 29, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.76/">
+            <p class="release__version">
+              0.0.76
+            </p>
+            <p class="release__version-date"><time datetime="2025-07-29T17:22:19+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Jul 29, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.75/">
+            <p class="release__version">
+              0.0.75
+            </p>
+            <p class="release__version-date"><time datetime="2025-07-23T17:22:03+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Jul 23, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.74/">
+            <p class="release__version">
+              0.0.74
+            </p>
+            <p class="release__version-date"><time datetime="2025-07-17T21:21:34+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Jul 17, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.73/">
+            <p class="release__version">
+              0.0.73
+            </p>
+            <p class="release__version-date"><time datetime="2025-07-11T15:22:08+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Jul 11, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.72/">
+            <p class="release__version">
+              0.0.72
+            </p>
+            <p class="release__version-date"><time datetime="2025-07-09T17:21:34+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Jul 9, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.71/">
+            <p class="release__version">
+              0.0.71
+            </p>
+            <p class="release__version-date"><time datetime="2025-07-01T13:25:24+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Jul 1, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.70/">
+            <p class="release__version">
+              0.0.70
+            </p>
+            <p class="release__version-date"><time datetime="2025-06-24T18:22:41+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Jun 24, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.69/">
+            <p class="release__version">
+              0.0.69
+            </p>
+            <p class="release__version-date"><time datetime="2025-06-18T17:39:24+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Jun 18, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.68/">
+            <p class="release__version">
+              0.0.68
+            </p>
+            <p class="release__version-date"><time datetime="2025-06-04T12:02:47+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Jun 4, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.67/">
+            <p class="release__version">
+              0.0.67
+            </p>
+            <p class="release__version-date"><time datetime="2025-06-03T17:02:49+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Jun 3, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.66/">
+            <p class="release__version">
+              0.0.66
+            </p>
+            <p class="release__version-date"><time datetime="2025-05-30T13:24:03+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    May 30, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.65/">
+            <p class="release__version">
+              0.0.65
+            </p>
+            <p class="release__version-date"><time datetime="2025-05-26T07:52:42+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    May 26, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.64/">
+            <p class="release__version">
+              0.0.64
+            </p>
+            <p class="release__version-date"><time datetime="2025-05-26T07:40:25+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    May 26, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.63/">
+            <p class="release__version">
+              0.0.63
+            </p>
+            <p class="release__version-date"><time datetime="2025-05-22T18:02:42+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    May 22, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.62/">
+            <p class="release__version">
+              0.0.62
+            </p>
+            <p class="release__version-date"><time datetime="2025-05-22T17:02:30+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    May 22, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.61/">
+            <p class="release__version">
+              0.0.61
+            </p>
+            <p class="release__version-date"><time datetime="2025-05-20T08:02:39+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    May 20, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.60/">
+            <p class="release__version">
+              0.0.60
+            </p>
+            <p class="release__version-date"><time datetime="2025-05-20T07:46:59+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    May 20, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.59/">
+            <p class="release__version">
+              0.0.59
+            </p>
+            <p class="release__version-date"><time datetime="2025-05-20T04:37:12+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    May 20, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.58/">
+            <p class="release__version">
+              0.0.58
+            </p>
+            <p class="release__version-date"><time datetime="2025-05-20T04:22:19+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    May 20, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.57/">
+            <p class="release__version">
+              0.0.57
+            </p>
+            <p class="release__version-date"><time datetime="2025-05-20T03:33:03+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    May 20, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.56/">
+            <p class="release__version">
+              0.0.56
+            </p>
+            <p class="release__version-date"><time datetime="2025-05-20T03:08:27+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    May 20, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.55/">
+            <p class="release__version">
+              0.0.55
+            </p>
+            <p class="release__version-date"><time datetime="2025-05-19T23:33:28+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    May 19, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.54/">
+            <p class="release__version">
+              0.0.54
+            </p>
+            <p class="release__version-date"><time datetime="2025-05-19T23:21:39+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    May 19, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.53/">
+            <p class="release__version">
+              0.0.53
+            </p>
+            <p class="release__version-date"><time datetime="2025-05-19T22:02:26+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    May 19, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.52/">
+            <p class="release__version">
+              0.0.52
+            </p>
+            <p class="release__version-date"><time datetime="2025-05-19T21:46:41+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    May 19, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.51/">
+            <p class="release__version">
+              0.0.51
+            </p>
+            <p class="release__version-date"><time datetime="2025-05-19T10:22:01+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    May 19, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.50/">
+            <p class="release__version">
+              0.0.50
+            </p>
+            <p class="release__version-date"><time datetime="2025-05-19T10:02:35+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    May 19, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.49/">
+            <p class="release__version">
+              0.0.49
+            </p>
+            <p class="release__version-date"><time datetime="2025-05-19T07:21:51+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    May 19, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.48/">
+            <p class="release__version">
+              0.0.48
+            </p>
+            <p class="release__version-date"><time datetime="2025-05-19T06:51:52+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    May 19, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.47/">
+            <p class="release__version">
+              0.0.47
+            </p>
+            <p class="release__version-date"><time datetime="2025-05-19T06:02:55+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    May 19, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.46/">
+            <p class="release__version">
+              0.0.46
+            </p>
+            <p class="release__version-date"><time datetime="2025-05-19T05:47:54+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    May 19, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.45/">
+            <p class="release__version">
+              0.0.45
+            </p>
+            <p class="release__version-date"><time datetime="2025-05-19T01:51:42+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    May 19, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.44/">
+            <p class="release__version">
+              0.0.44
+            </p>
+            <p class="release__version-date"><time datetime="2025-05-19T01:08:27+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    May 19, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.43/">
+            <p class="release__version">
+              0.0.43
+            </p>
+            <p class="release__version-date"><time datetime="2025-05-18T22:34:55+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    May 18, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.42/">
+            <p class="release__version">
+              0.0.42
+            </p>
+            <p class="release__version-date"><time datetime="2025-05-18T22:21:11+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    May 18, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.41/">
+            <p class="release__version">
+              0.0.41
+            </p>
+            <p class="release__version-date"><time datetime="2025-05-18T13:11:25+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    May 18, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.40/">
+            <p class="release__version">
+              0.0.40
+            </p>
+            <p class="release__version-date"><time datetime="2025-05-18T12:58:32+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    May 18, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.39/">
+            <p class="release__version">
+              0.0.39
+            </p>
+            <p class="release__version-date"><time datetime="2025-05-18T11:20:26+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    May 18, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.38/">
+            <p class="release__version">
+              0.0.38
+            </p>
+            <p class="release__version-date"><time datetime="2025-05-17T15:02:16+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    May 17, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.37/">
+            <p class="release__version">
+              0.0.37
+            </p>
+            <p class="release__version-date"><time datetime="2025-05-17T14:46:49+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    May 17, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.36/">
+            <p class="release__version">
+              0.0.36
+            </p>
+            <p class="release__version-date"><time datetime="2025-05-17T03:42:02+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    May 17, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.35/">
+            <p class="release__version">
+              0.0.35
+            </p>
+            <p class="release__version-date"><time datetime="2025-05-17T03:24:44+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    May 17, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.34/">
+            <p class="release__version">
+              0.0.34
+            </p>
+            <p class="release__version-date"><time datetime="2025-05-16T22:21:20+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    May 16, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.33/">
+            <p class="release__version">
+              0.0.33
+            </p>
+            <p class="release__version-date"><time datetime="2025-05-16T22:02:13+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    May 16, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.32/">
+            <p class="release__version">
+              0.0.32
+            </p>
+            <p class="release__version-date"><time datetime="2025-05-16T13:01:20+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    May 16, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.31/">
+            <p class="release__version">
+              0.0.31
+            </p>
+            <p class="release__version-date"><time datetime="2025-05-16T12:44:10+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    May 16, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.30/">
+            <p class="release__version">
+              0.0.30
+            </p>
+            <p class="release__version-date"><time datetime="2025-05-13T22:36:04+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    May 13, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.29/">
+            <p class="release__version">
+              0.0.29
+            </p>
+            <p class="release__version-date"><time datetime="2025-05-13T01:08:20+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    May 13, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.28/">
+            <p class="release__version">
+              0.0.28
+            </p>
+            <p class="release__version-date"><time datetime="2025-05-09T14:02:21+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    May 9, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.27/">
+            <p class="release__version">
+              0.0.27
+            </p>
+            <p class="release__version-date"><time datetime="2025-05-06T21:21:40+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    May 6, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.26/">
+            <p class="release__version">
+              0.0.26
+            </p>
+            <p class="release__version-date"><time datetime="2025-04-30T17:46:37+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Apr 30, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.25/">
+            <p class="release__version">
+              0.0.25
+            </p>
+            <p class="release__version-date"><time datetime="2025-04-14T19:27:25+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Apr 14, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.24/">
+            <p class="release__version">
+              0.0.24
+            </p>
+            <p class="release__version-date"><time datetime="2025-04-03T10:38:27+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Apr 3, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.23/">
+            <p class="release__version">
+              0.0.23
+            </p>
+            <p class="release__version-date"><time datetime="2025-04-03T10:36:00+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Apr 3, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.22/">
+            <p class="release__version">
+              0.0.22
+            </p>
+            <p class="release__version-date"><time datetime="2025-04-03T10:32:22+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Apr 3, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.21/">
+            <p class="release__version">
+              0.0.21
+            </p>
+            <p class="release__version-date"><time datetime="2025-04-03T09:31:38+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Apr 3, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.20/">
+            <p class="release__version">
+              0.0.20
+            </p>
+            <p class="release__version-date"><time datetime="2025-03-25T14:06:58+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Mar 25, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.19/">
+            <p class="release__version">
+              0.0.19
+            </p>
+            <p class="release__version-date"><time datetime="2025-03-25T13:56:17+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Mar 25, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.18/">
+            <p class="release__version">
+              0.0.18
+            </p>
+            <p class="release__version-date"><time datetime="2025-03-25T13:28:18+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Mar 25, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.17/">
+            <p class="release__version">
+              0.0.17
+            </p>
+            <p class="release__version-date"><time datetime="2025-03-24T22:23:29+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Mar 24, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.16/">
+            <p class="release__version">
+              0.0.16
+            </p>
+            <p class="release__version-date"><time datetime="2025-03-21T22:14:33+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Mar 21, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.15/">
+            <p class="release__version">
+              0.0.15
+            </p>
+            <p class="release__version-date"><time datetime="2025-03-21T22:05:13+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Mar 21, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.14/">
+            <p class="release__version">
+              0.0.14
+            </p>
+            <p class="release__version-date"><time datetime="2025-03-21T21:56:51+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Mar 21, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.13/">
+            <p class="release__version">
+              0.0.13
+            </p>
+            <p class="release__version-date"><time datetime="2025-03-21T21:53:59+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Mar 21, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.12/">
+            <p class="release__version">
+              0.0.12
+            </p>
+            <p class="release__version-date"><time datetime="2025-03-21T21:31:06+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Mar 21, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.11/">
+            <p class="release__version">
+              0.0.11
+            </p>
+            <p class="release__version-date"><time datetime="2025-03-21T21:10:35+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Mar 21, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.10/">
+            <p class="release__version">
+              0.0.10
+            </p>
+            <p class="release__version-date"><time datetime="2025-03-21T20:51:42+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Mar 21, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.9/">
+            <p class="release__version">
+              0.0.9
+            </p>
+            <p class="release__version-date"><time datetime="2025-03-21T20:17:44+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Mar 21, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.8/">
+            <p class="release__version">
+              0.0.8
+            </p>
+            <p class="release__version-date"><time datetime="2025-03-21T20:12:05+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Mar 21, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.7/">
+            <p class="release__version">
+              0.0.7
+            </p>
+            <p class="release__version-date"><time datetime="2025-03-21T15:22:35+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Mar 21, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.6/">
+            <p class="release__version">
+              0.0.6
+            </p>
+            <p class="release__version-date"><time datetime="2025-03-21T14:15:35+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Mar 21, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.5/">
+            <p class="release__version">
+              0.0.5
+            </p>
+            <p class="release__version-date"><time datetime="2025-03-21T13:43:28+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Mar 21, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.4/">
+            <p class="release__version">
+              0.0.4
+            </p>
+            <p class="release__version-date"><time datetime="2025-03-21T13:35:49+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Mar 21, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.3/">
+            <p class="release__version">
+              0.0.3
+            </p>
+            <p class="release__version-date"><time datetime="2025-03-20T20:16:25+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Mar 20, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.2/">
+            <p class="release__version">
+              0.0.2
+            </p>
+            <p class="release__version-date"><time datetime="2025-03-20T20:09:15+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Mar 20, 2025
+  </time></p>
+          </a>
+        </div>
+        <div class="release release--oldest">
+          <div class="release__meta">
+          </div>
+          <div class="release__graphic">
+<div class="release__line"></div>              <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+          </div>
+          <a class="card release__card"
+             href="/project/bybit-api/0.0.1/">
+            <p class="release__version">
+              0.0.1
+            </p>
+            <p class="release__version-date"><time datetime="2025-03-19T19:38:21+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Mar 19, 2025
+  </time></p>
+          </a>
+        </div>
+    </div>
+  </div>
+    <div id="files"
+         data-project-tabs-target="content"
+         class="vertical-tabs__content"
+         role="tabpanel"
+         aria-labelledby="files-tab mobile-files-tab"
+         tabindex="-1"
+         data-controller="filter-list">
+      <h2 class="page-title">Download files</h2>
+      <p>
+Download the file for your platform. If you're not sure which to choose, learn more about <a href="https://packaging.python.org/tutorials/installing-packages/" title="External link" target="_blank" rel="noopener">installing packages</a>.      </p>
+      <h3>
+Source Distribution    </h3>
+          <div class="file"
+>
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/a0/5f/4c74965d65ae4ab091881d159830921a3f6e782a2715f7c2826e433be159/bybit_api-0.0.127.tar.gz">bybit_api-0.0.127.tar.gz</a>
+        (839.4 kB
+        <a href="#bybit_api-0.0.127.tar.gz"
+           data-project-tabs-target="tab mobileTab"
+           data-action="project-tabs#onTabClick">view details</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2026-03-06T06:02:10+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Mar 6, 2026
+  </time>
+<code>Source</code>        </p>
+      </div>
+    </div>
+
+      <h3>
+Built Distribution    </h3>
+    <p class="hidden initial-toggle-visibility">
+Filter files by name, interpreter, ABI, and platform.    </p>
+    <p>
+If you're not sure about the file name format, learn more about <a href="https://packaging.python.org/en/latest/specifications/binary-distribution-format/" title="External link" target="_blank" rel="noopener">wheel file names</a>.    </p>
+    <noscript>
+      <p class="initial-toggle-visibility">
+The dropdown lists show the available interpreters, ABIs, and platforms.      </p>
+      <p class="initial-toggle-visibility">
+Enable javascript to be able to filter the list of wheel files.      </p>
+    </noscript>
+    <p class="hidden initial-toggle-visibility" data-controller="clipboard">
+Copy a direct link to the current filters      <a class="hidden"
+         href="https://pypi.org/project/bybit-api/#files"
+         data-clipboard-target="source"
+         data-filter-list-target="url"></a>
+      <button type="button"
+              class="button button--small copy-tooltip copy-tooltip-w"
+              data-action="clipboard#copy"
+              data-clipboard-target="tooltip"
+              data-clipboard-tooltip-value="Copy to clipboard">
+Copy      </button>
+    </p>
+    <p class="hidden initial-toggle-visibility">
+      <span data-filter-list-target="summary"></span>
+    </p>
+    <div>
+      <div class="form-group hidden initial-toggle-visibility">
+        <label class="form-group__label sr-only" for="bdist-filenames-filter">File name</label>
+        <input class="form-group__field"
+               type="text"
+               id="bdist-filenames-filter"
+               name="bdist-filenames-filter"
+               placeholder="File name"
+               autocapitalize="none"
+               autocomplete=""
+               spellcheck="false"
+               data-action="filter-list#filter"
+               data-filter-list-target="filter"
+               data-filtered-source="filename">
+      </div>
+      <div class="col-grid">
+        <div class="form-group col-third">  <label class="form-group__label sr-only" for="bdist-tags-interpreters">Interpreter</label>
+  <select class="form-group__field"
+          id="bdist-tags-interpreters"
+          name="bdist-tags-interpreters"
+          data-action="filter-list#filter"
+          data-filter-list-target="filter"
+          data-filtered-source="interpreters">
+    <option selected value="">Interpreter</option>
+      <option               value="py3">py3</option>
+  </select>
+</div>
+        <div class="form-group col-third">  <label class="form-group__label sr-only" for="bdist-tags-abis">ABI</label>
+  <select class="form-group__field"
+          id="bdist-tags-abis"
+          name="bdist-tags-abis"
+          data-action="filter-list#filter"
+          data-filter-list-target="filter"
+          data-filtered-source="abis">
+    <option selected value="">ABI</option>
+      <option               value="none">none</option>
+  </select>
+</div>
+        <div class="form-group col-third">  <label class="form-group__label sr-only" for="bdist-tags-platforms">Platform</label>
+  <select class="form-group__field"
+          id="bdist-tags-platforms"
+          name="bdist-tags-platforms"
+          data-action="filter-list#filter"
+          data-filter-list-target="filter"
+          data-filtered-source="platforms">
+    <option selected value="">Platform</option>
+      <option               value="any">any</option>
+  </select>
+</div>
+      </div>
+    </div>
+        <div class="file"
+ data-filter-list-target="item" data-filtered-target-filename='["bybit_api-0.0.127-py3-none-any.whl"]'  data-filtered-target-interpreters='["py3"]'  data-filtered-target-abis='["none"]'  data-filtered-target-platforms='["any"]' >
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/7d/a0/2846314de19c53850c7d3252fcc8a20df64a809e9701deabc20062c6af07/bybit_api-0.0.127-py3-none-any.whl">bybit_api-0.0.127-py3-none-any.whl</a>
+        (1.1 MB
+        <a href="#bybit_api-0.0.127-py3-none-any.whl"
+           data-project-tabs-target="tab mobileTab"
+           data-action="project-tabs#onTabClick">view details</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2026-03-06T06:02:07+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Mar 6, 2026
+  </time>
+<code>Python 3</code>        </p>
+      </div>
+    </div>
+
+</div>
+<div id="bybit_api-0.0.127.tar.gz"
+     data-project-tabs-target="content"
+     class="vertical-tabs__content"
+     role="tabpanel"
+     aria-labelledby="file-tab mobile-file-tab"
+     tabindex="-1">
+  <h2 class="page-title">File details</h2>
+  <p>
+    Details for the file <code>bybit_api-0.0.127.tar.gz</code>.
+  </p>
+  <h3>File metadata</h3>
+  <div>
+    <ul>
+      <li>
+        Download URL: <a href="https://files.pythonhosted.org/packages/a0/5f/4c74965d65ae4ab091881d159830921a3f6e782a2715f7c2826e433be159/bybit_api-0.0.127.tar.gz">bybit_api-0.0.127.tar.gz</a>
+      </li>
+      <li>Upload date: <time datetime="2026-03-06T06:02:10+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Mar 6, 2026
+  </time></li>
+      <li>
+Size: 839.4 kB      </li>
+      <li>Tags: Source</li>
+      <li>
+Uploaded using Trusted Publishing? No    </li>
+      <li>Uploaded via: twine/6.2.0 CPython/3.14.3</li>
+  </ul>
+</div>
+<h3>File hashes</h3>
+<div>
+  <table class="table table--hashes">
+    <caption class="sr-only">Hashes for bybit_api-0.0.127.tar.gz</caption>
+    <thead>
+      <tr>
+        <th scope="col">Algorithm</th>
+        <th scope="col">Hash digest</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr data-controller="clipboard">
+        <th scope="row">SHA256</th>
+        <td>
+          <code data-clipboard-target="source">f2ed5bb43cdf0212bf768befc589fbd0d4b55b78c9d7fb20d99bfac8d14adc22</code>
+        </td>
+        <td class="table__align-right">
+          <button type="button"
+                  class="button button--small copy-tooltip copy-tooltip-w"
+                  data-action="clipboard#copy"
+                  data-clipboard-target="tooltip"
+                  data-clipboard-tooltip-value="Copy to clipboard">
+Copy          </button>
+        </td>
+      </tr>
+      <tr data-controller="clipboard">
+        <th scope="row">MD5</th>
+        <td>
+          <code data-clipboard-target="source">6d7d35a0fb86792c4707005176a99331</code>
+        </td>
+        <td class="table__align-right">
+          <button type="button"
+                  class="button button--small copy-tooltip copy-tooltip-w"
+                  data-action="clipboard#copy"
+                  data-clipboard-target="tooltip"
+                  data-clipboard-tooltip-value="Copy to clipboard">
+Copy          </button>
+        </td>
+      </tr>
+      <tr data-controller="clipboard">
+        <th scope="row">BLAKE2b-256</th>
+        <td>
+          <code data-clipboard-target="source">a05f4c74965d65ae4ab091881d159830921a3f6e782a2715f7c2826e433be159</code>
+        </td>
+        <td class="table__align-right">
+          <button type="button"
+                  class="button button--small copy-tooltip copy-tooltip-w"
+                  data-action="clipboard#copy"
+                  data-clipboard-target="tooltip"
+                  data-clipboard-tooltip-value="Copy to clipboard">
+Copy          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>
+<a href="https://pip.pypa.io/en/stable/topics/secure-installs/#hash-checking-mode" title="External link" target="_blank" rel="noopener">See more details on using hashes here.</a></p>
+</div>
+</div><div id="bybit_api-0.0.127-py3-none-any.whl"
+     data-project-tabs-target="content"
+     class="vertical-tabs__content"
+     role="tabpanel"
+     aria-labelledby="file-tab mobile-file-tab"
+     tabindex="-1">
+  <h2 class="page-title">File details</h2>
+  <p>
+    Details for the file <code>bybit_api-0.0.127-py3-none-any.whl</code>.
+  </p>
+  <h3>File metadata</h3>
+  <div>
+    <ul>
+      <li>
+        Download URL: <a href="https://files.pythonhosted.org/packages/7d/a0/2846314de19c53850c7d3252fcc8a20df64a809e9701deabc20062c6af07/bybit_api-0.0.127-py3-none-any.whl">bybit_api-0.0.127-py3-none-any.whl</a>
+      </li>
+      <li>Upload date: <time datetime="2026-03-06T06:02:07+0000"
+        data-controller="localized-time"
+        data-localized-time-relative="true"
+        data-localized-time-show-time="false">
+    Mar 6, 2026
+  </time></li>
+      <li>
+Size: 1.1 MB      </li>
+      <li>Tags: Python 3</li>
+      <li>
+Uploaded using Trusted Publishing? No    </li>
+      <li>Uploaded via: twine/6.2.0 CPython/3.14.3</li>
+  </ul>
+</div>
+<h3>File hashes</h3>
+<div>
+  <table class="table table--hashes">
+    <caption class="sr-only">Hashes for bybit_api-0.0.127-py3-none-any.whl</caption>
+    <thead>
+      <tr>
+        <th scope="col">Algorithm</th>
+        <th scope="col">Hash digest</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr data-controller="clipboard">
+        <th scope="row">SHA256</th>
+        <td>
+          <code data-clipboard-target="source">b6803b059664fa5a3652f4d149b6c701343f2afeb593c666a3e5fb5bbc190366</code>
+        </td>
+        <td class="table__align-right">
+          <button type="button"
+                  class="button button--small copy-tooltip copy-tooltip-w"
+                  data-action="clipboard#copy"
+                  data-clipboard-target="tooltip"
+                  data-clipboard-tooltip-value="Copy to clipboard">
+Copy          </button>
+        </td>
+      </tr>
+      <tr data-controller="clipboard">
+        <th scope="row">MD5</th>
+        <td>
+          <code data-clipboard-target="source">228352395d01c1e0f62aa1aac8bddf3e</code>
+        </td>
+        <td class="table__align-right">
+          <button type="button"
+                  class="button button--small copy-tooltip copy-tooltip-w"
+                  data-action="clipboard#copy"
+                  data-clipboard-target="tooltip"
+                  data-clipboard-tooltip-value="Copy to clipboard">
+Copy          </button>
+        </td>
+      </tr>
+      <tr data-controller="clipboard">
+        <th scope="row">BLAKE2b-256</th>
+        <td>
+          <code data-clipboard-target="source">7da02846314de19c53850c7d3252fcc8a20df64a809e9701deabc20062c6af07</code>
+        </td>
+        <td class="table__align-right">
+          <button type="button"
+                  class="button button--small copy-tooltip copy-tooltip-w"
+                  data-action="clipboard#copy"
+                  data-clipboard-target="tooltip"
+                  data-clipboard-tooltip-value="Copy to clipboard">
+Copy          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>
+<a href="https://pip.pypa.io/en/stable/topics/secure-installs/#hash-checking-mode" title="External link" target="_blank" rel="noopener">See more details on using hashes here.</a></p>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</main>
+<footer class="footer">
+  <div class="footer__logo">
+    <img src="/static/images/white-cube.2351a86c.svg"
+         alt=""
+         class="-js-white-cube">
+  </div>
+  <div class="footer__menus">
+    <div class="footer__menu">
+      <h2>Help</h2>
+      <nav aria-label="Help navigation">
+        <ul>
+          <li>
+            <a href="https://packaging.python.org/tutorials/installing-packages/"
+               title="External link"
+               target="_blank"
+               rel="noopener">Installing packages</a>
+          </li>
+          <li>
+            <a href="https://packaging.python.org/tutorials/packaging-projects/"
+               title="External link"
+               target="_blank"
+               rel="noopener">Uploading packages</a>
+          </li>
+          <li>
+            <a href="https://packaging.python.org/"
+               title="External link"
+               target="_blank"
+               rel="noopener">User guide</a>
+          </li>
+          <li>
+            <a href="https://www.python.org/dev/peps/pep-0541/"
+               title="External link"
+               target="_blank"
+               rel="noopener">Project name retention</a>
+          </li>
+          <li>
+            <a href="/help/">FAQs</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer__menu">
+      <h2>About PyPI</h2>
+      <nav aria-label="About PyPI navigation">
+        <ul>
+          <li>
+            <a href="https://blog.pypi.org"
+               title="External link"
+               target="_blank"
+               rel="noopener">PyPI Blog</a>
+          </li>
+          <li>
+            <a href="https://dtdg.co/pypi"
+               title="External link"
+               target="_blank"
+               rel="noopener">Infrastructure dashboard</a>
+          </li>
+          <li>
+            <a href="/stats/">Statistics</a>
+          </li>
+          <li>
+            <a href="/trademarks/">Logos & trademarks</a>
+          </li>
+          <li>
+            <a href="/sponsors/">Our sponsors</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer__menu">
+      <h2>Contributing to PyPI</h2>
+      <nav aria-label="How to contribute navigation">
+        <ul>
+          <li>
+            <a href="/help/#feedback">Bugs and feedback</a>
+          </li>
+          <li>
+            <a href="https://github.com/pypi/warehouse"
+               title="External link"
+               target="_blank"
+               rel="noopener">Contribute on GitHub</a>
+          </li>
+          <li>
+            <a href="https://hosted.weblate.org/projects/pypa/warehouse/"
+               title="External link"
+               target="_blank"
+               rel="noopener">Translate PyPI</a>
+          </li>
+          <li>
+            <a href="/sponsors/">Sponsor PyPI</a>
+          </li>
+          <li>
+            <a href="https://github.com/pypi/warehouse/graphs/contributors"
+               title="External link"
+               target="_blank"
+               rel="noopener">Development credits</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer__menu">
+      <h2>Using PyPI</h2>
+      <nav aria-label="Using PyPI navigation">
+        <ul>
+          <li>
+            <a href="https://policies.python.org/pypi.org/Terms-of-Service/"
+               title="External link"
+               target="_blank"
+               rel="noopener">Terms of Service</a>
+          </li>
+          <li>
+            <a href="/security/">Report security issue</a>
+          </li>
+          <li>
+            <a href="https://policies.python.org/python.org/code-of-conduct/"
+               title="External link"
+               target="_blank"
+               rel="noopener">Code of conduct</a>
+          </li>
+          <li>
+            <a href="https://policies.python.org/pypi.org/Privacy-Notice/"
+               title="External link"
+               target="_blank"
+               rel="noopener">Privacy Notice</a>
+          </li>
+          <li>
+            <a href="https://policies.python.org/pypi.org/Acceptable-Use-Policy/"
+               title="External link"
+               target="_blank"
+               rel="noopener">Acceptable Use Policy</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <hr class="footer__divider">
+  <div class="footer__text">
+      <p>
+Status:<a href="https://status.python.org/"
+   title="External link"
+   target="_blank"
+   rel="noopener">
+        <span data-statuspage-domain="https://2p66nmmycsj3.statuspage.io">all systems operational</span></a>
+    </p>
+  <p>
+Developed and maintained by the Python community, for the Python community.    <br>
+    <a href="https://donate.pypi.org">Donate today!</a>
+  </p>
+  <p>
+    "PyPI", "Python Package Index", and the blocks logos are registered <a href="/trademarks/">trademarks</a> of the <a href="https://www.python.org/psf-landing" target="_blank" rel="noopener">Python Software Foundation</a>.
+    <br>
+  </p>
+  <p>
+    © 2026 <a href="https://www.python.org/psf-landing/"
+    title="External link"
+    target="_blank"
+    rel="noopener">Python Software Foundation</a>
+    <br>
+    <a href="/sitemap/">Site map</a>
+  </p>
+</div>
+<div class="centered hide-on-desktop">
+  <button type="button"
+          class="button button--switch-to-desktop hidden"
+          data-viewport-toggle-target="switchToDesktop"
+          data-action="viewport-toggle#switchToDesktop">Switch to desktop version</button>
+</div>
+</footer>
+<div class="language-switcher">
+  <form action="/locale/">
+    <ul>
+        <li>
+          <button class="language-switcher__selected"                  name="locale_id"
+                  value="en"
+                  type="submit">English</button>
+        </li>
+        <li>
+          <button                   name="locale_id"
+                  value="es"
+                  type="submit">español</button>
+        </li>
+        <li>
+          <button                   name="locale_id"
+                  value="fr"
+                  type="submit">français</button>
+        </li>
+        <li>
+          <button                   name="locale_id"
+                  value="ja"
+                  type="submit">日本語</button>
+        </li>
+        <li>
+          <button                   name="locale_id"
+                  value="pt_BR"
+                  type="submit">português (Brasil)</button>
+        </li>
+        <li>
+          <button                   name="locale_id"
+                  value="uk"
+                  type="submit">українська</button>
+        </li>
+        <li>
+          <button                   name="locale_id"
+                  value="el"
+                  type="submit">Ελληνικά</button>
+        </li>
+        <li>
+          <button                   name="locale_id"
+                  value="de"
+                  type="submit">Deutsch</button>
+        </li>
+        <li>
+          <button                   name="locale_id"
+                  value="zh_Hans"
+                  type="submit">中文 (简体)</button>
+        </li>
+        <li>
+          <button                   name="locale_id"
+                  value="zh_Hant"
+                  type="submit">中文 (繁體)</button>
+        </li>
+        <li>
+          <button                   name="locale_id"
+                  value="ru"
+                  type="submit">русский</button>
+        </li>
+        <li>
+          <button                   name="locale_id"
+                  value="he"
+                  type="submit">עברית</button>
+        </li>
+        <li>
+          <button                   name="locale_id"
+                  value="eo"
+                  type="submit">Esperanto</button>
+        </li>
+        <li>
+          <button                   name="locale_id"
+                  value="ko"
+                  type="submit">한국어</button>
+        </li>
+    </ul>
+  </form>
+</div>
+<div class="sponsors">
+  <p class="sponsors__title">Supported by</p>
+  <div class="sponsors__divider"></div>
+        <a class="sponsors__sponsor"
+           target="_blank"
+           rel="noopener"
+           href="https://aws.amazon.com/">
+          <img class=sponsors__image src="https://pypi-camo.freetls.fastly.net/ed7074cadad1a06f56bc520ad9bd3e00d0704c5b/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f6177732d77686974652d6c6f676f2d7443615473387a432e706e67" alt="" loading=lazy>
+          <span class="sponsors__name">AWS</span>
+          <span class="sponsors__service">
+              Cloud computing and Security Sponsor
+          </span>
+        </a>
+        <a class="sponsors__sponsor"
+           target="_blank"
+           rel="noopener"
+           href="https://www.datadoghq.com/">
+          <img class=sponsors__image src="https://pypi-camo.freetls.fastly.net/8855f7c063a3bdb5b0ce8d91bfc50cf851cc5c51/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f64617461646f672d77686974652d6c6f676f2d6668644c4e666c6f2e706e67" alt="" loading=lazy>
+          <span class="sponsors__name">Datadog</span>
+          <span class="sponsors__service">
+              Monitoring
+          </span>
+        </a>
+        <a class="sponsors__sponsor"
+           target="_blank"
+           rel="noopener"
+           href="https://depot.dev">
+          <img class=sponsors__image src="https://pypi-camo.freetls.fastly.net/60f709d24f3e4d469f9adc77c65e2f5291a3d165/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f6465706f742d77686974652d6c6f676f2d7038506f476831302e706e67" alt="" loading=lazy>
+          <span class="sponsors__name">Depot</span>
+          <span class="sponsors__service">
+              Continuous Integration
+          </span>
+        </a>
+        <a class="sponsors__sponsor"
+           target="_blank"
+           rel="noopener"
+           href="https://www.fastly.com/">
+          <img class=sponsors__image src="https://pypi-camo.freetls.fastly.net/df6fe8829cbff2d7f668d98571df1fd011f36192/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f666173746c792d77686974652d6c6f676f2d65684d3077735f6f2e706e67" alt="" loading=lazy>
+          <span class="sponsors__name">Fastly</span>
+          <span class="sponsors__service">
+              CDN
+          </span>
+        </a>
+        <a class="sponsors__sponsor"
+           target="_blank"
+           rel="noopener"
+           href="https://careers.google.com/">
+          <img class=sponsors__image src="https://pypi-camo.freetls.fastly.net/420cc8cf360bac879e24c923b2f50ba7d1314fb0/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f676f6f676c652d77686974652d6c6f676f2d616734424e3774332e706e67" alt="" loading=lazy>
+          <span class="sponsors__name">Google</span>
+          <span class="sponsors__service">
+              Download Analytics
+          </span>
+        </a>
+        <a class="sponsors__sponsor"
+           target="_blank"
+           rel="noopener"
+           href="https://www.pingdom.com/">
+          <img class=sponsors__image src="https://pypi-camo.freetls.fastly.net/d01053c02f3a626b73ffcb06b96367fdbbf9e230/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f70696e67646f6d2d77686974652d6c6f676f2d67355831547546362e706e67" alt="" loading=lazy>
+          <span class="sponsors__name">Pingdom</span>
+          <span class="sponsors__service">
+              Monitoring
+          </span>
+        </a>
+        <a class="sponsors__sponsor"
+           target="_blank"
+           rel="noopener"
+           href="https://sentry.io/for/python/?utm_source=pypi&amp;utm_medium=paid-community&amp;utm_campaign=python-na-evergreen&amp;utm_content=static-ad-pypi-sponsor-learnmore">
+          <img class=sponsors__image src="https://pypi-camo.freetls.fastly.net/67af7117035e2345bacb5a82e9aa8b5b3e70701d/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f73656e7472792d77686974652d6c6f676f2d4a2d6b64742d706e2e706e67" alt="" loading=lazy>
+          <span class="sponsors__name">Sentry</span>
+          <span class="sponsors__service">
+              Error logging
+          </span>
+        </a>
+        <a class="sponsors__sponsor"
+           target="_blank"
+           rel="noopener"
+           href="https://statuspage.io">
+          <img class=sponsors__image src="https://pypi-camo.freetls.fastly.net/b611884ff90435a0575dbab7d9b0d3e60f136466/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f737461747573706167652d77686974652d6c6f676f2d5467476c6a4a2d502e706e67" alt="" loading=lazy>
+          <span class="sponsors__name">StatusPage</span>
+          <span class="sponsors__service">
+              Status page
+          </span>
+        </a>
+</div></body>
+</html>
