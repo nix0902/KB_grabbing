@@ -1,0 +1,145 @@
+Title: 查询公告 | Bitget API
+URL: https://www.bitget.com/zh-CN/api-doc/common/notice/Get-All-Notices
+
+跳到主要内容
+公共
+现货
+合约
+经纪商
+代理商
+杠杆
+跟单
+理财
+机构借贷
+统一账户
+简体中文
+简介
+V2优化说明
+更新日志
+快速入门
+FAQ
+SDK
+参数签名
+参数签名代码示例
+Websocket接口
+公告
+查询公告
+API域名
+基础配置
+税务
+模拟盘
+P2P
+交易大数据
+虚拟子账户
+资产
+闪兑
+小额兑换BGB
+公告查询公告
+查询公告
+
+限速规则 20次/1s (IP)
+
+描述​
+
+查询一个月以内公告
+
+公告子类型描述： 公告子类型与公告类型匹配
+
+annType=latest_news
+announcements最新公告
+newsBitget动态
+annType=coin_listings
+spot现货
+futures合约
+margin杠杆
+copy_trading跟单
+annType=product_updates
+spot现货
+futures合约
+margin杠杆
+copy_trading跟单
+annType=security
+security_information安全资讯
+annType=api_trading
+api_announcementAPI公告
+annType=symbol_delisting
+trading_pair_delisting交易对下架
+annType=maintenance_system_updates
+asset_maintenance资产维护
+system_updates系统升级
+spot_maintenance现货维护
+futures_maintenance合约维护
+HTTP请求​
+GET /api/v2/public/annoucements
+请求示例
+curl "https://api.bitget.com/api/v2/public/annoucements?language=zh_CN"
+
+请求参数​
+参数名	参数类型	是否必须	描述
+annType	String	否	公告类型
+latest_news: 最新活动
+coin_listings: 新币上线
+product_updates: 产品更新
+security: 安全
+api_trading: API交易
+maintenance_system_updates: 维护/系统升级
+symbol_delisting: 下架资讯
+startTime	String	否	查询的开始时间，Unix毫秒时间戳，例如1690196141868
+按照对外展示时间查询
+endTime	String	否	查询的结束时间，Unix毫秒时间戳，例如1690196141868
+按照对外展示时间查询
+cursor	String	否	游标ID
+首次调用不需要，后续调用传上次响应中最后一个annId
+limit	String	否	每页条目数
+默认10条，最大10条
+language	String	是	语言类型
+zh_CN中文
+en_US英文
+如果传入的语言类型不支持，则返回英文
+返回示例
+{
+  "code": "00000",
+  "msg": "success",
+  "requestTime": 1688008631614,
+  "data": [
+    {
+      "annId": "1",
+      "annTitle": "test0629",
+      "annDesc": "最新公告",
+      "cTime": "1688008040000",
+      "language": "zh_CN",
+      "annUrl": "https://www.bitget.com/zh_CN/support/articles/23685"
+    }
+  ]
+}
+
+返回参数​
+返回字段	参数类型	字段说明
+annId	String	公告ID
+annTitle	String	公告标题
+annDesc	String	公告描述 (字段废弃)
+cTime	String	公告创建时间，Unix毫秒时间戳格式
+language	String	语言类型
+annUrl	String	链接
+annType	String	公告类型
+latest_news: 最新活动
+coin_listings: 新币上线
+product_updates: 产品更新
+security: 安全
+api_trading: API交易
+maintenance_system_updates: 维护/系统升级
+symbol_delisting: 下架资讯
+annSubType	String	公告子类型
+cTime	String	公告发布时间
+Unix毫秒时间戳格式
+您的阅读体验如何？
+★
+★
+★
+★
+★
+反馈建议
+上一页
+Websocket接口
+下一页
+API域名

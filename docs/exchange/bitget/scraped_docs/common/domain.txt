@@ -1,0 +1,55 @@
+Title: API域名 | Bitget API
+URL: https://www.bitget.com/zh-CN/api-doc/common/domain
+
+跳到主要内容
+公共
+现货
+合约
+经纪商
+代理商
+杠杆
+跟单
+理财
+机构借贷
+统一账户
+简体中文
+简介
+V2优化说明
+更新日志
+快速入门
+FAQ
+SDK
+参数签名
+参数签名代码示例
+Websocket接口
+公告
+API域名
+基础配置
+税务
+模拟盘
+P2P
+交易大数据
+虚拟子账户
+资产
+闪兑
+小额兑换BGB
+API域名
+API域名
+
+您可以自行使用Rest API接入方式进行操作。
+
+域名	API	描述
+rest 域名1	https://api.bitget.com	主域名
+websocket 公共频道	wss://ws.bitget.com/v2/ws/public	主域名, 公共频道
+websocket 私有频道	wss://ws.bitget.com/v2/ws/private	主域名, 私有频道
+您的阅读体验如何？
+★
+★
+★
+★
+★
+反馈建议
+上一页
+查询公告
+下一页
+获取服务器时间

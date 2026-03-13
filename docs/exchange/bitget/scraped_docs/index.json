@@ -1,0 +1,1406 @@
+{
+  "total_pages": 200,
+  "scraped_at": "2026-03-13 13:08:18",
+  "pages": {
+    "https://www.bitget.com/api-doc/common/intro": {
+      "section": "common",
+      "subsection": "intro",
+      "title": "Bitget API Introduction | Bitget API",
+      "file": "common/intro.md",
+      "chars": 1449
+    },
+    "https://www.bitget.com/api-doc/spot/intro": {
+      "section": "spot",
+      "subsection": "intro",
+      "title": "Spot Trading API | Bitget API",
+      "file": "spot/intro.md",
+      "chars": 860
+    },
+    "https://www.bitget.com/api-doc/contract/intro": {
+      "section": "contract",
+      "subsection": "intro",
+      "title": "Futures Trading API | Bitget API",
+      "file": "contract/intro.md",
+      "chars": 714
+    },
+    "https://www.bitget.com/api-doc/broker/intro": {
+      "section": "broker",
+      "subsection": "intro",
+      "title": "Broker Trading API | Bitget API",
+      "file": "broker/intro.md",
+      "chars": 1473
+    },
+    "https://www.bitget.com/api-doc/affiliate/intro": {
+      "section": "affiliate",
+      "subsection": "intro",
+      "title": "Affiliate Introduction | Bitget API",
+      "file": "affiliate/intro.md",
+      "chars": 1152
+    },
+    "https://www.bitget.com/api-doc/margin/intro": {
+      "section": "margin",
+      "subsection": "intro",
+      "title": "Margin Trading API | Bitget API",
+      "file": "margin/intro.md",
+      "chars": 788
+    },
+    "https://www.bitget.com/api-doc/copytrading/intro": {
+      "section": "copytrading",
+      "subsection": "intro",
+      "title": "Copy Trading API | Bitget API",
+      "file": "copytrading/intro.md",
+      "chars": 743
+    },
+    "https://www.bitget.com/api-doc/earn/intro": {
+      "section": "earn",
+      "subsection": "intro",
+      "title": "Earn API | Bitget API",
+      "file": "earn/intro.md",
+      "chars": 802
+    },
+    "https://www.bitget.com/api-doc/instloan/intro": {
+      "section": "instloan",
+      "subsection": "intro",
+      "title": "Inst Loan | Bitget API",
+      "file": "instloan/intro.md",
+      "chars": 810
+    },
+    "https://www.bitget.com/api-doc/uta/intro": {
+      "section": "uta",
+      "subsection": "intro",
+      "title": "Unified Trading Account | Bitget API",
+      "file": "uta/intro.md",
+      "chars": 3701
+    },
+    "https://www.bitget.com/api-doc/common/release-note": {
+      "section": "common",
+      "subsection": "release-note",
+      "title": "V2 API Update Guide | Bitget API",
+      "file": "common/release-note.md",
+      "chars": 29240
+    },
+    "https://www.bitget.com/api-doc/common/changelog": {
+      "section": "common",
+      "subsection": "changelog",
+      "title": "Changelog | Bitget API",
+      "file": "common/changelog.md",
+      "chars": 33223
+    },
+    "https://www.bitget.com/api-doc/common/quick-start": {
+      "section": "common",
+      "subsection": "quick-start",
+      "title": "Quick Start | Bitget API",
+      "file": "common/quick-start.md",
+      "chars": 3188
+    },
+    "https://www.bitget.com/api-doc/common/faq": {
+      "section": "common",
+      "subsection": "faq",
+      "title": "FAQ | Bitget API",
+      "file": "common/faq.md",
+      "chars": 3979
+    },
+    "https://www.bitget.com/api-doc/common/sdk-postman": {
+      "section": "common",
+      "subsection": "sdk-postman",
+      "title": "SDK | Bitget API",
+      "file": "common/sdk-postman.md",
+      "chars": 605
+    },
+    "https://www.bitget.com/api-doc/common/signature": {
+      "section": "common",
+      "subsection": "signature",
+      "title": "Signature | Bitget API",
+      "file": "common/signature.md",
+      "chars": 3397
+    },
+    "https://www.bitget.com/api-doc/common/websocket-intro": {
+      "section": "common",
+      "subsection": "websocket-intro",
+      "title": "Websocket API | Bitget API",
+      "file": "common/websocket-intro.md",
+      "chars": 7201
+    },
+    "https://www.bitget.com/api-doc/common/domain": {
+      "section": "common",
+      "subsection": "domain",
+      "title": "API Domain | Bitget API",
+      "file": "common/domain.md",
+      "chars": 745
+    },
+    "https://www.bitget.com/api-doc/common/notice/Get-All-Notices": {
+      "section": "common",
+      "subsection": "notice",
+      "title": "Query Announcements | Bitget API",
+      "file": "common/notice.md",
+      "chars": 3197
+    },
+    "https://www.bitget.com/api-doc/spot/market/Get-Coin-List": {
+      "section": "spot",
+      "subsection": "market",
+      "title": "Get Coin Info | Bitget API",
+      "file": "spot/market.md",
+      "chars": 3027
+    },
+    "https://www.bitget.com/api-doc/contract/market/Get-VIP-Fee-Rate": {
+      "section": "contract",
+      "subsection": "market",
+      "title": "VIP Fee Rate | Bitget API",
+      "file": "contract/market.md",
+      "chars": 2174
+    },
+    "https://www.bitget.com/api-doc/broker/commission/Get-Total-Commission": {
+      "section": "broker",
+      "subsection": "commission",
+      "title": "Get Total Commission | Bitget API",
+      "file": "broker/commission.md",
+      "chars": 3499
+    },
+    "https://www.bitget.com/api-doc/affiliate/customerInfo/GetDirectCommissions": {
+      "section": "affiliate",
+      "subsection": "customerInfo",
+      "title": "Get Agent Direct commissions | Bitget API",
+      "file": "affiliate/customerInfo.md",
+      "chars": 3959
+    },
+    "https://www.bitget.com/api-doc/margin/common/support-currencies": {
+      "section": "margin",
+      "subsection": "common",
+      "title": "Get Support Currencies | Bitget API",
+      "file": "margin/common.md",
+      "chars": 2686
+    },
+    "https://www.bitget.com/api-doc/copytrading/future-copytrade/trader/Trader-Order-Current-Track": {
+      "section": "copytrading",
+      "subsection": "future-copytrade",
+      "title": "Get Current Tracking Orders | Bitget API",
+      "file": "copytrading/future-copytrade.md",
+      "chars": 4036
+    },
+    "https://www.bitget.com/api-doc/earn/savings/Savings-Products": {
+      "section": "earn",
+      "subsection": "savings",
+      "title": "Savings Product List | Bitget API",
+      "file": "earn/savings.md",
+      "chars": 3104
+    },
+    "https://www.bitget.com/api-doc/instloan/public/Get-Product-Info": {
+      "section": "instloan",
+      "subsection": "public",
+      "title": "Get Product Info | Bitget API",
+      "file": "instloan/public.md",
+      "chars": 1449
+    },
+    "https://www.bitget.com/api-doc/classic/intro": {
+      "section": "classic",
+      "subsection": "intro",
+      "title": "Classic Account | Bitget API",
+      "file": "classic/intro.md",
+      "chars": 7900
+    },
+    "https://www.bitget.com/api-doc/uta/guide": {
+      "section": "uta",
+      "subsection": "guide",
+      "title": "Quick Start | Bitget API",
+      "file": "uta/guide.md",
+      "chars": 3810
+    },
+    "https://www.bitget.com/api-doc/uta/changelog": {
+      "section": "uta",
+      "subsection": "changelog",
+      "title": "Change Log | Bitget API",
+      "file": "uta/changelog.md",
+      "chars": 24297
+    },
+    "https://www.bitget.com/api-doc/uta/enum": {
+      "section": "uta",
+      "subsection": "enum",
+      "title": "Enumeration | Bitget API",
+      "file": "uta/enum.md",
+      "chars": 11956
+    },
+    "https://www.bitget.com/api-doc/common/demotrading/restapi": {
+      "section": "common",
+      "subsection": "demotrading",
+      "title": "RestAPI Demo Trading | Bitget API",
+      "file": "common/demotrading.md",
+      "chars": 1175
+    },
+    "https://www.bitget.com/api-doc/contract/market/Get-All-Symbols-Contracts": {
+      "section": "contract",
+      "subsection": "market",
+      "title": "Get Contract Config | Bitget API",
+      "file": "contract/market.md",
+      "chars": 5337
+    },
+    "https://www.bitget.com/api-doc/copytrading/future-copytrade/trader/Trader-Get-Config-Query-Symbols": {
+      "section": "copytrading",
+      "subsection": "future-copytrade",
+      "title": "Get Copy Trade Symbol Settings | Bitget API",
+      "file": "copytrading/future-copytrade.md",
+      "chars": 2121
+    },
+    "https://www.bitget.com/api-doc/copytrading/spot-copytrade/trader/Config-Query-Settings": {
+      "section": "copytrading",
+      "subsection": "spot-copytrade",
+      "title": "Get Copytrade Configuration | Bitget API",
+      "file": "copytrading/spot-copytrade.md",
+      "chars": 3361
+    },
+    "https://www.bitget.com/api-doc/spot/account/Get-Account-Info": {
+      "section": "spot",
+      "subsection": "account",
+      "title": "Get Account Information | Bitget API",
+      "file": "spot/account.md",
+      "chars": 2453
+    },
+    "https://www.bitget.com/api-doc/common/signature-samaple/hmac": {
+      "section": "common",
+      "subsection": "signature-samaple",
+      "title": "HMAC | Bitget API",
+      "file": "common/signature-samaple.md",
+      "chars": 2890
+    },
+    "https://www.bitget.com/api-doc/common/signature-samaple/rsa": {
+      "section": "common",
+      "subsection": "signature-samaple",
+      "title": "RSA | Bitget API",
+      "file": "common/signature-samaple.md",
+      "chars": 4961
+    },
+    "https://www.bitget.com/api-doc/common/public/Get-Server-Time": {
+      "section": "common",
+      "subsection": "public",
+      "title": "Get Server Time | Bitget API",
+      "file": "common/public.md",
+      "chars": 1085
+    },
+    "https://www.bitget.com/api-doc/common/signature-samaple/interaction": {
+      "section": "common",
+      "subsection": "signature-samaple",
+      "title": "Request Interaction | Bitget API",
+      "file": "common/signature-samaple.md",
+      "chars": 2949
+    },
+    "https://www.bitget.com/api-doc/spot/market/Get-Symbols": {
+      "section": "spot",
+      "subsection": "market",
+      "title": "Get Symbol Info | Bitget API",
+      "file": "spot/market.md",
+      "chars": 2925
+    },
+    "https://www.bitget.com/api-doc/spot/market/Get-VIP-Fee-Rate": {
+      "section": "spot",
+      "subsection": "market",
+      "title": "Get VIP Fee Rate | Bitget API",
+      "file": "spot/market.md",
+      "chars": 1645
+    },
+    "https://www.bitget.com/api-doc/spot/market/Get-Tickers": {
+      "section": "spot",
+      "subsection": "market",
+      "title": "Get Ticker Information | Bitget API",
+      "file": "spot/market.md",
+      "chars": 2297
+    },
+    "https://www.bitget.com/api-doc/spot/market/Merge-Orderbook": {
+      "section": "spot",
+      "subsection": "market",
+      "title": "Get Merge Depth | Bitget API",
+      "file": "spot/market.md",
+      "chars": 3291
+    },
+    "https://www.bitget.com/api-doc/spot/market/Get-Orderbook": {
+      "section": "spot",
+      "subsection": "market",
+      "title": "Get OrderBook Depth | Bitget API",
+      "file": "spot/market.md",
+      "chars": 1760
+    },
+    "https://www.bitget.com/api-doc/spot/market/Get-Candle-Data": {
+      "section": "spot",
+      "subsection": "market",
+      "title": "Get Candlestick Data | Bitget API",
+      "file": "spot/market.md",
+      "chars": 2839
+    },
+    "https://www.bitget.com/api-doc/spot/market/Get-Auction": {
+      "section": "spot",
+      "subsection": "market",
+      "title": "Get Call Auction information | Bitget API",
+      "file": "spot/market.md",
+      "chars": 1582
+    },
+    "https://www.bitget.com/api-doc/spot/market/Get-History-Candle-Data": {
+      "section": "spot",
+      "subsection": "market",
+      "title": "Get History Candlestick Data | Bitget API",
+      "file": "spot/market.md",
+      "chars": 3148
+    },
+    "https://www.bitget.com/api-doc/spot/market/Get-Recent-Trades": {
+      "section": "spot",
+      "subsection": "market",
+      "title": "Get Recent Trades | Bitget API",
+      "file": "spot/market.md",
+      "chars": 1718
+    },
+    "https://www.bitget.com/api-doc/spot/market/Get-Market-Trades": {
+      "section": "spot",
+      "subsection": "market",
+      "title": "Get Market Trades | Bitget API",
+      "file": "spot/market.md",
+      "chars": 2210
+    },
+    "https://www.bitget.com/api-doc/contract/market/Get-Interest-Rate": {
+      "section": "contract",
+      "subsection": "market",
+      "title": "Get Interest rate history | Bitget API",
+      "file": "contract/market.md",
+      "chars": 2081
+    },
+    "https://www.bitget.com/api-doc/contract/market/Get-Exchange-Rate": {
+      "section": "contract",
+      "subsection": "market",
+      "title": "Get Interest Exchange Rate | Bitget API",
+      "file": "contract/market.md",
+      "chars": 3566
+    },
+    "https://www.bitget.com/api-doc/contract/market/Get-Discount-Rate": {
+      "section": "contract",
+      "subsection": "market",
+      "title": "Get Discount Rate | Bitget API",
+      "file": "contract/market.md",
+      "chars": 3138
+    },
+    "https://www.bitget.com/api-doc/contract/market/Get-Merge-Depth": {
+      "section": "contract",
+      "subsection": "market",
+      "title": "Get Merge Market Depth | Bitget API",
+      "file": "contract/market.md",
+      "chars": 3537
+    },
+    "https://www.bitget.com/api-doc/contract/market/Get-Ticker": {
+      "section": "contract",
+      "subsection": "market",
+      "title": "Get Ticker | Bitget API",
+      "file": "contract/market.md",
+      "chars": 3703
+    },
+    "https://www.bitget.com/api-doc/contract/market/Get-All-Symbol-Ticker": {
+      "section": "contract",
+      "subsection": "market",
+      "title": "Get All Tickers | Bitget API",
+      "file": "contract/market.md",
+      "chars": 4465
+    },
+    "https://www.bitget.com/api-doc/contract/market/Get-Recent-Fills": {
+      "section": "contract",
+      "subsection": "market",
+      "title": "Get Recent Transactions | Bitget API",
+      "file": "contract/market.md",
+      "chars": 2158
+    },
+    "https://www.bitget.com/api-doc/contract/market/Get-Fills-History": {
+      "section": "contract",
+      "subsection": "market",
+      "title": "Get History Transactions | Bitget API",
+      "file": "contract/market.md",
+      "chars": 2873
+    },
+    "https://www.bitget.com/api-doc/contract/market/Get-Candle-Data": {
+      "section": "contract",
+      "subsection": "market",
+      "title": "Get Candlestick Data | Bitget API",
+      "file": "contract/market.md",
+      "chars": 3865
+    },
+    "https://www.bitget.com/api-doc/contract/market/Get-History-Candle-Data": {
+      "section": "contract",
+      "subsection": "market",
+      "title": "Get Historical Candlestick | Bitget API",
+      "file": "contract/market.md",
+      "chars": 3367
+    },
+    "https://www.bitget.com/api-doc/contract/market/Get-History-Index-Candle-Data": {
+      "section": "contract",
+      "subsection": "market",
+      "title": "Get Historical Index Price Candlestick | Bitget API",
+      "file": "contract/market.md",
+      "chars": 3426
+    },
+    "https://www.bitget.com/api-doc/contract/market/Get-History-Mark-Candle-Data": {
+      "section": "contract",
+      "subsection": "market",
+      "title": "Get Historical Mark Price Candlestick | Bitget API",
+      "file": "contract/market.md",
+      "chars": 3352
+    },
+    "https://www.bitget.com/api-doc/contract/market/Get-Open-Interest": {
+      "section": "contract",
+      "subsection": "market",
+      "title": "Get Open Interest | Bitget API",
+      "file": "contract/market.md",
+      "chars": 1924
+    },
+    "https://www.bitget.com/api-doc/contract/market/Get-Symbol-Next-Funding-Time": {
+      "section": "contract",
+      "subsection": "market",
+      "title": "Get Next Funding Time | Bitget API",
+      "file": "contract/market.md",
+      "chars": 1788
+    },
+    "https://www.bitget.com/api-doc/contract/market/Get-Symbol-Price": {
+      "section": "contract",
+      "subsection": "market",
+      "title": "Get Mark/Index/Market Prices | Bitget API",
+      "file": "contract/market.md",
+      "chars": 1902
+    },
+    "https://www.bitget.com/api-doc/contract/market/Get-History-Funding-Rate": {
+      "section": "contract",
+      "subsection": "market",
+      "title": "Get Historical Funding Rates | Bitget API",
+      "file": "contract/market.md",
+      "chars": 1970
+    },
+    "https://www.bitget.com/api-doc/contract/market/Get-Current-Funding-Rate": {
+      "section": "contract",
+      "subsection": "market",
+      "title": "Get Current Funding Rate | Bitget API",
+      "file": "contract/market.md",
+      "chars": 2195
+    },
+    "https://www.bitget.com/api-doc/contract/market/Get-Contracts-Oi": {
+      "section": "contract",
+      "subsection": "market",
+      "title": "Get Contract OI Limit | Bitget API",
+      "file": "contract/market.md",
+      "chars": 1942
+    },
+    "https://www.bitget.com/api-doc/broker/commission/Get-Order-Commission": {
+      "section": "broker",
+      "subsection": "commission",
+      "title": "Get Order Commission | Bitget API",
+      "file": "broker/commission.md",
+      "chars": 3451
+    },
+    "https://www.bitget.com/api-doc/broker/commission/Get-Rebate-Info": {
+      "section": "broker",
+      "subsection": "commission",
+      "title": "Get Rebate Info | Bitget API",
+      "file": "broker/commission.md",
+      "chars": 1476
+    },
+    "https://www.bitget.com/api-doc/affiliate/customerInfo/GetCustomerTradeVolume": {
+      "section": "affiliate",
+      "subsection": "customerInfo",
+      "title": "Get Agent Customer Trade Volume List | Bitget API",
+      "file": "affiliate/customerInfo.md",
+      "chars": 2114
+    },
+    "https://www.bitget.com/api-doc/affiliate/customerInfo/GetCustomerList": {
+      "section": "affiliate",
+      "subsection": "customerInfo",
+      "title": "Get Agent Customer List | Bitget API",
+      "file": "affiliate/customerInfo.md",
+      "chars": 2254
+    },
+    "https://www.bitget.com/api-doc/affiliate/customerInfo/GetCustomerKycResult": {
+      "section": "affiliate",
+      "subsection": "customerInfo",
+      "title": "Get Agent Customer Kyc Result | Bitget API",
+      "file": "affiliate/customerInfo.md",
+      "chars": 1975
+    },
+    "https://www.bitget.com/api-doc/affiliate/customerInfo/GetCustomerDeposit": {
+      "section": "affiliate",
+      "subsection": "customerInfo",
+      "title": "Get Agent Customer Deposit List | Bitget API",
+      "file": "affiliate/customerInfo.md",
+      "chars": 2160
+    },
+    "https://www.bitget.com/api-doc/affiliate/customerInfo/GetCustomerAssets": {
+      "section": "affiliate",
+      "subsection": "customerInfo",
+      "title": "Get Agent Customer Assets List | Bitget API",
+      "file": "affiliate/customerInfo.md",
+      "chars": 1673
+    },
+    "https://www.bitget.com/api-doc/affiliate/customerInfo/GetCommissionDetail": {
+      "section": "affiliate",
+      "subsection": "customerInfo",
+      "title": "Get Agent Commission Detail | Bitget API",
+      "file": "affiliate/customerInfo.md",
+      "chars": 4606
+    },
+    "https://www.bitget.com/api-doc/margin/common/interest-rate-record": {
+      "section": "margin",
+      "subsection": "common",
+      "title": "Get the leverage interest rate | Bitget API",
+      "file": "margin/common.md",
+      "chars": 1411
+    },
+    "https://www.bitget.com/api-doc/copytrading/future-copytrade/trader/Trader-Order-History-Track": {
+      "section": "copytrading",
+      "subsection": "future-copytrade",
+      "title": "Get History Tracking Orders | Bitget API",
+      "file": "copytrading/future-copytrade.md",
+      "chars": 4528
+    },
+    "https://www.bitget.com/api-doc/copytrading/future-copytrade/trader/Create-Copy-Api": {
+      "section": "copytrading",
+      "subsection": "future-copytrade",
+      "title": "Create Copy ApiKey | Bitget API",
+      "file": "copytrading/future-copytrade.md",
+      "chars": 2749
+    },
+    "https://www.bitget.com/api-doc/copytrading/future-copytrade/trader/Trader-Order-Modify-Tpsl": {
+      "section": "copytrading",
+      "subsection": "future-copytrade",
+      "title": "Modify Tracking Order TPSL | Bitget API",
+      "file": "copytrading/future-copytrade.md",
+      "chars": 2438
+    },
+    "https://www.bitget.com/api-doc/copytrading/future-copytrade/trader/Trader-Order-Total-Detail": {
+      "section": "copytrading",
+      "subsection": "future-copytrade",
+      "title": "Get Tracking Order Summary | Bitget API",
+      "file": "copytrading/future-copytrade.md",
+      "chars": 2750
+    },
+    "https://www.bitget.com/api-doc/copytrading/future-copytrade/trader/Trader-Profit-History-Summarys": {
+      "section": "copytrading",
+      "subsection": "future-copytrade",
+      "title": "Get History Profit Summary | Bitget API",
+      "file": "copytrading/future-copytrade.md",
+      "chars": 2218
+    },
+    "https://www.bitget.com/api-doc/copytrading/future-copytrade/trader/Trader-Profit-History-Details": {
+      "section": "copytrading",
+      "subsection": "future-copytrade",
+      "title": "Get History Profit Share Detail | Bitget API",
+      "file": "copytrading/future-copytrade.md",
+      "chars": 2907
+    },
+    "https://www.bitget.com/api-doc/copytrading/future-copytrade/trader/Trader-Order-Close-Positions": {
+      "section": "copytrading",
+      "subsection": "future-copytrade",
+      "title": "Close Tracking Order | Bitget API",
+      "file": "copytrading/future-copytrade.md",
+      "chars": 2348
+    },
+    "https://www.bitget.com/api-doc/copytrading/future-copytrade/trader/Trader-Profit-Details": {
+      "section": "copytrading",
+      "subsection": "future-copytrade",
+      "title": "Get Profit Share Detail | Bitget API",
+      "file": "copytrading/future-copytrade.md",
+      "chars": 1784
+    },
+    "https://www.bitget.com/api-doc/copytrading/future-copytrade/trader/Trader-Get-Profits-Group-Coin-Date": {
+      "section": "copytrading",
+      "subsection": "future-copytrade",
+      "title": "Get Profit Share Group by Coin & Date | Bitget API",
+      "file": "copytrading/future-copytrade.md",
+      "chars": 1944
+    },
+    "https://www.bitget.com/api-doc/copytrading/future-copytrade/trader/Trader-Config-Setting-Symbols": {
+      "section": "copytrading",
+      "subsection": "future-copytrade",
+      "title": "Change Copy Trade Symbol Setting | Bitget API",
+      "file": "copytrading/future-copytrade.md",
+      "chars": 3042
+    },
+    "https://www.bitget.com/api-doc/copytrading/future-copytrade/trader/Trader-Config-Settings-Base": {
+      "section": "copytrading",
+      "subsection": "future-copytrade",
+      "title": "Change Global Copy Trade Setting | Bitget API",
+      "file": "copytrading/future-copytrade.md",
+      "chars": 1818
+    },
+    "https://www.bitget.com/api-doc/copytrading/future-copytrade/trader/Config-Query-Followers": {
+      "section": "copytrading",
+      "subsection": "future-copytrade",
+      "title": "Get My Followers | Bitget API",
+      "file": "copytrading/future-copytrade.md",
+      "chars": 2599
+    },
+    "https://www.bitget.com/api-doc/copytrading/future-copytrade/trader/Config-Remove-Follower": {
+      "section": "copytrading",
+      "subsection": "future-copytrade",
+      "title": "Remove Follower | Bitget API",
+      "file": "copytrading/future-copytrade.md",
+      "chars": 1476
+    },
+    "https://www.bitget.com/api-doc/earn/savings/Savings-Account": {
+      "section": "earn",
+      "subsection": "savings",
+      "title": "Savings Account | Bitget API",
+      "file": "earn/savings.md",
+      "chars": 1588
+    },
+    "https://www.bitget.com/api-doc/earn/savings/Savings-Assets": {
+      "section": "earn",
+      "subsection": "savings",
+      "title": "Savings Assets | Bitget API",
+      "file": "earn/savings.md",
+      "chars": 3600
+    },
+    "https://www.bitget.com/api-doc/earn/savings/Savings-Records": {
+      "section": "earn",
+      "subsection": "savings",
+      "title": "Savings Records | Bitget API",
+      "file": "earn/savings.md",
+      "chars": 3068
+    },
+    "https://www.bitget.com/api-doc/earn/savings/Savings-Subscribe-Info": {
+      "section": "earn",
+      "subsection": "savings",
+      "title": "Savings Subscription Detail | Bitget API",
+      "file": "earn/savings.md",
+      "chars": 3102
+    },
+    "https://www.bitget.com/api-doc/earn/savings/Savings-Subscribe": {
+      "section": "earn",
+      "subsection": "savings",
+      "title": "Subscribe Savings | Bitget API",
+      "file": "earn/savings.md",
+      "chars": 1420
+    },
+    "https://www.bitget.com/api-doc/earn/savings/Savings-Subscribe-Result": {
+      "section": "earn",
+      "subsection": "savings",
+      "title": "Savings Subscription Result | Bitget API",
+      "file": "earn/savings.md",
+      "chars": 1449
+    },
+    "https://www.bitget.com/api-doc/earn/savings/Savings-Redeem": {
+      "section": "earn",
+      "subsection": "savings",
+      "title": "Redeem Savings | Bitget API",
+      "file": "earn/savings.md",
+      "chars": 1608
+    },
+    "https://www.bitget.com/api-doc/earn/savings/Savings-Redeem-Result": {
+      "section": "earn",
+      "subsection": "savings",
+      "title": "Savings Redemption Results | Bitget API",
+      "file": "earn/savings.md",
+      "chars": 1438
+    },
+    "https://www.bitget.com/api-doc/instloan/public/Get-Margin-Coin-Info": {
+      "section": "instloan",
+      "subsection": "public",
+      "title": "Get Margin Coin Info | Bitget API",
+      "file": "instloan/public.md",
+      "chars": 1636
+    },
+    "https://www.bitget.com/api-doc/instloan/public/Get-Spot-Symbols": {
+      "section": "instloan",
+      "subsection": "public",
+      "title": "Get Spot Symbols | Bitget API",
+      "file": "instloan/public.md",
+      "chars": 1094
+    },
+    "https://www.bitget.com/api-doc/classic/changelog": {
+      "section": "classic",
+      "subsection": "changelog",
+      "title": "Changelog | Bitget API",
+      "file": "classic/changelog.md",
+      "chars": 33609
+    },
+    "https://www.bitget.com/api-doc/classic/faq": {
+      "section": "classic",
+      "subsection": "faq",
+      "title": "FAQ | Bitget API",
+      "file": "classic/faq.md",
+      "chars": 3860
+    },
+    "https://www.bitget.com/api-doc/classic/quickStart/intro": {
+      "section": "classic",
+      "subsection": "quickStart",
+      "title": "Rest API | Bitget API",
+      "file": "classic/quickStart.md",
+      "chars": 15773
+    },
+    "https://www.bitget.com/api-doc/uta/public/Instruments": {
+      "section": "uta",
+      "subsection": "public",
+      "title": "Get Instruments | Bitget API",
+      "file": "uta/public.md",
+      "chars": 6675
+    },
+    "https://www.bitget.com/api-doc/uta/error-code/websocket": {
+      "section": "uta",
+      "subsection": "error-code",
+      "title": "WebSocket Error Code | Bitget API",
+      "file": "uta/error-code.md",
+      "chars": 27022
+    },
+    "https://www.bitget.com/api-doc/common/demotrading/websocket": {
+      "section": "common",
+      "subsection": "demotrading",
+      "title": "Websocket Demo Trading | Bitget API",
+      "file": "common/demotrading.md",
+      "chars": 1265
+    },
+    "https://www.bitget.com/api-doc/common/tax/Get-P2P-Account-Record": {
+      "section": "common",
+      "subsection": "tax",
+      "title": "P2P Transaction Records | Bitget API",
+      "file": "common/tax.md",
+      "chars": 1901
+    },
+    "https://www.bitget.com/api-doc/contract/account/Get-Single-Account": {
+      "section": "contract",
+      "subsection": "account",
+      "title": "Get Single Account | Bitget API",
+      "file": "contract/account.md",
+      "chars": 3941
+    },
+    "https://www.bitget.com/api-doc/copytrading/spot-copytrade/trader/Profit-Summarys": {
+      "section": "copytrading",
+      "subsection": "spot-copytrade",
+      "title": "Get Profit Summary | Bitget API",
+      "file": "copytrading/spot-copytrade.md",
+      "chars": 3047
+    },
+    "https://www.bitget.com/api-doc/copytrading/spot-copytrade/trader/Profit-History-Details": {
+      "section": "copytrading",
+      "subsection": "spot-copytrade",
+      "title": "Get History Profit Sharing Details | Bitget API",
+      "file": "copytrading/spot-copytrade.md",
+      "chars": 3324
+    },
+    "https://www.bitget.com/api-doc/copytrading/spot-copytrade/trader/Profit-Details": {
+      "section": "copytrading",
+      "subsection": "spot-copytrade",
+      "title": "Get Unrealized Profit Sharing Details | Bitget API",
+      "file": "copytrading/spot-copytrade.md",
+      "chars": 1862
+    },
+    "https://www.bitget.com/api-doc/copytrading/spot-copytrade/trader/Order-Total-Detail": {
+      "section": "copytrading",
+      "subsection": "spot-copytrade",
+      "title": "Get Data Indicator Statistics | Bitget API",
+      "file": "copytrading/spot-copytrade.md",
+      "chars": 8262
+    },
+    "https://www.bitget.com/api-doc/copytrading/spot-copytrade/trader/Order-Modify-Tpsl": {
+      "section": "copytrading",
+      "subsection": "spot-copytrade",
+      "title": "Modify Take Profit and Stop Loss | Bitget API",
+      "file": "copytrading/spot-copytrade.md",
+      "chars": 2240
+    },
+    "https://www.bitget.com/api-doc/copytrading/spot-copytrade/trader/Order-History-Track": {
+      "section": "copytrading",
+      "subsection": "spot-copytrade",
+      "title": "Get History Tracking Orders | Bitget API",
+      "file": "copytrading/spot-copytrade.md",
+      "chars": 3457
+    },
+    "https://www.bitget.com/api-doc/copytrading/spot-copytrade/trader/Order-Current-Track": {
+      "section": "copytrading",
+      "subsection": "spot-copytrade",
+      "title": "Get Current Tracking Orders | Bitget API",
+      "file": "copytrading/spot-copytrade.md",
+      "chars": 2950
+    },
+    "https://www.bitget.com/api-doc/copytrading/spot-copytrade/trader/Order-Close-Tracking": {
+      "section": "copytrading",
+      "subsection": "spot-copytrade",
+      "title": "Sell And Sell in Batch | Bitget API",
+      "file": "copytrading/spot-copytrade.md",
+      "chars": 1628
+    },
+    "https://www.bitget.com/api-doc/copytrading/spot-copytrade/trader/Config-Setting-Symbols": {
+      "section": "copytrading",
+      "subsection": "spot-copytrade",
+      "title": "Set Copytrade Symbols | Bitget API",
+      "file": "copytrading/spot-copytrade.md",
+      "chars": 1618
+    },
+    "https://www.bitget.com/api-doc/copytrading/spot-copytrade/trader/Config-Remove-Follower": {
+      "section": "copytrading",
+      "subsection": "spot-copytrade",
+      "title": "Remove Followers | Bitget API",
+      "file": "copytrading/spot-copytrade.md",
+      "chars": 1484
+    },
+    "https://www.bitget.com/api-doc/copytrading/spot-copytrade/trader/Config-Query-Followers": {
+      "section": "copytrading",
+      "subsection": "spot-copytrade",
+      "title": "My Follower List | Bitget API",
+      "file": "copytrading/spot-copytrade.md",
+      "chars": 2065
+    },
+    "https://www.bitget.com/api-doc/spot/account/Get-Account-Assets": {
+      "section": "spot",
+      "subsection": "account",
+      "title": "Get Account Assets | Bitget API",
+      "file": "spot/account.md",
+      "chars": 2382
+    },
+    "https://www.bitget.com/api-doc/spot/account/Get-Subaccount-Assets": {
+      "section": "spot",
+      "subsection": "account",
+      "title": "Get Sub-accounts Assets | Bitget API",
+      "file": "spot/account.md",
+      "chars": 2644
+    },
+    "https://www.bitget.com/api-doc/spot/account/Modify-Deposit-Account": {
+      "section": "spot",
+      "subsection": "account",
+      "title": "Modify Deposit Account | Bitget API",
+      "file": "spot/account.md",
+      "chars": 1775
+    },
+    "https://www.bitget.com/api-doc/spot/account/Get-Account-Bills": {
+      "section": "spot",
+      "subsection": "account",
+      "title": "Get Account Bills | Bitget API",
+      "file": "spot/account.md",
+      "chars": 3584
+    },
+    "https://www.bitget.com/api-doc/spot/account/Wallet-Transfer": {
+      "section": "spot",
+      "subsection": "account",
+      "title": "Transfer | Bitget API",
+      "file": "spot/account.md",
+      "chars": 2544
+    },
+    "https://www.bitget.com/api-doc/spot/account/Get-Transfer-Coins": {
+      "section": "spot",
+      "subsection": "account",
+      "title": "GET Transferable Coin List | Bitget API",
+      "file": "spot/account.md",
+      "chars": 2079
+    },
+    "https://www.bitget.com/api-doc/spot/account/Sub-Transfer": {
+      "section": "spot",
+      "subsection": "account",
+      "title": "Sub Transfer | Bitget API",
+      "file": "spot/account.md",
+      "chars": 2983
+    },
+    "https://www.bitget.com/api-doc/spot/account/Wallet-Withdrawal": {
+      "section": "spot",
+      "subsection": "account",
+      "title": "Withdraw | Bitget API",
+      "file": "spot/account.md",
+      "chars": 3526
+    },
+    "https://www.bitget.com/api-doc/spot/account/Get-SubAccount-TransferRecords": {
+      "section": "spot",
+      "subsection": "account",
+      "title": "Get MainSub Transfer Record | Bitget API",
+      "file": "spot/account.md",
+      "chars": 3903
+    },
+    "https://www.bitget.com/api-doc/spot/account/Get-Account-TransferRecords": {
+      "section": "spot",
+      "subsection": "account",
+      "title": "Get Transfer Record | Bitget API",
+      "file": "spot/account.md",
+      "chars": 3904
+    },
+    "https://www.bitget.com/api-doc/spot/account/Switch-Deduct": {
+      "section": "spot",
+      "subsection": "account",
+      "title": "Switch BGB Deduct | Bitget API",
+      "file": "spot/account.md",
+      "chars": 1411
+    },
+    "https://www.bitget.com/api-doc/spot/account/Get-Deposit-Address": {
+      "section": "spot",
+      "subsection": "account",
+      "title": "Get Deposit Address | Bitget API",
+      "file": "spot/account.md",
+      "chars": 1947
+    },
+    "https://www.bitget.com/api-doc/spot/account/Get-SubAccount-Deposit-Address": {
+      "section": "spot",
+      "subsection": "account",
+      "title": "Get SubAccount Deposit Address | Bitget API",
+      "file": "spot/account.md",
+      "chars": 2169
+    },
+    "https://www.bitget.com/api-doc/spot/account/Get-Deduct-Info": {
+      "section": "spot",
+      "subsection": "account",
+      "title": "Get BGB Deduct Info | Bitget API",
+      "file": "spot/account.md",
+      "chars": 1397
+    },
+    "https://www.bitget.com/api-doc/spot/account/Cancel-Withdrawal": {
+      "section": "spot",
+      "subsection": "account",
+      "title": "Cancel Withdrawal | Bitget API",
+      "file": "spot/account.md",
+      "chars": 1924
+    },
+    "https://www.bitget.com/api-doc/spot/account/Get-SubAccount-Deposit-Record": {
+      "section": "spot",
+      "subsection": "account",
+      "title": "Get SubAccount Deposit Records | Bitget API",
+      "file": "spot/account.md",
+      "chars": 3308
+    },
+    "https://www.bitget.com/api-doc/spot/account/Get-Withdraw-Record": {
+      "section": "spot",
+      "subsection": "account",
+      "title": "Get Withdrawal Records | Bitget API",
+      "file": "spot/account.md",
+      "chars": 3604
+    },
+    "https://www.bitget.com/api-doc/spot/account/Get-Deposit-Record": {
+      "section": "spot",
+      "subsection": "account",
+      "title": "Get Deposit Records | Bitget API",
+      "file": "spot/account.md",
+      "chars": 3260
+    },
+    "https://www.bitget.com/api-doc/spot/account/Upgrade_Account": {
+      "section": "spot",
+      "subsection": "account",
+      "title": "Upgrade Account | Bitget API",
+      "file": "spot/account.md",
+      "chars": 1849
+    },
+    "https://www.bitget.com/api-doc/spot/account/Get_Upgrade_Status": {
+      "section": "spot",
+      "subsection": "account",
+      "title": "Get Upgrade Status | Bitget API",
+      "file": "spot/account.md",
+      "chars": 1634
+    },
+    "https://www.bitget.com/api-doc/spot/plan/Batch-Cancel-Plan-Order": {
+      "section": "spot",
+      "subsection": "plan",
+      "title": "Cancel Plan Orders in Batch | Bitget API",
+      "file": "spot/plan.md",
+      "chars": 1919
+    },
+    "https://www.bitget.com/api-doc/common/public/Get-Trade-Rate": {
+      "section": "common",
+      "subsection": "public",
+      "title": "Get Trade Rate | Bitget API",
+      "file": "common/public.md",
+      "chars": 1587
+    },
+    "https://www.bitget.com/api-doc/common/public/Get-All-Trade-Rate": {
+      "section": "common",
+      "subsection": "public",
+      "title": "Get Business Line All Symbol Trade Rate | Bitget API",
+      "file": "common/public.md",
+      "chars": 1962
+    },
+    "https://www.bitget.com/api-doc/spot/public/Get-Server-Time": {
+      "section": "spot",
+      "subsection": "public",
+      "title": "Get Server Time | Bitget API",
+      "file": "spot/public.md",
+      "chars": 891
+    },
+    "https://www.bitget.com/api-doc/spot/trade/Place-Order": {
+      "section": "spot",
+      "subsection": "trade",
+      "title": "Place Order | Bitget API",
+      "file": "spot/trade.md",
+      "chars": 3915
+    },
+    "https://www.bitget.com/api-doc/broker/subaccount/Modify-Subaccount-Email": {
+      "section": "broker",
+      "subsection": "subaccount",
+      "title": "Modify Subaccount Email | Bitget API",
+      "file": "broker/subaccount.md",
+      "chars": 1870
+    },
+    "https://www.bitget.com/api-doc/affiliate/error-code/restapi": {
+      "section": "affiliate",
+      "subsection": "error-code",
+      "title": "Rest API Error Code | Bitget API",
+      "file": "affiliate/error-code.md",
+      "chars": 44635
+    },
+    "https://www.bitget.com/api-doc/margin/cross/record/Get-Cross-Loan-Records": {
+      "section": "margin",
+      "subsection": "cross",
+      "title": "Get Cross Borrow History | Bitget API",
+      "file": "margin/cross.md",
+      "chars": 2396
+    },
+    "https://www.bitget.com/api-doc/copytrading/future-copytrade/follower/Query-Current-Orders": {
+      "section": "copytrading",
+      "subsection": "future-copytrade",
+      "title": "Get Current Tracking Orders | Bitget API",
+      "file": "copytrading/future-copytrade.md",
+      "chars": 3628
+    },
+    "https://www.bitget.com/api-doc/earn/account/Earn-Assets": {
+      "section": "earn",
+      "subsection": "account",
+      "title": "Earn account | Bitget API",
+      "file": "earn/account.md",
+      "chars": 1136
+    },
+    "https://www.bitget.com/api-doc/instloan/account/Get-LTV": {
+      "section": "instloan",
+      "subsection": "account",
+      "title": "Get LTV | Bitget API",
+      "file": "instloan/account.md",
+      "chars": 1997
+    },
+    "https://www.bitget.com/api-doc/classic/quickStart/websocket-intro": {
+      "section": "classic",
+      "subsection": "quickStart",
+      "title": "Websocket API | Bitget API",
+      "file": "classic/quickStart.md",
+      "chars": 7079
+    },
+    "https://www.bitget.com/api-doc/classic/demotrading/restapi": {
+      "section": "classic",
+      "subsection": "demotrading",
+      "title": "Rest API Demo Trading | Bitget API",
+      "file": "classic/demotrading.md",
+      "chars": 1023
+    },
+    "https://www.bitget.com/api-doc/uta/public/Tickers": {
+      "section": "uta",
+      "subsection": "public",
+      "title": "Get Tickers | Bitget API",
+      "file": "uta/public.md",
+      "chars": 3245
+    },
+    "https://www.bitget.com/api-doc/uta/public/OrderBook": {
+      "section": "uta",
+      "subsection": "public",
+      "title": "Get OrderBook | Bitget API",
+      "file": "uta/public.md",
+      "chars": 2108
+    },
+    "https://www.bitget.com/api-doc/uta/public/RPI-OrderBook": {
+      "section": "uta",
+      "subsection": "public",
+      "title": "Get RPI OrderBook | Bitget API",
+      "file": "uta/public.md",
+      "chars": 2452
+    },
+    "https://www.bitget.com/api-doc/uta/public/Fills": {
+      "section": "uta",
+      "subsection": "public",
+      "title": "Get Recent Public Fills | Bitget API",
+      "file": "uta/public.md",
+      "chars": 2161
+    },
+    "https://www.bitget.com/api-doc/uta/public/Get-Proof-Of-Reserves": {
+      "section": "uta",
+      "subsection": "public",
+      "title": "Get Proof Of Reserves | Bitget API",
+      "file": "uta/public.md",
+      "chars": 2268
+    },
+    "https://www.bitget.com/api-doc/uta/public/Get-Open-Interest": {
+      "section": "uta",
+      "subsection": "public",
+      "title": "Get Open Interest | Bitget API",
+      "file": "uta/public.md",
+      "chars": 1653
+    },
+    "https://www.bitget.com/api-doc/uta/public/Get-Candle-Data": {
+      "section": "uta",
+      "subsection": "public",
+      "title": "Get Kline/Candlestick | Bitget API",
+      "file": "uta/public.md",
+      "chars": 2403
+    },
+    "https://www.bitget.com/api-doc/uta/public/Get-History-Candle-Data": {
+      "section": "uta",
+      "subsection": "public",
+      "title": "Get Kline/Candlestick History | Bitget API",
+      "file": "uta/public.md",
+      "chars": 2524
+    },
+    "https://www.bitget.com/api-doc/uta/public/Get-Current-Funding-Rate": {
+      "section": "uta",
+      "subsection": "public",
+      "title": "Get Current Funding Rate | Bitget API",
+      "file": "uta/public.md",
+      "chars": 1976
+    },
+    "https://www.bitget.com/api-doc/uta/public/Get-History-Funding-Rate": {
+      "section": "uta",
+      "subsection": "public",
+      "title": "Get Funding Rate History | Bitget API",
+      "file": "uta/public.md",
+      "chars": 2041
+    },
+    "https://www.bitget.com/api-doc/uta/public/Get-Risk-Reserve": {
+      "section": "uta",
+      "subsection": "public",
+      "title": "Get Risk Reserve | Bitget API",
+      "file": "uta/public.md",
+      "chars": 2161
+    },
+    "https://www.bitget.com/api-doc/uta/public/Get-Discount-Rate": {
+      "section": "uta",
+      "subsection": "public",
+      "title": "Get Discount Rate | Bitget API",
+      "file": "uta/public.md",
+      "chars": 1611
+    },
+    "https://www.bitget.com/api-doc/uta/public/Get-Margin-Loans": {
+      "section": "uta",
+      "subsection": "public",
+      "title": "Get Margin Loan | Bitget API",
+      "file": "uta/public.md",
+      "chars": 1372
+    },
+    "https://www.bitget.com/api-doc/uta/public/Get-Position-Tier-Data": {
+      "section": "uta",
+      "subsection": "public",
+      "title": "Get Position Tier | Bitget API",
+      "file": "uta/public.md",
+      "chars": 1933
+    },
+    "https://www.bitget.com/api-doc/uta/public/Get-Contracts-Oi": {
+      "section": "uta",
+      "subsection": "public",
+      "title": "Get Open Interest Limit | Bitget API",
+      "file": "uta/public.md",
+      "chars": 1776
+    },
+    "https://www.bitget.com/api-doc/uta/public/Get-Index-Components": {
+      "section": "uta",
+      "subsection": "public",
+      "title": "Get Index Price Components | Bitget API",
+      "file": "uta/public.md",
+      "chars": 2411
+    },
+    "https://www.bitget.com/api-doc/uta/public/Get-Fee-Group": {
+      "section": "uta",
+      "subsection": "public",
+      "title": "Get Market Maker Fee Group | Bitget API",
+      "file": "uta/public.md",
+      "chars": 3015
+    },
+    "https://www.bitget.com/api-doc/uta/public/Get-Score-Weights": {
+      "section": "uta",
+      "subsection": "public",
+      "title": "Get Market Maker Score Weight | Bitget API",
+      "file": "uta/public.md",
+      "chars": 1856
+    },
+    "https://www.bitget.com/api-doc/uta/error-code/restapi": {
+      "section": "uta",
+      "subsection": "error-code",
+      "title": "Rest API Error Code | Bitget API",
+      "file": "uta/error-code.md",
+      "chars": 10679
+    },
+    "https://www.bitget.com/api-doc/common/p2p/Get-P2P-Merchant-List": {
+      "section": "common",
+      "subsection": "p2p",
+      "title": "Get P2P Merchant List | Bitget API",
+      "file": "common/p2p.md",
+      "chars": 2710
+    },
+    "https://www.bitget.com/api-doc/common/tax/Get-Spot-Account-Record": {
+      "section": "common",
+      "subsection": "tax",
+      "title": "Spot Transaction Records | Bitget API",
+      "file": "common/tax.md",
+      "chars": 3609
+    },
+    "https://www.bitget.com/api-doc/common/tax/Get-Future-Account-Record": {
+      "section": "common",
+      "subsection": "tax",
+      "title": "Futures Transaction Records | Bitget API",
+      "file": "common/tax.md",
+      "chars": 3259
+    },
+    "https://www.bitget.com/api-doc/common/tax/Get-Margin-Account-Record": {
+      "section": "common",
+      "subsection": "tax",
+      "title": "Margin Transaction History | Bitget API",
+      "file": "common/tax.md",
+      "chars": 2536
+    },
+    "https://www.bitget.com/api-doc/contract/account/Get-Account-List": {
+      "section": "contract",
+      "subsection": "account",
+      "title": "Get Account List | Bitget API",
+      "file": "contract/account.md",
+      "chars": 4011
+    },
+    "https://www.bitget.com/api-doc/contract/account/Get-Sub-Account-Contract-Assets": {
+      "section": "contract",
+      "subsection": "account",
+      "title": "Get Subaccount Assets | Bitget API",
+      "file": "contract/account.md",
+      "chars": 3990
+    },
+    "https://www.bitget.com/api-doc/contract/account/Interest-History": {
+      "section": "contract",
+      "subsection": "account",
+      "title": "Get USDT-M futures Interest history | Bitget API",
+      "file": "contract/account.md",
+      "chars": 2993
+    },
+    "https://www.bitget.com/api-doc/contract/account/Get-Max-Open": {
+      "section": "contract",
+      "subsection": "account",
+      "title": "Get Max Openable Quantity | Bitget API",
+      "file": "contract/account.md",
+      "chars": 2021
+    },
+    "https://www.bitget.com/api-doc/contract/account/Get-Liquidation-Price": {
+      "section": "contract",
+      "subsection": "account",
+      "title": "Get Liquidation Price | Bitget API",
+      "file": "contract/account.md",
+      "chars": 2006
+    },
+    "https://www.bitget.com/api-doc/contract/account/Est-Open-Count": {
+      "section": "contract",
+      "subsection": "account",
+      "title": "My Estimated Open Count | Bitget API",
+      "file": "contract/account.md",
+      "chars": 1998
+    },
+    "https://www.bitget.com/api-doc/contract/account/Set-Auto-Margin": {
+      "section": "contract",
+      "subsection": "account",
+      "title": "Set Isolated Position Auto Margin | Bitget API",
+      "file": "contract/account.md",
+      "chars": 1896
+    },
+    "https://www.bitget.com/api-doc/contract/account/Change-Leverage": {
+      "section": "contract",
+      "subsection": "account",
+      "title": "Change Leverage | Bitget API",
+      "file": "contract/account.md",
+      "chars": 3939
+    },
+    "https://www.bitget.com/api-doc/contract/account/Change-All-Leverage": {
+      "section": "contract",
+      "subsection": "account",
+      "title": "Change The Product Line Leverage | Bitget API",
+      "file": "contract/account.md",
+      "chars": 1865
+    },
+    "https://www.bitget.com/api-doc/contract/account/Change-Margin": {
+      "section": "contract",
+      "subsection": "account",
+      "title": "Adjust Position Margin | Bitget API",
+      "file": "contract/account.md",
+      "chars": 2014
+    },
+    "https://www.bitget.com/api-doc/contract/account/Set-Asset-Mode": {
+      "section": "contract",
+      "subsection": "account",
+      "title": "Set USDT-M Futures Asset Mode | Bitget API",
+      "file": "contract/account.md",
+      "chars": 1744
+    },
+    "https://www.bitget.com/api-doc/contract/account/Change-Margin-Mode": {
+      "section": "contract",
+      "subsection": "account",
+      "title": "Change Margin Mode | Bitget API",
+      "file": "contract/account.md",
+      "chars": 2322
+    },
+    "https://www.bitget.com/api-doc/contract/account/Union-Convert": {
+      "section": "contract",
+      "subsection": "account",
+      "title": "Union Convert | Bitget API",
+      "file": "contract/account.md",
+      "chars": 1592
+    },
+    "https://www.bitget.com/api-doc/contract/account/Change-Hold-Mode": {
+      "section": "contract",
+      "subsection": "account",
+      "title": "Change Position Mode | Bitget API",
+      "file": "contract/account.md",
+      "chars": 2309
+    },
+    "https://www.bitget.com/api-doc/contract/account/Get-Account-Bill": {
+      "section": "contract",
+      "subsection": "account",
+      "title": "Get Account Bills | Bitget API",
+      "file": "contract/account.md",
+      "chars": 5635
+    },
+    "https://www.bitget.com/api-doc/contract/account/Get-Union-Transfer-Limits": {
+      "section": "contract",
+      "subsection": "account",
+      "title": "Get Union Transfer Limits | Bitget API",
+      "file": "contract/account.md",
+      "chars": 1592
+    },
+    "https://www.bitget.com/api-doc/contract/account/Get-Union-Config": {
+      "section": "contract",
+      "subsection": "account",
+      "title": "Get Union Config | Bitget API",
+      "file": "contract/account.md",
+      "chars": 1932
+    },
+    "https://www.bitget.com/api-doc/contract/account/Get-Switch-Union-USDT": {
+      "section": "contract",
+      "subsection": "account",
+      "title": "Get Switch Union USDT | Bitget API",
+      "file": "contract/account.md",
+      "chars": 1522
+    },
+    "https://www.bitget.com/api-doc/contract/account/Get-Isolated-Symbols": {
+      "section": "contract",
+      "subsection": "account",
+      "title": "Get Isolated Symbols | Bitget API",
+      "file": "contract/account.md",
+      "chars": 1805
+    },
+    "https://www.bitget.com/api-doc/copytrading/future-copytrade/follower/Cancel-Trader": {
+      "section": "copytrading",
+      "subsection": "future-copytrade",
+      "title": "Unfollow the Trader | Bitget API",
+      "file": "copytrading/future-copytrade.md",
+      "chars": 1265
+    },
+    "https://www.bitget.com/api-doc/copytrading/spot-copytrade/follower/Stop-Order": {
+      "section": "copytrading",
+      "subsection": "spot-copytrade",
+      "title": "Stop The Order | Bitget API",
+      "file": "copytrading/spot-copytrade.md",
+      "chars": 1500
+    },
+    "https://www.bitget.com/api-doc/common/vsubaccount/Get-Virtual-Subaccount-List": {
+      "section": "common",
+      "subsection": "vsubaccount",
+      "title": "Get Virtual Subaccounts | Bitget API",
+      "file": "common/vsubaccount.md",
+      "chars": 2635
+    },
+    "https://www.bitget.com/api-doc/spot/websocket/public/Tickers-Channel": {
+      "section": "spot",
+      "subsection": "websocket",
+      "title": "Market Channel | Bitget API",
+      "file": "spot/websocket.md",
+      "chars": 3039
+    },
+    "https://www.bitget.com/api-doc/spot/plan/Place-Plan-Order": {
+      "section": "spot",
+      "subsection": "plan",
+      "title": "Place Plan Order | Bitget API",
+      "file": "spot/plan.md",
+      "chars": 2417
+    },
+    "https://www.bitget.com/api-doc/spot/plan/Modify-Plan-Order": {
+      "section": "spot",
+      "subsection": "plan",
+      "title": "Modify Plan Order | Bitget API",
+      "file": "spot/plan.md",
+      "chars": 1823
+    }
+  }
+}

@@ -1,0 +1,47 @@
+Title: 合约交易API | Bitget API
+URL: https://www.bitget.com/zh-CN/api-doc/contract/intro
+
+跳到主要内容
+公共
+现货
+合约
+经纪商
+代理商
+杠杆
+跟单
+理财
+机构借贷
+统一账户
+简体中文
+合约交易API
+行情
+账户
+仓位
+交易
+策略交易
+Websocket
+错误码
+合约交易API
+合约交易API
+
+本Tab介绍合约相关的API，详细功能请参考左边的功能菜单
+
+这里重点介绍'产品类型': productType的用法
+
+USDT-FUTURES U本位合约（以USDT结算的合约）
+COIN-FUTURES 币本位合约（以加密货币结算的合约）
+USDC-FUTURES USDC合约（以USDC结算的合约）
+
+在REST API中，参数productType的取值参考值如上
+
+Websocket中，instType的取值参考值同上
+
+您的阅读体验如何？
+★
+★
+★
+★
+★
+反馈建议
+下一页
+获取合约VIP费率

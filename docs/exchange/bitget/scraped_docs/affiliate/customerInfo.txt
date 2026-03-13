@@ -1,0 +1,132 @@
+Title: Get Agent Direct commissions | Bitget API
+URL: https://www.bitget.com/api-doc/affiliate/customerInfo/GetDirectCommissions
+
+Skip to main content
+Common
+Spot
+Futures
+Broker
+Affiliate
+Margin
+Copy Trading
+Earn
+Inst Loan
+UTA
+English
+Affiliate Introduction
+Affiliate API
+Get Agent Direct commissions
+Get Agent Customer Trade Volume List
+Get Agent Customer List
+Get Agent Customer Kyc Result
+Get Agent Customer Deposit List
+Get Agent Customer Assets List
+Get Agent Commission Detail
+Error Code
+Affiliate APIGet Agent Direct commissions
+Get Agent Direct commissions
+Rate limit: 10/sec/UID
+Description​
+startTime and endTime should be both set or both left blank
+This API endpoint can only query the data in 30 days. If you need older data, please contact BD to export it manually.
+It will return yesterday's data (00:00-23:59 UTC+8) by default if there is no startTime/endTime set.
+Data update frequency: T+1 (UTC+8)
+HTTP Request​
+GET /api/v2/broker/customer-commissions
+Request Example
+curl  "https://api.bitget.com/api/v2/broker/customer-commissions?uid=3125195374&startTime=1694016000000&endTime=1694332799000&idLessThan=&limit=&coin=BTC" \
+  -H "ACCESS-KEY:your apiKey" \
+  -H "ACCESS-SIGN:*" \
+  -H "ACCESS-PASSPHRASE:*" \
+  -H "ACCESS-TIMESTAMP:1659076670000" \
+  -H "locale:zh-CN" \
+  -H "Content-Type: application/json" \
+
+Request Parameters​
+Parameter	Type	Required	Description
+startTime	String	No	Start time, maximum range of 30 days
+endTime	String	No	End time, maximum range of 30 days.
+idLessThan	String	No	Retrieve data before this ID
+limit	String	No	Limit number of data(default 100,max 1000)
+uid	String	No	UID
+coin	String	No	Coin, e.g: BTC
+symbol	String	No	Symbol e.g：
+BGBUSDT_SPBL spot
+BTCUSDT_SPBL-MABL spot margin
+BTCUSDT_UMCBL USDT-Futures
+BTCUSD_DMCBL COIN-Futures
+BTCPERP_CMCBL USDC-Futures
+showSub	String	No	Whether to Display Subordinate User Information of Direct Clients
+yes: Yes
+no: No
+
+Response Example
+{
+  "code": "00000",
+  "msg": "success",
+  "requestTime": 1694593273026,
+  "data": {
+    "endId": "6624",
+    "commissionList": [
+      {
+        "uid": "3125195374",
+        "date": "1694275200000",
+        "coin": "BTC",
+        "symbol": "BTCUSDT_SPBL",
+        "productType": "SPOT",
+        "dealAmount": "222",
+        "fee": "0.0000111",
+        "feeDeduction": "0.00000333",
+        "activityBonusDeduct": "0.00001",
+        "spotCouponDeduct": "0.00001",
+        "futuresCouponDeduct": "0.00001",
+        "spotFeeDiscountDeduct": "0.00001",
+        "negativeMakerFeeDeduct": "0.00001",
+        "feePaid": "0.00000777",
+        "rebateAmount": "0.00000388",
+        "userTotalRebateAmount": "0",
+        "dayTotalRebateAmount": "0.00000388",
+        "totalRebateAmount": "0.00000388"
+      }
+    ]
+  }
+}
+
+Response Parameters​
+Parameter	Type	Description
+commissionList	Array	Commission List
+>uid	String	Referred User UID
+>date	String	Commission return date (UTC+8)
+>coin	String	coin
+>symbol	String	symbol
+>productType	String	Product type
+SPOT Spot trading
+MARGIN Margin trading
+USDT-FUTURES USDT futures
+COIN-FUTURES Coin-M futures
+USDC-FUTURES USDC futures
+>dealAmount	String	Trading amount(maker+taker)
+>fee	String	Trading fee(maker+taker)
+>feeDeduction	String	Trading fee deducted(maker+taker)
+>activityBonusDeduct	String	Fees offset by experience funds
+>spotCouponDeduct	String	Fees offset by spot cashback coupons
+>futuresCouponDeduct	String	Fees offset by contract airdrop coupons
+>spotFeeDiscountDeduct	String	Fees reduced by spot fee discounts
+>negativeMakerFeeDeduct	String	Fees offset by negative maker fees
+>feePaid	String	Fees actually paid(maker+taker)
+>rebateAmount	String	Partner's commission(maker+taker)
+>userTotalRebateAmount	String	User's commission(maker+taker)
+>dayTotalRebateAmount	String	Total commission for the day.(maker+taker)
+>totalRebateAmount	String	Total commission accumulated over all days(maker+taker)
+endId	String	Last data ID. Used as an index for querying data when making a request
+How was your Reading Experience with us?
+★
+★
+★
+★
+★
+Feedback
+Previous
+Affiliate Introduction
+Next
+Get Agent Customer Trade Volume List

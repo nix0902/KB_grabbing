@@ -1,0 +1,108 @@
+Title: VIP Fee Rate | Bitget API
+URL: https://www.bitget.com/api-doc/contract/market/Get-VIP-Fee-Rate
+
+Skip to main content
+Common
+Spot
+Futures
+Broker
+Affiliate
+Margin
+Copy Trading
+Earn
+Inst Loan
+UTA
+English
+Futures Trading API
+Market
+VIP Fee Rate
+Get Interest rate history
+Get Interest Exchange Rate
+Get Discount Rate
+Get Merge Market Depth
+Get Ticker
+Get All Tickers
+Get Recent Transactions
+Get History Transactions
+Get Candlestick Data
+Get Historical Candlestick
+Get Historical Index Price Candlestick
+Get Historical Mark Price Candlestick
+Get Open Interest
+Get Next Funding Time
+Get Mark/Index/Market Prices
+Get Historical Funding Rates
+Get Current Funding Rate
+Get Contract OI Limit
+Get Contract Config
+Account
+Position
+Trade
+Trigger Order
+Websocket
+Error Code
+MarketVIP Fee Rate
+VIP Fee Rate
+
+Rate limit:10 req/sec/IP
+
+Description​
+
+Get VIP fee rate
+
+HTTP Request​
+GET /api/v2/mix/market/vip-fee-rate
+Request Example
+curl "https://api.bitget.com/api/v2/mix/market/vip-fee-rate"
+
+Request Parameters​
+
+N/A
+
+Response Example
+{
+    "code": "00000",
+    "msg": "success",
+    "requestTime": 1695794449789,
+    "data": [
+        {
+            "level": "1",
+            "dealAmount": "100000",
+            "assetAmount": "50000",
+            "takerFeeRate": "0.0006",
+            "makerFeeRate": "0.0004",
+            "btcWithdrawAmount": "300",
+            "usdtWithdrawAmount": "5000000"
+        },
+        {
+            "level": "2",
+            "dealAmount": "200000",
+            "assetAmount": "500000",
+            "takerFeeRate": "0.0006",
+            "makerFeeRate": "0.0004",
+            "btcWithdrawAmount": "300",
+            "usdtWithdrawAmount": "5000000"
+        }
+    ]
+}
+
+Response Parameters​
+Parameter	Type	Description
+> level	String	VIP level
+> dealAmount	String	Total trading volume of the last 30 days, USDT
+> assetAmount	String	Total assets, USDT
+> takerFeeRate	String	Taker rate, '0.000425' means 4.25 with four decimal places ahead
+> makerFeeRate	String	Maker rate, '0.00006' means 0.6 with four decimal places ahead
+> btcWithdrawAmount	String	24-hour withdrawal limit (BTC)
+> usdtWithdrawAmount	String	24-hour withdrawal limit (USDT)
+How was your Reading Experience with us?
+★
+★
+★
+★
+★
+Feedback
+Previous
+Futures Trading API
+Next
+Get Interest rate history

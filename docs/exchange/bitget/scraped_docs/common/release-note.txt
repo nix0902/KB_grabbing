@@ -1,0 +1,419 @@
+Title: V2优化说明 | Bitget API
+URL: https://www.bitget.com/zh-CN/api-doc/common/release-note
+
+跳到主要内容
+公共
+现货
+合约
+经纪商
+代理商
+杠杆
+跟单
+理财
+机构借贷
+统一账户
+简体中文
+简介
+V2优化说明
+更新日志
+快速入门
+FAQ
+SDK
+参数签名
+参数签名代码示例
+Websocket接口
+公告
+API域名
+基础配置
+税务
+模拟盘
+P2P
+交易大数据
+虚拟子账户
+资产
+闪兑
+小额兑换BGB
+V2优化说明
+V2优化说明
+改动范围​
+接口聚合​
+
+v1版本涉及入参改动的接口变更，通常会采用新增接口的方式解决，以防止影响线上用户的使用。因此，我们在v2版本中，优化了接口冗余及业务场景混淆等不足。全业务线接口聚合详情，请参照接口映射关系表
+
+全局symbol请求规则变更​
+
+在v2版本中，将交易对参数名称统一为symbol，与v1版本的symbolName对应。此外，在symbol传值时舍弃掉业务线说明，如spbl，umcbl等
+
+全局查询规则优化​
+
+在查询类接口的取数方式上，我们舍弃了v1版本pageSize及pageNo的分页查询方式，优化为idLessThan及limit的翻页查询方式。并基于实际业务场景，在多数查询类接口统一增加了时间范围数据查询。此外，部分交易记录的成交及订单相关接口，满足了使用ID作为请求参数的精准查询场景。基于id, startTime, endTime, idLessThan及limit的基本规则及场景说明如下
+
+基本规则：查询数据时，返回结果的校验顺序为 id > startTime+endTime > idLessThan，即优先满足id的精准查询场景，其次通过startTime及endTime过滤数据范围，最终通过游标idLessThan来获取指定记录条数limit的数据
+
+业务线接口及参数命名规则统一​
+
+在v1版本中，存在业务线之间参数不统一的问题，因此在v2版本，我们针对跨业务线（现货/合约/杠杆）及接口类型（Rest/WebSocket）的场景，对相同含义参数的命名进行了统一
+
+目录分类更清晰​
+
+原v1版本的接口目录分类定义较为宽泛，并且使得部分目录下的接口数量过多，从而造成了文档查询困难及观感体验不佳。在v2版本中，我们对接口目录的分类及命名进行了调整，从而使得分类更细致直观，避免阅读和检索问题
+
+支持获取合并深度信息​
+
+针对合约及现货交易对深度，我们大幅提升了接口可以获取的交易对深度，并对跨业务线的档位进行了统一
+
+版本	业务线	档位
+v1	现货	150/200
+v1	合约	5/15/50/100
+v2	现货	1/5/15/50/max，默认为100
+max根据当前交易对支持最大档位转换
+v2	合约	1/5/15/50/max，默认为100
+max根据当前交易对支持最大档位转换
+合约计划委托与追踪委托下单合并​
+
+在V2版本中，我们将普通计划委托和追踪委托两者的功能特性合并在一起，通过planType字段来区分出下单类型。
+
+两者下单类型都有不同下单规则，相比于普通计划委托，追踪委托在下单时需要关注callbackRatio字段，该字段用于设置触发下单百分比。同时也需要注意stopSurplusTriggerPrice/stopLossTriggerPrice两个字段，这两个字段用于指定追踪委托的止盈止损触发回调百分比。
+
+合约下单开仓平仓状态拆分​
+
+V2版本中，我们针对单双向持仓模式下仓位操作规则进行了规范。
+
+在下单时，需要根据持仓模式和对应的开单方向，将side和tradeSide字段的传参组合在一起进行下单操作。
+
+side和tradeSide的枚举值如下：
+
+字段名	枚举值	描述
+side	buy	买
+side	sell	卖
+tradeSide	open	开仓
+tradeSide	close	平仓
+
+单向/双向持仓模式下，对应组合的操作规则如下：
+
+持仓模式	传参组合	操作	描述
+单向持仓	side传buy	买	单向持仓时，只需要传side来标示买单还是卖单。
+单向持仓	side传sell	卖	单向持仓时，只需要传side来标示买单还是卖单。
+双向持仓	side传buy，且tradeSide传open	开多仓	双向持仓时，需要同时传递side和tradeSide字段，来确定是开多/开空，还是平多/平空。
+双向持仓	side传sell，且tradeSide传open	开空仓	双向持仓时，需要同时传递side和tradeSide字段，来确定是开多/开空，还是平多/平空。
+双向持仓	side传buy，且tradeSide传close	平多仓	双向持仓时，需要同时传递side和tradeSide字段，来确定是开多/开空，还是平多/平空。
+双向持仓	side传sell，且tradeSide传close	平空仓	双向持仓时，需要同时传递side和tradeSide字段，来确定是开多/开空，还是平多/平空。
+交割合约优化​
+
+V2版本中，针对币本位交割合约的symbol命名规则，进行了新的规范。
+
+对于币本位交割合约，它的symbol规则是币对+月码+年份的格式。
+
+如下举例并描述：
+
+Symbol	规则描述
+BTCUSDH23	H: 三月（第一季度）; 23: 2023年
+BTCUSDM23	M: 六月（第二季度）; 23: 2023年
+BTCUSDU23	U: 九月（第三季度）; 23: 2023年
+BTCUSDZ23	Z: 十二月（第四季度）; 23: 2023年
+
+其中加粗显示的H、M、U、Z这四个字母为月码标识。月码对应月份如下：
+
+月码	月份	月码	月份
+F	一月	N	七月
+G	二月	Q	八月
+H	三月	U	九月
+J	四月	V	十月
+K	五月	X	十一月
+M	六月	Z	十二月
+优化交易对最大/最小下单逻辑​
+
+在v2版本获取现货及合约交易对接口中，我们增加了最大及最小下单数量的相关参数说明，帮助用户获取最小交易量，最大交易量，最大持有订单数（包含交易对及产品线维度），价格精度及数量精度等交易对基础信息
+
+即将上线理财类接口​
+
+为满足用户的数字货币理财需求，我们即将上线理财宝及鲨鱼鳍产品接口，业务覆盖信息查询、收益统计、资产分析、申购及赎回等功能，并灵活支持活期及定期理财的投资模式，进而更有效地提供数字资产管理服务。
+
+即将上线质押借贷类接口​
+
+针对寻求保守且灵活借贷方的用户，我们即将上线上线质押借贷产品接口。质押借贷是一种金融产品，用户可将所持的加密货币资产作为质押品，借入法币或其他加密货币。Bitget质押借贷API旨在为用户即时提供额外资金，同时仍牢牢掌控所持加密资产。借贷全流程包括：质押资产、获得贷款、补充或提取质押品、强平清算、支付利息、偿还贷款、赎回质押品。
+
+接口映射关系表​
+现货​
+V1接口地址	V2接口地址
+- GET /api/spot/v1/notice/queryAllNotices	- GET /api/v2/public/annoucements
+- GET /api/spot/v1/public/time	- GET /api/v2/public/time
+- GET /api/spot/v1/public/currencies	- GET /api/v2/spot/public/coins
+- GET /api/spot/v1/public/products	- GET /api/v2/spot/public/symbols
+- GET /api/spot/v1/public/product	- GET /api/v2/spot/public/symbols
+- GET /api/spot/v1/market/ticker	- GET /api/v2/spot/market/tickers
+- GET /api/spot/v1/market/tickers	- GET /api/v2/spot/market/tickers
+- GET /api/spot/v1/market/fills-history	- GET /api/v2/spot/market/fills-history
+- GET /api/spot/v1/market/fills	- GET /api/v2/spot/market/fills
+- GET /api/spot/v1/market/candles	- GET /api/v2/spot/market/candles
+- GET /api/spot/v1/market/history-candles	- GET /api/v2/spot/market/history-candles
+- GET /api/spot/v1/market/depth	- GET /api/v2/spot/market/orderbook
+- GET /api/spot/v1/market/merge-depth	- GET /api/v2/spot/market/orderbook
+- GET /api/spot/v1/market/spot-vip-level	- GET /api/v2/spot/market/vip-fee-rate
+- POST /api/spot/v1/wallet/transfer	- POST /api/v2/spot/wallet/transfer
+- POST /api/spot/v1/wallet/transfer-v2	- POST /api/v2/spot/wallet/transfer
+- POST /api/spot/v1/wallet/subTransfer	- POST /api/v2/spot/wallet/subaccount-transfer
+- POST /api/spot/v1/wallet/withdrawal	- POST /api/v2/spot/wallet/withdrawal
+- POST /api/spot/v1/wallet/withdrawal-v2	- POST /api/v2/spot/wallet/withdrawal
+- POST /api/spot/v1/wallet/withdrawal-inner	- POST /api/v2/spot/wallet/withdrawal
+- POST /api/spot/v1/wallet/withdrawal-inner-v2	- POST /api/v2/spot/wallet/withdrawal
+- GET /api/spot/v1/wallet/deposit-address	- GET /api/v2/spot/wallet/deposit-address
+- GET /api/spot/v1/wallet/deposit-list	- GET /api/v2/spot/wallet/deposit-records
+- GET /api/spot/v1/wallet/withdrawal-list	- GET /api/v2/spot/wallet/withdrawal-records
+- GET /api/user/v1/fee/query	- GET /api/v2/public/trade-rate
+- GET /api/spot/v1/account/getInfo	- GET /api/v2/spot/account/info
+- GET /api/spot/v1/account/assets	- GET /api/v2/spot/account/assets
+- GET /api/spot/v1/account/assets-lite	- GET /api/v2/spot/account/assets
+- POST /api/spot/v1/account/sub-account-spot-assets	- GET /api/v2/spot/account/subaccount-assets
+- POST /api/spot/v1/account/bills	- GET /api/v2/spot/account/bills
+- GET /api/spot/v1/account/transferRecords	- GET /api/v2/spot/account/transferRecords
+- POST /api/spot/v1/trade/orders	- POST /api/v2/spot/trade/place-order
+- POST /api/spot/v1/trade/batch-orders	- POST /api/v2/spot/trade/batch-orders
+- POST /api/spot/v1/trade/cancel-order	- POST /api/v2/spot/trade/cancel-order
+- POST /api/spot/v1/trade/cancel-order-v2	- POST /api/v2/spot/trade/cancel-order
+- POST /api/spot/v1/trade/cancel-symbol-order	- POST /api/v2/spot/trade/cancel-symbol-order
+- POST /api/spot/v1/trade/cancel-batch-orders	- POST /api/v2/spot/trade/batch-cancel-order
+- POST /api/spot/v1/trade/cancel-batch-orders-v2	- POST /api/v2/spot/trade/batch-cancel-order
+- POST /api/spot/v1/trade/orderInfo	- GET /api/v2/spot/trade/orderInfo
+- POST /api/spot/v1/trade/open-order	- GET /api/v2/spot/trade/unfilled-orders
+- POST /api/spot/v1/trade/history	- GET /api/v2/spot/trade/history-orders
+- POST /api/spot/v1/trade/fills	- GET /api/v2/spot/trade/fills
+- POST /api/spot/v1/plan/placePlan	- POST /api/v2/spot/trade/place-plan-order
+- POST /api/spot/v1/plan/modifyPlan	- POST /api/v2/spot/trade/modify-plan-order
+- POST /api/spot/v1/plan/cancelPlan	- POST /api/v2/spot/trade/cancel-plan-order
+- POST /api/spot/v1/plan/currentPlan	- GET /api/v2/spot/trade/current-plan-order
+- POST /api/spot/v1/plan/historyPlan	- GET /api/v2/spot/trade/history-plan-order
+- POST /api/spot/v1/plan/batchCancelPlan	- POST /api/v2/spot/trade/batch-cancel-plan-order
+- GET /api/p2p/v1/merchant/merchantList	- GET /api/v2/p2p/merchantList
+- GET /api/p2p/v1/merchant/merchantInfo	- GET /api/v2/p2p/merchantInfo
+- GET /api/p2p/v1/merchant/advList	- GET /api/v2/p2p/advList
+- GET /api/p2p/v1/merchant/orderList	- GET /api/v2/p2p/orderList
+- POST /api/user/v1/sub/virtual-create	- POST /api/v2/user/create-virtual-subaccount
+- POST /api/user/v1/sub/virtual-modify	- POST /api/v2/user/modify-virtual-subaccount
+- POST /api/user/v1/sub/virtual-api-batch-create	- POST /api/v2/user/batch-create-subaccount-and-apikey
+- GET /api/user/v1/sub/virtual-list	- GET /api/v2/user/virtual-subaccount-list
+- POST /api/user/v1/sub/virtual-api-create	- POST /api/v2/user/create-virtual-subaccount-apikey
+- POST /api/user/v1/sub/virtual-api-modify	- POST /api/v2/user/modify-virtual-subaccount-apikey
+- GET /api/user/v1/sub/virtual-api-list	- GET /api/v2/user/virtual-subaccount-apikey-list
+- GET /api/spot/v1/convert/currencies	- GET /api/v2/convert/currencies
+- POST /api/spot/v1/convert/quoted-price	- POST /api/v2/convert/quoted-price
+- POST /api/spot/v1/convert/trade	- POST /api/v2/convert/trade
+- GET /api/spot/v1/convert/convert-record	- GET /api/v2/convert/convert-record
+- GET /api/user/v1/tax/spot-record	- GET /api/v2/tax/spot-record
+- GET /api/user/v1/tax/future-record	- GET /api/v2/tax/future-record
+- GET /api/user/v1/tax/margin-record	- GET /api/v2/tax/margin-record
+- GET /api/user/v1/tax/p2p-record	- GET /api/v2/tax/p2p-record
+合约​
+V1接口地址	V2接口地址
+- GET /api/mix/v1/market/ticker	- GET /api/v2/mix/market/ticker
+- GET /api/mix/v1/market/tickers	- GET /api/v2/mix/market/tickers
+- GET /api/mix/v1/market/contract-vip-level	- GET /api/v2/mix/market/vip-fee-rate
+- GET /api/mix/v1/market/fills	- GET /api/v2/mix/market/fills
+- GET /api/mix/v1/market/fills-history	- GET /api/v2/mix/market/fills-history
+- GET /api/mix/v1/market/candles	- GET /api/v2/mix/market/candles
+- GET /api/mix/v1/market/history-candles	- GET /api/v2/mix/market/history-candles
+- GET /api/mix/v1/market/history-index-candles	- GET /api/v2/mix/market/history-index-candles
+- GET /api/mix/v1/market/history-mark-candles	- GET /api/v2/mix/market/history-mark-candles
+- GET /api/mix/v1/market/funding-time	- GET /api/v2/mix/market/funding-time
+- GET /api/mix/v1/market/history-fundRate	- GET /api/v2/mix/market/history-fund-rate
+- GET /api/mix/v1/market/current-fundRate	- GET /api/v2/mix/market/current-fund-rate
+- GET /api/mix/v1/market/open-interest	- GET /api/v2/mix/market/open-interest
+- GET /api/mix/v1/market/queryPositionLever	- GET /api/v2/mix/market/query-position-lever
+- GET /api/mix/v1/account/account	- GET /api/v2/mix/account/account
+- GET /api/mix/v1/account/accounts	- GET /api/v2/mix/account/accounts
+- POST /api/mix/v1/account/sub-account-contract-assets	- GET /api/v2/mix/account/sub-account-assets
+- POST /api/mix/v1/account/open-count	- GET /api/v2/mix/account/open-count
+- POST /api/mix/v1/account/setLeverage	- POST /api/v2/mix/account/set-leverage
+- POST /api/mix/v1/account/setMargin	- POST /api/v2/mix/account/set-margin
+- POST /api/mix/v1/account/setMarginMode	- POST /api/v2/mix/account/set-margin-mode
+- POST /api/mix/v1/account/setPositionMode	- POST /api/v2/mix/account/set-position-mode
+- GET /api/mix/v1/position/singlePosition	- GET/api/v2/mix/position/single-position
+- GET /api/mix/v1/position/singlePosition-v2	- GET/api/v2/mix/position/single-position
+- GET /api/mix/v1/position/allPosition	- GET /api/v2/mix/position/all-position
+- GET /api/mix/v1/position/allPosition-v2	- GET /api/v2/mix/position/all-position
+- GET /api/mix/v1/account/accountBill	- GET /api/v2/mix/account/bill
+- GET /api/mix/v1/account/accountBusinessBill	- GET /api/v2/mix/account/bill
+- GET /api/mix/v1/market/index	- GET /api/v2/mix/market/symbol-price
+- GET /api/mix/v1/market/mark-price	- GET /api/v2/mix/market/symbol-price
+- GET /api/mix/v1/market/contracts	- GET /api/v2/mix/market/contracts
+- GET /api/mix/v1/market/symbol-leverage	- GET /api/v2/mix/market/contracts
+- GET /api/mix/v1/market/open-limit	- GET /api/v2/mix/market/contracts
+- POST /api/mix/v1/plan/placePlan	- POST /api/v2/mix/order/place-plan-order
+- POST /api/mix/v1/plan/placeTrailStop	- POST /api/v2/mix/order/place-plan-order
+- POST /api/mix/v1/plan/modifyPlan	- POST /api/v2/mix/order/modify-plan-order
+- POST /api/mix/v1/plan/modifyPlanPreset	- POST /api/v2/mix/order/modify-plan-order
+- POST /api/mix/v1/plan/cancelPlan	- POST /api/v2/mix/order/cancel-plan-order
+- POST /api/mix/v1/plan/cancelSymbolPlan	- POST /api/v2/mix/order/cancel-plan-order
+- POST /api/mix/v1/order/cancel-batch-orders	- POST /api/v2/mix/order/batch-cancel-orders
+- POST /api/mix/v1/order/cancel-all-orders	- POST /api/v2/mix/order/batch-cancel-orders
+- POST /api/mix/v1/order/cancel-symbol-orders	- POST /api/v2/mix/order/batch-cancel-orders
+- GET /api/mix/v1/order/current	- GET /api/v2/mix/order/orders-pending
+- GET /api/mix/v1/order/marginCoinCurrent	- GET /api/v2/mix/order/orders-pending
+- GET /api/mix/v1/order/history	- GET api/v2/mix/order/orders-history
+- GET /api/mix/v1/order/historyProductType	- GET api/v2/mix/order/orders-history
+- GET /api/mix/v1/order/fills	- GET /api/v2/mix/order/fills
+- GET /api/mix/v1/order/allFills	- GET /api/v2/mix/order/fills
+- POST /api/mix/v1/order/placeOrder	- POST /api/v2/mix/order/place-order
+- POST /api/mix/v1/order/placeOrder	- POST /api/v2/mix/order/click-backhand
+- POST /api/mix/v1/order/batch-orders	- POST /api/v2/mix/order/batch-place-order
+- POST /api/mix/v1/order/cancel-order	- POST /api/v2/mix/order/cancel-order
+- POST /api/mix/v1/order/modifyOrder	- POST /api/v2/mix/order/modify-order
+- POST /api/mix/v1/order/close-all-positions	- POST /api/v2/mix/order/close-positions
+- GET /api/mix/v1/order/detail	- GET /api/v2/mix/order/detail
+N/A	- GET /api/v2/mix/order/orders-plan-pending
+N/A	- GET /api/v2/mix/order/orders-plan-history
+杠杆​
+V1接口地址	V2接口地址
+- GET /api/margin/v1/cross/public/interestRateAndLimit	- GET /api/v2/margin/cross/interest-rate-and-limit
+- GET /api/margin/v1/isolated/public/interestRateAndLimit	- GET /api/v2/margin/isolated/interest-rate-and-limit
+- GET /api/margin/v1/cross/public/tierData	- GET /api/v2/margin/cross/tier-data
+- GET /api/margin/v1/isolated/public/tierData	- GET /api/v2/margin/isolated/tier-data
+- GET /api/margin/v1/public/currencies	- GET /api/v2/margin/currencies
+- GET /api/margin/v1/cross/account/assets	- GET /api/v2/margin/cross/account/assets
+- GET /api/margin/v1/isolated/account/assets	- GET /api/v2/margin/isolated/account/assets
+- POST /api/margin/v1/cross/account/borrow	- POST /api/v2/margin/cross/account/borrow
+- POST /api/margin/v1/isolated/account/borrow	- POST /api/v2/margin/isolated/account/borrow
+- POST /api/margin/v1/cross/account/repay	- POST /api/v2/margin/cross/account/repay
+- GET /api/margin/v1/isolated/account/repay	- POST /api/v2/margin/cross/account/repay
+- GET /api/margin/v1/cross/account/riskRate	- GET /api/v2/margin/cross/account/risk-rate
+- POST /api/margin/v1/isolated/account/riskRate	- GET /api/v2/margin/cross/account/risk-rate
+- POST /api/margin/v1/cross/account/maxBorrowableAmount	- GET /api/v2/margin/cross/account/max-borrowable-amount
+- GET /api/margin/v1/isolated/account/maxBorrowableAmount	- GET /api/v2/margin/isolated/account/max-borrowable-amount
+- GET /api/margin/v1/cross/account/maxTransferOutAmount	- GET /api/v2/margin/cross/account/max-transfer-out-amount
+- GET /api/margin/v1/isolated/account/maxTransferOutAmount	- GET /api/v2/margin/isolated/account/max-transfer-out-amount
+- POST /api/margin/v1/isolated/account/flashRepay	- POST /api/v2/margin/isolated/account/flash-repay
+- POST /api/margin/v1/isolated/account/queryFlashRepayStatus	- POST /api/v2/margin/isolated/account/query-flash-repay-status
+- POST /api/margin/v1/cross/account/flashRepay	- POST /api/v2/margin/cross/account/flash-repay
+- POST /api/margin/v1/cross/account/queryFlashRepayStatus	- POST /api/v2/margin/cross/account/flash-repay-status
+- POST /api/margin/v1/isolated/order/placeOrder	- POST /api/v2/margin/isolated/place-order
+- POST /api/margin/v1/isolated/order/batchPlaceOrder	- POST /api/v2/margin/isolated/batch-place-order
+- POST /api/margin/v1/isolated/order/cancelOrder	- POST /api/v2/margin/isolated/cancel-order
+- POST /api/margin/v1/isolated/order/batchCancelOrder	- POST /api/v2/margin/isolated/batch-cancel-order
+- GET /api/margin/v1/isolated/order/openOrders	- GET /api/v2/margin/isolated/open-orders
+- GET /api/margin/v1/isolated/order/history	- GET /api/v2/margin/isolated/history-orders
+- GET /api/margin/v1/isolated/order/fills	- GET /api/v2/margin/isolated/fills
+- GET /api/margin/v1/isolated/loan/list	- GET /api/v2/margin/isolated/borrow-history
+- GET /api/margin/v1/isolated/repay/list	- GET /api/v2/margin/isolated/repay-history
+- GET /api/margin/v1/isolated/interest/list	- GET /api/v2/margin/isolated/interest-history
+- GET /api/margin/v1/isolated/liquidation/list	- GET /api/v2/margin/isolated/liquidation-history
+- GET /api/margin/v1/isolated/fin/list	- GET /api/v2/margin/isolated/financial-records
+- POST /api/margin/v1/cross/order/placeOrder	- POST /api/v2/margin/cross/place-order
+- POST /api/margin/v1/cross/order/batchPlaceOrder	- POST /api/v2/margin/cross/batch-place-order
+- POST /api/margin/v1/cross/order/cancelOrder	- POST /api/v2/margin/cross/cancel-order
+- POST /api/margin/v1/cross/order/batchCancelOrder	- POST /api/v2/margin/cross/batch-cancel-order
+- GET /api/margin/v1/cross/order/openOrders	- GET /api/v2/margin/cross/open-orders
+- GET /api/margin/v1/cross/order/history	- GET /api/v2/margin/cross/history-orders
+- GET /api/margin/v1/cross/order/fills	- GET /api/v2/margin/cross/fills
+- GET /api/margin/v1/cross/loan/list	- GET /api/v2/margin/cross/borrow-history
+- GET /api/margin/v1/cross/repay/list	- GET /api/v2/margin/cross/repay-history
+- GET /api/margin/v1/cross/interest/list	- GET /api/v2/margin/cross/interest-history
+- GET /api/margin/v1/cross/liquidation/list	- GET /api/v2/margin/cross/liquidation-history
+- GET /api/margin/v1/cross/fin/list	- GET /api/v2/margin/cross/financial-records
+经纪商​
+V1接口地址	V2接口地址
+- GET /api/broker/v1/account/info	- GET /api/v2/broker/account/info
+- POST /api/broker/v1/account/sub-create	- POST /api/v2/broker/account/create-subaccount
+- GET /api/broker/v1/account/sub-list	- GET /api/v2/broker/account/subaccount-list
+- POST /api/broker/v1/account/sub-modify	- POST /api/v2/broker/account/modify-subaccount
+- POST /api/broker/v1/account/sub-modify-email	- POST /api/v2/broker/account/modify-subaccount-email
+- GET /api/broker/v1/account/sub-email	- GET /api/v2/broker/account/subaccount-email
+- GET /api/broker/v1/account/sub-spot-assets	- GET /api/v2/broker/account/subaccount-spot-assets
+- GET /api/broker/v1/account/sub-future-assets	- GET /api/v2/broker/account/subaccount-future-assets
+- POST /api/broker/v1/account/sub-address	- POST /api/v2/broker/account/subaccount-address
+- POST /api/broker/v1/account/sub-withdrawal	- POST /api/v2/broker/account/subaccount-withdrawal
+- POST /api/broker/v1/account/sub-auto-transfer	- POST /api/v2/broker/account/set-subaccount-autotransfer
+- POST /api/broker/v1/manage/sub-api-create	- POST /api/v2/broker/manage/create-subaccount-apikey
+- GET /api/broker/v1/manage/sub-api-list	- GET /api/v2/broker/manage/subaccount-apikey-list
+- POST /api/broker/v1/manage/sub-api-modify	- POST /api/v2/broker/manage/modify-subaccount-apikey
+合约跟单​
+V1接口地址	V2接口地址
+- POST /api/mix/v1/trace/closeTrackOrder	- POST /api/v2/copy/mix-trader/order-close-positions
+- POST /api/mix/v1/trace/closeTrackOrderBySymbol	- POST /api/v2/copy/mix-trader/order-close-positions
+- GET /api/mix/v1/trace/currentTrack	- GET /api/v2/copy/mix-trader/order-current-track
+- GET /api/mix/v1/trace/historyTrack	- GET /api/v2/copy/mix-trader/order-history-track
+- POST /api/mix/v1/trace/modifyTPSL	- POST /api/v2/copy/mix-trader/order-modify-tpsl
+- GET /api/mix/v1/trace/traderDetail	- GET /api/v2/copy/mix-trader/order-total-detail
+- GET /api/mix/v1/trace/summary	- GET /api/v2/copy/mix-trader/profit-summarys
+- GET /api/mix/v1/trace/profitSettleTokenIdGroup	- GET /api/v2/copy/mix-trader/profit-summarys
+- GET /api/mix/v1/trace/profitDateList	- GET /api/v2/copy/mix-trader/profit-hisotry-details
+- GET /api/mix/v1/trace/waitProfitDateList	- GET /api/v2/copy/mix-trader/profit-details
+- GET /api/mix/v1/trace/profitDateGroupList	- GET /api/v2/copy/mix-trader/profits-group-coin-date
+- GET /api/mix/v1/trace/traderSymbols	- GET /api/v2/copy/mix-trader/config-query-symbols
+- POST /api/mix/v1/trace/queryTraderTpslRatioConfig	- GET /api/v2/copy/mix-trader/config-query-symbols
+- POST /api/mix/v1/trace/setUpCopySymbols	- POST /api/v2/copy/mix-trader/config-setting-symbols
+- POST /api/mix/v1/trace/traderUpdateTpslRatioConfig	- POST /api/v2/copy/mix-trader/config-setting-symbols
+- POST /api/mix/v1/trace/traderUpdateConfig	- POST /api/v2/copy/mix-trader/config-settings-base
+- GET /api/mix/v1/trace/myFollowerList	- GET /api/v2/copy/mix-trader/config-query-followers
+- POST /api/mix/v1/trace/removeFollower	- POST /api/v2/copy/mix-trader/config-remove-follower
+- POST /api/mix/v1/trace/followerCloseByTrackingNo	- POST /api/v2/copy/mix-follower/close-positions
+- POST /api/mix/v1/trace/followerCloseByAll	- POST /api/v2/copy/mix-follower/close-positions
+- GET /api/mix/v1/trace/followerOrder	- GET /api/v2/copy/mix-follower/query-current-orders
+- GET /api/mix/v1/trace/followerHistoryOrders	- GET /api/v2/copy/mix-follower/query-history-orders
+- POST /api/mix/v1/trace/followerSetTpsl	- POST /api/v2/copy/mix-follower/setting-tpsl
+- GET /api/mix/v1/trace/queryTraceConfig	- GET /api/v2/copy/mix-follower/query-settings
+- GET /api/mix/v1/trace/public/getFollowerConfig	- GET /api/v2/copy/mix-follower/query-quantity-limit
+- POST /api/mix/v1/trace/followerSetBatchTraceConfig	- POST /api/v2/copy/mix-follower/settings
+- POST /api/mix/v1/trace/cancelCopyTrader	- POST /api/v2/copy/mix-follower/cancel-trader
+- GET /api/mix/v1/trace/myTraderList	- GET /api/v2/copy/mix-follower/query-traders
+- GET /api/mix/v1/trace/traderList	- GET /api/v2/copy/mix-broker/query-traders
+- GET /api/mix/v1/trace/report/order/historyList	- GET /api/v2/copy/mix-broker/query-history-traces
+- GET /api/mix/v1/trace/report/order/currentList	- GET /api/v2/copy/mix-broker/query-current-traces
+现货跟单​
+V1接口地址	V2接口地址
+- POST /api/spot/v1/trace/profit/totalProfitInfo	- GET /api/v2/copy/spot-trader/profit-summarys
+- POST /api/spot/v1/trace/profit/totalProfitList	- GET /api/v2/copy/spot-trader/profit-summarys
+- POST /api/spot/v1/trace/profit/profitHisList	- GET /api/v2/copy/spot-trader/profit-summarys
+- POST /api/spot/v1/trace/profit/profitHisDetailList	- GET /api/v2/copy/spot-trader/profit-hisotry-details
+- POST /api/spot/v1/trace/profit/waitProfitDetailList	- GET /api/v2/copy/spot-trader/profit-details
+- POST /api/spot/v1/trace/order/orderCurrentList	- GET /api/v2/copy/spot-trader/order-current-track
+- POST /api/spot/v1/trace/order/orderHistoryList	- GET /api/v2/copy/spot-trader/order-history-track
+- POST /api/spot/v1/trace/order/updateTpsl	- POST /api/v2/copy/spot-trader/order-modify-tpsl
+- POST /api/spot/v1/trace/order/closeTrackingOrder	- POST /api/v2/copy/spot-trader/order-close-tracking
+- POST /api/spot/v1/trace/user/getTraderInfo	- GET /api/v2/copy/spot-trader/order-total-detail
+- POST /api/spot/v1/trace/config/getTraderSettings	- GET /api/v2/copy/spot-trader/config-query-settings
+- POST /api/spot/v1/trace/order/spotInfoList	- GET /api/v2/copy/spot-trader/config-query-settings
+- POST /api/spot/v1/trace/config/getRemoveFollowerConfig	- GET /api/v2/copy/spot-trader/config-query-settings
+- POST /api/spot/v1/trace/user/myFollowers	- GET /api/v2/copy/spot-trader/config-query-followers
+- POST /api/spot/v1/trace/config/setProductCode	- POST /api/v2/copy/spot-trader/config-setting-symbols
+- POST /api/spot/v1/trace/user/removeFollower	- POST /api/v2/copy/spot-trader/config-remove-follower
+N/A	- GET /api/v2/copy/spot-follower/query-current-orders
+N/A	- GET /api/v2/copy/mix-follower/query-history-orders
+N/A	- POST /api/v2/copy/spot-follower/setting-tpsl
+N/A	- POST /api/v2/copy/spot-follower/order-close-tracking
+- POST /api/spot/v1/trace/config/getFollowerSettings	- GET /api/v2/copy/spot-follower/query-settings
+- POST /api/spot/v1/trace/user/myTraders	- GET /api/v2/copy/spot-follower/query-traders
+- POST /api/spot/v1/trace/config/setFollowerConfig	- POST /api/v2/copy/spot-follower/settings
+- POST /api/spot/v1/trace/user/removeTrader	- POST /api/v2/copy/spot-follower/cancel-trader
+- POST /api/spot/v1/trace/order/followerEndOrder	- POST /api/v2/copy/spot-follower/stop-order
+N/A	- GET /api/v2/copy/spot-follower/query-trader-symbols
+您的阅读体验如何？
+★
+★
+★
+★
+★
+反馈建议
+上一页
+简介
+下一页
+更新日志
+改动范围
+接口聚合
+全局symbol请求规则变更
+全局查询规则优化
+业务线接口及参数命名规则统一
+目录分类更清晰
+支持获取合并深度信息
+合约计划委托与追踪委托下单合并
+合约下单开仓平仓状态拆分
+交割合约优化
+优化交易对最大/最小下单逻辑
+即将上线理财类接口
+即将上线质押借贷类接口
+接口映射关系表
+现货
+合约
+杠杆
+经纪商
+合约跟单
+现货跟单
