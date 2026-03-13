@@ -4,6 +4,27 @@ This folder contains comprehensive Bitget API documentation and SDKs for various
 
 ## Contents
 
+### Scraped Documentation (via Playwright)
+
+#### scraped_docs/
+**200 pages** of official Bitget API documentation scraped using Playwright to bypass Cloudflare protection.
+- **common/** - Introduction, Quick Start, FAQ, Changelog, Release Notes, Signature examples, WebSocket intro
+- **spot/** - Market data, Trading, Account, Plans, WebSocket
+- **contract/** - Futures trading: Market, Account, Trade
+- **margin/** - Cross & Isolated margin: Common, Account, Trade
+- **broker/** - Sub-account management, Commission tracking
+- **copytrading/** - Spot & Futures copy trading
+- **earn/** - Savings, Account operations
+- **uta/** - Unified Trading Account: Guide, Enums, Error codes
+- **affiliate/** - Customer info, Error codes
+- **instloan/** - Institutional lending
+- **classic/** - Classic API documentation
+
+Each section contains:
+- `.md` files - Markdown format for easy reading
+- `.html` files - Original HTML content
+- `.txt` files - Plain text extraction
+
 ### Official Documentation
 
 #### apidoc/
@@ -44,11 +65,8 @@ Node.js & TypeScript SDK by tiagosiebler (72+ stars)
 - Full V2 and V3 REST API support
 - WebSocket support with auto-reconnect
 - TypeScript type definitions
-- Extensive examples folder with:
-  - REST API examples (public, private, trading)
-  - WebSocket examples
-  - Authentication examples (HMAC, RSA)
-- `llms.txt` - AI-friendly documentation
+- 900+ example files with code samples
+- `llms.txt` - AI-friendly documentation (339KB)
 
 #### python-bitget/
 Python SDK by cuongitl (51+ stars)
@@ -125,15 +143,27 @@ var client = new BitgetRestClient();
 var ticker = await client.SpotApi.ExchangeData.GetTickerAsync("BTCUSDT");
 ```
 
+## Statistics
+
+- **Total Files:** 2,000+
+- **Total Size:** ~34MB
+- **Code Files:** 918 (.ts, .js, .py, .java, .go, .cs)
+- **Documentation Pages:** 200+ (scraped via Playwright)
+- **SDK Examples:** 900+
+
 ## Resources
 
 - Official API Docs: https://www.bitget.com/api-doc
 - GitHub Organization: https://github.com/BitgetLimited
 - API Status: https://status.bitget.com/
 
-## Notes
+## Scraping Method
 
-- The website bitget.com is protected by Cloudflare, so direct scraping is not possible
-- This documentation was sourced from official GitHub repositories
-- All SDKs include working code examples
-- Postman collections are available for API testing
+The website bitget.com is protected by Cloudflare. Documentation was scraped using:
+- **Playwright** with Chromium browser
+- Headless mode with user-agent spoofing
+- Automatic Cloudflare challenge bypass
+- English locale (en-US)
+- Rate-limited to avoid blocking
+
+Scraper script: `/home/z/bitget_full_scraper.py`
