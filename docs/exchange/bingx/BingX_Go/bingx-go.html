@@ -1,0 +1,4130 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-layout="responsive" data-local="">
+  <head>
+    
+    <script>
+      window.addEventListener('error', window.__err=function f(e){f.p=f.p||[];f.p.push(e)});
+    </script>
+    <script>
+      (function() {
+        const theme = document.cookie.match(/prefers-color-scheme=(light|dark|auto)/)?.[1]
+        if (theme) {
+          document.querySelector('html').setAttribute('data-theme', theme);
+        }
+      }())
+    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <meta class="js-gtmID" data-gtmid="GTM-W8MVQXG">
+    <link rel="shortcut icon" href="/static/shared/icon/favicon.ico">
+    
+  
+    <link rel="canonical" href="https://pkg.go.dev/github.com/tigusigalpa/bingx-go">
+  
+
+    <link href="/static/frontend/frontend.min.css?version=prod-frontend-00154-5qh" rel="stylesheet">
+    
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Go Packages">
+    
+    
+  <title>bingx package - github.com/tigusigalpa/bingx-go - Go Packages</title>
+
+    
+  <link href="/static/frontend/unit/unit.min.css?version=prod-frontend-00154-5qh" rel="stylesheet">
+  
+  <link href="/static/frontend/unit/main/main.min.css?version=prod-frontend-00154-5qh" rel="stylesheet">
+
+
+  </head>
+  <body>
+    
+    <script>
+      function loadScript(src, mod = true) {
+        let s = document.createElement('script');
+        s.src = src;
+        if (mod) {
+          s.type = 'module';
+          s.async = true;
+          s.defer = true
+        }
+        document.head.appendChild(s);
+      }
+      loadScript("/third_party/dialog-polyfill/dialog-polyfill.js", false)
+      loadScript("/static/frontend/frontend.js");
+    </script>
+    
+  <header class="go-Header go-Header--full js-siteHeader">
+    <div class="go-Header-inner go-Header-inner--dark">
+      <nav class="go-Header-nav">
+        <a href="https://go.dev/" class="js-headerLogo" data-gtmc="nav link"
+            data-test-id="go-header-logo-link" role="heading" aria-level="1">
+          <img class="go-Header-logo" src="/static/shared/logo/go-white.svg" alt="Go">
+        </a>
+         <div class="skip-navigation-wrapper">
+            <a class="skip-to-content-link" aria-label="Skip to main content" href="#main-content"> Skip to Main Content </a>
+          </div>
+        <div class="go-Header-rightContent">
+          
+<div class="go-SearchForm js-searchForm">
+  <form
+    class="go-InputGroup go-ShortcutKey go-SearchForm-form"
+    action="/search"
+    data-shortcut="/"
+    data-shortcut-alt="search"
+    data-gtmc="search form"
+    aria-label="Search for a package"
+    role="search"
+  >
+    <input name="q" class="go-Input js-searchFocus" aria-label="Search for a package" type="search"
+        autocapitalize="off" autocomplete="off" autocorrect="off" spellcheck="false"
+        placeholder="Search packages or symbols"
+        value="" />
+    <input name="m" value="" hidden>
+    <button class="go-Button go-Button--inverted" aria-label="Submit search">
+      <img
+        class="go-Icon"
+        height="24"
+        width="24"
+        src="/static/shared/icon/search_gm_grey_24dp.svg"
+        alt=""
+      />
+    </button>
+  </form>
+  <button class="go-SearchForm-expandSearch js-expandSearch" data-gtmc="nav button"
+      aria-label="Open search" data-test-id="expand-search">
+    <img class="go-Icon go-Icon--inverted" height="24" width="24"
+        src="/static/shared/icon/search_gm_grey_24dp.svg" alt="">
+
+  </button>
+</div>
+
+          <ul class="go-Header-menu">
+            <li class="go-Header-menuItem">
+              <a class="js-desktop-menu-hover" href="#" data-gtmc="nav link">
+                Why Go
+                <img class="go-Icon" height="24" width="24" src="/static/shared/icon/arrow_drop_down_gm_grey_24dp.svg" alt="submenu dropdown icon">
+              </a>
+              <ul class="go-Header-submenu go-Header-submenu--why js-desktop-submenu-hover" aria-label="submenu">
+                  <li class="go-Header-submenuItem">
+                    <div>
+                      <a href="https://go.dev/solutions#case-studies">
+                        <span>Case Studies</span>
+                      </a>
+                    </div>
+                    <p>Common problems companies solve with Go</p>
+                  </li>
+                  <li class="go-Header-submenuItem">
+                    <div>
+                      <a href="https://go.dev/solutions#use-cases">
+                        <span>Use Cases</span>
+                      </a>
+                    </div>
+                    <p>Stories about how and why companies use Go</p>
+                  </li>
+                  <li class="go-Header-submenuItem">
+                    <div>
+                      <a href="https://go.dev/security/">
+                        <span>Security</span>
+                      </a>
+                    </div>
+                    <p>How Go can help keep you secure by default</p>
+                  </li>
+              </ul>
+            </li>
+            <li class="go-Header-menuItem">
+              <a href="https://go.dev/learn/" data-gtmc="nav link">Learn</a>
+            </li>
+            <li class="go-Header-menuItem">
+              <a class="js-desktop-menu-hover" href="#" data-gtmc="nav link">
+                Docs
+                <img class="go-Icon" height="24" width="24" src="/static/shared/icon/arrow_drop_down_gm_grey_24dp.svg" alt="submenu dropdown icon">
+              </a>
+              <ul class="go-Header-submenu go-Header-submenu--docs js-desktop-submenu-hover" aria-label="submenu">
+                <li class="go-Header-submenuItem">
+                  <div>
+                    <a href="https://go.dev/doc/effective_go">
+                      <span>Effective Go</span>
+                    </a>
+                  </div>
+                  <p>Tips for writing clear, performant, and idiomatic Go code</p>
+                </li>
+                <li class="go-Header-submenuItem">
+                  <div>
+                    <a href="https://go.dev/doc/">
+                      <span>Go User Manual</span>
+                    </a>
+                  </div>
+                  <p>A complete introduction to building software with Go</p>
+                </li>
+                <li class="go-Header-submenuItem">
+                  <div>
+                    <a href="https://pkg.go.dev/std">
+                      <span>Standard library</span>
+                    </a>
+                  </div>
+                  <p>Reference documentation for Go's standard library</p>
+                </li>
+                <li class="go-Header-submenuItem">
+                  <div>
+                    <a href="https://go.dev/doc/devel/release">
+                      <span>Release Notes</span>
+                    </a>
+                  </div>
+                  <p>Learn what's new in each Go release</p>
+                </li>
+              </ul>
+            </li>
+            <li class="go-Header-menuItem go-Header-menuItem--active">
+              <a href="/" data-gtmc="nav link">Packages</a>
+            </li>
+            <li class="go-Header-menuItem">
+              <a class="js-desktop-menu-hover" href="#" data-gtmc="nav link">
+                Community
+                <img class="go-Icon" height="24" width="24" src="/static/shared/icon/arrow_drop_down_gm_grey_24dp.svg" alt="submenu dropdown icon">
+              </a>
+              <ul class="go-Header-submenu go-Header-submenu--community js-desktop-submenu-hover" aria-label="submenu">
+                <li class="go-Header-submenuItem">
+                  <div>
+                    <a href="https://go.dev/talks/">
+                      <span>Recorded Talks</span>
+                    </a>
+                  </div>
+                  <p>Videos from prior events</p>
+                </li>
+                <li class="go-Header-submenuItem">
+                  <div>
+                    <a href="https://www.meetup.com/pro/go">
+                      <span>Meetups</span>
+                      <i class="material-icons">
+                        <img class="go-Icon" height="24" width="24"
+                            src="/static/shared/icon/launch_gm_grey_24dp.svg" alt="">
+                      </i>
+                    </a>
+                  </div>
+                  <p>Meet other local Go developers</p>
+                </li>
+                <li class="go-Header-submenuItem">
+                  <div>
+                    <a href="https://github.com/golang/go/wiki/Conferences">
+                      <span>Conferences</span>
+                      <i class="material-icons">
+                        <img class="go-Icon" height="24" width="24"
+                            src="/static/shared/icon/launch_gm_grey_24dp.svg" alt="">
+                      </i>
+                    </a>
+                  </div>
+                  <p>Learn and network with Go developers from around the world</p>
+                </li>
+                <li class="go-Header-submenuItem">
+                  <div>
+                    <a href="https://go.dev/blog">
+                      <span>Go blog</span>
+                    </a>
+                  </div>
+                  <p>The Go project's official blog.</p>
+                </li>
+                <li class="go-Header-submenuItem">
+                  <div>
+                    <a href="https://go.dev/help">
+                      <span>Go project</span>
+                    </a>
+                  </div>
+                  <p>Get help and stay informed from Go</p>
+                </li>
+                <li class="go-Header-submenuItem">
+                  <div>
+                    Get connected
+                  </div>
+                  <p></p>
+                  <div class="go-Header-socialIcons">
+                      <a
+                        class="go-Header-socialIcon"
+                        aria-label="Get connected with google-groups (Opens in new window)"
+                        title="Get connected with google-groups (Opens in new window)"
+                        href="https://groups.google.com/g/golang-nuts">
+                        <img src="/static/shared/logo/social/google-groups.svg" />
+                      </a>
+                      <a
+                        class="go-Header-socialIcon"
+                        aria-label="Get connected with github (Opens in new window)"
+                        title="Get connected with github (Opens in new window)"
+                        href="https://github.com/golang">
+                        <img src="/static/shared/logo/social/github.svg" />
+                      </a>
+                      <a
+                        class="go-Header-socialIcon"
+                        aria-label="Get connected with twitter (Opens in new window)"
+                        title="Get connected with twitter (Opens in new window)"
+                        href="https://twitter.com/golang">
+                        <img src="/static/shared/logo/social/twitter.svg" />
+                      </a>
+                      <a
+                        class="go-Header-socialIcon"
+                        aria-label="Get connected with reddit (Opens in new window)"
+                        title="Get connected with reddit (Opens in new window)"
+                        href="https://www.reddit.com/r/golang/">
+                        <img src="/static/shared/logo/social/reddit.svg" />
+                      </a>
+                      <a
+                        class="go-Header-socialIcon"
+                        aria-label="Get connected with slack (Opens in new window)"
+                        title="Get connected with slack (Opens in new window)"
+                        href="https://invite.slack.golangbridge.org/">
+                        <img src="/static/shared/logo/social/slack.svg" />
+                      </a>
+                      <a
+                        class="go-Header-socialIcon"
+                        aria-label="Get connected with stack-overflow (Opens in new window)"
+                        title=""
+                        href="https://stackoverflow.com/collectives/go">
+                        <img src="/static/shared/logo/social/stack-overflow.svg" />
+                      </a>
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <button class="go-Header-navOpen js-headerMenuButton go-Header-navOpen--white" data-gtmc="nav button" aria-label="Open navigation">
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <aside class="go-NavigationDrawer js-header">
+    <nav class="go-NavigationDrawer-nav">
+      <div class="go-NavigationDrawer-header">
+        <a href="https://go.dev/">
+          <img class="go-NavigationDrawer-logo" src="/static/shared/logo/go-blue.svg" alt="Go.">
+        </a>
+      </div>
+      <ul class="go-NavigationDrawer-list">
+          <li class="go-NavigationDrawer-listItem js-mobile-subnav-trigger go-NavigationDrawer-hasSubnav">
+            <a href="#">
+              <span>Why Go</span>
+              <i class="material-icons">
+                <img class="go-Icon" height="24" width="24"
+                  src="/static/shared/icon/navigate_next_gm_grey_24dp.svg" alt="">
+              </i>
+            </a>
+
+            <div class="go-NavigationDrawer go-NavigationDrawer-submenuItem">
+              <div class="go-NavigationDrawer-nav">
+                <div class="go-NavigationDrawer-header">
+                  <a href="#">
+                    <i class="material-icons">
+                      <img class="go-Icon" height="24" width="24"
+                        src="/static/shared/icon/navigate_before_gm_grey_24dp.svg" alt="">
+                      </i>
+                      Why Go
+                  </a>
+                </div>
+                <ul class="go-NavigationDrawer-list">
+                  <li class="go-NavigationDrawer-listItem">
+                    <a href="https://go.dev/solutions#case-studies">
+                      Case Studies
+                    </a>
+                  </li>
+                  <li class="go-NavigationDrawer-listItem">
+                    <a href="https://go.dev/solutions#use-cases">
+                      Use Cases
+                    </a>
+                  </li>
+                  <li class="go-NavigationDrawer-listItem">
+                    <a href="https://go.dev/security/">
+                      Security
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="go-NavigationDrawer-listItem">
+            <a href="https://go.dev/learn/">Learn</a>
+          </li>
+          <li class="go-NavigationDrawer-listItem js-mobile-subnav-trigger go-NavigationDrawer-hasSubnav">
+            <a href="#">
+              <span>Docs</span>
+              <i class="material-icons">
+                <img class="go-Icon" height="24" width="24"
+                  src="/static/shared/icon/navigate_next_gm_grey_24dp.svg" alt="">
+              </i>
+            </a>
+
+            <div class="go-NavigationDrawer go-NavigationDrawer-submenuItem">
+              <div class="go-NavigationDrawer-nav">
+                <div class="go-NavigationDrawer-header">
+                  <a href="#"><i class="material-icons">
+                    <img class="go-Icon" height="24" width="24"
+                      src="/static/shared/icon/navigate_before_gm_grey_24dp.svg" alt="">
+                    </i>
+                    Docs
+                  </a>
+                </div>
+                <ul class="go-NavigationDrawer-list">
+                  <li class="go-NavigationDrawer-listItem">
+                    <a href="https://go.dev/doc/effective_go">
+                      Effective Go
+                    </a>
+                  </li>
+                  <li class="go-NavigationDrawer-listItem">
+                    <a href="https://go.dev/doc/">
+                      Go User Manual
+                    </a>
+                  </li>
+                  <li class="go-NavigationDrawer-listItem">
+                    <a href="https://pkg.go.dev/std">
+                      Standard library
+                    </a>
+                  </li>
+                  <li class="go-NavigationDrawer-listItem">
+                    <a href="https://go.dev/doc/devel/release">
+                      Release Notes
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="go-NavigationDrawer-listItem go-NavigationDrawer-listItem--active">
+            <a href="/">Packages</a>
+          </li>
+          <li class="go-NavigationDrawer-listItem js-mobile-subnav-trigger go-NavigationDrawer-hasSubnav">
+            <a href="#">
+              <span>Community</span>
+              <i class="material-icons">
+                <img class="go-Icon" height="24" width="24"
+                  src="/static/shared/icon/navigate_next_gm_grey_24dp.svg" alt="">
+              </i>
+            </a>
+            <div class="go-NavigationDrawer go-NavigationDrawer-submenuItem">
+              <div class="go-NavigationDrawer-nav">
+                <div class="go-NavigationDrawer-header">
+                  <a href="#">
+                    <i class="material-icons">
+                      <img class="go-Icon" height="24" width="24"
+                        src="/static/shared/icon/navigate_before_gm_grey_24dp.svg" alt="">
+                    </i>
+                    Community
+                  </a>
+                </div>
+                <ul class="go-NavigationDrawer-list">
+                  <li class="go-NavigationDrawer-listItem">
+                    <a href="https://go.dev/talks/">
+                      Recorded Talks
+                    </a>
+                  </li>
+                  <li class="go-NavigationDrawer-listItem">
+                    <a href="https://www.meetup.com/pro/go">
+                      Meetups
+                      <i class="material-icons">
+                      <img class="go-Icon" height="24" width="24"
+                          src="/static/shared/icon/launch_gm_grey_24dp.svg" alt="">
+                      </i>
+                    </a>
+                  </li>
+                  <li class="go-NavigationDrawer-listItem">
+                    <a href="https://github.com/golang/go/wiki/Conferences">
+                      Conferences
+                      <i class="material-icons">
+                        <img class="go-Icon" height="24" width="24" src="/static/shared/icon/launch_gm_grey_24dp.svg" alt="">
+                      </i>
+                    </a>
+                  </li>
+                  <li class="go-NavigationDrawer-listItem">
+                    <a href="https://go.dev/blog">
+                      Go blog
+                    </a>
+                  </li>
+                  <li class="go-NavigationDrawer-listItem">
+                    <a href="https://go.dev/help">
+                      Go project
+                    </a>
+                  </li>
+                  <li class="go-NavigationDrawer-listItem">
+                    <div>Get connected</div>
+                    <div class="go-Header-socialIcons">
+                        <a class="go-Header-socialIcon" href="https://groups.google.com/g/golang-nuts"><img src="/static/shared/logo/social/google-groups.svg" /></a>
+                        <a class="go-Header-socialIcon" href="https://github.com/golang"><img src="/static/shared/logo/social/github.svg" /></a>
+                        <a class="go-Header-socialIcon" href="https://twitter.com/golang"><img src="/static/shared/logo/social/twitter.svg" /></a>
+                        <a class="go-Header-socialIcon" href="https://www.reddit.com/r/golang/"><img src="/static/shared/logo/social/reddit.svg" /></a>
+                        <a class="go-Header-socialIcon" href="https://invite.slack.golangbridge.org/"><img src="/static/shared/logo/social/slack.svg" /></a>
+                        <a class="go-Header-socialIcon" href="https://stackoverflow.com/collectives/go"><img src="/static/shared/logo/social/stack-overflow.svg" /></a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+      </ul>
+    </nav>
+  </aside>
+  <div class="go-NavigationDrawer-scrim js-scrim" role="presentation"></div>
+
+    
+  <main class="go-Main" id="main-content">
+    <div class="go-Main-banner" role="alert"></div>
+    <header class="go-Main-header js-mainHeader">
+  
+  
+  <nav class="go-Main-headerBreadcrumb go-Breadcrumb" aria-label="Breadcrumb" data-test-id="UnitHeader-breadcrumb">
+    <ol>
+      
+        
+          <li data-test-id="UnitHeader-breadcrumbItem">
+            <a href="/" data-gtmc="breadcrumb link">Discover Packages</a>
+          </li>
+        
+        <li>
+          <a href="/github.com/tigusigalpa/bingx-go@v1.1.0" data-gtmc="breadcrumb link" aria-current="location"
+              data-test-id="UnitHeader-breadcrumbCurrent">
+            github.com/tigusigalpa/bingx-go
+          </a>
+          
+            <button
+              class="go-Button go-Button--inline go-Clipboard js-clipboard"
+              title="Copy path to clipboard.&#10;&#10;github.com/tigusigalpa/bingx-go"
+              aria-label="Copy Path to Clipboard"
+              data-to-copy="github.com/tigusigalpa/bingx-go"
+              data-gtmc="breadcrumbs button"
+            >
+              <img
+                class="go-Icon go-Icon--accented"
+                height="24"
+                width="24"
+                src="/static/shared/icon/content_copy_gm_grey_24dp.svg"
+                alt=""
+              >
+            </button>
+          
+        
+      </li>
+    </ol>
+  </nav>
+
+  <div class="go-Main-headerContent">
+    
+  <div class="go-Main-headerTitle js-stickyHeader">
+    <a class="go-Main-headerLogo" href="https://go.dev/" aria-hidden="true" tabindex="-1" data-gtmc="header link" aria-label="Link to Go Homepage">
+      <img height="78" width="207" src="/static/shared/logo/go-blue.svg" alt="Go">
+    </a>
+    <h1 class="UnitHeader-titleHeading" data-test-id="UnitHeader-title">bingx</h1>
+    
+      <span class="go-Chip go-Chip--inverted">package</span>
+    
+      <span class="go-Chip go-Chip--inverted">module</span>
+    
+    
+      
+        <button
+          class="go-Button go-Button--inline go-Clipboard js-clipboard"
+          title="Copy path to clipboard.&#10;&#10;github.com/tigusigalpa/bingx-go"
+          aria-label="Copy Path to Clipboard"
+          data-to-copy="github.com/tigusigalpa/bingx-go"
+          data-gtmc="title button"
+          tabindex="-1"
+        >
+          <img
+            class="go-Icon go-Icon--accented"
+            height="24"
+            width="24"
+            src="/static/shared/icon/content_copy_gm_grey_24dp.svg"
+            alt=""
+          />
+        </button>
+      
+    
+  </div>
+
+    
+      
+  <div class="go-Main-headerDetails">
+    
+      
+  <span class="go-Main-headerDetailItem" data-test-id="UnitHeader-version">
+    <a href="?tab=versions" aria-label="Version: v1.1.0" 
+    data-gtmc="header link" aria-describedby="version-description">
+      <span class="go-textSubtle" aria-hidden="true">Version: </span>
+        v1.1.0
+    </a>
+    <div class="screen-reader-only" id="version-description" hidden>
+      Opens a new window with list of versions in this module.
+    </div>
+    
+    <span class="DetailsHeader-badge--latest" data-test-id="UnitHeader-minorVersionBanner">
+      <span class="go-Chip DetailsHeader-span--latest">Latest</span>
+      <span class="go-Chip DetailsHeader-span--notAtLatest">
+        Latest
+        
+  <details class="go-Tooltip js-tooltip" data-gtmc="tooltip">
+    <summary>
+      <img class="go-Icon go-Icon--inverted" height="24" width="24" src="/static/shared/icon/alert_gm_grey_24dp.svg" alt="Warning">
+    </summary>
+    <p>This package is not in the latest version of its module.</p>
+  </details>
+
+      </span>
+      <a href="/github.com/tigusigalpa/bingx-go" aria-label="Go to Latest Version" data-gtmc="header link">
+        <span class="go-Chip go-Chip--alert DetailsHeader-span--goToLatest">Go to latest</span>
+      </a>
+    </span>
+  </span>
+
+      
+  <span class="go-Main-headerDetailItem" data-test-id="UnitHeader-commitTime">
+    Published: Jan 17, 2026
+  </span>
+
+      
+  <span class="go-Main-headerDetailItem" data-test-id="UnitHeader-licenses">
+    License: <a href="/github.com/tigusigalpa/bingx-go?tab=licenses" data-test-id="UnitHeader-license" 
+        data-gtmc="header link" aria-describedby="license-description">MIT</a>
+      
+    
+  </span>
+  <div class="screen-reader-only" id="license-description" hidden>
+    Opens a new window with license information.
+  </div>
+
+      
+        
+  <span class="go-Main-headerDetailItem" data-test-id="UnitHeader-imports">
+    <a href="/github.com/tigusigalpa/bingx-go?tab=imports" aria-label="Imports: 4"
+        data-gtmc="header link" aria-describedby="imports-description">
+      <span class="go-textSubtle">Imports: </span>4
+    </a>
+  </span>
+  <div class="screen-reader-only" id="imports-description" hidden>
+    Opens a new window with list of imports.
+  </div>
+
+        
+  <span class="go-Main-headerDetailItem" data-test-id="UnitHeader-importedby">
+    <a href="/github.com/tigusigalpa/bingx-go?tab=importedby" aria-label="Imported By: 0"
+        data-gtmc="header link" aria-describedby="importedby-description">
+       <span class="go-textSubtle">Imported by: </span>0
+    </a>
+  </span>
+  <div class="screen-reader-only" id="importedby-description" hidden>
+    Opens a new window with list of known importers.
+  </div>
+
+      
+    
+  </div>
+  
+  <div class="UnitHeader-overflowContainer">
+    <svg class="UnitHeader-overflowImage" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+      <path d="M0 0h24v24H0z" fill="none"/>
+      <path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
+    </svg>
+    <select class="UnitHeader-overflowSelect js-selectNav" tabindex="-1">
+      <option value="/">Main</option>
+      <option value="/github.com/tigusigalpa/bingx-go?tab=versions">
+        Versions
+      </option>
+      <option value="/github.com/tigusigalpa/bingx-go?tab=licenses">
+        Licenses
+      </option>
+      
+        <option value="/github.com/tigusigalpa/bingx-go?tab=imports">
+          Imports
+        </option>
+        <option value="/github.com/tigusigalpa/bingx-go?tab=importedby">
+          Imported By
+        </option>
+      
+    </select>
+  </div>
+
+
+    
+  </div>
+
+</header>
+    
+      <aside class="go-Main-aside  js-mainAside">
+  
+  <div class="UnitMeta">
+    <h2 class="go-textLabel">Details</h2>
+    
+  <ul class="UnitMeta-details">
+    <li>
+      <details class="go-Tooltip js-tooltip" data-gtmc="tooltip">
+        <summary class="go-textSubtle">
+          
+  <img class="go-Icon go-Icon--accented"
+    tabindex="0"
+    role="button"src="/static/shared/icon/check_circle_gm_grey_24dp.svg" alt="checked" aria-label="Valid file, toggle tooltip"height="24" width="24">
+
+          Valid <a href="https://github.com/tigusigalpa/bingx-go/tree/v1.1.0/go.mod" target="_blank" rel="noopener">go.mod</a> file
+          <img class="go-Icon" role="button" tabindex="0" src="/static/shared/icon/help_gm_grey_24dp.svg" alt="" aria-label="Toggle go.mod validity tooltip" height="24" width="24">
+        </summary>
+        <p aria-live="polite" role="tooltip">
+          The Go module system was introduced in Go 1.11 and is the official dependency management
+          solution for Go.
+        </p>
+      </details>
+    </li>
+    <li>
+      <details class="go-Tooltip js-tooltip" data-gtmc="tooltip">
+        <summary class="go-textSubtle">
+          
+  <img class="go-Icon go-Icon--accented"
+    tabindex="0"
+    role="button"src="/static/shared/icon/check_circle_gm_grey_24dp.svg" alt="checked" aria-label="Valid file, toggle tooltip"height="24" width="24">
+
+          Redistributable license
+          <img class="go-Icon" role="button" tabindex="0" src="/static/shared/icon/help_gm_grey_24dp.svg" alt="" aria-label="Toggle redistributable help tooltip" height="24" width="24">
+        </summary>
+        <p aria-live="polite" role="tooltip">
+          Redistributable licenses place minimal restrictions on how software can be used,
+          modified, and redistributed.
+        </p>
+      </details>
+    </li>
+    <li>
+      <details class="go-Tooltip js-tooltip" data-gtmc="tooltip">
+        <summary class="go-textSubtle">
+          
+  <img class="go-Icon go-Icon--accented"
+    tabindex="0"
+    role="button"src="/static/shared/icon/check_circle_gm_grey_24dp.svg" alt="checked" aria-label="Valid file, toggle tooltip"height="24" width="24">
+
+          Tagged version
+          <img class="go-Icon" role="button" tabindex="0" src="/static/shared/icon/help_gm_grey_24dp.svg" alt="" aria-label="Toggle tagged version tooltip" height="24" width="24">
+        </summary>
+        <p aria-live="polite" role="tooltip">Modules with tagged versions give importers more predictable builds.</p>
+      </details>
+    </li>
+    <li>
+      <details class="go-Tooltip js-tooltip" data-gtmc="tooltip">
+        <summary class="go-textSubtle">
+          
+  <img class="go-Icon go-Icon--accented"
+    tabindex="0"
+    role="button"src="/static/shared/icon/check_circle_gm_grey_24dp.svg" alt="checked" aria-label="Valid file, toggle tooltip"height="24" width="24">
+
+          Stable version
+          <img class="go-Icon" role="button" tabindex="0" aria-label="Toggle stable version tooltip" src="/static/shared/icon/help_gm_grey_24dp.svg" alt="" height="24" width="24">
+        </summary>
+        <p aria-live="polite" role="tooltip">When a project reaches major version v1 it is considered stable.</p>
+      </details>
+    </li>
+    <li class="UnitMeta-detailsLearn">
+      <a href="/about#best-practices" data-gtmc="meta link">Learn more about best practices</a>
+    </li>
+  </ul>
+
+    <h2 class="go-textLabel">Repository</h2>
+    <div class="UnitMeta-repo">
+      
+        <a href="https://github.com/tigusigalpa/bingx-go" title="https://github.com/tigusigalpa/bingx-go" target="_blank" rel="noopener">
+          github.com/tigusigalpa/bingx-go
+        </a>
+      
+    </div>
+    
+      <h2 class="go-textLabel" data-test-id="links-heading">Links</h2>
+      <ul class="UnitMeta-links">
+        
+        
+          <li>
+            <a href="https://deps.dev/go/github.com%2Ftigusigalpa%2Fbingx-go/v1.1.0" title="View this module on Open Source Insights"
+              target="_blank" rel="noopener" data-test-id="meta-link-depsdev">
+              <img class="link-Icon" src="/static/shared/icon/depsdev-logo.svg"
+                alt="Open Source Insights Logo" />
+              Open Source Insights
+            </a>
+          </li>
+        
+        
+        
+  
+
+        
+  
+
+        
+  
+
+      </ul>
+    
+  </div>
+
+</aside>
+    
+    <nav class="go-Main-nav go-Main-nav--sticky js-mainNav" aria-label="Outline">
+  <div class="go-Main-navDesktop">
+    
+  <div class="UnitOutline-jumpTo">
+    <button class="UnitOutline-jumpToInput go-ShortcutKey js-jumpToInput"
+        aria-controls="jump-to-modal"
+        aria-label="Open Jump to Identifier"
+        data-shortcut="f"
+        data-shortcut-alt="find"
+        data-test-id="jump-to-button" data-gtmc="outline button">
+      Jump to ...
+    </button>
+  </div>
+  <ul class="go-Tree js-tree" role="tree" aria-label="Outline">
+    
+      <li class="js-readmeOutline">
+        <a href="#section-readme" data-gtmc="outline link">
+          README
+        </a>
+        
+  <ul id="readme-outline">
+    
+      <li>
+        <a href="#readme-table-of-contents" data-gtmc="readme outline link">
+          📖 Table of Contents
+        </a>
+         
+      </li>
+    
+      <li>
+        <a href="#readme-about" data-gtmc="readme outline link">
+          ✨ About
+        </a>
+        
+          <ul>
+            
+              <li>
+                <a href="#readme-mission" data-gtmc="readme outline link">
+                  🎯 Mission
+                </a>
+                 
+              </li>
+             
+          </ul>
+         
+      </li>
+    
+      <li>
+        <a href="#readme-why-choose-bingx-go-sdk" data-gtmc="readme outline link">
+          🌟 Why Choose BingX Go SDK?
+        </a>
+        
+          <ul>
+            
+              <li>
+                <a href="#readme-complete-api-coverage" data-gtmc="readme outline link">
+                  Complete API Coverage
+                </a>
+                 
+              </li>
+            
+              <li>
+                <a href="#readme-enterprise-grade-quality" data-gtmc="readme outline link">
+                  Enterprise-Grade Quality
+                </a>
+                 
+              </li>
+            
+              <li>
+                <a href="#readme-developer-experience" data-gtmc="readme outline link">
+                  Developer Experience
+                </a>
+                 
+              </li>
+            
+              <li>
+                <a href="#readme-production-ready" data-gtmc="readme outline link">
+                  Production Ready
+                </a>
+                 
+              </li>
+             
+          </ul>
+         
+      </li>
+    
+      <li>
+        <a href="#readme-features" data-gtmc="readme outline link">
+          🚀 Features
+        </a>
+        
+          <ul>
+            
+              <li>
+                <a href="#readme-comprehensive-service-coverage" data-gtmc="readme outline link">
+                  📊 Comprehensive Service Coverage
+                </a>
+                
+                  <ul>
+                    
+                      <li>
+                        <a href="#readme-usdt-m-perpetual-futures" data-gtmc="readme outline link">
+                          USDT-M Perpetual Futures
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="#readme-advanced-features" data-gtmc="readme outline link">
+                          Advanced Features
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="#readme-coin-m-perpetual-futures" data-gtmc="readme outline link">
+                          Coin-M Perpetual Futures
+                        </a>
+                      </li>
+                     
+                  </ul>
+                 
+              </li>
+            
+              <li>
+                <a href="#readme-key-capabilities" data-gtmc="readme outline link">
+                  🎯 Key Capabilities
+                </a>
+                 
+              </li>
+             
+          </ul>
+         
+      </li>
+    
+      <li>
+        <a href="#readme-architecture" data-gtmc="readme outline link">
+          🏗️ Architecture
+        </a>
+        
+          <ul>
+            
+              <li>
+                <a href="#readme-design-principles" data-gtmc="readme outline link">
+                  Design Principles
+                </a>
+                 
+              </li>
+             
+          </ul>
+         
+      </li>
+    
+      <li>
+        <a href="#readme-installation" data-gtmc="readme outline link">
+          📦 Installation
+        </a>
+        
+          <ul>
+            
+              <li>
+                <a href="#readme-prerequisites" data-gtmc="readme outline link">
+                  Prerequisites
+                </a>
+                 
+              </li>
+            
+              <li>
+                <a href="#readme-quick-install" data-gtmc="readme outline link">
+                  Quick Install
+                </a>
+                 
+              </li>
+            
+              <li>
+                <a href="#readme-verify-installation" data-gtmc="readme outline link">
+                  Verify Installation
+                </a>
+                 
+              </li>
+            
+              <li>
+                <a href="#readme-dependencies" data-gtmc="readme outline link">
+                  Dependencies
+                </a>
+                 
+              </li>
+             
+          </ul>
+         
+      </li>
+    
+      <li>
+        <a href="#readme-quick-start" data-gtmc="readme outline link">
+          ⚡ Quick Start
+        </a>
+        
+          <ul>
+            
+              <li>
+                <a href="#readme-basic-usage" data-gtmc="readme outline link">
+                  Basic Usage
+                </a>
+                 
+              </li>
+             
+          </ul>
+         
+      </li>
+    
+      <li>
+        <a href="#readme-usage-examples" data-gtmc="readme outline link">
+          📚 Usage Examples
+        </a>
+        
+          <ul>
+            
+              <li>
+                <a href="#readme-market-service-market-data" data-gtmc="readme outline link">
+                  Market Service - Market Data
+                </a>
+                 
+              </li>
+            
+              <li>
+                <a href="#readme-account-service-account-management" data-gtmc="readme outline link">
+                  Account Service - Account Management
+                </a>
+                 
+              </li>
+            
+              <li>
+                <a href="#readme-trade-service-trading-operations" data-gtmc="readme outline link">
+                  Trade Service - Trading Operations
+                </a>
+                 
+              </li>
+            
+              <li>
+                <a href="#readme-wallet-service-wallet-management" data-gtmc="readme outline link">
+                  Wallet Service - Wallet Management
+                </a>
+                 
+              </li>
+            
+              <li>
+                <a href="#readme-coin-m-perpetual-futures-1" data-gtmc="readme outline link">
+                  Coin-M Perpetual Futures
+                </a>
+                 
+              </li>
+            
+              <li>
+                <a href="#readme-sub-account-management" data-gtmc="readme outline link">
+                  Sub-Account Management
+                </a>
+                 
+              </li>
+            
+              <li>
+                <a href="#readme-copy-trading-operations" data-gtmc="readme outline link">
+                  Copy Trading Operations
+                </a>
+                 
+              </li>
+            
+              <li>
+                <a href="#readme-websocket-streaming" data-gtmc="readme outline link">
+                  WebSocket Streaming
+                </a>
+                
+                  <ul>
+                    
+                      <li>
+                        <a href="#readme-market-data-stream" data-gtmc="readme outline link">
+                          Market Data Stream
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="#readme-account-data-stream" data-gtmc="readme outline link">
+                          Account Data Stream
+                        </a>
+                      </li>
+                     
+                  </ul>
+                 
+              </li>
+             
+          </ul>
+         
+      </li>
+    
+      <li>
+        <a href="#readme-advanced-features-1" data-gtmc="readme outline link">
+          🔧 Advanced Features
+        </a>
+        
+          <ul>
+            
+              <li>
+                <a href="#readme-commission-calculation" data-gtmc="readme outline link">
+                  Commission Calculation
+                </a>
+                 
+              </li>
+            
+              <li>
+                <a href="#readme-batch-operations" data-gtmc="readme outline link">
+                  Batch Operations
+                </a>
+                 
+              </li>
+            
+              <li>
+                <a href="#readme-time-based-queries" data-gtmc="readme outline link">
+                  Time-Based Queries
+                </a>
+                 
+              </li>
+             
+          </ul>
+         
+      </li>
+    
+      <li>
+        <a href="#readme-configuration" data-gtmc="readme outline link">
+          ⚙️ Configuration
+        </a>
+        
+          <ul>
+            
+              <li>
+                <a href="#readme-client-configuration-options" data-gtmc="readme outline link">
+                  Client Configuration Options
+                </a>
+                 
+              </li>
+            
+              <li>
+                <a href="#readme-environment-variables" data-gtmc="readme outline link">
+                  Environment Variables
+                </a>
+                 
+              </li>
+            
+              <li>
+                <a href="#readme-timeout-configuration" data-gtmc="readme outline link">
+                  Timeout Configuration
+                </a>
+                 
+              </li>
+             
+          </ul>
+         
+      </li>
+    
+      <li>
+        <a href="#readme-api-reference" data-gtmc="readme outline link">
+          📖 API Reference
+        </a>
+        
+          <ul>
+            
+              <li>
+                <a href="#readme-client-methods" data-gtmc="readme outline link">
+                  Client Methods
+                </a>
+                 
+              </li>
+            
+              <li>
+                <a href="#readme-service-overview" data-gtmc="readme outline link">
+                  Service Overview
+                </a>
+                 
+              </li>
+            
+              <li>
+                <a href="#readme-response-format" data-gtmc="readme outline link">
+                  Response Format
+                </a>
+                 
+              </li>
+             
+          </ul>
+         
+      </li>
+    
+      <li>
+        <a href="#readme-error-handling" data-gtmc="readme outline link">
+          🛡️ Error Handling
+        </a>
+        
+          <ul>
+            
+              <li>
+                <a href="#readme-error-types" data-gtmc="readme outline link">
+                  Error Types
+                </a>
+                 
+              </li>
+             
+          </ul>
+         
+      </li>
+    
+      <li>
+        <a href="#readme-best-practices" data-gtmc="readme outline link">
+          � Best Practices
+        </a>
+        
+          <ul>
+            
+              <li>
+                <a href="#readme-security" data-gtmc="readme outline link">
+                  Security
+                </a>
+                 
+              </li>
+            
+              <li>
+                <a href="#readme-error-handling-1" data-gtmc="readme outline link">
+                  Error Handling
+                </a>
+                 
+              </li>
+            
+              <li>
+                <a href="#readme-performance" data-gtmc="readme outline link">
+                  Performance
+                </a>
+                 
+              </li>
+            
+              <li>
+                <a href="#readme-concurrency" data-gtmc="readme outline link">
+                  Concurrency
+                </a>
+                 
+              </li>
+             
+          </ul>
+         
+      </li>
+    
+      <li>
+        <a href="#readme-testing" data-gtmc="readme outline link">
+          🧪 Testing
+        </a>
+        
+          <ul>
+            
+              <li>
+                <a href="#readme-unit-testing" data-gtmc="readme outline link">
+                  Unit Testing
+                </a>
+                 
+              </li>
+            
+              <li>
+                <a href="#readme-integration-testing" data-gtmc="readme outline link">
+                  Integration Testing
+                </a>
+                 
+              </li>
+            
+              <li>
+                <a href="#readme-running-tests" data-gtmc="readme outline link">
+                  Running Tests
+                </a>
+                 
+              </li>
+             
+          </ul>
+         
+      </li>
+    
+      <li>
+        <a href="#readme-performance-1" data-gtmc="readme outline link">
+          ⚡ Performance
+        </a>
+        
+          <ul>
+            
+              <li>
+                <a href="#readme-benchmarks" data-gtmc="readme outline link">
+                  Benchmarks
+                </a>
+                 
+              </li>
+            
+              <li>
+                <a href="#readme-optimization-tips" data-gtmc="readme outline link">
+                  Optimization Tips
+                </a>
+                 
+              </li>
+             
+          </ul>
+         
+      </li>
+    
+      <li>
+        <a href="#readme-roadmap" data-gtmc="readme outline link">
+          �️ Roadmap
+        </a>
+        
+          <ul>
+            
+              <li>
+                <a href="#readme-current-version-v1-0-0" data-gtmc="readme outline link">
+                  Current Version (v1.0.0)
+                </a>
+                 
+              </li>
+            
+              <li>
+                <a href="#readme-planned-features-v1-1-0" data-gtmc="readme outline link">
+                  Planned Features (v1.1.0)
+                </a>
+                 
+              </li>
+            
+              <li>
+                <a href="#readme-future-enhancements-v2-0-0" data-gtmc="readme outline link">
+                  Future Enhancements (v2.0.0)
+                </a>
+                 
+              </li>
+             
+          </ul>
+         
+      </li>
+    
+      <li>
+        <a href="#readme-creating-api-keys" data-gtmc="readme outline link">
+          🔑 Creating API Keys
+        </a>
+        
+          <ul>
+            
+              <li>
+                <a href="#readme-step-by-step-guide" data-gtmc="readme outline link">
+                  Step-by-Step Guide
+                </a>
+                 
+              </li>
+            
+              <li>
+                <a href="#readme-security-recommendations" data-gtmc="readme outline link">
+                  Security Recommendations
+                </a>
+                 
+              </li>
+             
+          </ul>
+         
+      </li>
+    
+      <li>
+        <a href="#readme-contributing" data-gtmc="readme outline link">
+          🤝 Contributing
+        </a>
+        
+          <ul>
+            
+              <li>
+                <a href="#readme-ways-to-contribute" data-gtmc="readme outline link">
+                  Ways to Contribute
+                </a>
+                 
+              </li>
+            
+              <li>
+                <a href="#readme-development-setup" data-gtmc="readme outline link">
+                  Development Setup
+                </a>
+                 
+              </li>
+            
+              <li>
+                <a href="#readme-pull-request-process" data-gtmc="readme outline link">
+                  Pull Request Process
+                </a>
+                 
+              </li>
+            
+              <li>
+                <a href="#readme-code-style" data-gtmc="readme outline link">
+                  Code Style
+                </a>
+                 
+              </li>
+             
+          </ul>
+         
+      </li>
+    
+      <li>
+        <a href="#readme-license" data-gtmc="readme outline link">
+          📝 License
+        </a>
+        
+          <ul>
+            
+              <li>
+                <a href="#readme-mit-license-summary" data-gtmc="readme outline link">
+                  MIT License Summary
+                </a>
+                 
+              </li>
+             
+          </ul>
+         
+      </li>
+    
+      <li>
+        <a href="#readme-disclaimer" data-gtmc="readme outline link">
+          ⚠️ Disclaimer
+        </a>
+         
+      </li>
+    
+      <li>
+        <a href="#readme-support" data-gtmc="readme outline link">
+          📧 Support
+        </a>
+        
+          <ul>
+            
+              <li>
+                <a href="#readme-get-help" data-gtmc="readme outline link">
+                  Get Help
+                </a>
+                 
+              </li>
+            
+              <li>
+                <a href="#readme-community" data-gtmc="readme outline link">
+                  Community
+                </a>
+                 
+              </li>
+            
+              <li>
+                <a href="#readme-commercial-support" data-gtmc="readme outline link">
+                  Commercial Support
+                </a>
+                 
+              </li>
+             
+          </ul>
+         
+      </li>
+    
+      <li>
+        <a href="#readme-acknowledgments" data-gtmc="readme outline link">
+          🙏 Acknowledgments
+        </a>
+         
+      </li>
+    
+      <li>
+        <a href="#readme-project-stats" data-gtmc="readme outline link">
+          📊 Project Stats
+        </a>
+         
+      </li>
+     
+  </ul>
+
+      </li>
+    
+    
+      <li>
+        <a href="#section-documentation" data-gtmc="outline link">
+          Documentation
+        </a>
+        
+<ul>
+  <li class="DocNav-overview">
+      <a href="#pkg-index" data-gtmc="doc outline link">
+        Index
+      </a>
+    </li>
+    <li class="DocNav-constants">
+      <a href="#pkg-constants" data-gtmc="doc outline link">
+        Constants
+      </a>
+    </li>
+    <li class="DocNav-variables">
+      <a href="#pkg-variables" data-gtmc="doc outline link">
+        Variables
+      </a>
+    </li>
+    <li class="DocNav-functions">
+      <a href="#pkg-functions" data-gtmc="doc outline link">
+        Functions
+      </a>
+      
+    </li>
+    <li class="DocNav-types">
+      <a href="#pkg-types" data-gtmc="doc outline link">
+        Types
+      </a>
+      <ul>
+        
+          
+          <li>
+            <a href="#Client" title="type Client" data-gtmc="doc outline link">
+              type Client
+            </a>
+            
+              <ul>
+                
+                  <li>
+                    <a href="#NewClient" title="NewClient(apiKey, apiSecret, options)"
+                        data-gtmc="doc outline link">
+                      NewClient(apiKey, apiSecret, options)
+                    </a>
+                  </li>
+                
+                
+                  <li>
+                    <a href="#Client.Account" title="(c) Account()"
+                        data-gtmc="doc outline link">
+                      (c) Account()
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="#Client.CoinM" title="(c) CoinM()"
+                        data-gtmc="doc outline link">
+                      (c) CoinM()
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="#Client.Contract" title="(c) Contract()"
+                        data-gtmc="doc outline link">
+                      (c) Contract()
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="#Client.CopyTrading" title="(c) CopyTrading()"
+                        data-gtmc="doc outline link">
+                      (c) CopyTrading()
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="#Client.CreateOrder" title="(c) CreateOrder(params)"
+                        data-gtmc="doc outline link">
+                      (c) CreateOrder(params)
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="#Client.GetAPIKey" title="(c) GetAPIKey()"
+                        data-gtmc="doc outline link">
+                      (c) GetAPIKey()
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="#Client.GetBalance" title="(c) GetBalance()"
+                        data-gtmc="doc outline link">
+                      (c) GetBalance()
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="#Client.GetEndpoint" title="(c) GetEndpoint()"
+                        data-gtmc="doc outline link">
+                      (c) GetEndpoint()
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="#Client.GetHTTPClient" title="(c) GetHTTPClient()"
+                        data-gtmc="doc outline link">
+                      (c) GetHTTPClient()
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="#Client.GetSymbols" title="(c) GetSymbols()"
+                        data-gtmc="doc outline link">
+                      (c) GetSymbols()
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="#Client.ListenKey" title="(c) ListenKey()"
+                        data-gtmc="doc outline link">
+                      (c) ListenKey()
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="#Client.Market" title="(c) Market()"
+                        data-gtmc="doc outline link">
+                      (c) Market()
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="#Client.NewAccountDataStream" title="(c) NewAccountDataStream(listenKey)"
+                        data-gtmc="doc outline link">
+                      (c) NewAccountDataStream(listenKey)
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="#Client.NewMarketDataStream" title="(c) NewMarketDataStream()"
+                        data-gtmc="doc outline link">
+                      (c) NewMarketDataStream()
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="#Client.SpotAccount" title="(c) SpotAccount()"
+                        data-gtmc="doc outline link">
+                      (c) SpotAccount()
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="#Client.SubAccount" title="(c) SubAccount()"
+                        data-gtmc="doc outline link">
+                      (c) SubAccount()
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="#Client.Trade" title="(c) Trade()"
+                        data-gtmc="doc outline link">
+                      (c) Trade()
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="#Client.Wallet" title="(c) Wallet()"
+                        data-gtmc="doc outline link">
+                      (c) Wallet()
+                    </a>
+                  </li>
+                
+              </ul>
+             
+          </li>
+        
+          
+          <li>
+            <a href="#ClientConfig" title="type ClientConfig" data-gtmc="doc outline link">
+              type ClientConfig
+            </a>
+             
+          </li>
+        
+          
+          <li>
+            <a href="#ClientOption" title="type ClientOption" data-gtmc="doc outline link">
+              type ClientOption
+            </a>
+            
+              <ul>
+                
+                  <li>
+                    <a href="#WithBaseURI" title="WithBaseURI(uri)"
+                        data-gtmc="doc outline link">
+                      WithBaseURI(uri)
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="#WithSignatureEncoding" title="WithSignatureEncoding(encoding)"
+                        data-gtmc="doc outline link">
+                      WithSignatureEncoding(encoding)
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="#WithSourceKey" title="WithSourceKey(key)"
+                        data-gtmc="doc outline link">
+                      WithSourceKey(key)
+                    </a>
+                  </li>
+                
+                
+              </ul>
+             
+          </li>
+        
+          
+          <li>
+            <a href="#CoinMClient" title="type CoinMClient" data-gtmc="doc outline link">
+              type CoinMClient
+            </a>
+            
+              <ul>
+                
+                  <li>
+                    <a href="#NewCoinMClient" title="NewCoinMClient(httpClient)"
+                        data-gtmc="doc outline link">
+                      NewCoinMClient(httpClient)
+                    </a>
+                  </li>
+                
+                
+                  <li>
+                    <a href="#CoinMClient.ListenKey" title="(c) ListenKey()"
+                        data-gtmc="doc outline link">
+                      (c) ListenKey()
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="#CoinMClient.Market" title="(c) Market()"
+                        data-gtmc="doc outline link">
+                      (c) Market()
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="#CoinMClient.Trade" title="(c) Trade()"
+                        data-gtmc="doc outline link">
+                      (c) Trade()
+                    </a>
+                  </li>
+                
+              </ul>
+             
+          </li>
+         
+      </ul>
+    </li>
+  
+  
+</ul>
+
+      </li>
+    
+    
+      <li>
+        <a href="#section-sourcefiles" data-gtmc="outline link">
+          Source Files
+        </a>
+      </li>
+    
+    
+      <li>
+        <a href="#section-directories" data-gtmc="outline link">
+          Directories
+        </a>
+      </li>
+    
+  </ul>
+
+  </div>
+  <div class="go-Main-navMobile js-mainNavMobile">
+    <label class="go-Label">
+      <select class="go-Select">
+        
+          <option selected disabled>README</option>
+        
+      </select>
+    </label>
+  </div>
+</nav>
+    <article class="go-Main-article js-mainContent">
+  <div class="UnitDetails" data-test-id="UnitDetails" style="display: block;">
+    <div class="UnitDetails-content js-unitDetailsContent" data-test-id="UnitDetails-content">
+      
+        
+  <div class="UnitReadme UnitReadme--expanded js-readme">
+    <h2 class="UnitReadme-title" id="section-readme">
+      <img class="go-Icon" height="24" width="24" src="/static/shared/icon/chrome_reader_mode_gm_grey_24dp.svg" alt="">
+      README
+      <a class="UnitReadme-idLink" href="#section-readme" title="Go to Readme" aria-label="Go to Readme">¶</a>
+    </h2>
+    
+      <div class="UnitReadme-content" data-test-id="Unit-readmeContent">
+        <div class="Overview-readmeContent js-readmeContent"><h3 class="h1" id="readme-bingx-go-sdk">BingX Go SDK</h3>
+<div align="center">
+<p><img src="https://github.com/user-attachments/assets/61babf48-746f-469e-aeed-5058a9337d86" alt="BingX Golang SDK"/></p>
+<p><a href="https://golang.org/" rel="nofollow"><img src="https://img.shields.io/badge/Go-1.21+-00ADD8?style=flat-square&amp;logo=go" alt="Go Version"/></a>
+<a href="https://github.com/tigusigalpa/bingx-go/blob/v1.1.0/LICENSE" rel="nofollow"><img src="https://img.shields.io/badge/license-MIT-green?style=flat-square" alt="License"/></a>
+<a href="https://goreportcard.com/report/github.com/tigusigalpa/bingx-go" rel="nofollow"><img src="https://goreportcard.com/badge/github.com/tigusigalpa/bingx-go?style=flat-square" alt="Go Report Card"/></a>
+<a href="https://github.com/tigusigalpa/bingx-go/releases" rel="nofollow"><img src="https://img.shields.io/github/v/release/tigusigalpa/bingx-go?style=flat-square" alt="GitHub Release"/></a>
+<a href="https://pkg.go.dev/github.com/tigusigalpa/bingx-go" rel="nofollow"><img src="https://img.shields.io/badge/godoc-reference-blue?style=flat-square&amp;logo=go" alt="GoDoc"/></a></p>
+<p><strong>Professional-Grade Golang SDK for BingX Cryptocurrency Exchange</strong></p>
+<p><em>Comprehensive API integration for USDT-M &amp; Coin-M Perpetual Futures, Spot Trading, and Advanced Market Operations</em></p>
+<p><a href="#readme--features" rel="nofollow">Features</a> • <a href="#readme--installation" rel="nofollow">Installation</a> • <a href="#readme--quick-start" rel="nofollow">Quick Start</a> • <a href="#readme--documentation" rel="nofollow">Documentation</a> • <a href="#readme--usage-examples" rel="nofollow">Examples</a> • <a href="#readme--support" rel="nofollow">Support</a></p>
+</div>
+<hr/>
+<h4 class="h2" id="readme-table-of-contents">📖 Table of Contents</h4>
+<ul>
+<li><a href="#readme--about" rel="nofollow">About</a></li>
+<li><a href="#readme--why-choose-bingx-go-sdk" rel="nofollow">Why Choose BingX Go SDK</a></li>
+<li><a href="#readme--features" rel="nofollow">Features</a></li>
+<li><a href="#readme--architecture" rel="nofollow">Architecture</a></li>
+<li><a href="#readme--installation" rel="nofollow">Installation</a></li>
+<li><a href="#readme--quick-start" rel="nofollow">Quick Start</a></li>
+<li><a href="#readme--usage-examples" rel="nofollow">Usage Examples</a>
+<ul>
+<li><a href="#readme-market-service---market-data" rel="nofollow">Market Data</a></li>
+<li><a href="#readme-account-service---account-management" rel="nofollow">Account Management</a></li>
+<li><a href="#readme-trade-service---trading-operations" rel="nofollow">Trading Operations</a></li>
+<li><a href="#readme-wallet-service---wallet-management" rel="nofollow">Wallet Management</a></li>
+<li><a href="#readme-coin-m-perpetual-futures" rel="nofollow">Coin-M Futures</a></li>
+<li><a href="#readme-sub-account-management" rel="nofollow">Sub-Accounts</a></li>
+<li><a href="#readme-copy-trading-operations" rel="nofollow">Copy Trading</a></li>
+<li><a href="#readme-websocket-streaming" rel="nofollow">WebSocket Streaming</a></li>
+</ul>
+</li>
+<li><a href="#readme--advanced-features" rel="nofollow">Advanced Features</a></li>
+<li><a href="#readme--configuration" rel="nofollow">Configuration</a></li>
+<li><a href="#readme--error-handling" rel="nofollow">Error Handling</a></li>
+<li><a href="#readme--best-practices" rel="nofollow">Best Practices</a></li>
+<li><a href="#readme--testing" rel="nofollow">Testing</a></li>
+<li><a href="#readme--performance" rel="nofollow">Performance</a></li>
+<li><a href="#readme--roadmap" rel="nofollow">Roadmap</a></li>
+<li><a href="#readme--contributing" rel="nofollow">Contributing</a></li>
+<li><a href="#readme--license" rel="nofollow">License</a></li>
+<li><a href="#readme--support" rel="nofollow">Support</a></li>
+</ul>
+<hr/>
+<h4 class="h2" id="readme-about">✨ About</h4>
+<p><strong>BingX Go SDK</strong> is an enterprise-grade, production-ready Golang library designed for seamless integration with the
+BingX cryptocurrency exchange API. Built from the ground up with modern Go idioms and best practices, this SDK provides
+developers with a robust, type-safe, and highly performant solution for algorithmic trading, market analysis, and
+portfolio management.</p>
+<p><strong>📦 Package:</strong> <a href="https://pkg.go.dev/github.com/tigusigalpa/bingx-go" rel="nofollow">pkg.go.dev/github.com/tigusigalpa/bingx-go</a></p>
+<h5 class="h3" id="readme-mission">🎯 Mission</h5>
+<p>To empower Go developers with a reliable, efficient, and comprehensive toolkit for building sophisticated cryptocurrency
+trading applications on the BingX platform.</p>
+<hr/>
+<h4 class="h2" id="readme-why-choose-bingx-go-sdk">🌟 Why Choose BingX Go SDK?</h4>
+<h5 class="h3" id="readme-complete-api-coverage"><strong>Complete API Coverage</strong></h5>
+<ul>
+<li>✅ <strong>220+ API Methods</strong> - Every endpoint from BingX API v1 &amp; v2</li>
+<li>✅ <strong>USDT-M Perpetual Futures</strong> - Full support for USDT-margined contracts</li>
+<li>✅ <strong>Coin-M Perpetual Futures</strong> - Complete Coin-margined futures implementation</li>
+<li>✅ <strong>Spot Trading</strong> - Comprehensive spot market operations</li>
+<li>✅ <strong>Advanced Features</strong> - Copy trading, sub-accounts, TWAP orders</li>
+</ul>
+<h5 class="h3" id="readme-enterprise-grade-quality"><strong>Enterprise-Grade Quality</strong></h5>
+<ul>
+<li>🛡️ <strong>Type-Safe</strong> - Leverages Go&#39;s strong typing for compile-time safety</li>
+<li>🔒 <strong>Secure</strong> - HMAC-SHA256 signature with configurable encoding (hex/base64)</li>
+<li>⚡ <strong>High Performance</strong> - Optimized for low latency and high throughput</li>
+<li>🏗️ <strong>Modular Architecture</strong> - Clean separation of concerns with service-based design</li>
+<li>📝 <strong>Well Documented</strong> - Comprehensive inline documentation and examples</li>
+</ul>
+<h5 class="h3" id="readme-developer-experience"><strong>Developer Experience</strong></h5>
+<ul>
+<li>🚀 <strong>Easy to Use</strong> - Intuitive API with fluent interfaces</li>
+<li>🔧 <strong>Flexible Configuration</strong> - Functional options pattern for customization</li>
+<li>🎨 <strong>Idiomatic Go</strong> - Follows Golang best practices and conventions</li>
+<li>🧪 <strong>Testable</strong> - Designed with testing in mind</li>
+<li>📦 <strong>Zero Dependencies</strong> - Minimal external dependencies (only gorilla/websocket)</li>
+</ul>
+<h5 class="h3" id="readme-production-ready"><strong>Production Ready</strong></h5>
+<ul>
+<li>🔄 <strong>Maintained</strong> - Regular updates and bug fixes</li>
+<li>📊 <strong>Monitoring Ready</strong> - Comprehensive error types for observability</li>
+<li>🌐 <strong>WebSocket Support</strong> - Real-time data streaming capabilities</li>
+<li>🔐 <strong>Rate Limit Handling</strong> - Built-in rate limit exception handling</li>
+</ul>
+<hr/>
+<h4 class="h2" id="readme-features">🚀 Features</h4>
+<h5 class="h3" id="readme-comprehensive-service-coverage">📊 Comprehensive Service Coverage</h5>
+<table>
+<tbody><tr>
+<td width="50%" valign="top">
+<h6 class="h4" id="readme-usdt-m-perpetual-futures"><strong>USDT-M Perpetual Futures</strong></h6>
+<ul>
+<li>
+<p><strong>🏪 Market Service</strong> (40+ methods)</p>
+<ul>
+<li>Real-time &amp; historical prices</li>
+<li>Market depth &amp; order books</li>
+<li>Candlestick data (K-lines)</li>
+<li>24hr tickers &amp; statistics</li>
+<li>Funding rates &amp; premium index</li>
+<li>Aggregate &amp; recent trades</li>
+<li>Long/short ratios</li>
+<li>Basis data &amp; sentiment analysis</li>
+</ul>
+</li>
+<li>
+<p><strong>👤 Account Service</strong> (20+ methods)</p>
+<ul>
+<li>Balance &amp; asset management</li>
+<li>Position tracking &amp; monitoring</li>
+<li>Leverage configuration</li>
+<li>Margin mode management</li>
+<li>Trading fees &amp; commissions</li>
+<li>API permissions &amp; rate limits</li>
+<li>Balance history &amp; deposits</li>
+</ul>
+</li>
+<li>
+<p><strong>🔄 Trade Service</strong> (25+ methods)</p>
+<ul>
+<li>Order creation &amp; management</li>
+<li>Batch order operations</li>
+<li>Order modification &amp; cancellation</li>
+<li>Position management</li>
+<li>Trade history &amp; analytics</li>
+<li>Test orders (sandbox)</li>
+<li>Commission calculations</li>
+</ul>
+</li>
+<li>
+<p><strong>💰 Wallet Service</strong> (6+ methods)</p>
+<ul>
+<li>Deposit &amp; withdrawal management</li>
+<li>Address generation</li>
+<li>Transaction history</li>
+<li>Multi-coin support</li>
+<li>Network selection</li>
+</ul>
+</li>
+</ul>
+</td>
+<td width="50%" valign="top">
+<h6 class="h4" id="readme-advanced-features"><strong>Advanced Features</strong></h6>
+<ul>
+<li>
+<p><strong>💵 Spot Account Service</strong> (8+ methods)</p>
+<ul>
+<li>Spot balance management</li>
+<li>Universal transfers</li>
+<li>Internal transfers</li>
+<li>Transfer history</li>
+<li>Multi-account support</li>
+</ul>
+</li>
+<li>
+<p><strong>👥 Sub-Account Service</strong> (20+ methods)</p>
+<ul>
+<li>Sub-account creation &amp; management</li>
+<li>API key management</li>
+<li>Asset transfers</li>
+<li>Deposit address management</li>
+<li>Authorization controls</li>
+</ul>
+</li>
+<li>
+<p><strong>🔄 Copy Trading Service</strong> (13+ methods)</p>
+<ul>
+<li>Futures copy trading</li>
+<li>Spot copy trading</li>
+<li>Profit tracking</li>
+<li>Commission management</li>
+<li>Trading pair configuration</li>
+</ul>
+</li>
+<li>
+<p><strong>📋 Contract Service</strong> (3+ methods)</p>
+<ul>
+<li>Standard contract positions</li>
+<li>Order history</li>
+<li>Balance queries</li>
+</ul>
+</li>
+<li>
+<p><strong>🔐 Listen Key Service</strong> (3+ methods)</p>
+<ul>
+<li>WebSocket authentication</li>
+<li>Key generation &amp; extension</li>
+<li>Session management</li>
+</ul>
+</li>
+</ul>
+<h6 class="h4" id="readme-coin-m-perpetual-futures"><strong>Coin-M Perpetual Futures</strong></h6>
+<ul>
+<li>
+<p><strong>🪙 Coin-M Market</strong> (6+ methods)</p>
+<ul>
+<li>Contract specifications</li>
+<li>Ticker &amp; price data</li>
+<li>Market depth</li>
+<li>K-line data</li>
+<li>Open interest</li>
+<li>Funding rates</li>
+</ul>
+</li>
+<li>
+<p><strong>🪙 Coin-M Trade</strong> (17+ methods)</p>
+<ul>
+<li>Order management</li>
+<li>Position tracking</li>
+<li>Leverage &amp; margin</li>
+<li>Balance queries</li>
+<li>Trade history</li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+</tbody></table>
+<h5 class="h3" id="readme-key-capabilities">🎯 Key Capabilities</h5>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Real-Time Data</strong></td>
+<td>WebSocket support for live market data and account updates</td>
+</tr>
+<tr>
+<td><strong>Order Types</strong></td>
+<td>MARKET, LIMIT, STOP, STOP_MARKET, TAKE_PROFIT, and more</td>
+</tr>
+<tr>
+<td><strong>Position Modes</strong></td>
+<td>One-way and Hedge mode support</td>
+</tr>
+<tr>
+<td><strong>Margin Types</strong></td>
+<td>ISOLATED and CROSSED margin modes</td>
+</tr>
+<tr>
+<td><strong>Time in Force</strong></td>
+<td>GTC, IOC, FOK order execution options</td>
+</tr>
+<tr>
+<td><strong>Risk Management</strong></td>
+<td>Stop-loss, take-profit, trailing stops</td>
+</tr>
+<tr>
+<td><strong>Batch Operations</strong></td>
+<td>Create, modify, and cancel multiple orders at once</td>
+</tr>
+<tr>
+<td><strong>Historical Data</strong></td>
+<td>Access to comprehensive historical trading data</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h4 class="h2" id="readme-architecture">🏗️ Architecture</h4>
+<p>The SDK follows a clean, modular architecture designed for maintainability and extensibility:</p>
+<pre><code>bingx-go/
+├── client.go              # Main client with service orchestration
+├── coinm_client.go        # Coin-M futures client
+├── http/
+│   └── client.go          # HTTP client with HMAC signing
+├── errors/
+│   └── errors.go          # Custom error types
+├── services/
+│   ├── market.go          # Market data service
+│   ├── account.go         # Account management service
+│   ├── trade.go           # Trading operations service
+│   ├── wallet.go          # Wallet operations service
+│   ├── spotaccount.go     # Spot account service
+│   ├── subaccount.go      # Sub-account service
+│   ├── copytrading.go     # Copy trading service
+│   ├── contract.go        # Contract service
+│   ├── listenkey.go       # WebSocket auth service
+│   └── coinm/             # Coin-M specific services
+│       ├── market.go
+│       ├── trade.go
+│       └── listenkey.go
+└── examples/              # Usage examples
+</code></pre>
+<h5 class="h3" id="readme-design-principles">Design Principles</h5>
+<ul>
+<li><strong>Single Responsibility</strong> - Each service handles a specific domain</li>
+<li><strong>Dependency Injection</strong> - HTTP client injected for testability</li>
+<li><strong>Functional Options</strong> - Flexible client configuration</li>
+<li><strong>Error Transparency</strong> - Rich error types for debugging</li>
+<li><strong>Immutability</strong> - Thread-safe by design</li>
+</ul>
+<hr/>
+<h4 class="h2" id="readme-installation">📦 Installation</h4>
+<h5 class="h3" id="readme-prerequisites">Prerequisites</h5>
+<ul>
+<li><strong>Go 1.21+</strong> - Latest stable Go version recommended</li>
+<li><strong>Git</strong> - For package management</li>
+<li><strong>BingX Account</strong> - API keys required for authenticated endpoints</li>
+</ul>
+<h5 class="h3" id="readme-quick-install">Quick Install</h5>
+<pre><code># Install the package
+go get github.com/tigusigalpa/bingx-go
+
+# Update to latest version
+go get -u github.com/tigusigalpa/bingx-go
+</code></pre>
+<h5 class="h3" id="readme-verify-installation">Verify Installation</h5>
+<pre><code>package main
+
+import (
+    &#34;fmt&#34;
+    bingx &#34;github.com/tigusigalpa/bingx-go&#34;
+)
+
+func main() {
+    client := bingx.NewClient(&#34;&#34;, &#34;&#34;, bingx.WithBaseURI(&#34;https://open-api.bingx.com&#34;))
+    fmt.Println(&#34;BingX SDK installed successfully!&#34;)
+}
+</code></pre>
+<h5 class="h3" id="readme-dependencies">Dependencies</h5>
+<p>The SDK has minimal dependencies:</p>
+<ul>
+<li><code>github.com/gorilla/websocket</code> - WebSocket support (optional, only if using WebSocket features)</li>
+</ul>
+<hr/>
+<h4 class="h2" id="readme-quick-start">⚡ Quick Start</h4>
+<h5 class="h3" id="readme-basic-usage">Basic Usage</h5>
+<pre><code>package main
+
+import (
+    &#34;fmt&#34;
+    &#34;log&#34;
+    
+    bingx &#34;github.com/tigusigalpa/bingx-go&#34;
+)
+
+func main() {
+    // Create client
+    client := bingx.NewClient(
+        &#34;YOUR_API_KEY&#34;,
+        &#34;YOUR_API_SECRET&#34;,
+        bingx.WithBaseURI(&#34;https://open-api.bingx.com&#34;),
+        bingx.WithSignatureEncoding(&#34;base64&#34;),
+    )
+    
+    // Get current price
+    price, err := client.Market().GetLatestPrice(&#34;BTC-USDT&#34;)
+    if err != nil {
+        log.Fatal(err)
+    }
+    fmt.Printf(&#34;BTC price: %v\n&#34;, price)
+    
+    // Get account balance
+    balance, err := client.Account().GetBalance()
+    if err != nil {
+        log.Fatal(err)
+    }
+    fmt.Printf(&#34;Balance: %v\n&#34;, balance)
+    
+    // Create an order
+    order, err := client.Trade().CreateOrder(map[string]interface{}{
+        &#34;symbol&#34;:       &#34;BTC-USDT&#34;,
+        &#34;side&#34;:         &#34;BUY&#34;,
+        &#34;type&#34;:         &#34;LIMIT&#34;,
+        &#34;positionSide&#34;: &#34;LONG&#34;,
+        &#34;price&#34;:        50000.0,
+        &#34;quantity&#34;:     0.001,
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    fmt.Printf(&#34;Order created: %v\n&#34;, order)
+}
+</code></pre>
+<hr/>
+<h4 class="h2" id="readme-usage-examples">📚 Usage Examples</h4>
+<h5 class="h3" id="readme-market-service-market-data">Market Service - Market Data</h5>
+<pre><code>// Get futures symbols
+symbols, err := client.Market().GetFuturesSymbols()
+
+// Get spot symbols
+spotSymbols, err := client.Market().GetSpotSymbols()
+
+// Get all symbols
+allSymbols, err := client.Market().GetAllSymbols()
+
+// Get latest price
+price, err := client.Market().GetLatestPrice(&#34;BTC-USDT&#34;)
+
+// Get market depth
+depth, err := client.Market().GetDepth(&#34;BTC-USDT&#34;, 20)
+
+// Get K-lines
+klines, err := client.Market().GetKlines(&#34;BTC-USDT&#34;, &#34;1h&#34;, 100, nil, nil)
+
+// Get 24hr ticker
+ticker, err := client.Market().Get24hrTicker(nil) // nil for all symbols
+
+// Get funding rate history
+fundingRate, err := client.Market().GetFundingRateHistory(&#34;BTC-USDT&#34;, 100)
+</code></pre>
+<h5 class="h3" id="readme-account-service-account-management">Account Service - Account Management</h5>
+<pre><code>// Get account balance
+balance, err := client.Account().GetBalance()
+
+// Get positions
+positions, err := client.Account().GetPositions(nil) // nil for all positions
+
+// Get positions for specific symbol
+btcPositions, err := client.Account().GetPositions(&amp;symbol)
+
+// Get account info
+accountInfo, err := client.Account().GetAccountInfo()
+
+// Get/Set leverage
+leverage, err := client.Account().GetLeverage(&#34;BTC-USDT&#34;, nil)
+err = client.Account().SetLeverage(&#34;BTC-USDT&#34;, &#34;BOTH&#34;, 20, nil)
+
+// Get/Set margin mode
+marginMode, err := client.Account().GetMarginMode(&#34;BTC-USDT&#34;)
+err = client.Account().SetMarginMode(&#34;BTC-USDT&#34;, &#34;ISOLATED&#34;)
+</code></pre>
+<h5 class="h3" id="readme-trade-service-trading-operations">Trade Service - Trading Operations</h5>
+<pre><code>// Create order
+order, err := client.Trade().CreateOrder(map[string]interface{}{
+    &#34;symbol&#34;:       &#34;BTC-USDT&#34;,
+    &#34;side&#34;:         &#34;BUY&#34;,
+    &#34;type&#34;:         &#34;MARKET&#34;,
+    &#34;positionSide&#34;: &#34;LONG&#34;,
+    &#34;quantity&#34;:     0.001,
+})
+
+// Cancel order
+orderID := &#34;123456789&#34;
+err = client.Trade().CancelOrder(&#34;BTC-USDT&#34;, &amp;orderID, nil, nil, nil)
+
+// Cancel all orders
+err = client.Trade().CancelAllOrders(nil, &amp;symbol, nil, nil)
+
+// Get order details
+order, err := client.Trade().GetOrder(&#34;BTC-USDT&#34;, &#34;123456789&#34;)
+
+// Get open orders
+openOrders, err := client.Trade().GetOpenOrders(nil, 100)
+
+// Get order history
+history, err := client.Trade().GetOrderHistory(&amp;symbol, 100, nil, nil)
+
+// Get user trades
+trades, err := client.Trade().GetUserTrades(&amp;symbol, 100, nil, nil)
+</code></pre>
+<h5 class="h3" id="readme-wallet-service-wallet-management">Wallet Service - Wallet Management</h5>
+<pre><code>// Get deposit history
+deposits, err := client.Wallet().GetDepositHistory(&#34;USDT&#34;, nil, nil, nil, 100)
+
+// Get deposit address
+address, err := client.Wallet().GetDepositAddress(&#34;USDT&#34;, &#34;TRC20&#34;)
+
+// Get withdrawal history
+withdrawals, err := client.Wallet().GetWithdrawalHistory(&#34;USDT&#34;, nil, nil, nil, 100)
+
+// Create withdrawal
+withdrawal, err := client.Wallet().Withdraw(&#34;USDT&#34;, &#34;TXxx...xxx&#34;, 100.0, &#34;TRC20&#34;, nil)
+
+// Get all coin info
+coins, err := client.Wallet().GetAllCoinInfo()
+</code></pre>
+<h5 class="h3" id="readme-coin-m-perpetual-futures-1">Coin-M Perpetual Futures</h5>
+<pre><code>// Get Coin-M market data
+ticker, err := client.CoinM().Market().GetTicker(&#34;BTC-USD&#34;)
+
+// Get Coin-M contracts
+contracts, err := client.CoinM().Market().GetContracts()
+
+// Create Coin-M order
+order, err := client.CoinM().Trade().CreateOrder(map[string]interface{}{
+    &#34;symbol&#34;:       &#34;BTC-USD&#34;,
+    &#34;side&#34;:         &#34;BUY&#34;,
+    &#34;positionSide&#34;: &#34;LONG&#34;,
+    &#34;type&#34;:         &#34;MARKET&#34;,
+    &#34;quantity&#34;:     100,
+})
+
+// Get Coin-M positions
+positions, err := client.CoinM().Trade().GetPositions(nil)
+
+// Get Coin-M balance
+balance, err := client.CoinM().Trade().GetBalance()
+</code></pre>
+<h5 class="h3" id="readme-sub-account-management">Sub-Account Management</h5>
+<pre><code>// Create sub-account
+result, err := client.SubAccount().CreateSubAccount(&#34;sub_account_001&#34;)
+
+// Get sub-account list
+subAccounts, err := client.SubAccount().GetSubAccountList(nil, 1, 10)
+
+// Create API key for sub-account
+apiKey, err := client.SubAccount().CreateSubAccountAPIKey(
+    &#34;sub_account_001&#34;,
+    &#34;Trading Bot&#34;,
+    map[string]bool{&#34;spot&#34;: true, &#34;futures&#34;: true},
+    nil, // IP whitelist (optional)
+)
+
+// Transfer assets to sub-account
+transfer, err := client.SubAccount().SubAccountInternalTransfer(
+    &#34;USDT&#34;,
+    &#34;SPOT&#34;,
+    100.0,
+    &#34;FROM_MAIN_TO_SUB&#34;,
+    nil,
+    &amp;subUID,
+    nil,
+)
+
+// Get sub-account assets
+assets, err := client.SubAccount().GetSubAccountAssets(&#34;12345678&#34;)
+</code></pre>
+<h5 class="h3" id="readme-copy-trading-operations">Copy Trading Operations</h5>
+<pre><code>// Get current track orders
+orders, err := client.CopyTrading().GetCurrentTrackOrders(&#34;BTC-USDT&#34;)
+
+// Close track order
+result, err := client.CopyTrading().CloseTrackOrder(&#34;1252864099381234567&#34;)
+
+// Set take profit and stop loss
+stopLoss := 48000.0
+takeProfit := 52000.0
+err = client.CopyTrading().SetTPSL(&#34;1252864099381234567&#34;, &amp;stopLoss, &amp;takeProfit)
+
+// Get profit summary
+summary, err := client.CopyTrading().GetProfitSummary()
+
+// Set commission rate
+err = client.CopyTrading().SetCommission(5.0) // 5% commission
+</code></pre>
+<h5 class="h3" id="readme-websocket-streaming">WebSocket Streaming</h5>
+<h6 class="h4" id="readme-market-data-stream">Market Data Stream</h6>
+<pre><code>// Create market data stream
+stream := client.NewMarketDataStream()
+
+// Connect to WebSocket
+if err := stream.Connect(); err != nil {
+    log.Fatal(err)
+}
+defer stream.Disconnect()
+
+// Register message handler
+stream.OnMessage(func(data map[string]interface{}) {
+    fmt.Printf(&#34;Received: %+v\n&#34;, data)
+})
+
+// Subscribe to various data types
+stream.SubscribeTrade(&#34;BTC-USDT&#34;)
+stream.SubscribeKline(&#34;BTC-USDT&#34;, &#34;1m&#34;)
+stream.SubscribeDepth(&#34;BTC-USDT&#34;, 20)
+stream.SubscribeTicker(&#34;BTC-USDT&#34;)
+stream.SubscribeBookTicker(&#34;BTC-USDT&#34;)
+
+// Start listening (blocking)
+stream.Listen()
+</code></pre>
+<h6 class="h4" id="readme-account-data-stream">Account Data Stream</h6>
+<pre><code>// Generate listen key
+resp, err := client.ListenKey().Generate()
+if err != nil {
+    log.Fatal(err)
+}
+listenKey := resp[&#34;listenKey&#34;].(string)
+
+// Create account data stream
+stream := client.NewAccountDataStream(listenKey)
+
+if err := stream.Connect(); err != nil {
+    log.Fatal(err)
+}
+defer stream.Disconnect()
+
+// Listen for account updates
+stream.OnAccountUpdate(func(eventType string, data map[string]interface{}) {
+    fmt.Printf(&#34;Event [%s]: %+v\n&#34;, eventType, data)
+})
+
+// Listen for specific update types
+stream.OnBalanceUpdate(func(balances interface{}) {
+    fmt.Printf(&#34;Balance: %+v\n&#34;, balances)
+})
+
+stream.OnPositionUpdate(func(positions interface{}) {
+    fmt.Printf(&#34;Positions: %+v\n&#34;, positions)
+})
+
+stream.OnOrderUpdate(func(order interface{}) {
+    fmt.Printf(&#34;Order: %+v\n&#34;, order)
+})
+
+// Start listening
+stream.Listen()
+</code></pre>
+<p>For detailed WebSocket documentation, see <a href="https://github.com/tigusigalpa/bingx-go/blob/v1.1.0/websocket/README.md" rel="nofollow">websocket/README.md</a>.</p>
+<hr/>
+<h4 class="h2" id="readme-advanced-features-1">🔧 Advanced Features</h4>
+<h5 class="h3" id="readme-commission-calculation">Commission Calculation</h5>
+<pre><code>// Calculate futures commission
+commission := client.Trade().CalculateFuturesCommission(100.0, 10, nil)
+fmt.Printf(&#34;Commission: %.6f USDT\n&#34;, commission.Commission)
+fmt.Printf(&#34;Net Position Value: %.2f USDT\n&#34;, commission.NetPositionValue)
+
+// Quick commission amount
+amount := client.Trade().GetCommissionAmount(100.0, 10)
+fmt.Printf(&#34;Commission Amount: %.6f USDT\n&#34;, amount)
+</code></pre>
+<h5 class="h3" id="readme-batch-operations">Batch Operations</h5>
+<pre><code>// Create multiple orders at once
+orders := []map[string]interface{}{
+    {
+        &#34;symbol&#34;:       &#34;BTC-USDT&#34;,
+        &#34;side&#34;:         &#34;BUY&#34;,
+        &#34;type&#34;:         &#34;LIMIT&#34;,
+        &#34;positionSide&#34;: &#34;LONG&#34;,
+        &#34;price&#34;:        50000.0,
+        &#34;quantity&#34;:     0.001,
+    },
+    {
+        &#34;symbol&#34;:       &#34;ETH-USDT&#34;,
+        &#34;side&#34;:         &#34;BUY&#34;,
+        &#34;type&#34;:         &#34;LIMIT&#34;,
+        &#34;positionSide&#34;: &#34;LONG&#34;,
+        &#34;price&#34;:        3000.0,
+        &#34;quantity&#34;:     0.01,
+    },
+}
+
+result, err := client.Trade().CreateBatchOrders(orders)
+
+// Cancel multiple orders
+orderIDs := []string{&#34;123456789&#34;, &#34;987654321&#34;}
+err = client.Trade().CancelBatchOrders(&#34;BTC-USDT&#34;, orderIDs, nil, nil, nil)
+</code></pre>
+<h5 class="h3" id="readme-time-based-queries">Time-Based Queries</h5>
+<pre><code>import &#34;time&#34;
+
+// Get trades from last 24 hours
+startTime := time.Now().Add(-24 * time.Hour).UnixMilli()
+endTime := time.Now().UnixMilli()
+
+trades, err := client.Trade().GetUserTrades(
+    &amp;symbol,
+    100,
+    &amp;startTime,
+    &amp;endTime,
+)
+
+// Get historical klines
+klines, err := client.Market().GetKlines(
+    &#34;BTC-USDT&#34;,
+    &#34;1h&#34;,
+    100,
+    &amp;startTime,
+    &amp;endTime,
+)
+</code></pre>
+<hr/>
+<h4 class="h2" id="readme-configuration">⚙️ Configuration</h4>
+<h5 class="h3" id="readme-client-configuration-options">Client Configuration Options</h5>
+<pre><code>client := bingx.NewClient(
+    apiKey,
+    apiSecret,
+    // Set custom base URI (default: https://open-api.bingx.com)
+    bingx.WithBaseURI(&#34;https://open-api.bingx.com&#34;),
+    
+    // Set source key for tracking (optional)
+    bingx.WithSourceKey(&#34;my-trading-bot-v1&#34;),
+    
+    // Set signature encoding: &#34;base64&#34; or &#34;hex&#34; (default: base64)
+    bingx.WithSignatureEncoding(&#34;base64&#34;),
+)
+</code></pre>
+<h5 class="h3" id="readme-environment-variables">Environment Variables</h5>
+<pre><code># Recommended: Store credentials in environment variables
+export BINGX_API_KEY=&#34;your_api_key_here&#34;
+export BINGX_API_SECRET=&#34;your_api_secret_here&#34;
+export BINGX_SOURCE_KEY=&#34;optional_source_key&#34;
+</code></pre>
+<pre><code>import &#34;os&#34;
+
+client := bingx.NewClient(
+    os.Getenv(&#34;BINGX_API_KEY&#34;),
+    os.Getenv(&#34;BINGX_API_SECRET&#34;),
+    bingx.WithSourceKey(os.Getenv(&#34;BINGX_SOURCE_KEY&#34;)),
+)
+</code></pre>
+<h5 class="h3" id="readme-timeout-configuration">Timeout Configuration</h5>
+<pre><code>// The HTTP client uses default timeouts:
+// - Connection timeout: 10 seconds
+// - Request timeout: 30 seconds
+
+// For custom timeout, modify the HTTP client in http/client.go
+</code></pre>
+<hr/>
+<h4 class="h2" id="readme-api-reference">📖 API Reference</h4>
+<h5 class="h3" id="readme-client-methods">Client Methods</h5>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>NewClient(apiKey, apiSecret string, options...)</code></td>
+<td>Create new BingX client</td>
+<td><code>*Client</code></td>
+</tr>
+<tr>
+<td><code>client.Market()</code></td>
+<td>Access market data service</td>
+<td><code>*MarketService</code></td>
+</tr>
+<tr>
+<td><code>client.Account()</code></td>
+<td>Access account management service</td>
+<td><code>*AccountService</code></td>
+</tr>
+<tr>
+<td><code>client.Trade()</code></td>
+<td>Access trading operations service</td>
+<td><code>*TradeService</code></td>
+</tr>
+<tr>
+<td><code>client.Contract()</code></td>
+<td>Access contract service</td>
+<td><code>*ContractService</code></td>
+</tr>
+<tr>
+<td><code>client.ListenKey()</code></td>
+<td>Access WebSocket auth service</td>
+<td><code>*ListenKeyService</code></td>
+</tr>
+<tr>
+<td><code>client.Wallet()</code></td>
+<td>Access wallet operations service</td>
+<td><code>*WalletService</code></td>
+</tr>
+<tr>
+<td><code>client.SpotAccount()</code></td>
+<td>Access spot account service</td>
+<td><code>*SpotAccountService</code></td>
+</tr>
+<tr>
+<td><code>client.SubAccount()</code></td>
+<td>Access sub-account service</td>
+<td><code>*SubAccountService</code></td>
+</tr>
+<tr>
+<td><code>client.CopyTrading()</code></td>
+<td>Access copy trading service</td>
+<td><code>*CopyTradingService</code></td>
+</tr>
+<tr>
+<td><code>client.CoinM()</code></td>
+<td>Access Coin-M futures client</td>
+<td><code>*CoinMClient</code></td>
+</tr>
+<tr>
+<td><code>client.NewMarketDataStream()</code></td>
+<td>Create market data WebSocket</td>
+<td><code>*MarketDataStream</code></td>
+</tr>
+<tr>
+<td><code>client.NewAccountDataStream(listenKey)</code></td>
+<td>Create account data WebSocket</td>
+<td><code>*AccountDataStream</code></td>
+</tr>
+<tr>
+<td><code>client.GetHTTPClient()</code></td>
+<td>Get underlying HTTP client</td>
+<td><code>*http.BaseHTTPClient</code></td>
+</tr>
+<tr>
+<td><code>client.GetEndpoint()</code></td>
+<td>Get API endpoint URL</td>
+<td><code>string</code></td>
+</tr>
+<tr>
+<td><code>client.GetAPIKey()</code></td>
+<td>Get configured API key</td>
+<td><code>string</code></td>
+</tr>
+</tbody>
+</table>
+<h5 class="h3" id="readme-service-overview">Service Overview</h5>
+<details>
+<summary><b>Market Service Methods</b></summary>
+<ul>
+<li><code>GetFuturesSymbols()</code> - Get all futures trading symbols</li>
+<li><code>GetSpotSymbols()</code> - Get all spot trading symbols</li>
+<li><code>GetAllSymbols()</code> - Get both spot and futures symbols</li>
+<li><code>GetLatestPrice(symbol)</code> - Get latest price for a symbol</li>
+<li><code>GetSpotLatestPrice(symbol)</code> - Get latest spot price</li>
+<li><code>GetDepth(symbol, limit)</code> - Get order book depth</li>
+<li><code>GetSpotDepth(symbol, limit)</code> - Get spot order book</li>
+<li><code>GetKlines(symbol, interval, limit, startTime, endTime)</code> - Get candlestick data</li>
+<li><code>GetSpotKlines(...)</code> - Get spot candlestick data</li>
+<li><code>Get24hrTicker(symbol)</code> - Get 24hr ticker statistics</li>
+<li><code>GetSpot24hrTicker(symbol)</code> - Get spot 24hr ticker</li>
+<li><code>GetFundingRateHistory(symbol, limit)</code> - Get funding rate history</li>
+<li><code>GetMarkPrice(symbol)</code> - Get mark price</li>
+<li><code>GetPremiumIndexKlines(...)</code> - Get premium index klines</li>
+<li><code>GetAggregateTrades(...)</code> - Get aggregate trades</li>
+<li><code>GetRecentTrades(symbol, limit)</code> - Get recent trades</li>
+<li><code>GetServerTime()</code> - Get server time</li>
+<li><code>GetContinuousKlines(...)</code> - Get continuous contract klines</li>
+<li><code>GetIndexPriceKlines(...)</code> - Get index price klines</li>
+<li><code>GetTopLongShortRatio(...)</code> - Get long/short ratio</li>
+<li><code>GetHistoricalTopLongShortRatio(...)</code> - Get historical ratios</li>
+<li><code>GetBasis(...)</code> - Get basis data</li>
+</ul>
+</details>
+<details>
+<summary><b>Account Service Methods</b></summary>
+<ul>
+<li><code>GetBalance()</code> - Get account balance</li>
+<li><code>GetPositions(symbol)</code> - Get positions</li>
+<li><code>GetAccountInfo()</code> - Get account information</li>
+<li><code>GetTradingFees(symbol)</code> - Get trading fees</li>
+<li><code>GetMarginMode(symbol)</code> - Get margin mode</li>
+<li><code>SetMarginMode(symbol, mode)</code> - Set margin mode</li>
+<li><code>GetLeverage(symbol, recvWindow)</code> - Get leverage</li>
+<li><code>SetLeverage(symbol, side, leverage, recvWindow)</code> - Set leverage</li>
+<li><code>GetPositionMargin(symbol)</code> - Get position margin</li>
+<li><code>SetPositionMargin(symbol, positionSide, amount, type)</code> - Set position margin</li>
+<li><code>GetBalanceHistory(coin, limit)</code> - Get balance history</li>
+<li><code>GetAccountPermissions()</code> - Get API permissions</li>
+<li><code>GetAPIKey()</code> - Get API key info</li>
+<li><code>GetUserCommissionRates(symbol)</code> - Get commission rates</li>
+<li><code>GetAPIRateLimits()</code> - Get rate limits</li>
+<li><code>GetDepositHistory(coin, limit)</code> - Get deposit history</li>
+<li><code>GetWithdrawHistory(coin, limit)</code> - Get withdrawal history</li>
+<li><code>GetAssetDetails(asset)</code> - Get asset details</li>
+<li><code>GetAllAssets()</code> - Get all assets</li>
+<li><code>GetFundingWallet(asset)</code> - Get funding wallet</li>
+<li><code>DustTransfer(assets)</code> - Convert dust to BNB</li>
+</ul>
+</details>
+<details>
+<summary><b>Trade Service Methods</b></summary>
+<ul>
+<li><code>CreateOrder(params)</code> - Create new order</li>
+<li><code>ModifyOrder(...)</code> - Modify existing order</li>
+<li><code>CreateTestOrder(params)</code> - Create test order (no execution)</li>
+<li><code>CloseAllPositions(symbol, ...)</code> - Close all positions</li>
+<li><code>GetMarginType(symbol, ...)</code> - Get margin type</li>
+<li><code>ChangeMarginType(symbol, type, ...)</code> - Change margin type</li>
+<li><code>GetLeverage(symbol, ...)</code> - Get leverage</li>
+<li><code>SetLeverage(symbol, leverage, ...)</code> - Set leverage</li>
+<li><code>CreateBatchOrders(orders)</code> - Create multiple orders</li>
+<li><code>CancelOrder(symbol, orderID, ...)</code> - Cancel order</li>
+<li><code>CancelAllOrders(...)</code> - Cancel all orders</li>
+<li><code>CancelBatchOrders(...)</code> - Cancel multiple orders</li>
+<li><code>GetOrder(symbol, orderID)</code> - Get order details</li>
+<li><code>GetOpenOrders(symbol, limit)</code> - Get open orders</li>
+<li><code>GetOrderHistory(...)</code> - Get order history</li>
+<li><code>GetFilledOrders(...)</code> - Get filled orders</li>
+<li><code>GetUserTrades(...)</code> - Get user trades</li>
+<li><code>ChangeLeverage(symbol, side, leverage, ...)</code> - Change leverage</li>
+<li><code>CalculateFuturesCommission(margin, leverage, rate)</code> - Calculate commission</li>
+<li><code>GetCommissionAmount(margin, leverage)</code> - Get commission amount</li>
+</ul>
+</details>
+<h5 class="h3" id="readme-response-format">Response Format</h5>
+<p>All API methods return <code>(map[string]interface{}, error)</code>:</p>
+<pre><code>response, err := client.Market().GetLatestPrice(&#34;BTC-USDT&#34;)
+if err != nil {
+    // Handle error
+}
+
+// Access response data
+if data, ok := response[&#34;data&#34;].(map[string]interface{}); ok {
+    price := data[&#34;price&#34;]
+    fmt.Printf(&#34;Price: %v\n&#34;, price)
+}
+</code></pre>
+<hr/>
+<h4 class="h2" id="readme-error-handling">🛡️ Error Handling</h4>
+<p>The SDK provides custom error types for different scenarios:</p>
+<pre><code>import &#34;github.com/tigusigalpa/bingx-go/errors&#34;
+
+// Handle errors
+order, err := client.Trade().CreateOrder(params)
+if err != nil {
+    switch e := err.(type) {
+    case *errors.AuthenticationException:
+        log.Printf(&#34;Authentication error: %v&#34;, e)
+    case *errors.RateLimitException:
+        log.Printf(&#34;Rate limit exceeded: %v&#34;, e)
+    case *errors.InsufficientBalanceException:
+        log.Printf(&#34;Insufficient balance: %v&#34;, e)
+    case *errors.APIException:
+        log.Printf(&#34;API error [%s]: %v&#34;, e.APICode, e)
+    default:
+        log.Printf(&#34;Error: %v&#34;, err)
+    }
+    return
+}
+</code></pre>
+<h5 class="h3" id="readme-error-types">Error Types</h5>
+<ul>
+<li><code>BingXException</code> - Base exception for all errors</li>
+<li><code>APIException</code> - API-level errors with error codes</li>
+<li><code>AuthenticationException</code> - Authentication failures</li>
+<li><code>RateLimitException</code> - Rate limit exceeded</li>
+<li><code>InsufficientBalanceException</code> - Insufficient balance errors</li>
+</ul>
+<hr/>
+<h4 class="h2" id="readme-best-practices">� Best Practices</h4>
+<h5 class="h3" id="readme-security">Security</h5>
+<pre><code>// ✅ DO: Use environment variables for credentials
+apiKey := os.Getenv(&#34;BINGX_API_KEY&#34;)
+apiSecret := os.Getenv(&#34;BINGX_API_SECRET&#34;)
+
+// ❌ DON&#39;T: Hardcode credentials
+apiKey := &#34;your_api_key_here&#34; // Never do this!
+
+// ✅ DO: Restrict API key permissions
+// Only enable permissions you need (read-only for monitoring, etc.)
+
+// ✅ DO: Use IP whitelist
+// Configure IP restrictions in BingX API settings
+</code></pre>
+<h5 class="h3" id="readme-error-handling-1">Error Handling</h5>
+<pre><code>// ✅ DO: Always check errors
+result, err := client.Trade().CreateOrder(params)
+if err != nil {
+    // Handle specific error types
+    switch e := err.(type) {
+    case *errors.RateLimitException:
+        // Implement exponential backoff
+        time.Sleep(time.Second * 5)
+    case *errors.InsufficientBalanceException:
+        // Log and alert
+        log.Error(&#34;Insufficient balance&#34;)
+    default:
+        // Generic error handling
+        log.Error(err)
+    }
+    return
+}
+
+// ❌ DON&#39;T: Ignore errors
+result, _ := client.Trade().CreateOrder(params) // Bad practice
+</code></pre>
+<h5 class="h3" id="readme-performance">Performance</h5>
+<pre><code>// ✅ DO: Reuse client instances
+var globalClient *bingx.Client
+
+func init() {
+    globalClient = bingx.NewClient(apiKey, apiSecret)
+}
+
+// ❌ DON&#39;T: Create new client for each request
+func makeRequest() {
+    client := bingx.NewClient(apiKey, apiSecret) // Wasteful
+    client.Market().GetLatestPrice(&#34;BTC-USDT&#34;)
+}
+
+// ✅ DO: Use batch operations when possible
+orders := []map[string]interface{}{...}
+client.Trade().CreateBatchOrders(orders)
+
+// ❌ DON&#39;T: Make individual requests in loops
+for _, order := range orders {
+    client.Trade().CreateOrder(order) // Inefficient
+}
+</code></pre>
+<h5 class="h3" id="readme-concurrency">Concurrency</h5>
+<pre><code>// ✅ DO: Client is thread-safe
+var wg sync.WaitGroup
+for _, symbol := range symbols {
+    wg.Add(1)
+    go func(s string) {
+        defer wg.Done()
+        price, _ := client.Market().GetLatestPrice(s)
+        // Process price
+    }(symbol)
+}
+wg.Wait()
+</code></pre>
+<hr/>
+<h4 class="h2" id="readme-testing">🧪 Testing</h4>
+<h5 class="h3" id="readme-unit-testing">Unit Testing</h5>
+<pre><code>package main
+
+import (
+    &#34;testing&#34;
+    bingx &#34;github.com/tigusigalpa/bingx-go&#34;
+)
+
+func TestMarketData(t *testing.T) {
+    client := bingx.NewClient(&#34;&#34;, &#34;&#34;) // Empty credentials for public endpoints
+    
+    symbols, err := client.Market().GetFuturesSymbols()
+    if err != nil {
+        t.Fatalf(&#34;Failed to get symbols: %v&#34;, err)
+    }
+    
+    if symbols == nil {
+        t.Error(&#34;Expected symbols, got nil&#34;)
+    }
+}
+</code></pre>
+<h5 class="h3" id="readme-integration-testing">Integration Testing</h5>
+<pre><code>func TestOrderCreation(t *testing.T) {
+    if testing.Short() {
+        t.Skip(&#34;Skipping integration test&#34;)
+    }
+    
+    client := bingx.NewClient(
+        os.Getenv(&#34;BINGX_API_KEY&#34;),
+        os.Getenv(&#34;BINGX_API_SECRET&#34;),
+    )
+    
+    // Test order creation
+    order, err := client.Trade().CreateTestOrder(params)
+    if err != nil {
+        t.Fatalf(&#34;Test order failed: %v&#34;, err)
+    }
+}
+</code></pre>
+<h5 class="h3" id="readme-running-tests">Running Tests</h5>
+<pre><code># Run all tests
+go test ./...
+
+# Run with coverage
+go test -cover ./...
+
+# Run specific test
+go test -run TestMarketData
+
+# Skip integration tests
+go test -short ./...
+</code></pre>
+<hr/>
+<h4 class="h2" id="readme-performance-1">⚡ Performance</h4>
+<h5 class="h3" id="readme-benchmarks">Benchmarks</h5>
+<p>The SDK is optimized for high-performance trading applications:</p>
+<ul>
+<li><strong>Request Latency</strong>: &lt; 50ms (network dependent)</li>
+<li><strong>Memory Usage</strong>: ~2MB per client instance</li>
+<li><strong>Concurrent Requests</strong>: Supports 1000+ concurrent goroutines</li>
+<li><strong>Signature Generation</strong>: &lt; 1ms per request</li>
+</ul>
+<h5 class="h3" id="readme-optimization-tips">Optimization Tips</h5>
+<ol>
+<li><strong>Connection Pooling</strong>: HTTP client reuses connections automatically</li>
+<li><strong>Batch Operations</strong>: Use batch methods for multiple orders</li>
+<li><strong>Caching</strong>: Cache market data locally when appropriate</li>
+<li><strong>Rate Limiting</strong>: Implement client-side rate limiting to avoid API limits</li>
+</ol>
+<pre><code>// Example: Rate-limited requests
+import &#34;golang.org/x/time/rate&#34;
+
+limiter := rate.NewLimiter(rate.Limit(10), 1) // 10 requests per second
+
+func makeRequest() {
+    limiter.Wait(context.Background())
+    client.Market().GetLatestPrice(&#34;BTC-USDT&#34;)
+}
+</code></pre>
+<hr/>
+<h4 class="h2" id="readme-roadmap">�️ Roadmap</h4>
+<h5 class="h3" id="readme-current-version-v1-0-0">Current Version (v1.0.0)</h5>
+<ul>
+<li>✅ Complete API coverage</li>
+<li>✅ All service implementations</li>
+<li>✅ Error handling</li>
+<li>✅ Documentation</li>
+</ul>
+<h5 class="h3" id="readme-planned-features-v1-1-0">Planned Features (v1.1.0)</h5>
+<ul>
+<li>🔄 WebSocket streaming implementation</li>
+<li>🔄 Order builder with fluent interface</li>
+<li>🔄 Rate limiter middleware</li>
+<li>🔄 Request/response logging</li>
+<li>🔄 Retry mechanism with exponential backoff</li>
+</ul>
+<h5 class="h3" id="readme-future-enhancements-v2-0-0">Future Enhancements (v2.0.0)</h5>
+<ul>
+<li>📊 Built-in technical indicators</li>
+<li>🤖 Strategy backtesting framework</li>
+<li>📈 Portfolio management tools</li>
+<li>🔔 Event-driven architecture</li>
+<li>📱 Mobile-optimized examples</li>
+</ul>
+<hr/>
+<h4 class="h2" id="readme-creating-api-keys">🔑 Creating API Keys</h4>
+<h5 class="h3" id="readme-step-by-step-guide">Step-by-Step Guide</h5>
+<ol>
+<li><strong>Login</strong> to your BingX account</li>
+<li><strong>Navigate</strong> to <a href="https://bingx.com/en-US/accounts/api" rel="nofollow">API Management</a></li>
+<li><strong>Click</strong> &#34;Create API&#34;</li>
+<li><strong>Configure</strong> permissions:
+<ul>
+<li>✅ Enable &#34;Read&#34; for market data</li>
+<li>✅ Enable &#34;Trade&#34; for order placement</li>
+<li>✅ Enable &#34;Withdraw&#34; only if needed (not recommended)</li>
+</ul>
+</li>
+<li><strong>Set IP Whitelist</strong> (highly recommended)</li>
+<li><strong>Save</strong> your API Key and Secret Key</li>
+<li>⚠️ <strong>Important</strong>: Secret Key is shown only once - store it securely!</li>
+</ol>
+<h5 class="h3" id="readme-security-recommendations">Security Recommendations</h5>
+<ul>
+<li>🔒 Never share your API keys</li>
+<li>🔒 Use separate keys for different applications</li>
+<li>🔒 Enable IP whitelist restrictions</li>
+<li>🔒 Regularly rotate API keys</li>
+<li>🔒 Monitor API key usage in BingX dashboard</li>
+<li>🔒 Disable keys immediately if compromised</li>
+</ul>
+<hr/>
+<h4 class="h2" id="readme-contributing">🤝 Contributing</h4>
+<p>We welcome contributions from the community! Here&#39;s how you can help:</p>
+<h5 class="h3" id="readme-ways-to-contribute">Ways to Contribute</h5>
+<ul>
+<li>🐛 <strong>Report Bugs</strong> - Open an issue with detailed reproduction steps</li>
+<li>💡 <strong>Suggest Features</strong> - Share your ideas for improvements</li>
+<li>📝 <strong>Improve Documentation</strong> - Fix typos, add examples, clarify concepts</li>
+<li>🔧 <strong>Submit Code</strong> - Fix bugs or implement new features</li>
+</ul>
+<h5 class="h3" id="readme-development-setup">Development Setup</h5>
+<pre><code># Clone the repository
+git clone https://github.com/tigusigalpa/bingx-go.git
+cd bingx-go
+
+# Install dependencies
+go mod download
+
+# Run tests
+go test ./...
+
+# Run linter
+golangci-lint run
+</code></pre>
+<h5 class="h3" id="readme-pull-request-process">Pull Request Process</h5>
+<ol>
+<li>Fork the repository</li>
+<li>Create a feature branch (<code>git checkout -b feature/amazing-feature</code>)</li>
+<li>Make your changes</li>
+<li>Add tests for new functionality</li>
+<li>Ensure all tests pass</li>
+<li>Commit your changes (<code>git commit -m &#39;Add amazing feature&#39;</code>)</li>
+<li>Push to the branch (<code>git push origin feature/amazing-feature</code>)</li>
+<li>Open a Pull Request</li>
+</ol>
+<h5 class="h3" id="readme-code-style">Code Style</h5>
+<ul>
+<li>Follow <a href="https://golang.org/doc/effective_go" rel="nofollow">Effective Go</a> guidelines</li>
+<li>Use <code>gofmt</code> for formatting</li>
+<li>Add comments for exported functions</li>
+<li>Keep functions focused and small</li>
+<li>Write descriptive commit messages</li>
+</ul>
+<hr/>
+<h4 class="h2" id="readme-license">📝 License</h4>
+<p>This project is licensed under the <strong>MIT License</strong> - see the <a href="https://github.com/tigusigalpa/bingx-go/blob/v1.1.0/LICENSE" rel="nofollow">LICENSE</a> file for details.</p>
+<h5 class="h3" id="readme-mit-license-summary">MIT License Summary</h5>
+<p>✅ Commercial use<br/>
+✅ Modification<br/>
+✅ Distribution<br/>
+✅ Private use</p>
+<p>⚠️ Liability and warranty limitations apply</p>
+<hr/>
+<h4 class="h2" id="readme-disclaimer">⚠️ Disclaimer</h4>
+<p><strong>Important Notice:</strong></p>
+<ul>
+<li>This SDK is provided &#34;as-is&#34; without any warranties</li>
+<li>Cryptocurrency trading carries significant financial risk</li>
+<li>Past performance does not guarantee future results</li>
+<li>Always test thoroughly in a sandbox environment before production use</li>
+<li>The authors are not responsible for any financial losses</li>
+<li>Use at your own risk</li>
+</ul>
+<p><strong>Recommendations:</strong></p>
+<ul>
+<li>Start with small amounts</li>
+<li>Implement proper risk management</li>
+<li>Monitor your trading bots continuously</li>
+<li>Keep your API keys secure</li>
+<li>Stay informed about market conditions</li>
+</ul>
+<hr/>
+<h4 class="h2" id="readme-support">📧 Support</h4>
+<h5 class="h3" id="readme-get-help">Get Help</h5>
+<ul>
+<li>📖 <strong>Documentation</strong>: Read this README and inline code documentation</li>
+<li>💬 <strong>GitHub Issues</strong>: <a href="https://github.com/tigusigalpa/bingx-go/issues" rel="nofollow">Report bugs or request features</a></li>
+<li>📚 <strong>BingX API Docs</strong>: <a href="https://bingx-api.github.io/docs/" rel="nofollow">Official API Documentation</a></li>
+<li>💡 <strong>Examples</strong>: Check the <code>examples/</code> directory for code samples</li>
+</ul>
+<h5 class="h3" id="readme-community">Community</h5>
+<ul>
+<li>⭐ <strong>Star this repo</strong> if you find it useful</li>
+<li>🐦 <strong>Share</strong> with other Go developers</li>
+<li>🔔 <strong>Watch</strong> for updates and new releases</li>
+</ul>
+<h5 class="h3" id="readme-commercial-support">Commercial Support</h5>
+<p>For enterprise support, custom development, or consulting services, please contact the maintainers.</p>
+<hr/>
+<h4 class="h2" id="readme-acknowledgments">🙏 Acknowledgments</h4>
+<ul>
+<li><strong>BingX Team</strong> - For providing comprehensive API documentation</li>
+<li><strong>Go Community</strong> - For excellent tools and libraries</li>
+<li><strong>Contributors</strong> - Thank you to everyone who has contributed to this project</li>
+</ul>
+<hr/>
+<h4 class="h2" id="readme-project-stats">📊 Project Stats</h4>
+<p><img src="https://img.shields.io/github/stars/tigusigalpa/bingx-go?style=social" alt="GitHub stars"/>
+<img src="https://img.shields.io/github/forks/tigusigalpa/bingx-go?style=social" alt="GitHub forks"/>
+<img src="https://img.shields.io/github/watchers/tigusigalpa/bingx-go?style=social" alt="GitHub watchers"/></p>
+<hr/>
+<div align="center">
+<p><strong>Made with ❤️ by the Go Community</strong></p>
+<p><a href="#readme-bingx-go-sdk" rel="nofollow">⬆ Back to Top</a></p>
+</div>
+</div>
+      </div>
+      <button class="UnitReadme-expandLink js-readmeExpand"
+          data-test-id="readme-expand" data-gtmc="readme button"
+          aria-label="Expand Readme">Expand ▾</button>
+      <button class="UnitReadme-collapseLink js-readmeCollapse"
+          data-test-id="readme-collapse" data-gtmc="readme button"
+          aria-label="Expand Readme">Collapse ▴</button>
+    
+  </div>
+
+      
+      
+        
+          
+  <div class="UnitDoc">
+    <h2 class="UnitDoc-title" id="section-documentation">
+      <img class="go-Icon" height="24" width="24" src="/static/shared/icon/code_gm_grey_24dp.svg" alt="">
+      Documentation
+      <a class="UnitDoc-idLink" href="#section-documentation" title="Go to Documentation" aria-label="Go to Documentation">¶</a>
+    </h2>
+    
+  
+    
+  
+
+    <div class="Documentation js-documentation">
+      
+        
+
+<div class="Documentation-content js-docContent"> <section class="Documentation-index">
+    <h3 id="pkg-index" class="Documentation-indexHeader">Index <a href="#pkg-index" title="Go to Index" aria-label="Go to Index">¶</a></h3>
+
+<ul class="Documentation-indexList">
+<li class="Documentation-indexType">
+          <a href="#Client">type Client</a></li>
+<li><ul class="Documentation-indexTypeFunctions">
+<li>
+            <a href="#NewClient">func NewClient(apiKey, apiSecret string, options ...ClientOption) *Client</a></li>
+</ul></li>
+<li><ul class="Documentation-indexTypeMethods">
+<li>
+            <a href="#Client.Account">func (c *Client) Account() *services.AccountService</a></li>
+<li>
+            <a href="#Client.CoinM">func (c *Client) CoinM() *CoinMClient</a></li>
+<li>
+            <a href="#Client.Contract">func (c *Client) Contract() *services.ContractService</a></li>
+<li>
+            <a href="#Client.CopyTrading">func (c *Client) CopyTrading() *services.CopyTradingService</a></li>
+<li>
+            <a href="#Client.CreateOrder">func (c *Client) CreateOrder(params map[string]interface{}) (map[string]interface{}, error)</a></li>
+<li>
+            <a href="#Client.GetAPIKey">func (c *Client) GetAPIKey() string</a></li>
+<li>
+            <a href="#Client.GetBalance">func (c *Client) GetBalance() (map[string]interface{}, error)</a></li>
+<li>
+            <a href="#Client.GetEndpoint">func (c *Client) GetEndpoint() string</a></li>
+<li>
+            <a href="#Client.GetHTTPClient">func (c *Client) GetHTTPClient() *http.BaseHTTPClient</a></li>
+<li>
+            <a href="#Client.GetSymbols">func (c *Client) GetSymbols() (map[string]interface{}, error)</a></li>
+<li>
+            <a href="#Client.ListenKey">func (c *Client) ListenKey() *services.ListenKeyService</a></li>
+<li>
+            <a href="#Client.Market">func (c *Client) Market() *services.MarketService</a></li>
+<li>
+            <a href="#Client.NewAccountDataStream">func (c *Client) NewAccountDataStream(listenKey string) *websocket.AccountDataStream</a></li>
+<li>
+            <a href="#Client.NewMarketDataStream">func (c *Client) NewMarketDataStream() *websocket.MarketDataStream</a></li>
+<li>
+            <a href="#Client.SpotAccount">func (c *Client) SpotAccount() *services.SpotAccountService</a></li>
+<li>
+            <a href="#Client.SubAccount">func (c *Client) SubAccount() *services.SubAccountService</a></li>
+<li>
+            <a href="#Client.Trade">func (c *Client) Trade() *services.TradeService</a></li>
+<li>
+            <a href="#Client.Wallet">func (c *Client) Wallet() *services.WalletService</a></li>
+</ul></li>
+<li class="Documentation-indexType">
+          <a href="#ClientConfig">type ClientConfig</a></li>
+<li class="Documentation-indexType">
+          <a href="#ClientOption">type ClientOption</a></li>
+<li><ul class="Documentation-indexTypeFunctions">
+<li>
+            <a href="#WithBaseURI">func WithBaseURI(uri string) ClientOption</a></li>
+<li>
+            <a href="#WithSignatureEncoding">func WithSignatureEncoding(encoding string) ClientOption</a></li>
+<li>
+            <a href="#WithSourceKey">func WithSourceKey(key string) ClientOption</a></li>
+</ul></li>
+<li class="Documentation-indexType">
+          <a href="#CoinMClient">type CoinMClient</a></li>
+<li><ul class="Documentation-indexTypeFunctions">
+<li>
+            <a href="#NewCoinMClient">func NewCoinMClient(httpClient *http.BaseHTTPClient) *CoinMClient</a></li>
+</ul></li>
+<li><ul class="Documentation-indexTypeMethods">
+<li>
+            <a href="#CoinMClient.ListenKey">func (c *CoinMClient) ListenKey() *coinm.ListenKeyService</a></li>
+<li>
+            <a href="#CoinMClient.Market">func (c *CoinMClient) Market() *coinm.MarketService</a></li>
+<li>
+            <a href="#CoinMClient.Trade">func (c *CoinMClient) Trade() *coinm.TradeService</a></li>
+</ul></li>
+</ul>
+</section><h3 tabindex="-1" id="pkg-constants" class="Documentation-constantsHeader">Constants <a href="#pkg-constants" title="Go to Constants" aria-label="Go to Constants">¶</a></h3>
+
+  <section class="Documentation-constants"><p class="Documentation-empty">This section is empty.</p></section>
+
+  <h3 tabindex="-1" id="pkg-variables" class="Documentation-variablesHeader">Variables <a href="#pkg-variables" title="Go to Variables" aria-label="Go to Variables">¶</a></h3>
+
+  <section class="Documentation-variables"><p class="Documentation-empty">This section is empty.</p></section>
+
+  <h3 tabindex="-1" id="pkg-functions" class="Documentation-functionsHeader">Functions <a href="#pkg-functions" title="Go to Functions" aria-label="Go to Functions">¶</a></h3>
+
+  <section class="Documentation-functions"><p class="Documentation-empty">This section is empty.</p></section>
+
+  <h3 tabindex="-1" id="pkg-types" class="Documentation-typesHeader">Types <a href="#pkg-types" title="Go to Types" aria-label="Go to Types">¶</a></h3>
+
+  <section class="Documentation-types"><div class="Documentation-type">
+      
+  
+  
+    <h4 tabindex="-1" id="Client" data-kind="type" class="Documentation-typeHeader">
+      <span>type <a class="Documentation-source" href="https://github.com/tigusigalpa/bingx-go/blob/v1.1.0/client.go#L9">Client</a> <a class="Documentation-idLink" href="#Client" title="Go to Client" aria-label="Go to Client">¶</a></span>
+  <span class="Documentation-sinceVersion">
+    
+  </span>
+</h4>
+
+    
+    <div class="Documentation-declaration">
+      <pre>type Client struct {
+	<span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+    </div>
+  
+<div class="Documentation-typeFunc">
+    
+  
+  
+    <h4 tabindex="-1" id="NewClient" data-kind="function" class="Documentation-typeFuncHeader">
+      <span>func <a class="Documentation-source" href="https://github.com/tigusigalpa/bingx-go/blob/v1.1.0/client.go#L23">NewClient</a> <a class="Documentation-idLink" href="#NewClient" title="Go to NewClient" aria-label="Go to NewClient">¶</a></span>
+  <span class="Documentation-sinceVersion">
+    
+  </span>
+</h4>
+
+    
+    <div class="Documentation-declaration">
+      <pre>func NewClient(apiKey, apiSecret <a href="/builtin#string">string</a>, options ...<a href="#ClientOption">ClientOption</a>) *<a href="#Client">Client</a></pre>
+    </div>
+  
+
+  
+
+  </div><div class="Documentation-typeMethod">
+    
+  
+  
+    <h4 tabindex="-1" id="Client.Account" data-kind="method" class="Documentation-typeMethodHeader">
+      <span>func (*Client) <a class="Documentation-source" href="https://github.com/tigusigalpa/bingx-go/blob/v1.1.0/client.go#L88">Account</a> <a class="Documentation-idLink" href="#Client.Account" title="Go to Client.Account" aria-label="Go to Client.Account">¶</a></span>
+  <span class="Documentation-sinceVersion">
+    
+  </span>
+</h4>
+
+    
+    <div class="Documentation-declaration">
+      <pre>func (c *<a href="#Client">Client</a>) Account() *<a href="/github.com/tigusigalpa/bingx-go@v1.1.0/services">services</a>.<a href="/github.com/tigusigalpa/bingx-go@v1.1.0/services#AccountService">AccountService</a></pre>
+    </div>
+  
+
+  
+
+  </div><div class="Documentation-typeMethod">
+    
+  
+  
+    <h4 tabindex="-1" id="Client.CoinM" data-kind="method" class="Documentation-typeMethodHeader">
+      <span>func (*Client) <a class="Documentation-source" href="https://github.com/tigusigalpa/bingx-go/blob/v1.1.0/client.go#L120">CoinM</a> <a class="Documentation-idLink" href="#Client.CoinM" title="Go to Client.CoinM" aria-label="Go to Client.CoinM">¶</a></span>
+  <span class="Documentation-sinceVersion">
+    
+  </span>
+</h4>
+
+    
+    <div class="Documentation-declaration">
+      <pre>func (c *<a href="#Client">Client</a>) CoinM() *<a href="#CoinMClient">CoinMClient</a></pre>
+    </div>
+  
+
+  
+
+  </div><div class="Documentation-typeMethod">
+    
+  
+  
+    <h4 tabindex="-1" id="Client.Contract" data-kind="method" class="Documentation-typeMethodHeader">
+      <span>func (*Client) <a class="Documentation-source" href="https://github.com/tigusigalpa/bingx-go/blob/v1.1.0/client.go#L96">Contract</a> <a class="Documentation-idLink" href="#Client.Contract" title="Go to Client.Contract" aria-label="Go to Client.Contract">¶</a></span>
+  <span class="Documentation-sinceVersion">
+    
+  </span>
+</h4>
+
+    
+    <div class="Documentation-declaration">
+      <pre>func (c *<a href="#Client">Client</a>) Contract() *<a href="/github.com/tigusigalpa/bingx-go@v1.1.0/services">services</a>.<a href="/github.com/tigusigalpa/bingx-go@v1.1.0/services#ContractService">ContractService</a></pre>
+    </div>
+  
+
+  
+
+  </div><div class="Documentation-typeMethod">
+    
+  
+  
+    <h4 tabindex="-1" id="Client.CopyTrading" data-kind="method" class="Documentation-typeMethodHeader">
+      <span>func (*Client) <a class="Documentation-source" href="https://github.com/tigusigalpa/bingx-go/blob/v1.1.0/client.go#L116">CopyTrading</a> <a class="Documentation-idLink" href="#Client.CopyTrading" title="Go to Client.CopyTrading" aria-label="Go to Client.CopyTrading">¶</a></span>
+  <span class="Documentation-sinceVersion">
+    
+  </span>
+</h4>
+
+    
+    <div class="Documentation-declaration">
+      <pre>func (c *<a href="#Client">Client</a>) CopyTrading() *<a href="/github.com/tigusigalpa/bingx-go@v1.1.0/services">services</a>.<a href="/github.com/tigusigalpa/bingx-go@v1.1.0/services#CopyTradingService">CopyTradingService</a></pre>
+    </div>
+  
+
+  
+
+  </div><div class="Documentation-typeMethod">
+    
+  
+  
+    <h4 tabindex="-1" id="Client.CreateOrder" data-kind="method" class="Documentation-typeMethodHeader">
+      <span>func (*Client) <a class="Documentation-source" href="https://github.com/tigusigalpa/bingx-go/blob/v1.1.0/client.go#L147">CreateOrder</a> <a class="Documentation-idLink" href="#Client.CreateOrder" title="Go to Client.CreateOrder" aria-label="Go to Client.CreateOrder">¶</a></span>
+  <span class="Documentation-sinceVersion">
+    
+  </span>
+</h4>
+
+    
+    <div class="Documentation-declaration">
+      <pre>func (c *<a href="#Client">Client</a>) CreateOrder(params map[<a href="/builtin#string">string</a>]interface{}) (map[<a href="/builtin#string">string</a>]interface{}, <a href="/builtin#error">error</a>)</pre>
+    </div>
+  
+
+  
+
+  </div><div class="Documentation-typeMethod">
+    
+  
+  
+    <h4 tabindex="-1" id="Client.GetAPIKey" data-kind="method" class="Documentation-typeMethodHeader">
+      <span>func (*Client) <a class="Documentation-source" href="https://github.com/tigusigalpa/bingx-go/blob/v1.1.0/client.go#L135">GetAPIKey</a> <a class="Documentation-idLink" href="#Client.GetAPIKey" title="Go to Client.GetAPIKey" aria-label="Go to Client.GetAPIKey">¶</a></span>
+  <span class="Documentation-sinceVersion">
+    
+  </span>
+</h4>
+
+    
+    <div class="Documentation-declaration">
+      <pre>func (c *<a href="#Client">Client</a>) GetAPIKey() <a href="/builtin#string">string</a></pre>
+    </div>
+  
+
+  
+
+  </div><div class="Documentation-typeMethod">
+    
+  
+  
+    <h4 tabindex="-1" id="Client.GetBalance" data-kind="method" class="Documentation-typeMethodHeader">
+      <span>func (*Client) <a class="Documentation-source" href="https://github.com/tigusigalpa/bingx-go/blob/v1.1.0/client.go#L139">GetBalance</a> <a class="Documentation-idLink" href="#Client.GetBalance" title="Go to Client.GetBalance" aria-label="Go to Client.GetBalance">¶</a></span>
+  <span class="Documentation-sinceVersion">
+    
+  </span>
+</h4>
+
+    
+    <div class="Documentation-declaration">
+      <pre>func (c *<a href="#Client">Client</a>) GetBalance() (map[<a href="/builtin#string">string</a>]interface{}, <a href="/builtin#error">error</a>)</pre>
+    </div>
+  
+
+  
+
+  </div><div class="Documentation-typeMethod">
+    
+  
+  
+    <h4 tabindex="-1" id="Client.GetEndpoint" data-kind="method" class="Documentation-typeMethodHeader">
+      <span>func (*Client) <a class="Documentation-source" href="https://github.com/tigusigalpa/bingx-go/blob/v1.1.0/client.go#L131">GetEndpoint</a> <a class="Documentation-idLink" href="#Client.GetEndpoint" title="Go to Client.GetEndpoint" aria-label="Go to Client.GetEndpoint">¶</a></span>
+  <span class="Documentation-sinceVersion">
+    
+  </span>
+</h4>
+
+    
+    <div class="Documentation-declaration">
+      <pre>func (c *<a href="#Client">Client</a>) GetEndpoint() <a href="/builtin#string">string</a></pre>
+    </div>
+  
+
+  
+
+  </div><div class="Documentation-typeMethod">
+    
+  
+  
+    <h4 tabindex="-1" id="Client.GetHTTPClient" data-kind="method" class="Documentation-typeMethodHeader">
+      <span>func (*Client) <a class="Documentation-source" href="https://github.com/tigusigalpa/bingx-go/blob/v1.1.0/client.go#L127">GetHTTPClient</a> <a class="Documentation-idLink" href="#Client.GetHTTPClient" title="Go to Client.GetHTTPClient" aria-label="Go to Client.GetHTTPClient">¶</a></span>
+  <span class="Documentation-sinceVersion">
+    
+  </span>
+</h4>
+
+    
+    <div class="Documentation-declaration">
+      <pre>func (c *<a href="#Client">Client</a>) GetHTTPClient() *<a href="/github.com/tigusigalpa/bingx-go@v1.1.0/http">http</a>.<a href="/github.com/tigusigalpa/bingx-go@v1.1.0/http#BaseHTTPClient">BaseHTTPClient</a></pre>
+    </div>
+  
+
+  
+
+  </div><div class="Documentation-typeMethod">
+    
+  
+  
+    <h4 tabindex="-1" id="Client.GetSymbols" data-kind="method" class="Documentation-typeMethodHeader">
+      <span>func (*Client) <a class="Documentation-source" href="https://github.com/tigusigalpa/bingx-go/blob/v1.1.0/client.go#L143">GetSymbols</a> <a class="Documentation-idLink" href="#Client.GetSymbols" title="Go to Client.GetSymbols" aria-label="Go to Client.GetSymbols">¶</a></span>
+  <span class="Documentation-sinceVersion">
+    
+  </span>
+</h4>
+
+    
+    <div class="Documentation-declaration">
+      <pre>func (c *<a href="#Client">Client</a>) GetSymbols() (map[<a href="/builtin#string">string</a>]interface{}, <a href="/builtin#error">error</a>)</pre>
+    </div>
+  
+
+  
+
+  </div><div class="Documentation-typeMethod">
+    
+  
+  
+    <h4 tabindex="-1" id="Client.ListenKey" data-kind="method" class="Documentation-typeMethodHeader">
+      <span>func (*Client) <a class="Documentation-source" href="https://github.com/tigusigalpa/bingx-go/blob/v1.1.0/client.go#L100">ListenKey</a> <a class="Documentation-idLink" href="#Client.ListenKey" title="Go to Client.ListenKey" aria-label="Go to Client.ListenKey">¶</a></span>
+  <span class="Documentation-sinceVersion">
+    
+  </span>
+</h4>
+
+    
+    <div class="Documentation-declaration">
+      <pre>func (c *<a href="#Client">Client</a>) ListenKey() *<a href="/github.com/tigusigalpa/bingx-go@v1.1.0/services">services</a>.<a href="/github.com/tigusigalpa/bingx-go@v1.1.0/services#ListenKeyService">ListenKeyService</a></pre>
+    </div>
+  
+
+  
+
+  </div><div class="Documentation-typeMethod">
+    
+  
+  
+    <h4 tabindex="-1" id="Client.Market" data-kind="method" class="Documentation-typeMethodHeader">
+      <span>func (*Client) <a class="Documentation-source" href="https://github.com/tigusigalpa/bingx-go/blob/v1.1.0/client.go#L84">Market</a> <a class="Documentation-idLink" href="#Client.Market" title="Go to Client.Market" aria-label="Go to Client.Market">¶</a></span>
+  <span class="Documentation-sinceVersion">
+    
+  </span>
+</h4>
+
+    
+    <div class="Documentation-declaration">
+      <pre>func (c *<a href="#Client">Client</a>) Market() *<a href="/github.com/tigusigalpa/bingx-go@v1.1.0/services">services</a>.<a href="/github.com/tigusigalpa/bingx-go@v1.1.0/services#MarketService">MarketService</a></pre>
+    </div>
+  
+
+  
+
+  </div><div class="Documentation-typeMethod">
+    
+  
+  
+    <h4 tabindex="-1" id="Client.NewAccountDataStream" data-kind="method" class="Documentation-typeMethodHeader">
+      <span>func (*Client) <a class="Documentation-source" href="https://github.com/tigusigalpa/bingx-go/blob/v1.1.0/client.go#L155">NewAccountDataStream</a> <a class="Documentation-idLink" href="#Client.NewAccountDataStream" title="Go to Client.NewAccountDataStream" aria-label="Go to Client.NewAccountDataStream">¶</a></span>
+  <span class="Documentation-sinceVersion">
+    
+      <span class="Documentation-sinceVersionLabel">added in</span>
+      <span class="Documentation-sinceVersionVersion">v1.1.0</span>
+    
+  </span>
+</h4>
+
+    
+    <div class="Documentation-declaration">
+      <pre>func (c *<a href="#Client">Client</a>) NewAccountDataStream(listenKey <a href="/builtin#string">string</a>) *<a href="/github.com/tigusigalpa/bingx-go@v1.1.0/websocket">websocket</a>.<a href="/github.com/tigusigalpa/bingx-go@v1.1.0/websocket#AccountDataStream">AccountDataStream</a></pre>
+    </div>
+  
+
+  
+
+  </div><div class="Documentation-typeMethod">
+    
+  
+  
+    <h4 tabindex="-1" id="Client.NewMarketDataStream" data-kind="method" class="Documentation-typeMethodHeader">
+      <span>func (*Client) <a class="Documentation-source" href="https://github.com/tigusigalpa/bingx-go/blob/v1.1.0/client.go#L151">NewMarketDataStream</a> <a class="Documentation-idLink" href="#Client.NewMarketDataStream" title="Go to Client.NewMarketDataStream" aria-label="Go to Client.NewMarketDataStream">¶</a></span>
+  <span class="Documentation-sinceVersion">
+    
+      <span class="Documentation-sinceVersionLabel">added in</span>
+      <span class="Documentation-sinceVersionVersion">v1.1.0</span>
+    
+  </span>
+</h4>
+
+    
+    <div class="Documentation-declaration">
+      <pre>func (c *<a href="#Client">Client</a>) NewMarketDataStream() *<a href="/github.com/tigusigalpa/bingx-go@v1.1.0/websocket">websocket</a>.<a href="/github.com/tigusigalpa/bingx-go@v1.1.0/websocket#MarketDataStream">MarketDataStream</a></pre>
+    </div>
+  
+
+  
+
+  </div><div class="Documentation-typeMethod">
+    
+  
+  
+    <h4 tabindex="-1" id="Client.SpotAccount" data-kind="method" class="Documentation-typeMethodHeader">
+      <span>func (*Client) <a class="Documentation-source" href="https://github.com/tigusigalpa/bingx-go/blob/v1.1.0/client.go#L108">SpotAccount</a> <a class="Documentation-idLink" href="#Client.SpotAccount" title="Go to Client.SpotAccount" aria-label="Go to Client.SpotAccount">¶</a></span>
+  <span class="Documentation-sinceVersion">
+    
+  </span>
+</h4>
+
+    
+    <div class="Documentation-declaration">
+      <pre>func (c *<a href="#Client">Client</a>) SpotAccount() *<a href="/github.com/tigusigalpa/bingx-go@v1.1.0/services">services</a>.<a href="/github.com/tigusigalpa/bingx-go@v1.1.0/services#SpotAccountService">SpotAccountService</a></pre>
+    </div>
+  
+
+  
+
+  </div><div class="Documentation-typeMethod">
+    
+  
+  
+    <h4 tabindex="-1" id="Client.SubAccount" data-kind="method" class="Documentation-typeMethodHeader">
+      <span>func (*Client) <a class="Documentation-source" href="https://github.com/tigusigalpa/bingx-go/blob/v1.1.0/client.go#L112">SubAccount</a> <a class="Documentation-idLink" href="#Client.SubAccount" title="Go to Client.SubAccount" aria-label="Go to Client.SubAccount">¶</a></span>
+  <span class="Documentation-sinceVersion">
+    
+  </span>
+</h4>
+
+    
+    <div class="Documentation-declaration">
+      <pre>func (c *<a href="#Client">Client</a>) SubAccount() *<a href="/github.com/tigusigalpa/bingx-go@v1.1.0/services">services</a>.<a href="/github.com/tigusigalpa/bingx-go@v1.1.0/services#SubAccountService">SubAccountService</a></pre>
+    </div>
+  
+
+  
+
+  </div><div class="Documentation-typeMethod">
+    
+  
+  
+    <h4 tabindex="-1" id="Client.Trade" data-kind="method" class="Documentation-typeMethodHeader">
+      <span>func (*Client) <a class="Documentation-source" href="https://github.com/tigusigalpa/bingx-go/blob/v1.1.0/client.go#L92">Trade</a> <a class="Documentation-idLink" href="#Client.Trade" title="Go to Client.Trade" aria-label="Go to Client.Trade">¶</a></span>
+  <span class="Documentation-sinceVersion">
+    
+  </span>
+</h4>
+
+    
+    <div class="Documentation-declaration">
+      <pre>func (c *<a href="#Client">Client</a>) Trade() *<a href="/github.com/tigusigalpa/bingx-go@v1.1.0/services">services</a>.<a href="/github.com/tigusigalpa/bingx-go@v1.1.0/services#TradeService">TradeService</a></pre>
+    </div>
+  
+
+  
+
+  </div><div class="Documentation-typeMethod">
+    
+  
+  
+    <h4 tabindex="-1" id="Client.Wallet" data-kind="method" class="Documentation-typeMethodHeader">
+      <span>func (*Client) <a class="Documentation-source" href="https://github.com/tigusigalpa/bingx-go/blob/v1.1.0/client.go#L104">Wallet</a> <a class="Documentation-idLink" href="#Client.Wallet" title="Go to Client.Wallet" aria-label="Go to Client.Wallet">¶</a></span>
+  <span class="Documentation-sinceVersion">
+    
+  </span>
+</h4>
+
+    
+    <div class="Documentation-declaration">
+      <pre>func (c *<a href="#Client">Client</a>) Wallet() *<a href="/github.com/tigusigalpa/bingx-go@v1.1.0/services">services</a>.<a href="/github.com/tigusigalpa/bingx-go@v1.1.0/services#WalletService">WalletService</a></pre>
+    </div>
+  
+
+  
+
+  </div>
+  
+
+    </div><div class="Documentation-type">
+      
+  
+  
+    <h4 tabindex="-1" id="ClientConfig" data-kind="type" class="Documentation-typeHeader">
+      <span>type <a class="Documentation-source" href="https://github.com/tigusigalpa/bingx-go/blob/v1.1.0/client.go#L58">ClientConfig</a> <a class="Documentation-idLink" href="#ClientConfig" title="Go to ClientConfig" aria-label="Go to ClientConfig">¶</a></span>
+  <span class="Documentation-sinceVersion">
+    
+  </span>
+</h4>
+
+    
+    <div class="Documentation-declaration">
+      <pre>type ClientConfig struct {
+<span id="ClientConfig.BaseURI" data-kind="field">	BaseURI           <a href="/builtin#string">string</a>
+</span><span id="ClientConfig.SourceKey" data-kind="field">	SourceKey         <a href="/builtin#string">string</a>
+</span><span id="ClientConfig.SignatureEncoding" data-kind="field">	SignatureEncoding <a href="/builtin#string">string</a>
+</span>}</pre>
+    </div>
+  
+
+  
+
+    </div><div class="Documentation-type">
+      
+  
+  
+    <h4 tabindex="-1" id="ClientOption" data-kind="type" class="Documentation-typeHeader">
+      <span>type <a class="Documentation-source" href="https://github.com/tigusigalpa/bingx-go/blob/v1.1.0/client.go#L64">ClientOption</a> <a class="Documentation-idLink" href="#ClientOption" title="Go to ClientOption" aria-label="Go to ClientOption">¶</a></span>
+  <span class="Documentation-sinceVersion">
+    
+  </span>
+</h4>
+
+    
+    <div class="Documentation-declaration">
+      <pre>type ClientOption func(*<a href="#ClientConfig">ClientConfig</a>)</pre>
+    </div>
+  
+<div class="Documentation-typeFunc">
+    
+  
+  
+    <h4 tabindex="-1" id="WithBaseURI" data-kind="function" class="Documentation-typeFuncHeader">
+      <span>func <a class="Documentation-source" href="https://github.com/tigusigalpa/bingx-go/blob/v1.1.0/client.go#L66">WithBaseURI</a> <a class="Documentation-idLink" href="#WithBaseURI" title="Go to WithBaseURI" aria-label="Go to WithBaseURI">¶</a></span>
+  <span class="Documentation-sinceVersion">
+    
+  </span>
+</h4>
+
+    
+    <div class="Documentation-declaration">
+      <pre>func WithBaseURI(uri <a href="/builtin#string">string</a>) <a href="#ClientOption">ClientOption</a></pre>
+    </div>
+  
+
+  
+
+  </div><div class="Documentation-typeFunc">
+    
+  
+  
+    <h4 tabindex="-1" id="WithSignatureEncoding" data-kind="function" class="Documentation-typeFuncHeader">
+      <span>func <a class="Documentation-source" href="https://github.com/tigusigalpa/bingx-go/blob/v1.1.0/client.go#L78">WithSignatureEncoding</a> <a class="Documentation-idLink" href="#WithSignatureEncoding" title="Go to WithSignatureEncoding" aria-label="Go to WithSignatureEncoding">¶</a></span>
+  <span class="Documentation-sinceVersion">
+    
+  </span>
+</h4>
+
+    
+    <div class="Documentation-declaration">
+      <pre>func WithSignatureEncoding(encoding <a href="/builtin#string">string</a>) <a href="#ClientOption">ClientOption</a></pre>
+    </div>
+  
+
+  
+
+  </div><div class="Documentation-typeFunc">
+    
+  
+  
+    <h4 tabindex="-1" id="WithSourceKey" data-kind="function" class="Documentation-typeFuncHeader">
+      <span>func <a class="Documentation-source" href="https://github.com/tigusigalpa/bingx-go/blob/v1.1.0/client.go#L72">WithSourceKey</a> <a class="Documentation-idLink" href="#WithSourceKey" title="Go to WithSourceKey" aria-label="Go to WithSourceKey">¶</a></span>
+  <span class="Documentation-sinceVersion">
+    
+  </span>
+</h4>
+
+    
+    <div class="Documentation-declaration">
+      <pre>func WithSourceKey(key <a href="/builtin#string">string</a>) <a href="#ClientOption">ClientOption</a></pre>
+    </div>
+  
+
+  
+
+  </div>
+  
+
+    </div><div class="Documentation-type">
+      
+  
+  
+    <h4 tabindex="-1" id="CoinMClient" data-kind="type" class="Documentation-typeHeader">
+      <span>type <a class="Documentation-source" href="https://github.com/tigusigalpa/bingx-go/blob/v1.1.0/coinm_client.go#L8">CoinMClient</a> <a class="Documentation-idLink" href="#CoinMClient" title="Go to CoinMClient" aria-label="Go to CoinMClient">¶</a></span>
+  <span class="Documentation-sinceVersion">
+    
+  </span>
+</h4>
+
+    
+    <div class="Documentation-declaration">
+      <pre>type CoinMClient struct {
+	<span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+    </div>
+  
+<div class="Documentation-typeFunc">
+    
+  
+  
+    <h4 tabindex="-1" id="NewCoinMClient" data-kind="function" class="Documentation-typeFuncHeader">
+      <span>func <a class="Documentation-source" href="https://github.com/tigusigalpa/bingx-go/blob/v1.1.0/coinm_client.go#L15">NewCoinMClient</a> <a class="Documentation-idLink" href="#NewCoinMClient" title="Go to NewCoinMClient" aria-label="Go to NewCoinMClient">¶</a></span>
+  <span class="Documentation-sinceVersion">
+    
+  </span>
+</h4>
+
+    
+    <div class="Documentation-declaration">
+      <pre>func NewCoinMClient(httpClient *<a href="/github.com/tigusigalpa/bingx-go@v1.1.0/http">http</a>.<a href="/github.com/tigusigalpa/bingx-go@v1.1.0/http#BaseHTTPClient">BaseHTTPClient</a>) *<a href="#CoinMClient">CoinMClient</a></pre>
+    </div>
+  
+
+  
+
+  </div><div class="Documentation-typeMethod">
+    
+  
+  
+    <h4 tabindex="-1" id="CoinMClient.ListenKey" data-kind="method" class="Documentation-typeMethodHeader">
+      <span>func (*CoinMClient) <a class="Documentation-source" href="https://github.com/tigusigalpa/bingx-go/blob/v1.1.0/coinm_client.go#L32">ListenKey</a> <a class="Documentation-idLink" href="#CoinMClient.ListenKey" title="Go to CoinMClient.ListenKey" aria-label="Go to CoinMClient.ListenKey">¶</a></span>
+  <span class="Documentation-sinceVersion">
+    
+  </span>
+</h4>
+
+    
+    <div class="Documentation-declaration">
+      <pre>func (c *<a href="#CoinMClient">CoinMClient</a>) ListenKey() *<a href="/github.com/tigusigalpa/bingx-go@v1.1.0/services/coinm">coinm</a>.<a href="/github.com/tigusigalpa/bingx-go@v1.1.0/services/coinm#ListenKeyService">ListenKeyService</a></pre>
+    </div>
+  
+
+  
+
+  </div><div class="Documentation-typeMethod">
+    
+  
+  
+    <h4 tabindex="-1" id="CoinMClient.Market" data-kind="method" class="Documentation-typeMethodHeader">
+      <span>func (*CoinMClient) <a class="Documentation-source" href="https://github.com/tigusigalpa/bingx-go/blob/v1.1.0/coinm_client.go#L24">Market</a> <a class="Documentation-idLink" href="#CoinMClient.Market" title="Go to CoinMClient.Market" aria-label="Go to CoinMClient.Market">¶</a></span>
+  <span class="Documentation-sinceVersion">
+    
+  </span>
+</h4>
+
+    
+    <div class="Documentation-declaration">
+      <pre>func (c *<a href="#CoinMClient">CoinMClient</a>) Market() *<a href="/github.com/tigusigalpa/bingx-go@v1.1.0/services/coinm">coinm</a>.<a href="/github.com/tigusigalpa/bingx-go@v1.1.0/services/coinm#MarketService">MarketService</a></pre>
+    </div>
+  
+
+  
+
+  </div><div class="Documentation-typeMethod">
+    
+  
+  
+    <h4 tabindex="-1" id="CoinMClient.Trade" data-kind="method" class="Documentation-typeMethodHeader">
+      <span>func (*CoinMClient) <a class="Documentation-source" href="https://github.com/tigusigalpa/bingx-go/blob/v1.1.0/coinm_client.go#L28">Trade</a> <a class="Documentation-idLink" href="#CoinMClient.Trade" title="Go to CoinMClient.Trade" aria-label="Go to CoinMClient.Trade">¶</a></span>
+  <span class="Documentation-sinceVersion">
+    
+  </span>
+</h4>
+
+    
+    <div class="Documentation-declaration">
+      <pre>func (c *<a href="#CoinMClient">CoinMClient</a>) Trade() *<a href="/github.com/tigusigalpa/bingx-go@v1.1.0/services/coinm">coinm</a>.<a href="/github.com/tigusigalpa/bingx-go@v1.1.0/services/coinm#TradeService">TradeService</a></pre>
+    </div>
+  
+
+  
+
+  </div>
+  
+
+    </div></section></div> 
+
+
+
+
+
+
+
+      
+    </div>
+  </div>
+
+        
+      
+      
+        
+  <div class="UnitFiles js-unitFiles">
+    <h2 class="UnitFiles-title" id="section-sourcefiles">
+      <img class="go-Icon" height="24" width="24" src="/static/shared/icon/insert_drive_file_gm_grey_24dp.svg" alt="">
+      Source Files
+      <a class="UnitFiles-idLink" href="#section-sourcefiles" title="Go to Source Files" aria-label="Go to Source Files">¶</a>
+    </h2><div class="UnitFiles-titleLink">
+      <a href="https://github.com/tigusigalpa/bingx-go/tree/v1.1.0" target="_blank" rel="noopener">View all Source files</a>
+    </div><div>
+      <ul class="UnitFiles-fileList"><li><a href="https://github.com/tigusigalpa/bingx-go/blob/v1.1.0/client.go" target="_blank" rel="noopener" title="client.go">client.go</a></li><li><a href="https://github.com/tigusigalpa/bingx-go/blob/v1.1.0/coinm_client.go" target="_blank" rel="noopener" title="coinm_client.go">coinm_client.go</a></li></ul>
+    </div>
+  </div>
+
+      
+      
+        
+  <div class="UnitDirectories js-unitDirectories">
+    <h2 class="UnitDirectories-title" id="section-directories">
+      <img class="go-Icon" height="24" width="24" src="/static/shared/icon/folder_gm_grey_24dp.svg" alt="">
+      Directories
+      <a class="UnitDirectories-idLink" href="#section-directories" title="Go to Directories" aria-label="Go to Directories">¶</a>
+    </h2>
+    <div class="UnitDirectories-toggles">
+      <div class="UnitDirectories-toggleButtons">
+        <button class="js-showInternalDirectories" data-test-id="internal-directories-toggle"
+            data-gtmc="directories button" aria-label="Show Internal Directories">
+          Show internal
+        </button>
+        <button class="js-expandAllDirectories" data-test-id="directories-toggle"
+            data-gtmc="directories button" aria-label="Expand All Directories">
+          Expand all
+        </button>
+      </div>
+    </div>
+    <table class="UnitDirectories-table UnitDirectories-table--tree js-expandableTable"
+          data-test-id="UnitDirectories-table">
+      <tr class="UnitDirectories-tableHeader UnitDirectories-tableHeader--tree">
+        <th>Path</th>
+        <th class="UnitDirectories-desktopSynopsis">Synopsis</th>
+      </tr>
+      
+          
+  
+  <tr
+      class="">
+    <td data-id="errors" data-aria-owns="">
+      <div class="UnitDirectories-pathCell">
+        <div><a href="/github.com/tigusigalpa/bingx-go@v1.1.0/errors">errors</a>
+            
+          </div>
+          <div class="UnitDirectories-mobileSynopsis"></div>
+        </div>
+      </td>
+      <td class="UnitDirectories-desktopSynopsis"></td></tr></tr>
+
+      
+          
+  
+  <tr data-aria-controls="examples-basic examples-trading "
+      class="">
+    <td data-id="examples" data-aria-owns="examples-basic examples-trading ">
+      <div class="UnitDirectories-pathCell">
+        <div><button type="button" class="go-Button go-Button--inline UnitDirectories-toggleButton"
+                aria-expanded="false"
+                aria-label="2 more from"
+                data-aria-controls="examples-basic examples-trading "
+                data-aria-labelledby="examples-button examples"
+                data-id="examples-button">
+              <img class="go-Icon" height="24" width="24" src="/static/shared/icon/arrow_right_gm_grey_24dp.svg"
+                  alt="">
+            </button><a href="/github.com/tigusigalpa/bingx-go@v1.1.0/examples">examples</a>
+            
+          </div>
+          <div class="UnitDirectories-mobileSynopsis"></div>
+        </div>
+      </td>
+      <td class="UnitDirectories-desktopSynopsis"></td></tr><tr data-id="examples-basic" class="">
+      <td>
+        <div class="UnitDirectories-subdirectory">
+          <span>
+            <a href="/github.com/tigusigalpa/bingx-go@v1.1.0/examples/basic">basic</a>
+            
+            <span class="go-Chip go-Chip--inverted">command</span>
+          </span>
+          <div class="UnitDirectories-mobileSynopsis"></div>
+        </div>
+      </td>
+      <td class="UnitDirectories-desktopSynopsis"></td><tr data-id="examples-trading" class="">
+      <td>
+        <div class="UnitDirectories-subdirectory">
+          <span>
+            <a href="/github.com/tigusigalpa/bingx-go@v1.1.0/examples/trading">trading</a>
+            
+            <span class="go-Chip go-Chip--inverted">command</span>
+          </span>
+          <div class="UnitDirectories-mobileSynopsis"></div>
+        </div>
+      </td>
+      <td class="UnitDirectories-desktopSynopsis"></td></tr>
+
+      
+          
+  
+  <tr
+      class="">
+    <td data-id="http" data-aria-owns="">
+      <div class="UnitDirectories-pathCell">
+        <div><a href="/github.com/tigusigalpa/bingx-go@v1.1.0/http">http</a>
+            
+          </div>
+          <div class="UnitDirectories-mobileSynopsis"></div>
+        </div>
+      </td>
+      <td class="UnitDirectories-desktopSynopsis"></td></tr></tr>
+
+      
+          
+  
+  <tr data-aria-controls="services-coinm "
+      class="">
+    <td data-id="services" data-aria-owns="services-coinm ">
+      <div class="UnitDirectories-pathCell">
+        <div><button type="button" class="go-Button go-Button--inline UnitDirectories-toggleButton"
+                aria-expanded="false"
+                aria-label="1 more from"
+                data-aria-controls="services-coinm "
+                data-aria-labelledby="services-button services"
+                data-id="services-button">
+              <img class="go-Icon" height="24" width="24" src="/static/shared/icon/arrow_right_gm_grey_24dp.svg"
+                  alt="">
+            </button><a href="/github.com/tigusigalpa/bingx-go@v1.1.0/services">services</a>
+            
+          </div>
+          <div class="UnitDirectories-mobileSynopsis"></div>
+        </div>
+      </td>
+      <td class="UnitDirectories-desktopSynopsis"></td></tr><tr data-id="services-coinm" class="">
+      <td>
+        <div class="UnitDirectories-subdirectory">
+          <span>
+            <a href="/github.com/tigusigalpa/bingx-go@v1.1.0/services/coinm">coinm</a>
+            
+            
+          </span>
+          <div class="UnitDirectories-mobileSynopsis"></div>
+        </div>
+      </td>
+      <td class="UnitDirectories-desktopSynopsis"></td></tr>
+
+      
+          
+  
+  <tr
+      class="">
+    <td data-id="websocket" data-aria-owns="">
+      <div class="UnitDirectories-pathCell">
+        <div><a href="/github.com/tigusigalpa/bingx-go@v1.1.0/websocket">websocket</a>
+            
+          </div>
+          <div class="UnitDirectories-mobileSynopsis"></div>
+        </div>
+      </td>
+      <td class="UnitDirectories-desktopSynopsis"></td></tr></tr>
+
+      
+    </table>
+  </div>
+
+      
+    </div>
+  </div>
+  <div id="showInternal-description" hidden> Click to show internal directories. </div>
+  <div id="hideInternal-description" hidden> Click to hide internal directories. </div>
+</article>
+    <footer class="go-Main-footer"></footer>
+  </main>
+
+    
+  <footer class="go-Footer">
+    
+    <div class="go-Footer-links">
+      <div class="go-Footer-linkColumn">
+        <a href="https://go.dev/solutions" class="go-Footer-link go-Footer-link--primary"
+            data-gtmc="footer link">
+          Why Go
+        </a>
+        <a href="https://go.dev/solutions#use-cases" class="go-Footer-link"
+            data-gtmc="footer link">
+          Use Cases
+        </a>
+        <a href="https://go.dev/solutions#case-studies" class="go-Footer-link"
+            data-gtmc="footer link">
+          Case Studies
+        </a>
+      </div>
+      <div class="go-Footer-linkColumn">
+        <a href="https://learn.go.dev/" class="go-Footer-link go-Footer-link--primary"
+            data-gtmc="footer link">
+          Get Started
+        </a>
+        <a href="https://play.golang.org" class="go-Footer-link" data-gtmc="footer link">
+          Playground
+        </a>
+        <a href="https://tour.golang.org" class="go-Footer-link" data-gtmc="footer link">
+          Tour
+        </a>
+        <a href="https://stackoverflow.com/questions/tagged/go?tab=Newest" class="go-Footer-link"
+            data-gtmc="footer link">
+          Stack Overflow
+        </a>
+        <a href="https://go.dev/help" class="go-Footer-link"
+            data-gtmc="footer link">
+          Help
+        </a>
+      </div>
+      <div class="go-Footer-linkColumn">
+        <a href="https://pkg.go.dev" class="go-Footer-link go-Footer-link--primary"
+            data-gtmc="footer link">
+          Packages
+        </a>
+        <a href="/std" class="go-Footer-link" data-gtmc="footer link">
+          Standard Library
+        </a>
+        <a href="/golang.org/x" class="go-Footer-link" data-gtmc="footer link">
+          Sub-repositories
+        </a>
+        <a href="https://pkg.go.dev/about" class="go-Footer-link" data-gtmc="footer link">
+          About Go Packages
+        </a>
+      </div>
+      <div class="go-Footer-linkColumn">
+        <a href="https://go.dev/project" class="go-Footer-link go-Footer-link--primary"
+            data-gtmc="footer link">
+          About
+        </a>
+        <a href="https://go.dev/dl/" class="go-Footer-link" data-gtmc="footer link">Download</a>
+        <a href="https://go.dev/blog" class="go-Footer-link" data-gtmc="footer link">Blog</a>
+        <a href="https://github.com/golang/go/issues" class="go-Footer-link" data-gtmc="footer link">
+          Issue Tracker
+        </a>
+        <a href="https://go.dev/doc/devel/release.html" class="go-Footer-link"
+            data-gtmc="footer link">
+          Release Notes
+        </a>
+        <a href="https://go.dev/brand" class="go-Footer-link" data-gtmc="footer link">
+          Brand Guidelines
+        </a>
+        <a href="https://go.dev/conduct" class="go-Footer-link" data-gtmc="footer link">
+          Code of Conduct
+        </a>
+      </div>
+      <div class="go-Footer-linkColumn">
+        <a href="https://www.twitter.com/golang" class="go-Footer-link go-Footer-link--primary"
+            data-gtmc="footer link">
+          Connect
+        </a>
+        <a href="https://www.twitter.com/golang" class="go-Footer-link" data-gtmc="footer link">
+          Twitter
+        </a>
+        <a href="https://github.com/golang" class="go-Footer-link" data-gtmc="footer link">GitHub</a>
+        <a href="https://invite.slack.golangbridge.org/" class="go-Footer-link"
+            data-gtmc="footer link">
+          Slack
+        </a>
+        <a href="https://reddit.com/r/golang" class="go-Footer-link" data-gtmc="footer link">
+          r/golang
+        </a>
+        <a href="https://www.meetup.com/pro/go" class="go-Footer-link" data-gtmc="footer link">
+          Meetup
+        </a>
+        <a href="https://golangweekly.com/" class="go-Footer-link" data-gtmc="footer link">
+          Golang Weekly
+        </a>
+      </div>
+    </div>
+    <div class="go-Footer-bottom">
+      <img class="go-Footer-gopher"  width="1431" height="901"
+          src="/static/shared/gopher/pilot-bust-1431x901.svg" alt="Gopher in flight goggles">
+      <ul class="go-Footer-listRow">
+        <li class="go-Footer-listItem">
+          <a href="https://go.dev/copyright" data-gtmc="footer link">Copyright</a>
+        </li>
+        <li class="go-Footer-listItem">
+          <a href="https://go.dev/tos" data-gtmc="footer link">Terms of Service</a>
+        </li>
+        <li class="go-Footer-listItem">
+          <a href="http://www.google.com/intl/en/policies/privacy/" data-gtmc="footer link"
+              target="_blank" rel="noopener">
+            Privacy Policy
+          </a>
+        </li>
+        <li class="go-Footer-listItem">
+          <a href="https://go.dev/s/pkgsite-feedback" target="_blank" rel="noopener"
+              data-gtmc="footer link">
+            Report an Issue
+          </a>
+        </li>
+        <li class="go-Footer-listItem">
+          <button class="go-Button go-Button--text go-Footer-toggleTheme js-toggleTheme" aria-label="Theme Toggle">
+            <img data-value="auto" class="go-Icon go-Icon--inverted" height="24" width="24" src="/static/shared/icon/brightness_6_gm_grey_24dp.svg" alt="System theme">
+            <img data-value="dark" class="go-Icon go-Icon--inverted" height="24" width="24" src="/static/shared/icon/brightness_2_gm_grey_24dp.svg" alt="Dark theme">
+            <img data-value="light" class="go-Icon go-Icon--inverted" height="24" width="24" src="/static/shared/icon/light_mode_gm_grey_24dp.svg" alt="Light theme">
+            <p> Theme Toggle </p>
+          </button>
+        </li>
+        <li class="go-Footer-listItem">
+          <button class="go-Button go-Button--text go-Footer-keyboard js-openShortcuts" aria-label="Shorcuts Modal">
+            <img class="go-Icon go-Icon--inverted" height="24" width="24" src="/static/shared/icon/keyboard_grey_24dp.svg" alt="">
+            <p> Shortcuts Modal </p>
+          </button>
+        </li>
+      </ul>
+      <a class="go-Footer-googleLogo" href="https://google.com" target="_blank"rel="noopener"
+          data-gtmc="footer link">
+        <img class="go-Footer-googleLogoImg" height="24" width="72"
+            src="/static/shared/logo/google-white.svg" alt="Google logo">
+      </a>
+    </div>
+  </footer>
+
+    
+  <dialog id="jump-to-modal" class="JumpDialog go-Modal go-Modal--md js-modal">
+    <form method="dialog" data-gmtc="jump to form" aria-label="Jump to Identifier">
+      <div class="Dialog-title go-Modal-header">
+        <h2>Jump to</h2>
+        <button
+          class="go-Button go-Button--inline"
+          type="button"
+          data-modal-close
+          data-gtmc="modal button"
+          aria-label="Close"
+        >
+          <img
+            class="go-Icon"
+            height="24"
+            width="24"
+            src="/static/shared/icon/close_gm_grey_24dp.svg"
+            alt=""
+          />
+        </button>
+      </div>
+      <div class="JumpDialog-filter">
+        <input class="JumpDialog-input go-Input" autocomplete="off" type="text">
+      </div>
+      <div class="JumpDialog-body go-Modal-body">
+        <div class="JumpDialog-list"></div>
+      </div>
+      <div class="go-Modal-actions">
+        <button class="go-Button" data-test-id="close-dialog">Close</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog class="ShortcutsDialog go-Modal go-Modal--sm js-modal">
+    <form method="dialog">
+      <div class="go-Modal-header">
+        <h2>Keyboard shortcuts</h2>
+        <button
+          class="go-Button go-Button--inline"
+          type="button"
+          data-modal-close
+          data-gtmc="modal button"
+          aria-label="Close"
+        >
+          <img
+            class="go-Icon"
+            height="24"
+            width="24"
+            src="/static/shared/icon/close_gm_grey_24dp.svg"
+            alt=""
+          />
+        </button>
+      </div>
+      <div class="go-Modal-body">
+        <table>
+          <tbody>
+            <tr><td class="ShortcutsDialog-key">
+              <strong>?</strong></td><td> : This menu</td>
+            </tr>
+            <tr><td class="ShortcutsDialog-key">
+              <strong>/</strong></td><td> : Search site</td>
+            </tr>
+            <tr><td class="ShortcutsDialog-key">
+              <strong>f</strong> or <strong>F</strong></td><td> : Jump to</td>
+            </tr>
+            <tr>
+              <td class="ShortcutsDialog-key"><strong>y</strong> or <strong>Y</strong></td>
+              <td> : Canonical URL</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="go-Modal-actions">
+        <button class="go-Button" data-test-id="close-dialog">Close</button>
+      </div>
+    </form>
+  </dialog>
+
+    
+      <section class="Cookie-notice js-cookieNotice">
+        <div>go.dev uses cookies from Google to deliver and enhance the quality of its services and to
+        analyze traffic. <a target=_blank href="https://policies.google.com/technologies/cookies">Learn more.</a></div>
+        <div><button class="go-Button">Okay</button></div>
+      </section>
+    
+    
+      <script>
+        // this will throw if the querySelector can’t find the element
+        const gtmId = document.querySelector('.js-gtmID').dataset.gtmid;
+        if (!gtmId) {
+          throw new Error('Google Tag Manager ID not found');
+        }
+        loadScript(`https://www.googletagmanager.com/gtm.js?id=${gtmId}`);
+      </script>
+      <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W8MVQXG"
+                height="0" width="0" style="display:none;visibility:hidden">
+        </iframe>
+      </noscript>
+    
+    
+  
+  <div class="js-canonicalURLPath" data-canonical-url-path="/github.com/tigusigalpa/bingx-go@v1.1.0" hidden></div>
+  <div class="js-playgroundVars" data-modulepath="github.com/tigusigalpa/bingx-go" data-version="v1.1.0" hidden></div>
+  <script>
+    loadScript('/static/frontend/unit/main/main.js')
+  </script>
+
+  <script>
+    loadScript('/static/frontend/unit/unit.js')
+  </script>
+
+  </body>
+</html>

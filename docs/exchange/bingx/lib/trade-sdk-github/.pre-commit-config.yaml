@@ -1,0 +1,23 @@
+repos:
+  - repo: local
+    hooks:
+      - id: rustfmt
+        name: Auto format Rust code
+        entry: cargo fmt
+        language: system
+        types: [rust]
+        pass_filenames: false
+
+      - id: clippy
+        name: Run Clippy
+        entry: cargo clippy --all-targets -- -D warnings
+        language: system
+        types: [rust]
+        pass_filenames: false
+
+      - id: cargo-check
+        name: Run cargo check
+        entry: cargo check --all-targets
+        language: system
+        types: [rust]
+        pass_filenames: false

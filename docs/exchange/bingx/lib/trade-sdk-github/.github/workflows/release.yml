@@ -1,0 +1,59 @@
+name: release-plz
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: write
+  pull-requests: write
+  id-token: write
+
+jobs:
+  rust-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Setup Rust toolchain
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          components: clippy, rustfmt
+
+      - name: Cache cargo
+        uses: Swatinem/rust-cache@v2
+
+      - name: Check formatting
+        run: cargo fmt -- --check
+
+      - name: Run Clippy
+        run: cargo clippy --all-targets -- -D warnings
+
+      - name: Run cargo check
+        run: cargo check --all-targets
+
+  release-plz:
+    needs: rust-checks
+    environment: release
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        command: [release, release-pr]
+    concurrency:
+      group: release-plz-${{ matrix.command }}-${{ github.ref }}
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+      - uses: release-plz/action@v0.5
+        with:
+          command: ${{ matrix.command }}
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
