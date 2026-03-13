@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="generator" content="docs.rs 0.0.0 (a68728e7 2026-03-08 )"><link rel="stylesheet" href="https://docs.rs/-/static/vendored.css?0-0-0-a68728e7-2026-03-08" media="all" />
+        <link rel="stylesheet" href="https://docs.rs/-/static/style.css?0-0-0-a68728e7-2026-03-08" media="all" />
+        <link rel="stylesheet" href="https://docs.rs/-/static/font-awesome.css?0-0-0-a68728e7-2026-03-08" media="all" />
+
+        <link rel="search" href="https://docs.rs/-/static/opensearch.xml" type="application/opensearchdescription+xml" title="Docs.rs" />
+
+        <title>bitget_sdk 0.1.1 - Docs.rs</title><script nonce="7n++Wc+qMgAVnHszSBFiKchFNHlEmyMbO5YQS/WFQVrovZjm">(function() {
+    function applyTheme(theme) {
+        if (theme) {
+            document.documentElement.dataset.docsRsTheme = theme;
+        }
+    }
+
+    window.addEventListener("storage", ev => {
+        if (ev.key === "rustdoc-theme") {
+            applyTheme(ev.newValue);
+        }
+    });
+
+    // see ./storage-change-detection.html for details
+    window.addEventListener("message", ev => {
+        if (ev.data && ev.data.storage && ev.data.storage.key === "rustdoc-theme") {
+            applyTheme(ev.data.storage.value);
+        }
+    });
+
+    applyTheme(window.localStorage.getItem("rustdoc-theme"));
+})();</script><script defer type="text/javascript" nonce="7n++Wc+qMgAVnHszSBFiKchFNHlEmyMbO5YQS/WFQVrovZjm" src="https://docs.rs/-/static/menu.js?0-0-0-a68728e7-2026-03-08"></script>
+        <script defer type="text/javascript" nonce="7n++Wc+qMgAVnHszSBFiKchFNHlEmyMbO5YQS/WFQVrovZjm" src="https://docs.rs/-/static/index.js?0-0-0-a68728e7-2026-03-08"></script>
+    </head>
+
+    <body class="flex">
+<div class="nav-container">
+    <div class="container">
+        <div class="pure-menu pure-menu-horizontal" role="navigation" aria-label="Main navigation">
+            <form action="https://docs.rs/releases/search"
+                  method="GET"
+                  id="nav-search-form"
+                  class="landing-search-form-nav  ">
+
+                
+                <a href="https://docs.rs/" class="pure-menu-heading pure-menu-link docsrs-logo" aria-label="Docs.rs">
+                    <span title="Docs.rs"><span class="fa fa-solid fa-cubes " aria-hidden="true"></span></span>
+                    <span class="title">Docs.rs</span>
+                </a><ul class="pure-menu-list">
+    <script id="crate-metadata" type="application/json">
+        
+        {
+            "name": "bitget_sdk",
+            "version": "0.1.1"
+        }
+    </script><li class="pure-menu-item">
+            <a href="https://docs.rs/crate/bitget_sdk/latest" class="pure-menu-link crate-name" title="Bitget Exchange API SDK for Rust">
+                <span class="fa fa-solid fa-cube " aria-hidden="true"></span>
+                <span class="title">bitget_sdk-0.1.1</span>
+            </a>
+        </li><li class="pure-menu-item pure-menu-has-children">
+                <a href="client.rs.html#" class="pure-menu-link" aria-label="Platform">
+                    <span class="fa fa-solid fa-gears " aria-hidden="true"></span>
+                    <span class="title">Platform</span>
+                </a>
+
+                
+                <ul class="pure-menu-children" id="platforms" data-url="/crate/bitget_sdk/latest/menus/platforms/"><li class="pure-menu-item">
+            <a href="https://docs.rs/bitget_sdk/latest/bitget_sdk/" class="pure-menu-link" data-fragment="retain" rel="">x86_64-unknown-linux-gnu</a>
+        </li></ul>
+            </li><li class="pure-menu-item">
+                <a href="https://docs.rs/crate/bitget_sdk/latest/features" title="Browse available feature flags of bitget_sdk-0.1.1" class="pure-menu-link">
+                    <span class="fa fa-solid fa-flag " aria-hidden="true"></span>
+                    <span class="title">Feature flags</span>
+                </a>
+            </li>
+        
+    
+</ul><div class="spacer"></div>
+                
+                
+
+<ul class="pure-menu-list">
+                    <li class="pure-menu-item pure-menu-has-children">
+                        <a href="client.rs.html#" class="pure-menu-link" aria-label="docs.rs">docs.rs</a>
+                        <ul class="pure-menu-children aligned-icons"><li class="pure-menu-item"><a class="pure-menu-link" href="https://docs.rs/about"><span class="fa fa-solid fa-circle-info " aria-hidden="true"></span> About docs.rs</a></li><li class="pure-menu-item"><a class="pure-menu-link" href="https://docs.rs/about/badges"><span class="fa fa-brands fa-fonticons " aria-hidden="true"></span> Badges</a></li><li class="pure-menu-item"><a class="pure-menu-link" href="https://docs.rs/about/builds"><span class="fa fa-solid fa-gears " aria-hidden="true"></span> Builds</a></li><li class="pure-menu-item"><a class="pure-menu-link" href="https://docs.rs/about/metadata"><span class="fa fa-solid fa-table " aria-hidden="true"></span> Metadata</a></li><li class="pure-menu-item"><a class="pure-menu-link" href="https://docs.rs/about/redirections"><span class="fa fa-solid fa-road " aria-hidden="true"></span> Shorthand URLs</a></li><li class="pure-menu-item"><a class="pure-menu-link" href="https://docs.rs/about/download"><span class="fa fa-solid fa-download " aria-hidden="true"></span> Download</a></li><li class="pure-menu-item"><a class="pure-menu-link" href="https://docs.rs/about/rustdoc-json"><span class="fa fa-solid fa-file-code " aria-hidden="true"></span> Rustdoc JSON</a></li><li class="pure-menu-item"><a class="pure-menu-link" href="https://docs.rs/releases/queue"><span class="fa fa-solid fa-gears " aria-hidden="true"></span> Build queue</a></li><li class="pure-menu-item"><a class="pure-menu-link" href="https://foundation.rust-lang.org/policies/privacy-policy/#docs.rs" target="_blank"><span class="fa fa-solid fa-shield-halved " aria-hidden="true"></span> Privacy policy</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="pure-menu-list"><li class="pure-menu-item pure-menu-has-children">
+                        <a href="client.rs.html#" class="pure-menu-link" aria-label="Rust">Rust</a>
+                        <ul class="pure-menu-children">
+                            <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.rust-lang.org/" target="_blank">Rust website</a></li>
+                            <li class="pure-menu-item"><a class="pure-menu-link" href="https://doc.rust-lang.org/book/" target="_blank">The Book</a></li>
+
+                            <li class="pure-menu-item"><a class="pure-menu-link" href="https://doc.rust-lang.org/std/" target="_blank">Standard Library API Reference</a></li>
+
+                            <li class="pure-menu-item"><a class="pure-menu-link" href="https://doc.rust-lang.org/rust-by-example/" target="_blank">Rust by Example</a></li>
+
+                            <li class="pure-menu-item"><a class="pure-menu-link" href="https://doc.rust-lang.org/cargo/guide/" target="_blank">The Cargo Guide</a></li>
+
+                            <li class="pure-menu-item"><a class="pure-menu-link" href="https://doc.rust-lang.org/nightly/clippy" target="_blank">Clippy Documentation</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <div id="search-input-nav">
+                    <label for="nav-search">
+                        <span class="fa fa-solid fa-magnifying-glass " aria-hidden="true"></span>
+                    </label>
+
+                    
+                    
+                    <input id="nav-search" name="query" type="text" aria-label="Find crate by search query" tabindex="-1"
+                        placeholder="Find crate"
+                        >
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+    
+    <div class="docsrs-package-container">
+        <div class="container">
+            <div class="description-container">
+                
+
+                
+                <h1 id="crate-title">
+                    bitget_sdk 0.1.1
+                    <span id="clipboard" class="svg-clipboard" title="Copy crate name and version information"></span>
+                </h1>
+
+                
+                <div class="description">Bitget Exchange API SDK for Rust</div>
+
+
+                <div class="pure-menu pure-menu-horizontal">
+                    <ul class="pure-menu-list">
+                        
+                        <li class="pure-menu-item"><a href="https://docs.rs/crate/bitget_sdk/latest"
+                                class="pure-menu-link">
+                                <span class="fa fa-solid fa-cube " aria-hidden="true"></span>
+                                <span class="title"> Crate</span>
+                            </a>
+                        </li>
+
+                        
+                        <li class="pure-menu-item">
+                            <a href="client.rs.html"
+                                class="pure-menu-link pure-menu-active">
+                                <span class="fa fa-regular fa-folder-open " aria-hidden="true"></span>
+                                <span class="title"> Source</span>
+                            </a>
+                        </li>
+
+                        
+                        <li class="pure-menu-item">
+                            <a href="https://docs.rs/crate/bitget_sdk/latest/builds"
+                                class="pure-menu-link">
+                                <span class="fa fa-solid fa-gears " aria-hidden="true"></span>
+                                <span class="title"> Builds</span>
+                            </a>
+                        </li>
+
+                        
+                        <li class="pure-menu-item">
+                            <a href="https://docs.rs/crate/bitget_sdk/latest/features"
+                               class="pure-menu-link">
+                                <span class="fa fa-solid fa-flag " aria-hidden="true"></span>
+                                <span class="title">Feature flags</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div><a href="https://docs.rs/bitget_sdk/latest/bitget_sdk/" class="doc-link">
+                    <span class="fa fa-solid fa-book " aria-hidden="true"></span> Documentation
+                </a></div>
+    </div>
+
+    <div class="container package-page-container small-bottom-pad">
+        <div class="pure-g">
+            <div id="side-menu" class="pure-u-1 pure-u-sm-7-24 pure-u-md-5-24 source-view">
+                <div class="pure-menu package-menu">
+                    <ul class="pure-menu-list">
+                        
+                        
+                            <li class="pure-menu-item toggle-source">
+                                <button aria-label="Hide source sidebar" title="Hide source sidebar" aria-expanded="true"><span class="left"><span class="fa fa-solid fa-chevron-left " aria-hidden="true"></span></span><span class="right"><span class="fa fa-solid fa-chevron-right " aria-hidden="true"></span></span> <span class="text">Hide files</span></button>
+                            </li>
+                        
+                        <li class="pure-menu-item">
+                                <a href="../index.html" class="pure-menu-link"><span class="fa fa-regular fa-folder-open " aria-hidden="true"></span> <span class="text">..</span></a>
+                            </li><li class="pure-menu-item">
+                                
+                                <a href="account_api.rs.html" class="pure-menu-link">
+                                    <span class="fa fa-brands fa-rust " aria-hidden="true"></span>
+
+                                    <span class="text">account_api.rs</span>
+                                </a>
+                            </li><li class="pure-menu-item">
+                                
+                                <a href="asset_api.rs.html" class="pure-menu-link">
+                                    <span class="fa fa-brands fa-rust " aria-hidden="true"></span>
+
+                                    <span class="text">asset_api.rs</span>
+                                </a>
+                            </li><li class="pure-menu-item">
+                                
+                                <a href="client.rs.html" class="pure-menu-link">
+                                    <span class="fa fa-brands fa-rust " aria-hidden="true"></span>
+
+                                    <span class="text">client.rs</span>
+                                </a>
+                            </li><li class="pure-menu-item">
+                                
+                                <a href="consts.rs.html" class="pure-menu-link">
+                                    <span class="fa fa-brands fa-rust " aria-hidden="true"></span>
+
+                                    <span class="text">consts.rs</span>
+                                </a>
+                            </li><li class="pure-menu-item">
+                                
+                                <a href="error.rs.html" class="pure-menu-link">
+                                    <span class="fa fa-brands fa-rust " aria-hidden="true"></span>
+
+                                    <span class="text">error.rs</span>
+                                </a>
+                            </li><li class="pure-menu-item">
+                                
+                                <a href="exceptions.rs.html" class="pure-menu-link">
+                                    <span class="fa fa-brands fa-rust " aria-hidden="true"></span>
+
+                                    <span class="text">exceptions.rs</span>
+                                </a>
+                            </li><li class="pure-menu-item">
+                                
+                                <a href="fund_flow_api.rs.html" class="pure-menu-link">
+                                    <span class="fa fa-brands fa-rust " aria-hidden="true"></span>
+
+                                    <span class="text">fund_flow_api.rs</span>
+                                </a>
+                            </li><li class="pure-menu-item">
+                                
+                                <a href="history_api.rs.html" class="pure-menu-link">
+                                    <span class="fa fa-brands fa-rust " aria-hidden="true"></span>
+
+                                    <span class="text">history_api.rs</span>
+                                </a>
+                            </li><li class="pure-menu-item">
+                                
+                                <a href="lib.rs.html" class="pure-menu-link">
+                                    <span class="fa fa-brands fa-rust " aria-hidden="true"></span>
+
+                                    <span class="text">lib.rs</span>
+                                </a>
+                            </li><li class="pure-menu-item">
+                                
+                                <a href="market_api.rs.html" class="pure-menu-link">
+                                    <span class="fa fa-brands fa-rust " aria-hidden="true"></span>
+
+                                    <span class="text">market_api.rs</span>
+                                </a>
+                            </li><li class="pure-menu-item">
+                                
+                                <a href="order_api.rs.html" class="pure-menu-link">
+                                    <span class="fa fa-brands fa-rust " aria-hidden="true"></span>
+
+                                    <span class="text">order_api.rs</span>
+                                </a>
+                            </li><li class="pure-menu-item">
+                                
+                                <a href="order_query_api.rs.html" class="pure-menu-link">
+                                    <span class="fa fa-brands fa-rust " aria-hidden="true"></span>
+
+                                    <span class="text">order_query_api.rs</span>
+                                </a>
+                            </li><li class="pure-menu-item">
+                                
+                                <a href="transfer_api.rs.html" class="pure-menu-link">
+                                    <span class="fa fa-brands fa-rust " aria-hidden="true"></span>
+
+                                    <span class="text">transfer_api.rs</span>
+                                </a>
+                            </li><li class="pure-menu-item">
+                                
+                                <a href="utils.rs.html" class="pure-menu-link">
+                                    <span class="fa fa-brands fa-rust " aria-hidden="true"></span>
+
+                                    <span class="text">utils.rs</span>
+                                </a>
+                            </li><li class="pure-menu-item">
+                                
+                                <a href="ws_api.rs.html" class="pure-menu-link">
+                                    <span class="fa fa-brands fa-rust " aria-hidden="true"></span>
+
+                                    <span class="text">ws_api.rs</span>
+                                </a>
+                            </li></ul>
+                </div>
+            </div>
+
+            
+                
+                    
+                
+                <div id="source-code-container" class="pure-u-1 pure-u-sm-17-24 pure-u-md-19-24">
+                    <div data-nosnippet class="source-code"><pre id="line-numbers"><code><a href="client.rs.html#1" id="1">1</a>
+<a href="client.rs.html#2" id="2">2</a>
+<a href="client.rs.html#3" id="3">3</a>
+<a href="client.rs.html#4" id="4">4</a>
+<a href="client.rs.html#5" id="5">5</a>
+<a href="client.rs.html#6" id="6">6</a>
+<a href="client.rs.html#7" id="7">7</a>
+<a href="client.rs.html#8" id="8">8</a>
+<a href="client.rs.html#9" id="9">9</a>
+<a href="client.rs.html#10" id="10">10</a>
+<a href="client.rs.html#11" id="11">11</a>
+<a href="client.rs.html#12" id="12">12</a>
+<a href="client.rs.html#13" id="13">13</a>
+<a href="client.rs.html#14" id="14">14</a>
+<a href="client.rs.html#15" id="15">15</a>
+<a href="client.rs.html#16" id="16">16</a>
+<a href="client.rs.html#17" id="17">17</a>
+<a href="client.rs.html#18" id="18">18</a>
+<a href="client.rs.html#19" id="19">19</a>
+<a href="client.rs.html#20" id="20">20</a>
+<a href="client.rs.html#21" id="21">21</a>
+<a href="client.rs.html#22" id="22">22</a>
+<a href="client.rs.html#23" id="23">23</a>
+<a href="client.rs.html#24" id="24">24</a>
+<a href="client.rs.html#25" id="25">25</a>
+<a href="client.rs.html#26" id="26">26</a>
+<a href="client.rs.html#27" id="27">27</a>
+<a href="client.rs.html#28" id="28">28</a>
+<a href="client.rs.html#29" id="29">29</a>
+<a href="client.rs.html#30" id="30">30</a>
+<a href="client.rs.html#31" id="31">31</a>
+<a href="client.rs.html#32" id="32">32</a>
+<a href="client.rs.html#33" id="33">33</a>
+<a href="client.rs.html#34" id="34">34</a>
+<a href="client.rs.html#35" id="35">35</a>
+<a href="client.rs.html#36" id="36">36</a>
+<a href="client.rs.html#37" id="37">37</a>
+<a href="client.rs.html#38" id="38">38</a>
+<a href="client.rs.html#39" id="39">39</a>
+<a href="client.rs.html#40" id="40">40</a>
+<a href="client.rs.html#41" id="41">41</a>
+<a href="client.rs.html#42" id="42">42</a>
+<a href="client.rs.html#43" id="43">43</a>
+<a href="client.rs.html#44" id="44">44</a>
+<a href="client.rs.html#45" id="45">45</a>
+<a href="client.rs.html#46" id="46">46</a>
+<a href="client.rs.html#47" id="47">47</a>
+<a href="client.rs.html#48" id="48">48</a>
+<a href="client.rs.html#49" id="49">49</a>
+<a href="client.rs.html#50" id="50">50</a>
+<a href="client.rs.html#51" id="51">51</a>
+<a href="client.rs.html#52" id="52">52</a>
+<a href="client.rs.html#53" id="53">53</a>
+<a href="client.rs.html#54" id="54">54</a>
+<a href="client.rs.html#55" id="55">55</a>
+<a href="client.rs.html#56" id="56">56</a>
+<a href="client.rs.html#57" id="57">57</a>
+<a href="client.rs.html#58" id="58">58</a>
+<a href="client.rs.html#59" id="59">59</a>
+<a href="client.rs.html#60" id="60">60</a>
+<a href="client.rs.html#61" id="61">61</a>
+<a href="client.rs.html#62" id="62">62</a>
+<a href="client.rs.html#63" id="63">63</a>
+<a href="client.rs.html#64" id="64">64</a>
+<a href="client.rs.html#65" id="65">65</a>
+<a href="client.rs.html#66" id="66">66</a>
+<a href="client.rs.html#67" id="67">67</a>
+<a href="client.rs.html#68" id="68">68</a>
+<a href="client.rs.html#69" id="69">69</a>
+<a href="client.rs.html#70" id="70">70</a>
+<a href="client.rs.html#71" id="71">71</a>
+<a href="client.rs.html#72" id="72">72</a>
+<a href="client.rs.html#73" id="73">73</a>
+<a href="client.rs.html#74" id="74">74</a>
+<a href="client.rs.html#75" id="75">75</a>
+<a href="client.rs.html#76" id="76">76</a>
+<a href="client.rs.html#77" id="77">77</a>
+<a href="client.rs.html#78" id="78">78</a>
+<a href="client.rs.html#79" id="79">79</a>
+<a href="client.rs.html#80" id="80">80</a>
+<a href="client.rs.html#81" id="81">81</a>
+<a href="client.rs.html#82" id="82">82</a>
+<a href="client.rs.html#83" id="83">83</a>
+<a href="client.rs.html#84" id="84">84</a>
+<a href="client.rs.html#85" id="85">85</a>
+<a href="client.rs.html#86" id="86">86</a>
+<a href="client.rs.html#87" id="87">87</a>
+<a href="client.rs.html#88" id="88">88</a>
+<a href="client.rs.html#89" id="89">89</a>
+<a href="client.rs.html#90" id="90">90</a>
+<a href="client.rs.html#91" id="91">91</a>
+<a href="client.rs.html#92" id="92">92</a>
+<a href="client.rs.html#93" id="93">93</a>
+<a href="client.rs.html#94" id="94">94</a>
+<a href="client.rs.html#95" id="95">95</a>
+<a href="client.rs.html#96" id="96">96</a>
+<a href="client.rs.html#97" id="97">97</a>
+<a href="client.rs.html#98" id="98">98</a>
+<a href="client.rs.html#99" id="99">99</a>
+<a href="client.rs.html#100" id="100">100</a>
+<a href="client.rs.html#101" id="101">101</a>
+<a href="client.rs.html#102" id="102">102</a>
+<a href="client.rs.html#103" id="103">103</a>
+<a href="client.rs.html#104" id="104">104</a>
+<a href="client.rs.html#105" id="105">105</a>
+<a href="client.rs.html#106" id="106">106</a>
+<a href="client.rs.html#107" id="107">107</a>
+<a href="client.rs.html#108" id="108">108</a>
+<a href="client.rs.html#109" id="109">109</a>
+<a href="client.rs.html#110" id="110">110</a>
+<a href="client.rs.html#111" id="111">111</a>
+<a href="client.rs.html#112" id="112">112</a>
+<a href="client.rs.html#113" id="113">113</a>
+<a href="client.rs.html#114" id="114">114</a>
+<a href="client.rs.html#115" id="115">115</a>
+<a href="client.rs.html#116" id="116">116</a>
+<a href="client.rs.html#117" id="117">117</a>
+<a href="client.rs.html#118" id="118">118</a>
+<a href="client.rs.html#119" id="119">119</a>
+<a href="client.rs.html#120" id="120">120</a>
+<a href="client.rs.html#121" id="121">121</a>
+<a href="client.rs.html#122" id="122">122</a>
+<a href="client.rs.html#123" id="123">123</a>
+<a href="client.rs.html#124" id="124">124</a>
+<a href="client.rs.html#125" id="125">125</a>
+<a href="client.rs.html#126" id="126">126</a>
+<a href="client.rs.html#127" id="127">127</a>
+<a href="client.rs.html#128" id="128">128</a>
+<a href="client.rs.html#129" id="129">129</a>
+<a href="client.rs.html#130" id="130">130</a>
+<a href="client.rs.html#131" id="131">131</a>
+<a href="client.rs.html#132" id="132">132</a>
+<a href="client.rs.html#133" id="133">133</a>
+<a href="client.rs.html#134" id="134">134</a>
+<a href="client.rs.html#135" id="135">135</a>
+<a href="client.rs.html#136" id="136">136</a>
+<a href="client.rs.html#137" id="137">137</a>
+<a href="client.rs.html#138" id="138">138</a>
+<a href="client.rs.html#139" id="139">139</a>
+<a href="client.rs.html#140" id="140">140</a>
+<a href="client.rs.html#141" id="141">141</a>
+<a href="client.rs.html#142" id="142">142</a>
+<a href="client.rs.html#143" id="143">143</a>
+<a href="client.rs.html#144" id="144">144</a>
+<a href="client.rs.html#145" id="145">145</a>
+<a href="client.rs.html#146" id="146">146</a>
+<a href="client.rs.html#147" id="147">147</a>
+<a href="client.rs.html#148" id="148">148</a>
+<a href="client.rs.html#149" id="149">149</a>
+<a href="client.rs.html#150" id="150">150</a>
+<a href="client.rs.html#151" id="151">151</a>
+<a href="client.rs.html#152" id="152">152</a>
+<a href="client.rs.html#153" id="153">153</a>
+<a href="client.rs.html#154" id="154">154</a>
+<a href="client.rs.html#155" id="155">155</a>
+<a href="client.rs.html#156" id="156">156</a>
+<a href="client.rs.html#157" id="157">157</a>
+<a href="client.rs.html#158" id="158">158</a>
+<a href="client.rs.html#159" id="159">159</a>
+<a href="client.rs.html#160" id="160">160</a>
+<a href="client.rs.html#161" id="161">161</a>
+<a href="client.rs.html#162" id="162">162</a>
+<a href="client.rs.html#163" id="163">163</a>
+<a href="client.rs.html#164" id="164">164</a>
+<a href="client.rs.html#165" id="165">165</a>
+<a href="client.rs.html#166" id="166">166</a>
+</code></pre></div>
+                    <div id="source-code" class="source-code"><pre><code><span class="syntax-source syntax-rust"><span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">//!</span> Bitget HTTP 客户端实现
+</span><span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">//!</span>
+</span><span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">//!</span> 该模块提供了与 Bitget 交易所 API 交互的核心客户端实现
+</span><span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">//!</span> 负责处理 API 请求、签名验证和错误处理
+</span>
+<span class="syntax-keyword syntax-other syntax-rust">use</span> <span class="syntax-meta syntax-path syntax-rust">anyhow<span class="syntax-punctuation syntax-accessor syntax-rust">::</span></span><span class="syntax-meta syntax-block syntax-rust"><span class="syntax-punctuation syntax-section syntax-block syntax-begin syntax-rust">{</span><span class="syntax-support syntax-type syntax-rust">Result</span><span class="syntax-punctuation syntax-separator syntax-rust">,</span> anyhow</span><span class="syntax-meta syntax-block syntax-rust"><span class="syntax-punctuation syntax-section syntax-block syntax-end syntax-rust">}</span></span><span class="syntax-punctuation syntax-terminator syntax-rust">;</span>
+<span class="syntax-keyword syntax-other syntax-rust">use</span> <span class="syntax-meta syntax-path syntax-rust">reqwest<span class="syntax-punctuation syntax-accessor syntax-rust">::</span></span><span class="syntax-meta syntax-path syntax-rust">blocking<span class="syntax-punctuation syntax-accessor syntax-rust">::</span></span>Client<span class="syntax-punctuation syntax-terminator syntax-rust">;</span>
+<span class="syntax-keyword syntax-other syntax-rust">use</span> <span class="syntax-meta syntax-path syntax-rust">reqwest<span class="syntax-punctuation syntax-accessor syntax-rust">::</span></span><span class="syntax-meta syntax-path syntax-rust">header<span class="syntax-punctuation syntax-accessor syntax-rust">::</span></span><span class="syntax-meta syntax-block syntax-rust"><span class="syntax-punctuation syntax-section syntax-block syntax-begin syntax-rust">{</span>HeaderMap<span class="syntax-punctuation syntax-separator syntax-rust">,</span> HeaderName<span class="syntax-punctuation syntax-separator syntax-rust">,</span> HeaderValue</span><span class="syntax-meta syntax-block syntax-rust"><span class="syntax-punctuation syntax-section syntax-block syntax-end syntax-rust">}</span></span><span class="syntax-punctuation syntax-terminator syntax-rust">;</span>
+<span class="syntax-keyword syntax-other syntax-rust">use</span> <span class="syntax-meta syntax-path syntax-rust">std<span class="syntax-punctuation syntax-accessor syntax-rust">::</span></span><span class="syntax-meta syntax-path syntax-rust">collections<span class="syntax-punctuation syntax-accessor syntax-rust">::</span></span>BTreeMap<span class="syntax-punctuation syntax-terminator syntax-rust">;</span>
+<span class="syntax-keyword syntax-other syntax-rust">use</span> <span class="syntax-meta syntax-path syntax-rust">std<span class="syntax-punctuation syntax-accessor syntax-rust">::</span></span><span class="syntax-meta syntax-path syntax-rust">str<span class="syntax-punctuation syntax-accessor syntax-rust">::</span></span>FromStr<span class="syntax-punctuation syntax-terminator syntax-rust">;</span>
+
+<span class="syntax-keyword syntax-other syntax-rust">use</span> <span class="syntax-keyword syntax-other syntax-rust">crate</span><span class="syntax-meta syntax-path syntax-rust"><span class="syntax-punctuation syntax-accessor syntax-rust">::</span></span>consts<span class="syntax-punctuation syntax-terminator syntax-rust">;</span>
+<span class="syntax-keyword syntax-other syntax-rust">use</span> <span class="syntax-keyword syntax-other syntax-rust">crate</span><span class="syntax-meta syntax-path syntax-rust"><span class="syntax-punctuation syntax-accessor syntax-rust">::</span></span>utils<span class="syntax-punctuation syntax-terminator syntax-rust">;</span>
+
+<span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span> Bitget 交易所客户端
+</span><span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span>
+</span><span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span> 提供与 Bitget API 交互的核心功能，包括请求签名、发送请求等
+</span><span class="syntax-meta syntax-annotation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-annotation syntax-rust">#</span><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">[</span><span class="syntax-variable syntax-annotation syntax-rust">derive</span><span class="syntax-meta syntax-annotation syntax-parameters syntax-rust"><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span></span></span><span class="syntax-meta syntax-annotation syntax-parameters syntax-rust"><span class="syntax-meta syntax-group syntax-rust">Debug<span class="syntax-punctuation syntax-separator syntax-rust">,</span> Clone</span></span><span class="syntax-meta syntax-annotation syntax-parameters syntax-rust"><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span></span><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">]</span></span>
+<span class="syntax-meta syntax-struct syntax-rust"><span class="syntax-storage syntax-modifier syntax-rust">pub</span> <span class="syntax-storage syntax-type syntax-struct syntax-rust">struct</span> </span><span class="syntax-meta syntax-struct syntax-rust"><span class="syntax-entity syntax-name syntax-struct syntax-rust">BitgetClient</span> </span><span class="syntax-meta syntax-struct syntax-rust"><span class="syntax-meta syntax-block syntax-rust"><span class="syntax-punctuation syntax-section syntax-block syntax-begin syntax-rust">{</span>
+    <span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span> API 密钥
+</span>    <span class="syntax-storage syntax-modifier syntax-rust">pub</span> <span class="syntax-variable syntax-other syntax-member syntax-rust">api_key</span><span class="syntax-punctuation syntax-separator syntax-type syntax-rust">:</span> String,
+    <span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span> API 密钥对应的秘钥
+</span>    <span class="syntax-storage syntax-modifier syntax-rust">pub</span> <span class="syntax-variable syntax-other syntax-member syntax-rust">api_secret_key</span><span class="syntax-punctuation syntax-separator syntax-type syntax-rust">:</span> String,
+    <span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span> API 密码短语
+</span>    <span class="syntax-storage syntax-modifier syntax-rust">pub</span> <span class="syntax-variable syntax-other syntax-member syntax-rust">passphrase</span><span class="syntax-punctuation syntax-separator syntax-type syntax-rust">:</span> String,
+    <span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span> 是否使用服务器时间
+</span>    <span class="syntax-storage syntax-modifier syntax-rust">pub</span> <span class="syntax-variable syntax-other syntax-member syntax-rust">use_server_time</span><span class="syntax-punctuation syntax-separator syntax-type syntax-rust">:</span> <span class="syntax-storage syntax-type syntax-rust">bool</span>,
+    <span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span> 是否为首次请求（用于调试）
+</span>    <span class="syntax-storage syntax-modifier syntax-rust">pub</span> <span class="syntax-variable syntax-other syntax-member syntax-rust">first</span><span class="syntax-punctuation syntax-separator syntax-type syntax-rust">:</span> <span class="syntax-storage syntax-type syntax-rust">bool</span>,
+    <span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span> HTTP 客户端
+</span>    <span class="syntax-variable syntax-other syntax-member syntax-rust">http_client</span><span class="syntax-punctuation syntax-separator syntax-type syntax-rust">:</span> Client,
+    <span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span> 基础 URL
+</span>    <span class="syntax-variable syntax-other syntax-member syntax-rust">base_url</span><span class="syntax-punctuation syntax-separator syntax-type syntax-rust">:</span> String,
+</span><span class="syntax-meta syntax-block syntax-rust"><span class="syntax-punctuation syntax-section syntax-block syntax-end syntax-rust">}</span></span></span>
+
+<span class="syntax-meta syntax-impl syntax-rust"><span class="syntax-storage syntax-type syntax-impl syntax-rust">impl</span> </span><span class="syntax-meta syntax-impl syntax-rust"><span class="syntax-entity syntax-name syntax-impl syntax-rust">BitgetClient</span> </span><span class="syntax-meta syntax-impl syntax-rust"><span class="syntax-meta syntax-block syntax-rust"><span class="syntax-punctuation syntax-section syntax-block syntax-begin syntax-rust">{</span>
+    <span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span> 创建新的 Bitget 客户端实例
+</span>    <span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span>
+</span>    <span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span> # 参数
+</span>    <span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span> * `api_key` - API 密钥
+</span>    <span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span> * `api_secret_key` - API 密钥对应的秘钥
+</span>    <span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span> * `passphrase` - API 密码短语
+</span>    <span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span> * `use_server_time` - 是否使用服务器时间
+</span>    <span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span> * `first` - 是否为首次请求（用于调试）
+</span>    <span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span>
+</span>    <span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span> # 返回
+</span>    <span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span> 返回 BitgetClient 实例
+</span>    <span class="syntax-meta syntax-function syntax-rust"><span class="syntax-meta syntax-function syntax-rust"><span class="syntax-storage syntax-modifier syntax-rust">pub</span> <span class="syntax-storage syntax-type syntax-function syntax-rust">fn</span> </span><span class="syntax-entity syntax-name syntax-function syntax-rust">new</span></span><span class="syntax-meta syntax-function syntax-rust"><span class="syntax-meta syntax-function syntax-parameters syntax-rust"><span class="syntax-punctuation syntax-section syntax-parameters syntax-begin syntax-rust">(</span>
+        <span class="syntax-variable syntax-parameter syntax-rust">api_key</span><span class="syntax-punctuation syntax-separator syntax-rust">:</span> String,
+        <span class="syntax-variable syntax-parameter syntax-rust">api_secret_key</span><span class="syntax-punctuation syntax-separator syntax-rust">:</span> String,
+        <span class="syntax-variable syntax-parameter syntax-rust">passphrase</span><span class="syntax-punctuation syntax-separator syntax-rust">:</span> String,
+        <span class="syntax-variable syntax-parameter syntax-rust">use_server_time</span><span class="syntax-punctuation syntax-separator syntax-rust">:</span> <span class="syntax-storage syntax-type syntax-rust">bool</span>,
+        <span class="syntax-variable syntax-parameter syntax-rust">first</span><span class="syntax-punctuation syntax-separator syntax-rust">:</span> <span class="syntax-storage syntax-type syntax-rust">bool</span>,
+    </span><span class="syntax-meta syntax-function syntax-rust"><span class="syntax-meta syntax-function syntax-parameters syntax-rust"><span class="syntax-punctuation syntax-section syntax-parameters syntax-end syntax-rust">)</span></span></span></span><span class="syntax-meta syntax-function syntax-rust"> <span class="syntax-meta syntax-function syntax-return-type syntax-rust"><span class="syntax-punctuation syntax-separator syntax-rust">-&gt;</span> <span class="syntax-storage syntax-type syntax-rust">Self</span></span> </span><span class="syntax-meta syntax-function syntax-rust"><span class="syntax-meta syntax-block syntax-rust"><span class="syntax-punctuation syntax-section syntax-block syntax-begin syntax-rust">{</span>
+        <span class="syntax-storage syntax-type syntax-rust">Self</span> <span class="syntax-meta syntax-block syntax-rust"><span class="syntax-punctuation syntax-section syntax-block syntax-begin syntax-rust">{</span>
+            api_key<span class="syntax-punctuation syntax-separator syntax-rust">,</span>
+            api_secret_key<span class="syntax-punctuation syntax-separator syntax-rust">,</span>
+            passphrase<span class="syntax-punctuation syntax-separator syntax-rust">,</span>
+            use_server_time<span class="syntax-punctuation syntax-separator syntax-rust">,</span>
+            first<span class="syntax-punctuation syntax-separator syntax-rust">,</span>
+            http_client<span class="syntax-punctuation syntax-separator syntax-rust">:</span> <span class="syntax-meta syntax-path syntax-rust">Client<span class="syntax-punctuation syntax-accessor syntax-rust">::</span></span>new<span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span><span class="syntax-punctuation syntax-separator syntax-rust">,</span>
+            base_url<span class="syntax-punctuation syntax-separator syntax-rust">:</span> <span class="syntax-meta syntax-path syntax-rust">consts<span class="syntax-punctuation syntax-accessor syntax-rust">::</span></span><span class="syntax-constant syntax-other syntax-rust">API_URL</span><span class="syntax-punctuation syntax-accessor syntax-dot syntax-rust">.</span><span class="syntax-support syntax-function syntax-rust">to_string</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span><span class="syntax-punctuation syntax-separator syntax-rust">,</span>
+        </span><span class="syntax-meta syntax-block syntax-rust"><span class="syntax-punctuation syntax-section syntax-block syntax-end syntax-rust">}</span></span>
+    </span><span class="syntax-meta syntax-block syntax-rust"><span class="syntax-punctuation syntax-section syntax-block syntax-end syntax-rust">}</span></span></span>
+
+    <span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span> 发送同步请求（支持 GET/POST），自动签名、构造 header
+</span>    <span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span>
+</span>    <span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span> # 参数
+</span>    <span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span> * `method` - 请求方法（GET/POST）
+</span>    <span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span> * `request_path` - 请求路径
+</span>    <span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span> * `params` - 请求参数（BTreeMap，自动按 key 排序）
+</span>    <span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span> * `cursor` - 是否为分页请求
+</span>    <span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span>
+</span>    <span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span> # 返回
+</span>    <span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span> 返回请求结果字符串或错误
+</span>    <span class="syntax-meta syntax-function syntax-rust"><span class="syntax-meta syntax-function syntax-rust"><span class="syntax-storage syntax-modifier syntax-rust">pub</span> <span class="syntax-storage syntax-type syntax-function syntax-rust">fn</span> </span><span class="syntax-entity syntax-name syntax-function syntax-rust">request</span></span><span class="syntax-meta syntax-function syntax-rust"><span class="syntax-meta syntax-function syntax-parameters syntax-rust"><span class="syntax-punctuation syntax-section syntax-parameters syntax-begin syntax-rust">(</span>
+        <span class="syntax-keyword syntax-operator syntax-rust">&amp;</span><span class="syntax-variable syntax-parameter syntax-rust">self</span>,
+        <span class="syntax-variable syntax-parameter syntax-rust">method</span><span class="syntax-punctuation syntax-separator syntax-rust">:</span> <span class="syntax-keyword syntax-operator syntax-rust">&amp;</span><span class="syntax-storage syntax-type syntax-rust">str</span>,
+        <span class="syntax-variable syntax-parameter syntax-rust">request_path</span><span class="syntax-punctuation syntax-separator syntax-rust">:</span> <span class="syntax-keyword syntax-operator syntax-rust">&amp;</span><span class="syntax-storage syntax-type syntax-rust">str</span>,
+        <span class="syntax-variable syntax-parameter syntax-rust">params</span><span class="syntax-punctuation syntax-separator syntax-rust">:</span> <span class="syntax-keyword syntax-operator syntax-rust">&amp;</span><span class="syntax-meta syntax-generic syntax-rust">BTreeMap<span class="syntax-punctuation syntax-definition syntax-generic syntax-begin syntax-rust">&lt;</span><span class="syntax-support syntax-type syntax-rust">String</span>, <span class="syntax-support syntax-type syntax-rust">String</span><span class="syntax-punctuation syntax-definition syntax-generic syntax-end syntax-rust">&gt;</span></span>,
+        <span class="syntax-variable syntax-parameter syntax-rust">cursor</span><span class="syntax-punctuation syntax-separator syntax-rust">:</span> <span class="syntax-storage syntax-type syntax-rust">bool</span>,
+    </span><span class="syntax-meta syntax-function syntax-rust"><span class="syntax-meta syntax-function syntax-parameters syntax-rust"><span class="syntax-punctuation syntax-section syntax-parameters syntax-end syntax-rust">)</span></span></span></span><span class="syntax-meta syntax-function syntax-rust"> <span class="syntax-meta syntax-function syntax-return-type syntax-rust"><span class="syntax-punctuation syntax-separator syntax-rust">-&gt;</span> <span class="syntax-meta syntax-generic syntax-rust"><span class="syntax-support syntax-type syntax-rust">Result</span><span class="syntax-punctuation syntax-definition syntax-generic syntax-begin syntax-rust">&lt;</span><span class="syntax-support syntax-type syntax-rust">String</span><span class="syntax-punctuation syntax-definition syntax-generic syntax-end syntax-rust">&gt;</span></span></span> </span><span class="syntax-meta syntax-function syntax-rust"><span class="syntax-meta syntax-block syntax-rust"><span class="syntax-punctuation syntax-section syntax-block syntax-begin syntax-rust">{</span>
+        <span class="syntax-storage syntax-type syntax-rust">let</span> _cursor <span class="syntax-keyword syntax-operator syntax-assignment syntax-rust">=</span> cursor<span class="syntax-punctuation syntax-terminator syntax-rust">;</span>
+        <span class="syntax-comment syntax-line syntax-double-slash syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">//</span> 1. 构造 url
+</span>        <span class="syntax-storage syntax-type syntax-rust">let</span> <span class="syntax-storage syntax-modifier syntax-rust">mut</span> full_path <span class="syntax-keyword syntax-operator syntax-assignment syntax-rust">=</span> request_path<span class="syntax-punctuation syntax-accessor syntax-dot syntax-rust">.</span><span class="syntax-support syntax-function syntax-rust">to_string</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span><span class="syntax-punctuation syntax-terminator syntax-rust">;</span>
+        <span class="syntax-keyword syntax-control syntax-rust">if</span> method <span class="syntax-keyword syntax-operator syntax-comparison syntax-rust">==</span> <span class="syntax-meta syntax-path syntax-rust">consts<span class="syntax-punctuation syntax-accessor syntax-rust">::</span></span><span class="syntax-constant syntax-other syntax-rust">GET</span> <span class="syntax-meta syntax-block syntax-rust"><span class="syntax-punctuation syntax-section syntax-block syntax-begin syntax-rust">{</span>
+            full_path<span class="syntax-punctuation syntax-accessor syntax-dot syntax-rust">.</span><span class="syntax-support syntax-function syntax-rust">push</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span><span class="syntax-string syntax-quoted syntax-single syntax-rust"><span class="syntax-punctuation syntax-definition syntax-string syntax-begin syntax-rust">&#39;</span>?<span class="syntax-punctuation syntax-definition syntax-string syntax-end syntax-rust">&#39;</span></span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span><span class="syntax-punctuation syntax-terminator syntax-rust">;</span>
+            full_path<span class="syntax-punctuation syntax-accessor syntax-dot syntax-rust">.</span><span class="syntax-support syntax-function syntax-rust">push_str</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span><span class="syntax-keyword syntax-operator syntax-bitwise syntax-rust">&amp;</span><span class="syntax-meta syntax-path syntax-rust">utils<span class="syntax-punctuation syntax-accessor syntax-rust">::</span></span>build_query<span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span>params</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span><span class="syntax-punctuation syntax-terminator syntax-rust">;</span>
+        </span><span class="syntax-meta syntax-block syntax-rust"><span class="syntax-punctuation syntax-section syntax-block syntax-end syntax-rust">}</span></span>
+
+        <span class="syntax-storage syntax-type syntax-rust">let</span> url <span class="syntax-keyword syntax-operator syntax-assignment syntax-rust">=</span> <span class="syntax-support syntax-macro syntax-rust">format!</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-string syntax-quoted syntax-double syntax-rust"><span class="syntax-punctuation syntax-definition syntax-string syntax-begin syntax-rust">&quot;</span><span class="syntax-constant syntax-other syntax-placeholder syntax-rust">{}</span><span class="syntax-constant syntax-other syntax-placeholder syntax-rust">{}</span><span class="syntax-punctuation syntax-definition syntax-string syntax-end syntax-rust">&quot;</span></span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-separator syntax-rust">,</span> <span class="syntax-variable syntax-language syntax-rust">self</span><span class="syntax-punctuation syntax-accessor syntax-dot syntax-rust">.</span>base_url<span class="syntax-punctuation syntax-separator syntax-rust">,</span> full_path<span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span><span class="syntax-punctuation syntax-terminator syntax-rust">;</span>
+
+        <span class="syntax-comment syntax-line syntax-double-slash syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">//</span> 2. 构造 headers
+</span>        <span class="syntax-storage syntax-type syntax-rust">let</span> headers <span class="syntax-keyword syntax-operator syntax-assignment syntax-rust">=</span> <span class="syntax-variable syntax-language syntax-rust">self</span><span class="syntax-punctuation syntax-accessor syntax-dot syntax-rust">.</span><span class="syntax-support syntax-function syntax-rust">build_headers</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span>method<span class="syntax-punctuation syntax-separator syntax-rust">,</span> <span class="syntax-keyword syntax-operator syntax-bitwise syntax-rust">&amp;</span>full_path<span class="syntax-punctuation syntax-separator syntax-rust">,</span> params</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span><span class="syntax-keyword syntax-operator syntax-rust">?</span><span class="syntax-punctuation syntax-terminator syntax-rust">;</span>
+
+        <span class="syntax-comment syntax-line syntax-double-slash syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">//</span> 3. 构造 body (POST 请求)
+</span>        <span class="syntax-storage syntax-type syntax-rust">let</span> body <span class="syntax-keyword syntax-operator syntax-assignment syntax-rust">=</span> <span class="syntax-keyword syntax-control syntax-rust">if</span> method <span class="syntax-keyword syntax-operator syntax-comparison syntax-rust">==</span> <span class="syntax-meta syntax-path syntax-rust">consts<span class="syntax-punctuation syntax-accessor syntax-rust">::</span></span><span class="syntax-constant syntax-other syntax-rust">POST</span> <span class="syntax-meta syntax-block syntax-rust"><span class="syntax-punctuation syntax-section syntax-block syntax-begin syntax-rust">{</span>
+            <span class="syntax-support syntax-type syntax-rust">Some</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span><span class="syntax-meta syntax-path syntax-rust">serde_json<span class="syntax-punctuation syntax-accessor syntax-rust">::</span></span>to_string<span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span>params</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span><span class="syntax-keyword syntax-operator syntax-rust">?</span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span>
+        </span><span class="syntax-meta syntax-block syntax-rust"><span class="syntax-punctuation syntax-section syntax-block syntax-end syntax-rust">}</span></span> <span class="syntax-keyword syntax-control syntax-rust">else</span> <span class="syntax-meta syntax-block syntax-rust"><span class="syntax-punctuation syntax-section syntax-block syntax-begin syntax-rust">{</span>
+            <span class="syntax-support syntax-type syntax-rust">None</span>
+        </span><span class="syntax-meta syntax-block syntax-rust"><span class="syntax-punctuation syntax-section syntax-block syntax-end syntax-rust">}</span></span><span class="syntax-punctuation syntax-terminator syntax-rust">;</span>
+
+        <span class="syntax-comment syntax-line syntax-double-slash syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">//</span> 4. 发送请求
+</span>        <span class="syntax-storage syntax-type syntax-rust">let</span> response <span class="syntax-keyword syntax-operator syntax-assignment syntax-rust">=</span> <span class="syntax-keyword syntax-control syntax-rust">match</span> method <span class="syntax-meta syntax-block syntax-rust"><span class="syntax-punctuation syntax-section syntax-block syntax-begin syntax-rust">{</span>
+            <span class="syntax-meta syntax-path syntax-rust">consts<span class="syntax-punctuation syntax-accessor syntax-rust">::</span></span><span class="syntax-constant syntax-other syntax-rust">GET</span> <span class="syntax-keyword syntax-operator syntax-rust">=&gt;</span> <span class="syntax-variable syntax-language syntax-rust">self</span><span class="syntax-punctuation syntax-accessor syntax-dot syntax-rust">.</span>http_client<span class="syntax-punctuation syntax-accessor syntax-dot syntax-rust">.</span><span class="syntax-support syntax-function syntax-rust">get</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span><span class="syntax-keyword syntax-operator syntax-bitwise syntax-rust">&amp;</span>url</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span><span class="syntax-punctuation syntax-accessor syntax-dot syntax-rust">.</span><span class="syntax-support syntax-function syntax-rust">headers</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span>headers</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span><span class="syntax-punctuation syntax-accessor syntax-dot syntax-rust">.</span><span class="syntax-support syntax-function syntax-rust">send</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span><span class="syntax-keyword syntax-operator syntax-rust">?</span><span class="syntax-punctuation syntax-separator syntax-rust">,</span>
+            <span class="syntax-meta syntax-path syntax-rust">consts<span class="syntax-punctuation syntax-accessor syntax-rust">::</span></span><span class="syntax-constant syntax-other syntax-rust">POST</span> <span class="syntax-keyword syntax-operator syntax-rust">=&gt;</span> <span class="syntax-variable syntax-language syntax-rust">self</span>
+                <span class="syntax-punctuation syntax-accessor syntax-dot syntax-rust">.</span>http_client
+                <span class="syntax-punctuation syntax-accessor syntax-dot syntax-rust">.</span><span class="syntax-support syntax-function syntax-rust">post</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span><span class="syntax-keyword syntax-operator syntax-bitwise syntax-rust">&amp;</span>url</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span>
+                <span class="syntax-punctuation syntax-accessor syntax-dot syntax-rust">.</span><span class="syntax-support syntax-function syntax-rust">headers</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span>headers</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span>
+                <span class="syntax-punctuation syntax-accessor syntax-dot syntax-rust">.</span><span class="syntax-support syntax-function syntax-rust">body</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span>body<span class="syntax-punctuation syntax-accessor syntax-dot syntax-rust">.</span><span class="syntax-support syntax-function syntax-rust">unwrap</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span>
+                <span class="syntax-punctuation syntax-accessor syntax-dot syntax-rust">.</span><span class="syntax-support syntax-function syntax-rust">send</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span><span class="syntax-keyword syntax-operator syntax-rust">?</span><span class="syntax-punctuation syntax-separator syntax-rust">,</span>
+            <span class="syntax-keyword syntax-operator syntax-rust">_</span> <span class="syntax-keyword syntax-operator syntax-rust">=&gt;</span> <span class="syntax-keyword syntax-control syntax-rust">return</span> <span class="syntax-support syntax-type syntax-rust">Err</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span><span class="syntax-support syntax-macro syntax-rust">anyhow!</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span><span class="syntax-string syntax-quoted syntax-double syntax-rust"><span class="syntax-punctuation syntax-definition syntax-string syntax-begin syntax-rust">&quot;</span>不支持的 HTTP 方法: {}<span class="syntax-punctuation syntax-definition syntax-string syntax-end syntax-rust">&quot;</span></span><span class="syntax-punctuation syntax-separator syntax-rust">,</span> method</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span><span class="syntax-punctuation syntax-separator syntax-rust">,</span>
+        </span><span class="syntax-meta syntax-block syntax-rust"><span class="syntax-punctuation syntax-section syntax-block syntax-end syntax-rust">}</span></span><span class="syntax-punctuation syntax-terminator syntax-rust">;</span>
+
+        <span class="syntax-comment syntax-line syntax-double-slash syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">//</span> 5. 处理响应
+</span>        <span class="syntax-storage syntax-type syntax-rust">let</span> status <span class="syntax-keyword syntax-operator syntax-assignment syntax-rust">=</span> response<span class="syntax-punctuation syntax-accessor syntax-dot syntax-rust">.</span><span class="syntax-support syntax-function syntax-rust">status</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span><span class="syntax-punctuation syntax-terminator syntax-rust">;</span>
+        <span class="syntax-storage syntax-type syntax-rust">let</span> text <span class="syntax-keyword syntax-operator syntax-assignment syntax-rust">=</span> response<span class="syntax-punctuation syntax-accessor syntax-dot syntax-rust">.</span><span class="syntax-support syntax-function syntax-rust">text</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span><span class="syntax-keyword syntax-operator syntax-rust">?</span><span class="syntax-punctuation syntax-terminator syntax-rust">;</span>
+
+        <span class="syntax-keyword syntax-control syntax-rust">if</span> <span class="syntax-keyword syntax-operator syntax-logical syntax-rust">!</span>status<span class="syntax-punctuation syntax-accessor syntax-dot syntax-rust">.</span><span class="syntax-support syntax-function syntax-rust">is_success</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span> <span class="syntax-meta syntax-block syntax-rust"><span class="syntax-punctuation syntax-section syntax-block syntax-begin syntax-rust">{</span>
+            <span class="syntax-keyword syntax-control syntax-rust">return</span> <span class="syntax-support syntax-type syntax-rust">Err</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span><span class="syntax-support syntax-macro syntax-rust">anyhow!</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span><span class="syntax-string syntax-quoted syntax-double syntax-rust"><span class="syntax-punctuation syntax-definition syntax-string syntax-begin syntax-rust">&quot;</span>请求失败，状态码: {}, 响应: {}<span class="syntax-punctuation syntax-definition syntax-string syntax-end syntax-rust">&quot;</span></span><span class="syntax-punctuation syntax-separator syntax-rust">,</span> status<span class="syntax-punctuation syntax-separator syntax-rust">,</span> text</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span><span class="syntax-punctuation syntax-terminator syntax-rust">;</span>
+        </span><span class="syntax-meta syntax-block syntax-rust"><span class="syntax-punctuation syntax-section syntax-block syntax-end syntax-rust">}</span></span>
+
+        <span class="syntax-support syntax-type syntax-rust">Ok</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span>text</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span>
+    </span><span class="syntax-meta syntax-block syntax-rust"><span class="syntax-punctuation syntax-section syntax-block syntax-end syntax-rust">}</span></span></span>
+
+    <span class="syntax-meta syntax-function syntax-rust"><span class="syntax-meta syntax-function syntax-rust"><span class="syntax-storage syntax-type syntax-function syntax-rust">fn</span> </span><span class="syntax-entity syntax-name syntax-function syntax-rust">build_headers</span></span><span class="syntax-meta syntax-function syntax-rust"><span class="syntax-meta syntax-function syntax-parameters syntax-rust"><span class="syntax-punctuation syntax-section syntax-parameters syntax-begin syntax-rust">(</span>
+        <span class="syntax-keyword syntax-operator syntax-rust">&amp;</span><span class="syntax-variable syntax-parameter syntax-rust">self</span>,
+        <span class="syntax-variable syntax-parameter syntax-rust">method</span><span class="syntax-punctuation syntax-separator syntax-rust">:</span> <span class="syntax-keyword syntax-operator syntax-rust">&amp;</span><span class="syntax-storage syntax-type syntax-rust">str</span>,
+        <span class="syntax-variable syntax-parameter syntax-rust">full_path</span><span class="syntax-punctuation syntax-separator syntax-rust">:</span> <span class="syntax-keyword syntax-operator syntax-rust">&amp;</span><span class="syntax-storage syntax-type syntax-rust">str</span>,
+        <span class="syntax-variable syntax-parameter syntax-rust">params</span><span class="syntax-punctuation syntax-separator syntax-rust">:</span> <span class="syntax-keyword syntax-operator syntax-rust">&amp;</span><span class="syntax-meta syntax-generic syntax-rust">BTreeMap<span class="syntax-punctuation syntax-definition syntax-generic syntax-begin syntax-rust">&lt;</span><span class="syntax-support syntax-type syntax-rust">String</span>, <span class="syntax-support syntax-type syntax-rust">String</span><span class="syntax-punctuation syntax-definition syntax-generic syntax-end syntax-rust">&gt;</span></span>,
+    </span><span class="syntax-meta syntax-function syntax-rust"><span class="syntax-meta syntax-function syntax-parameters syntax-rust"><span class="syntax-punctuation syntax-section syntax-parameters syntax-end syntax-rust">)</span></span></span></span><span class="syntax-meta syntax-function syntax-rust"> <span class="syntax-meta syntax-function syntax-return-type syntax-rust"><span class="syntax-punctuation syntax-separator syntax-rust">-&gt;</span> <span class="syntax-meta syntax-generic syntax-rust"><span class="syntax-support syntax-type syntax-rust">Result</span><span class="syntax-punctuation syntax-definition syntax-generic syntax-begin syntax-rust">&lt;</span>HeaderMap<span class="syntax-punctuation syntax-definition syntax-generic syntax-end syntax-rust">&gt;</span></span></span> </span><span class="syntax-meta syntax-function syntax-rust"><span class="syntax-meta syntax-block syntax-rust"><span class="syntax-punctuation syntax-section syntax-block syntax-begin syntax-rust">{</span>
+        <span class="syntax-storage syntax-type syntax-rust">let</span> timestamp <span class="syntax-keyword syntax-operator syntax-assignment syntax-rust">=</span> <span class="syntax-keyword syntax-control syntax-rust">if</span> <span class="syntax-variable syntax-language syntax-rust">self</span><span class="syntax-punctuation syntax-accessor syntax-dot syntax-rust">.</span>use_server_time <span class="syntax-meta syntax-block syntax-rust"><span class="syntax-punctuation syntax-section syntax-block syntax-begin syntax-rust">{</span>
+            <span class="syntax-comment syntax-line syntax-double-slash syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">//</span> TODO: 实现获取服务器时间接口
+</span>            <span class="syntax-meta syntax-path syntax-rust">utils<span class="syntax-punctuation syntax-accessor syntax-rust">::</span></span>get_timestamp<span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span>
+        </span><span class="syntax-meta syntax-block syntax-rust"><span class="syntax-punctuation syntax-section syntax-block syntax-end syntax-rust">}</span></span> <span class="syntax-keyword syntax-control syntax-rust">else</span> <span class="syntax-meta syntax-block syntax-rust"><span class="syntax-punctuation syntax-section syntax-block syntax-begin syntax-rust">{</span>
+            <span class="syntax-meta syntax-path syntax-rust">utils<span class="syntax-punctuation syntax-accessor syntax-rust">::</span></span>get_timestamp<span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span>
+        </span><span class="syntax-meta syntax-block syntax-rust"><span class="syntax-punctuation syntax-section syntax-block syntax-end syntax-rust">}</span></span><span class="syntax-punctuation syntax-terminator syntax-rust">;</span>
+
+        <span class="syntax-storage syntax-type syntax-rust">let</span> body <span class="syntax-keyword syntax-operator syntax-assignment syntax-rust">=</span> <span class="syntax-keyword syntax-control syntax-rust">if</span> method <span class="syntax-keyword syntax-operator syntax-comparison syntax-rust">==</span> <span class="syntax-meta syntax-path syntax-rust">consts<span class="syntax-punctuation syntax-accessor syntax-rust">::</span></span><span class="syntax-constant syntax-other syntax-rust">POST</span> <span class="syntax-meta syntax-block syntax-rust"><span class="syntax-punctuation syntax-section syntax-block syntax-begin syntax-rust">{</span>
+            <span class="syntax-meta syntax-path syntax-rust">serde_json<span class="syntax-punctuation syntax-accessor syntax-rust">::</span></span>to_string<span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span>params</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span><span class="syntax-punctuation syntax-accessor syntax-dot syntax-rust">.</span><span class="syntax-support syntax-function syntax-rust">map_err</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span><span class="syntax-meta syntax-function syntax-closure syntax-rust"><span class="syntax-meta syntax-function syntax-parameters syntax-rust"><span class="syntax-punctuation syntax-section syntax-parameters syntax-begin syntax-rust">|</span></span></span><span class="syntax-meta syntax-function syntax-closure syntax-rust"><span class="syntax-meta syntax-function syntax-parameters syntax-rust"><span class="syntax-variable syntax-parameter syntax-rust">e</span><span class="syntax-punctuation syntax-section syntax-parameters syntax-end syntax-rust">|</span></span> </span><span class="syntax-meta syntax-function syntax-closure syntax-rust"><span class="syntax-support syntax-macro syntax-rust">anyhow!</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span><span class="syntax-string syntax-quoted syntax-double syntax-rust"><span class="syntax-punctuation syntax-definition syntax-string syntax-begin syntax-rust">&quot;</span>序列化参数失败: {}<span class="syntax-punctuation syntax-definition syntax-string syntax-end syntax-rust">&quot;</span></span><span class="syntax-punctuation syntax-separator syntax-rust">,</span> e</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span></span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span><span class="syntax-keyword syntax-operator syntax-rust">?</span>
+        </span><span class="syntax-meta syntax-block syntax-rust"><span class="syntax-punctuation syntax-section syntax-block syntax-end syntax-rust">}</span></span> <span class="syntax-keyword syntax-control syntax-rust">else</span> <span class="syntax-meta syntax-block syntax-rust"><span class="syntax-punctuation syntax-section syntax-block syntax-begin syntax-rust">{</span>
+            <span class="syntax-support syntax-type syntax-rust">String</span><span class="syntax-meta syntax-path syntax-rust"><span class="syntax-punctuation syntax-accessor syntax-rust">::</span></span>new<span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span>
+        </span><span class="syntax-meta syntax-block syntax-rust"><span class="syntax-punctuation syntax-section syntax-block syntax-end syntax-rust">}</span></span><span class="syntax-punctuation syntax-terminator syntax-rust">;</span>
+
+        <span class="syntax-storage syntax-type syntax-rust">let</span> pre_hash <span class="syntax-keyword syntax-operator syntax-assignment syntax-rust">=</span> <span class="syntax-meta syntax-path syntax-rust">utils<span class="syntax-punctuation syntax-accessor syntax-rust">::</span></span>pre_hash<span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span><span class="syntax-keyword syntax-operator syntax-bitwise syntax-rust">&amp;</span>timestamp<span class="syntax-punctuation syntax-separator syntax-rust">,</span> method<span class="syntax-punctuation syntax-separator syntax-rust">,</span> full_path<span class="syntax-punctuation syntax-separator syntax-rust">,</span> <span class="syntax-keyword syntax-operator syntax-bitwise syntax-rust">&amp;</span>body</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span><span class="syntax-punctuation syntax-terminator syntax-rust">;</span>
+        <span class="syntax-storage syntax-type syntax-rust">let</span> sign <span class="syntax-keyword syntax-operator syntax-assignment syntax-rust">=</span> <span class="syntax-keyword syntax-control syntax-rust">match</span> <span class="syntax-meta syntax-path syntax-rust">consts<span class="syntax-punctuation syntax-accessor syntax-rust">::</span></span><span class="syntax-constant syntax-other syntax-rust">SIGN_TYPE</span> <span class="syntax-meta syntax-block syntax-rust"><span class="syntax-punctuation syntax-section syntax-block syntax-begin syntax-rust">{</span>
+            <span class="syntax-string syntax-quoted syntax-double syntax-rust"><span class="syntax-punctuation syntax-definition syntax-string syntax-begin syntax-rust">&quot;</span>RSA<span class="syntax-punctuation syntax-definition syntax-string syntax-end syntax-rust">&quot;</span></span> <span class="syntax-keyword syntax-operator syntax-rust">=&gt;</span> <span class="syntax-meta syntax-block syntax-rust"><span class="syntax-punctuation syntax-section syntax-block syntax-begin syntax-rust">{</span>
+                <span class="syntax-comment syntax-line syntax-double-slash syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">//</span> TODO: 实现 RSA 签名
+</span>                <span class="syntax-keyword syntax-control syntax-rust">return</span> <span class="syntax-support syntax-type syntax-rust">Err</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span><span class="syntax-support syntax-macro syntax-rust">anyhow!</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span><span class="syntax-string syntax-quoted syntax-double syntax-rust"><span class="syntax-punctuation syntax-definition syntax-string syntax-begin syntax-rust">&quot;</span>RSA 签名暂未实现<span class="syntax-punctuation syntax-definition syntax-string syntax-end syntax-rust">&quot;</span></span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span><span class="syntax-punctuation syntax-terminator syntax-rust">;</span>
+            </span><span class="syntax-meta syntax-block syntax-rust"><span class="syntax-punctuation syntax-section syntax-block syntax-end syntax-rust">}</span></span>
+            <span class="syntax-keyword syntax-operator syntax-rust">_</span> <span class="syntax-keyword syntax-operator syntax-rust">=&gt;</span> <span class="syntax-meta syntax-path syntax-rust">utils<span class="syntax-punctuation syntax-accessor syntax-rust">::</span></span>sign<span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span><span class="syntax-keyword syntax-operator syntax-bitwise syntax-rust">&amp;</span>pre_hash<span class="syntax-punctuation syntax-separator syntax-rust">,</span> <span class="syntax-keyword syntax-operator syntax-bitwise syntax-rust">&amp;</span><span class="syntax-variable syntax-language syntax-rust">self</span><span class="syntax-punctuation syntax-accessor syntax-dot syntax-rust">.</span>api_secret_key</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span><span class="syntax-keyword syntax-operator syntax-rust">?</span><span class="syntax-punctuation syntax-separator syntax-rust">,</span>
+        </span><span class="syntax-meta syntax-block syntax-rust"><span class="syntax-punctuation syntax-section syntax-block syntax-end syntax-rust">}</span></span><span class="syntax-punctuation syntax-terminator syntax-rust">;</span>
+
+        <span class="syntax-storage syntax-type syntax-rust">let</span> headers <span class="syntax-keyword syntax-operator syntax-assignment syntax-rust">=</span> <span class="syntax-meta syntax-path syntax-rust">utils<span class="syntax-punctuation syntax-accessor syntax-rust">::</span></span>get_header<span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span><span class="syntax-keyword syntax-operator syntax-bitwise syntax-rust">&amp;</span><span class="syntax-variable syntax-language syntax-rust">self</span><span class="syntax-punctuation syntax-accessor syntax-dot syntax-rust">.</span>api_key<span class="syntax-punctuation syntax-separator syntax-rust">,</span> <span class="syntax-keyword syntax-operator syntax-bitwise syntax-rust">&amp;</span>sign<span class="syntax-punctuation syntax-separator syntax-rust">,</span> <span class="syntax-keyword syntax-operator syntax-bitwise syntax-rust">&amp;</span>timestamp<span class="syntax-punctuation syntax-separator syntax-rust">,</span> <span class="syntax-keyword syntax-operator syntax-bitwise syntax-rust">&amp;</span><span class="syntax-variable syntax-language syntax-rust">self</span><span class="syntax-punctuation syntax-accessor syntax-dot syntax-rust">.</span>passphrase</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span><span class="syntax-punctuation syntax-terminator syntax-rust">;</span>
+
+        <span class="syntax-storage syntax-type syntax-rust">let</span> <span class="syntax-storage syntax-modifier syntax-rust">mut</span> header_map <span class="syntax-keyword syntax-operator syntax-assignment syntax-rust">=</span> <span class="syntax-meta syntax-path syntax-rust">HeaderMap<span class="syntax-punctuation syntax-accessor syntax-rust">::</span></span>new<span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span><span class="syntax-punctuation syntax-terminator syntax-rust">;</span>
+        <span class="syntax-keyword syntax-control syntax-rust">for</span> <span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span>k<span class="syntax-punctuation syntax-separator syntax-rust">,</span> v</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span> <span class="syntax-keyword syntax-operator syntax-rust">in</span> headers <span class="syntax-meta syntax-block syntax-rust"><span class="syntax-punctuation syntax-section syntax-block syntax-begin syntax-rust">{</span>
+            header_map<span class="syntax-punctuation syntax-accessor syntax-dot syntax-rust">.</span><span class="syntax-support syntax-function syntax-rust">insert</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span>
+                <span class="syntax-meta syntax-path syntax-rust">HeaderName<span class="syntax-punctuation syntax-accessor syntax-rust">::</span></span>from_str<span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span><span class="syntax-keyword syntax-operator syntax-bitwise syntax-rust">&amp;</span>k</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span><span class="syntax-punctuation syntax-accessor syntax-dot syntax-rust">.</span><span class="syntax-support syntax-function syntax-rust">map_err</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span><span class="syntax-meta syntax-function syntax-closure syntax-rust"><span class="syntax-meta syntax-function syntax-parameters syntax-rust"><span class="syntax-punctuation syntax-section syntax-parameters syntax-begin syntax-rust">|</span></span></span><span class="syntax-meta syntax-function syntax-closure syntax-rust"><span class="syntax-meta syntax-function syntax-parameters syntax-rust"><span class="syntax-variable syntax-parameter syntax-rust">e</span><span class="syntax-punctuation syntax-section syntax-parameters syntax-end syntax-rust">|</span></span> </span><span class="syntax-meta syntax-function syntax-closure syntax-rust"><span class="syntax-support syntax-macro syntax-rust">anyhow!</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span><span class="syntax-string syntax-quoted syntax-double syntax-rust"><span class="syntax-punctuation syntax-definition syntax-string syntax-begin syntax-rust">&quot;</span>无效的 header 名称: {}<span class="syntax-punctuation syntax-definition syntax-string syntax-end syntax-rust">&quot;</span></span><span class="syntax-punctuation syntax-separator syntax-rust">,</span> e</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span></span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span><span class="syntax-keyword syntax-operator syntax-rust">?</span><span class="syntax-punctuation syntax-separator syntax-rust">,</span>
+                <span class="syntax-meta syntax-path syntax-rust">HeaderValue<span class="syntax-punctuation syntax-accessor syntax-rust">::</span></span>from_str<span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span><span class="syntax-keyword syntax-operator syntax-bitwise syntax-rust">&amp;</span>v</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span><span class="syntax-punctuation syntax-accessor syntax-dot syntax-rust">.</span><span class="syntax-support syntax-function syntax-rust">map_err</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span><span class="syntax-meta syntax-function syntax-closure syntax-rust"><span class="syntax-meta syntax-function syntax-parameters syntax-rust"><span class="syntax-punctuation syntax-section syntax-parameters syntax-begin syntax-rust">|</span></span></span><span class="syntax-meta syntax-function syntax-closure syntax-rust"><span class="syntax-meta syntax-function syntax-parameters syntax-rust"><span class="syntax-variable syntax-parameter syntax-rust">e</span><span class="syntax-punctuation syntax-section syntax-parameters syntax-end syntax-rust">|</span></span> </span><span class="syntax-meta syntax-function syntax-closure syntax-rust"><span class="syntax-support syntax-macro syntax-rust">anyhow!</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span><span class="syntax-string syntax-quoted syntax-double syntax-rust"><span class="syntax-punctuation syntax-definition syntax-string syntax-begin syntax-rust">&quot;</span>无效的 header 值: {}<span class="syntax-punctuation syntax-definition syntax-string syntax-end syntax-rust">&quot;</span></span><span class="syntax-punctuation syntax-separator syntax-rust">,</span> e</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span></span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span><span class="syntax-keyword syntax-operator syntax-rust">?</span><span class="syntax-punctuation syntax-separator syntax-rust">,</span>
+            </span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span><span class="syntax-punctuation syntax-terminator syntax-rust">;</span>
+        </span><span class="syntax-meta syntax-block syntax-rust"><span class="syntax-punctuation syntax-section syntax-block syntax-end syntax-rust">}</span></span>
+
+        <span class="syntax-support syntax-type syntax-rust">Ok</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span>header_map</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span>
+    </span><span class="syntax-meta syntax-block syntax-rust"><span class="syntax-punctuation syntax-section syntax-block syntax-end syntax-rust">}</span></span></span>
+</span><span class="syntax-meta syntax-block syntax-rust"><span class="syntax-punctuation syntax-section syntax-block syntax-end syntax-rust">}</span></span></span>
+</span></code></pre></div>
+                </div></div>
+    </div>
+        <script nonce="7n++Wc+qMgAVnHszSBFiKchFNHlEmyMbO5YQS/WFQVrovZjm" type="text/javascript" src="https://docs.rs/-/static/source.js?0-0-0-a68728e7-2026-03-08"></script>
+    </body>
+</html>

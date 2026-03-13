@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="generator" content="docs.rs 0.0.0 (a68728e7 2026-03-08 )"><link rel="stylesheet" href="https://docs.rs/-/static/vendored.css?0-0-0-a68728e7-2026-03-08" media="all" />
+        <link rel="stylesheet" href="https://docs.rs/-/static/style.css?0-0-0-a68728e7-2026-03-08" media="all" />
+        <link rel="stylesheet" href="https://docs.rs/-/static/font-awesome.css?0-0-0-a68728e7-2026-03-08" media="all" />
+
+        <link rel="search" href="https://docs.rs/-/static/opensearch.xml" type="application/opensearchdescription+xml" title="Docs.rs" />
+
+        <title>bitget_sdk 0.1.1 - Docs.rs</title><script nonce="BAF3KilWYYwx7rSDcm1khWkWRG70sFJP/mBIpzwE0M/bR4On">(function() {
+    function applyTheme(theme) {
+        if (theme) {
+            document.documentElement.dataset.docsRsTheme = theme;
+        }
+    }
+
+    window.addEventListener("storage", ev => {
+        if (ev.key === "rustdoc-theme") {
+            applyTheme(ev.newValue);
+        }
+    });
+
+    // see ./storage-change-detection.html for details
+    window.addEventListener("message", ev => {
+        if (ev.data && ev.data.storage && ev.data.storage.key === "rustdoc-theme") {
+            applyTheme(ev.data.storage.value);
+        }
+    });
+
+    applyTheme(window.localStorage.getItem("rustdoc-theme"));
+})();</script><script defer type="text/javascript" nonce="BAF3KilWYYwx7rSDcm1khWkWRG70sFJP/mBIpzwE0M/bR4On" src="https://docs.rs/-/static/menu.js?0-0-0-a68728e7-2026-03-08"></script>
+        <script defer type="text/javascript" nonce="BAF3KilWYYwx7rSDcm1khWkWRG70sFJP/mBIpzwE0M/bR4On" src="https://docs.rs/-/static/index.js?0-0-0-a68728e7-2026-03-08"></script>
+    </head>
+
+    <body class="flex">
+<div class="nav-container">
+    <div class="container">
+        <div class="pure-menu pure-menu-horizontal" role="navigation" aria-label="Main navigation">
+            <form action="https://docs.rs/releases/search"
+                  method="GET"
+                  id="nav-search-form"
+                  class="landing-search-form-nav  ">
+
+                
+                <a href="https://docs.rs/" class="pure-menu-heading pure-menu-link docsrs-logo" aria-label="Docs.rs">
+                    <span title="Docs.rs"><span class="fa fa-solid fa-cubes " aria-hidden="true"></span></span>
+                    <span class="title">Docs.rs</span>
+                </a><ul class="pure-menu-list">
+    <script id="crate-metadata" type="application/json">
+        
+        {
+            "name": "bitget_sdk",
+            "version": "0.1.1"
+        }
+    </script><li class="pure-menu-item">
+            <a href="https://docs.rs/crate/bitget_sdk/latest" class="pure-menu-link crate-name" title="Bitget Exchange API SDK for Rust">
+                <span class="fa fa-solid fa-cube " aria-hidden="true"></span>
+                <span class="title">bitget_sdk-0.1.1</span>
+            </a>
+        </li><li class="pure-menu-item pure-menu-has-children">
+                <a href="Cargo.toml.orig.html#" class="pure-menu-link" aria-label="Platform">
+                    <span class="fa fa-solid fa-gears " aria-hidden="true"></span>
+                    <span class="title">Platform</span>
+                </a>
+
+                
+                <ul class="pure-menu-children" id="platforms" data-url="/crate/bitget_sdk/latest/menus/platforms/"><li class="pure-menu-item">
+            <a href="https://docs.rs/bitget_sdk/latest/bitget_sdk/" class="pure-menu-link" data-fragment="retain" rel="">x86_64-unknown-linux-gnu</a>
+        </li></ul>
+            </li><li class="pure-menu-item">
+                <a href="https://docs.rs/crate/bitget_sdk/latest/features" title="Browse available feature flags of bitget_sdk-0.1.1" class="pure-menu-link">
+                    <span class="fa fa-solid fa-flag " aria-hidden="true"></span>
+                    <span class="title">Feature flags</span>
+                </a>
+            </li>
+        
+    
+</ul><div class="spacer"></div>
+                
+                
+
+<ul class="pure-menu-list">
+                    <li class="pure-menu-item pure-menu-has-children">
+                        <a href="Cargo.toml.orig.html#" class="pure-menu-link" aria-label="docs.rs">docs.rs</a>
+                        <ul class="pure-menu-children aligned-icons"><li class="pure-menu-item"><a class="pure-menu-link" href="https://docs.rs/about"><span class="fa fa-solid fa-circle-info " aria-hidden="true"></span> About docs.rs</a></li><li class="pure-menu-item"><a class="pure-menu-link" href="https://docs.rs/about/badges"><span class="fa fa-brands fa-fonticons " aria-hidden="true"></span> Badges</a></li><li class="pure-menu-item"><a class="pure-menu-link" href="https://docs.rs/about/builds"><span class="fa fa-solid fa-gears " aria-hidden="true"></span> Builds</a></li><li class="pure-menu-item"><a class="pure-menu-link" href="https://docs.rs/about/metadata"><span class="fa fa-solid fa-table " aria-hidden="true"></span> Metadata</a></li><li class="pure-menu-item"><a class="pure-menu-link" href="https://docs.rs/about/redirections"><span class="fa fa-solid fa-road " aria-hidden="true"></span> Shorthand URLs</a></li><li class="pure-menu-item"><a class="pure-menu-link" href="https://docs.rs/about/download"><span class="fa fa-solid fa-download " aria-hidden="true"></span> Download</a></li><li class="pure-menu-item"><a class="pure-menu-link" href="https://docs.rs/about/rustdoc-json"><span class="fa fa-solid fa-file-code " aria-hidden="true"></span> Rustdoc JSON</a></li><li class="pure-menu-item"><a class="pure-menu-link" href="https://docs.rs/releases/queue"><span class="fa fa-solid fa-gears " aria-hidden="true"></span> Build queue</a></li><li class="pure-menu-item"><a class="pure-menu-link" href="https://foundation.rust-lang.org/policies/privacy-policy/#docs.rs" target="_blank"><span class="fa fa-solid fa-shield-halved " aria-hidden="true"></span> Privacy policy</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="pure-menu-list"><li class="pure-menu-item pure-menu-has-children">
+                        <a href="Cargo.toml.orig.html#" class="pure-menu-link" aria-label="Rust">Rust</a>
+                        <ul class="pure-menu-children">
+                            <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.rust-lang.org/" target="_blank">Rust website</a></li>
+                            <li class="pure-menu-item"><a class="pure-menu-link" href="https://doc.rust-lang.org/book/" target="_blank">The Book</a></li>
+
+                            <li class="pure-menu-item"><a class="pure-menu-link" href="https://doc.rust-lang.org/std/" target="_blank">Standard Library API Reference</a></li>
+
+                            <li class="pure-menu-item"><a class="pure-menu-link" href="https://doc.rust-lang.org/rust-by-example/" target="_blank">Rust by Example</a></li>
+
+                            <li class="pure-menu-item"><a class="pure-menu-link" href="https://doc.rust-lang.org/cargo/guide/" target="_blank">The Cargo Guide</a></li>
+
+                            <li class="pure-menu-item"><a class="pure-menu-link" href="https://doc.rust-lang.org/nightly/clippy" target="_blank">Clippy Documentation</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <div id="search-input-nav">
+                    <label for="nav-search">
+                        <span class="fa fa-solid fa-magnifying-glass " aria-hidden="true"></span>
+                    </label>
+
+                    
+                    
+                    <input id="nav-search" name="query" type="text" aria-label="Find crate by search query" tabindex="-1"
+                        placeholder="Find crate"
+                        >
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+    
+    <div class="docsrs-package-container">
+        <div class="container">
+            <div class="description-container">
+                
+
+                
+                <h1 id="crate-title">
+                    bitget_sdk 0.1.1
+                    <span id="clipboard" class="svg-clipboard" title="Copy crate name and version information"></span>
+                </h1>
+
+                
+                <div class="description">Bitget Exchange API SDK for Rust</div>
+
+
+                <div class="pure-menu pure-menu-horizontal">
+                    <ul class="pure-menu-list">
+                        
+                        <li class="pure-menu-item"><a href="https://docs.rs/crate/bitget_sdk/latest"
+                                class="pure-menu-link">
+                                <span class="fa fa-solid fa-cube " aria-hidden="true"></span>
+                                <span class="title"> Crate</span>
+                            </a>
+                        </li>
+
+                        
+                        <li class="pure-menu-item">
+                            <a href="Cargo.toml.orig.html"
+                                class="pure-menu-link pure-menu-active">
+                                <span class="fa fa-regular fa-folder-open " aria-hidden="true"></span>
+                                <span class="title"> Source</span>
+                            </a>
+                        </li>
+
+                        
+                        <li class="pure-menu-item">
+                            <a href="https://docs.rs/crate/bitget_sdk/latest/builds"
+                                class="pure-menu-link">
+                                <span class="fa fa-solid fa-gears " aria-hidden="true"></span>
+                                <span class="title"> Builds</span>
+                            </a>
+                        </li>
+
+                        
+                        <li class="pure-menu-item">
+                            <a href="https://docs.rs/crate/bitget_sdk/latest/features"
+                               class="pure-menu-link">
+                                <span class="fa fa-solid fa-flag " aria-hidden="true"></span>
+                                <span class="title">Feature flags</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div><a href="https://docs.rs/bitget_sdk/latest/bitget_sdk/" class="doc-link">
+                    <span class="fa fa-solid fa-book " aria-hidden="true"></span> Documentation
+                </a></div>
+    </div>
+
+    <div class="container package-page-container small-bottom-pad">
+        <div class="pure-g">
+            <div id="side-menu" class="pure-u-1 pure-u-sm-7-24 pure-u-md-5-24 source-view">
+                <div class="pure-menu package-menu">
+                    <ul class="pure-menu-list">
+                        
+                        
+                            <li class="pure-menu-item toggle-source">
+                                <button aria-label="Hide source sidebar" title="Hide source sidebar" aria-expanded="true"><span class="left"><span class="fa fa-solid fa-chevron-left " aria-hidden="true"></span></span><span class="right"><span class="fa fa-solid fa-chevron-right " aria-hidden="true"></span></span> <span class="text">Hide files</span></button>
+                            </li>
+                        
+                        <li class="pure-menu-item">
+                                
+                                <a href="src/index.html" class="pure-menu-link">
+                                    <span class="fa fa-regular fa-folder-open " aria-hidden="true"></span>
+
+                                    <span class="text">src</span>
+                                </a>
+                            </li><li class="pure-menu-item">
+                                
+                                <a href=".cargo_vcs_info.json.html" class="pure-menu-link">
+                                    <span class="fa fa-regular fa-file " aria-hidden="true"></span><span class="text">.cargo_vcs_info.json</span>
+                                </a>
+                            </li><li class="pure-menu-item">
+                                
+                                <a href=".gitignore.html" class="pure-menu-link">
+                                    
+                                        <span class="fa fa-brands fa-git-alt " aria-hidden="true"></span>
+
+                                    
+
+                                    <span class="text">.gitignore</span>
+                                </a>
+                            </li><li class="pure-menu-item">
+                                
+                                <a href="Cargo.lock.html" class="pure-menu-link">
+                                    <span class="fa fa-solid fa-lock " aria-hidden="true"></span>
+
+                                    
+                                    <span class="text">Cargo.lock</span>
+                                </a>
+                            </li><li class="pure-menu-item">
+                                
+                                <a href="Cargo.toml.html" class="pure-menu-link">
+                                    <span class="fa fa-regular fa-file-lines " aria-hidden="true"></span>
+
+                                        
+                                    <span class="text">Cargo.toml</span>
+                                </a>
+                            </li><li class="pure-menu-item">
+                                
+                                <a href="Cargo.toml.orig.html" class="pure-menu-link">
+                                    <span class="fa fa-regular fa-file-lines " aria-hidden="true"></span>
+
+                                        
+                                    <span class="text">Cargo.toml.orig</span>
+                                </a>
+                            </li><li class="pure-menu-item">
+                                
+                                <a href="README.md.html" class="pure-menu-link">
+                                    
+                                        <span class="fa fa-brands fa-markdown " aria-hidden="true"></span>
+
+                                    
+                                    <span class="text">README.md</span>
+                                </a>
+                            </li></ul>
+                </div>
+            </div>
+
+            
+                
+                    
+                
+                <div id="source-code-container" class="pure-u-1 pure-u-sm-17-24 pure-u-md-19-24">
+                    <div data-nosnippet class="source-code"><pre id="line-numbers"><code><a href="Cargo.toml.orig.html#1" id="1">1</a>
+<a href="Cargo.toml.orig.html#2" id="2">2</a>
+<a href="Cargo.toml.orig.html#3" id="3">3</a>
+<a href="Cargo.toml.orig.html#4" id="4">4</a>
+<a href="Cargo.toml.orig.html#5" id="5">5</a>
+<a href="Cargo.toml.orig.html#6" id="6">6</a>
+<a href="Cargo.toml.orig.html#7" id="7">7</a>
+<a href="Cargo.toml.orig.html#8" id="8">8</a>
+<a href="Cargo.toml.orig.html#9" id="9">9</a>
+<a href="Cargo.toml.orig.html#10" id="10">10</a>
+<a href="Cargo.toml.orig.html#11" id="11">11</a>
+<a href="Cargo.toml.orig.html#12" id="12">12</a>
+<a href="Cargo.toml.orig.html#13" id="13">13</a>
+<a href="Cargo.toml.orig.html#14" id="14">14</a>
+<a href="Cargo.toml.orig.html#15" id="15">15</a>
+<a href="Cargo.toml.orig.html#16" id="16">16</a>
+<a href="Cargo.toml.orig.html#17" id="17">17</a>
+<a href="Cargo.toml.orig.html#18" id="18">18</a>
+<a href="Cargo.toml.orig.html#19" id="19">19</a>
+<a href="Cargo.toml.orig.html#20" id="20">20</a>
+<a href="Cargo.toml.orig.html#21" id="21">21</a>
+<a href="Cargo.toml.orig.html#22" id="22">22</a>
+<a href="Cargo.toml.orig.html#23" id="23">23</a>
+<a href="Cargo.toml.orig.html#24" id="24">24</a>
+</code></pre></div>
+                    <div id="source-code" class="source-code"><pre><code><span class="syntax-source syntax-toml"><span class="syntax-punctuation syntax-definition syntax-table syntax-begin syntax-toml">[</span><span class="syntax-meta syntax-tag syntax-table syntax-toml"><span class="syntax-entity syntax-name syntax-table syntax-toml">package</span></span><span class="syntax-punctuation syntax-definition syntax-table syntax-end syntax-toml">]</span>
+<span class="syntax-meta syntax-tag syntax-key syntax-toml"><span class="syntax-entity syntax-name syntax-tag syntax-toml">name</span></span> <span class="syntax-punctuation syntax-definition syntax-key-value syntax-toml">=</span> <span class="syntax-string syntax-quoted syntax-double syntax-basic syntax-toml"><span class="syntax-punctuation syntax-definition syntax-string syntax-begin syntax-toml">&quot;</span>bitget_sdk<span class="syntax-punctuation syntax-definition syntax-string syntax-end syntax-toml">&quot;</span></span>
+<span class="syntax-meta syntax-tag syntax-key syntax-toml"><span class="syntax-entity syntax-name syntax-tag syntax-toml">version</span></span> <span class="syntax-punctuation syntax-definition syntax-key-value syntax-toml">=</span> <span class="syntax-string syntax-quoted syntax-double syntax-basic syntax-toml"><span class="syntax-punctuation syntax-definition syntax-string syntax-begin syntax-toml">&quot;</span>0.1.1<span class="syntax-punctuation syntax-definition syntax-string syntax-end syntax-toml">&quot;</span></span>
+<span class="syntax-meta syntax-tag syntax-key syntax-toml"><span class="syntax-entity syntax-name syntax-tag syntax-toml">edition</span></span> <span class="syntax-punctuation syntax-definition syntax-key-value syntax-toml">=</span> <span class="syntax-string syntax-quoted syntax-double syntax-basic syntax-toml"><span class="syntax-punctuation syntax-definition syntax-string syntax-begin syntax-toml">&quot;</span>2024<span class="syntax-punctuation syntax-definition syntax-string syntax-end syntax-toml">&quot;</span></span>
+<span class="syntax-meta syntax-tag syntax-key syntax-toml"><span class="syntax-entity syntax-name syntax-tag syntax-toml">description</span></span> <span class="syntax-punctuation syntax-definition syntax-key-value syntax-toml">=</span> <span class="syntax-string syntax-quoted syntax-double syntax-basic syntax-toml"><span class="syntax-punctuation syntax-definition syntax-string syntax-begin syntax-toml">&quot;</span>Bitget Exchange API SDK for Rust<span class="syntax-punctuation syntax-definition syntax-string syntax-end syntax-toml">&quot;</span></span>
+<span class="syntax-meta syntax-tag syntax-key syntax-toml"><span class="syntax-entity syntax-name syntax-tag syntax-toml">license</span></span> <span class="syntax-punctuation syntax-definition syntax-key-value syntax-toml">=</span> <span class="syntax-string syntax-quoted syntax-double syntax-basic syntax-toml"><span class="syntax-punctuation syntax-definition syntax-string syntax-begin syntax-toml">&quot;</span>MIT<span class="syntax-punctuation syntax-definition syntax-string syntax-end syntax-toml">&quot;</span></span>
+<span class="syntax-meta syntax-tag syntax-key syntax-toml"><span class="syntax-entity syntax-name syntax-tag syntax-toml">authors</span></span> <span class="syntax-punctuation syntax-definition syntax-key-value syntax-toml">=</span> <span class="syntax-punctuation syntax-definition syntax-array syntax-begin syntax-toml">[</span><span class="syntax-string syntax-quoted syntax-double syntax-basic syntax-toml"><span class="syntax-punctuation syntax-definition syntax-string syntax-begin syntax-toml">&quot;</span>hi &lt;victor@telegraphs.org&gt;<span class="syntax-punctuation syntax-definition syntax-string syntax-end syntax-toml">&quot;</span></span><span class="syntax-punctuation syntax-definition syntax-array syntax-end syntax-toml">]</span>
+<span class="syntax-meta syntax-tag syntax-key syntax-toml"><span class="syntax-entity syntax-name syntax-tag syntax-toml">repository</span></span> <span class="syntax-punctuation syntax-definition syntax-key-value syntax-toml">=</span> <span class="syntax-string syntax-quoted syntax-double syntax-basic syntax-toml"><span class="syntax-punctuation syntax-definition syntax-string syntax-begin syntax-toml">&quot;</span>https://github.com/blockchain-toolbox/bitget-rs<span class="syntax-punctuation syntax-definition syntax-string syntax-end syntax-toml">&quot;</span></span>
+<span class="syntax-meta syntax-tag syntax-key syntax-toml"><span class="syntax-entity syntax-name syntax-tag syntax-toml">keywords</span></span> <span class="syntax-punctuation syntax-definition syntax-key-value syntax-toml">=</span> <span class="syntax-punctuation syntax-definition syntax-array syntax-begin syntax-toml">[</span><span class="syntax-string syntax-quoted syntax-double syntax-basic syntax-toml"><span class="syntax-punctuation syntax-definition syntax-string syntax-begin syntax-toml">&quot;</span>bitget<span class="syntax-punctuation syntax-definition syntax-string syntax-end syntax-toml">&quot;</span></span><span class="syntax-punctuation syntax-separator syntax-array syntax-toml">,</span> <span class="syntax-string syntax-quoted syntax-double syntax-basic syntax-toml"><span class="syntax-punctuation syntax-definition syntax-string syntax-begin syntax-toml">&quot;</span>crypto<span class="syntax-punctuation syntax-definition syntax-string syntax-end syntax-toml">&quot;</span></span><span class="syntax-punctuation syntax-separator syntax-array syntax-toml">,</span> <span class="syntax-string syntax-quoted syntax-double syntax-basic syntax-toml"><span class="syntax-punctuation syntax-definition syntax-string syntax-begin syntax-toml">&quot;</span>exchange<span class="syntax-punctuation syntax-definition syntax-string syntax-end syntax-toml">&quot;</span></span><span class="syntax-punctuation syntax-separator syntax-array syntax-toml">,</span> <span class="syntax-string syntax-quoted syntax-double syntax-basic syntax-toml"><span class="syntax-punctuation syntax-definition syntax-string syntax-begin syntax-toml">&quot;</span>api<span class="syntax-punctuation syntax-definition syntax-string syntax-end syntax-toml">&quot;</span></span><span class="syntax-punctuation syntax-separator syntax-array syntax-toml">,</span> <span class="syntax-string syntax-quoted syntax-double syntax-basic syntax-toml"><span class="syntax-punctuation syntax-definition syntax-string syntax-begin syntax-toml">&quot;</span>sdk<span class="syntax-punctuation syntax-definition syntax-string syntax-end syntax-toml">&quot;</span></span><span class="syntax-punctuation syntax-definition syntax-array syntax-end syntax-toml">]</span>
+<span class="syntax-meta syntax-tag syntax-key syntax-toml"><span class="syntax-entity syntax-name syntax-tag syntax-toml">categories</span></span> <span class="syntax-punctuation syntax-definition syntax-key-value syntax-toml">=</span> <span class="syntax-punctuation syntax-definition syntax-array syntax-begin syntax-toml">[</span><span class="syntax-string syntax-quoted syntax-double syntax-basic syntax-toml"><span class="syntax-punctuation syntax-definition syntax-string syntax-begin syntax-toml">&quot;</span>api-bindings<span class="syntax-punctuation syntax-definition syntax-string syntax-end syntax-toml">&quot;</span></span><span class="syntax-punctuation syntax-separator syntax-array syntax-toml">,</span> <span class="syntax-string syntax-quoted syntax-double syntax-basic syntax-toml"><span class="syntax-punctuation syntax-definition syntax-string syntax-begin syntax-toml">&quot;</span>cryptography<span class="syntax-punctuation syntax-definition syntax-string syntax-end syntax-toml">&quot;</span></span><span class="syntax-punctuation syntax-definition syntax-array syntax-end syntax-toml">]</span>
+
+<span class="syntax-punctuation syntax-definition syntax-table syntax-begin syntax-toml">[</span><span class="syntax-meta syntax-tag syntax-table syntax-toml"><span class="syntax-entity syntax-name syntax-table syntax-toml">dependencies</span></span><span class="syntax-punctuation syntax-definition syntax-table syntax-end syntax-toml">]</span>
+<span class="syntax-meta syntax-tag syntax-key syntax-toml"><span class="syntax-entity syntax-name syntax-tag syntax-toml">anyhow</span></span> <span class="syntax-punctuation syntax-definition syntax-key-value syntax-toml">=</span> <span class="syntax-string syntax-quoted syntax-double syntax-basic syntax-toml"><span class="syntax-punctuation syntax-definition syntax-string syntax-begin syntax-toml">&quot;</span>1<span class="syntax-punctuation syntax-definition syntax-string syntax-end syntax-toml">&quot;</span></span>
+<span class="syntax-meta syntax-tag syntax-key syntax-toml"><span class="syntax-entity syntax-name syntax-tag syntax-toml">serde</span></span> <span class="syntax-punctuation syntax-definition syntax-key-value syntax-toml">=</span> <span class="syntax-punctuation syntax-definition syntax-inline-table syntax-begin syntax-toml">{</span> <span class="syntax-meta syntax-tag syntax-key syntax-toml"><span class="syntax-entity syntax-name syntax-tag syntax-toml">version</span></span> <span class="syntax-punctuation syntax-definition syntax-key-value syntax-toml">=</span> <span class="syntax-string syntax-quoted syntax-double syntax-basic syntax-toml"><span class="syntax-punctuation syntax-definition syntax-string syntax-begin syntax-toml">&quot;</span>1<span class="syntax-punctuation syntax-definition syntax-string syntax-end syntax-toml">&quot;</span></span><span class="syntax-punctuation syntax-separator syntax-inline-table syntax-toml">,</span> <span class="syntax-meta syntax-tag syntax-key syntax-toml"><span class="syntax-entity syntax-name syntax-tag syntax-toml">features</span></span> <span class="syntax-punctuation syntax-definition syntax-key-value syntax-toml">=</span> <span class="syntax-punctuation syntax-definition syntax-array syntax-begin syntax-toml">[</span><span class="syntax-string syntax-quoted syntax-double syntax-basic syntax-toml"><span class="syntax-punctuation syntax-definition syntax-string syntax-begin syntax-toml">&quot;</span>derive<span class="syntax-punctuation syntax-definition syntax-string syntax-end syntax-toml">&quot;</span></span><span class="syntax-punctuation syntax-definition syntax-array syntax-end syntax-toml">]</span> <span class="syntax-punctuation syntax-definition syntax-inline-table syntax-end syntax-toml">}</span>
+<span class="syntax-meta syntax-tag syntax-key syntax-toml"><span class="syntax-entity syntax-name syntax-tag syntax-toml">serde_json</span></span> <span class="syntax-punctuation syntax-definition syntax-key-value syntax-toml">=</span> <span class="syntax-string syntax-quoted syntax-double syntax-basic syntax-toml"><span class="syntax-punctuation syntax-definition syntax-string syntax-begin syntax-toml">&quot;</span>1<span class="syntax-punctuation syntax-definition syntax-string syntax-end syntax-toml">&quot;</span></span>
+<span class="syntax-meta syntax-tag syntax-key syntax-toml"><span class="syntax-entity syntax-name syntax-tag syntax-toml">tracing</span></span> <span class="syntax-punctuation syntax-definition syntax-key-value syntax-toml">=</span> <span class="syntax-string syntax-quoted syntax-double syntax-basic syntax-toml"><span class="syntax-punctuation syntax-definition syntax-string syntax-begin syntax-toml">&quot;</span>0.1<span class="syntax-punctuation syntax-definition syntax-string syntax-end syntax-toml">&quot;</span></span>
+<span class="syntax-meta syntax-tag syntax-key syntax-toml"><span class="syntax-entity syntax-name syntax-tag syntax-toml">tokio</span></span> <span class="syntax-punctuation syntax-definition syntax-key-value syntax-toml">=</span> <span class="syntax-punctuation syntax-definition syntax-inline-table syntax-begin syntax-toml">{</span> <span class="syntax-meta syntax-tag syntax-key syntax-toml"><span class="syntax-entity syntax-name syntax-tag syntax-toml">version</span></span> <span class="syntax-punctuation syntax-definition syntax-key-value syntax-toml">=</span> <span class="syntax-string syntax-quoted syntax-double syntax-basic syntax-toml"><span class="syntax-punctuation syntax-definition syntax-string syntax-begin syntax-toml">&quot;</span>1<span class="syntax-punctuation syntax-definition syntax-string syntax-end syntax-toml">&quot;</span></span><span class="syntax-punctuation syntax-separator syntax-inline-table syntax-toml">,</span> <span class="syntax-meta syntax-tag syntax-key syntax-toml"><span class="syntax-entity syntax-name syntax-tag syntax-toml">features</span></span> <span class="syntax-punctuation syntax-definition syntax-key-value syntax-toml">=</span> <span class="syntax-punctuation syntax-definition syntax-array syntax-begin syntax-toml">[</span><span class="syntax-string syntax-quoted syntax-double syntax-basic syntax-toml"><span class="syntax-punctuation syntax-definition syntax-string syntax-begin syntax-toml">&quot;</span>full<span class="syntax-punctuation syntax-definition syntax-string syntax-end syntax-toml">&quot;</span></span><span class="syntax-punctuation syntax-definition syntax-array syntax-end syntax-toml">]</span> <span class="syntax-punctuation syntax-definition syntax-inline-table syntax-end syntax-toml">}</span>
+<span class="syntax-meta syntax-tag syntax-key syntax-toml"><span class="syntax-entity syntax-name syntax-tag syntax-toml">reqwest</span></span> <span class="syntax-punctuation syntax-definition syntax-key-value syntax-toml">=</span> <span class="syntax-punctuation syntax-definition syntax-inline-table syntax-begin syntax-toml">{</span> <span class="syntax-meta syntax-tag syntax-key syntax-toml"><span class="syntax-entity syntax-name syntax-tag syntax-toml">version</span></span> <span class="syntax-punctuation syntax-definition syntax-key-value syntax-toml">=</span> <span class="syntax-string syntax-quoted syntax-double syntax-basic syntax-toml"><span class="syntax-punctuation syntax-definition syntax-string syntax-begin syntax-toml">&quot;</span>0.11<span class="syntax-punctuation syntax-definition syntax-string syntax-end syntax-toml">&quot;</span></span><span class="syntax-punctuation syntax-separator syntax-inline-table syntax-toml">,</span> <span class="syntax-meta syntax-tag syntax-key syntax-toml"><span class="syntax-entity syntax-name syntax-tag syntax-toml">features</span></span> <span class="syntax-punctuation syntax-definition syntax-key-value syntax-toml">=</span> <span class="syntax-punctuation syntax-definition syntax-array syntax-begin syntax-toml">[</span><span class="syntax-string syntax-quoted syntax-double syntax-basic syntax-toml"><span class="syntax-punctuation syntax-definition syntax-string syntax-begin syntax-toml">&quot;</span>blocking<span class="syntax-punctuation syntax-definition syntax-string syntax-end syntax-toml">&quot;</span></span><span class="syntax-punctuation syntax-separator syntax-array syntax-toml">,</span> <span class="syntax-string syntax-quoted syntax-double syntax-basic syntax-toml"><span class="syntax-punctuation syntax-definition syntax-string syntax-begin syntax-toml">&quot;</span>json<span class="syntax-punctuation syntax-definition syntax-string syntax-end syntax-toml">&quot;</span></span><span class="syntax-punctuation syntax-separator syntax-array syntax-toml">,</span> <span class="syntax-string syntax-quoted syntax-double syntax-basic syntax-toml"><span class="syntax-punctuation syntax-definition syntax-string syntax-begin syntax-toml">&quot;</span>rustls-tls<span class="syntax-punctuation syntax-definition syntax-string syntax-end syntax-toml">&quot;</span></span><span class="syntax-punctuation syntax-definition syntax-array syntax-end syntax-toml">]</span> <span class="syntax-punctuation syntax-definition syntax-inline-table syntax-end syntax-toml">}</span>
+<span class="syntax-meta syntax-tag syntax-key syntax-toml"><span class="syntax-entity syntax-name syntax-tag syntax-toml">base64</span></span> <span class="syntax-punctuation syntax-definition syntax-key-value syntax-toml">=</span> <span class="syntax-string syntax-quoted syntax-double syntax-basic syntax-toml"><span class="syntax-punctuation syntax-definition syntax-string syntax-begin syntax-toml">&quot;</span>0.21<span class="syntax-punctuation syntax-definition syntax-string syntax-end syntax-toml">&quot;</span></span>
+<span class="syntax-meta syntax-tag syntax-key syntax-toml"><span class="syntax-entity syntax-name syntax-tag syntax-toml">chrono</span></span> <span class="syntax-punctuation syntax-definition syntax-key-value syntax-toml">=</span> <span class="syntax-string syntax-quoted syntax-double syntax-basic syntax-toml"><span class="syntax-punctuation syntax-definition syntax-string syntax-begin syntax-toml">&quot;</span>0.4<span class="syntax-punctuation syntax-definition syntax-string syntax-end syntax-toml">&quot;</span></span>
+<span class="syntax-meta syntax-tag syntax-key syntax-toml"><span class="syntax-entity syntax-name syntax-tag syntax-toml">hmac</span></span> <span class="syntax-punctuation syntax-definition syntax-key-value syntax-toml">=</span> <span class="syntax-string syntax-quoted syntax-double syntax-basic syntax-toml"><span class="syntax-punctuation syntax-definition syntax-string syntax-begin syntax-toml">&quot;</span>0.12<span class="syntax-punctuation syntax-definition syntax-string syntax-end syntax-toml">&quot;</span></span>
+<span class="syntax-meta syntax-tag syntax-key syntax-toml"><span class="syntax-entity syntax-name syntax-tag syntax-toml">sha2</span></span> <span class="syntax-punctuation syntax-definition syntax-key-value syntax-toml">=</span> <span class="syntax-string syntax-quoted syntax-double syntax-basic syntax-toml"><span class="syntax-punctuation syntax-definition syntax-string syntax-begin syntax-toml">&quot;</span>0.10<span class="syntax-punctuation syntax-definition syntax-string syntax-end syntax-toml">&quot;</span></span>
+<span class="syntax-meta syntax-tag syntax-key syntax-toml"><span class="syntax-entity syntax-name syntax-tag syntax-toml">tokio-tungstenite</span></span> <span class="syntax-punctuation syntax-definition syntax-key-value syntax-toml">=</span> <span class="syntax-string syntax-quoted syntax-double syntax-basic syntax-toml"><span class="syntax-punctuation syntax-definition syntax-string syntax-begin syntax-toml">&quot;</span>0.20<span class="syntax-punctuation syntax-definition syntax-string syntax-end syntax-toml">&quot;</span></span>
+<span class="syntax-meta syntax-tag syntax-key syntax-toml"><span class="syntax-entity syntax-name syntax-tag syntax-toml">futures-util</span></span> <span class="syntax-punctuation syntax-definition syntax-key-value syntax-toml">=</span> <span class="syntax-string syntax-quoted syntax-double syntax-basic syntax-toml"><span class="syntax-punctuation syntax-definition syntax-string syntax-begin syntax-toml">&quot;</span>0.3<span class="syntax-punctuation syntax-definition syntax-string syntax-end syntax-toml">&quot;</span></span>
+</span></code></pre></div>
+                </div></div>
+    </div>
+        <script nonce="BAF3KilWYYwx7rSDcm1khWkWRG70sFJP/mBIpzwE0M/bR4On" type="text/javascript" src="https://docs.rs/-/static/source.js?0-0-0-a68728e7-2026-03-08"></script>
+    </body>
+</html>

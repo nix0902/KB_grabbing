@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="generator" content="docs.rs 0.0.0 (a68728e7 2026-03-08 )"><link rel="canonical" href="https://docs.rs/crate/bitget_sdk/latest" /><link rel="stylesheet" href="/-/static/vendored.css?0-0-0-a68728e7-2026-03-08" media="all" />
+        <link rel="stylesheet" href="/-/static/style.css?0-0-0-a68728e7-2026-03-08" media="all" />
+        <link rel="stylesheet" href="/-/static/font-awesome.css?0-0-0-a68728e7-2026-03-08" media="all" />
+
+        <link rel="search" href="/-/static/opensearch.xml" type="application/opensearchdescription+xml" title="Docs.rs" />
+
+        <title>bitget_sdk 0.1.1 - Docs.rs</title><script nonce="ZHt2dMWDmH+AOdbvDLDBvszMHQ8Z3/Ujh/7Ji8Cms2hLQo4L">(function() {
+    function applyTheme(theme) {
+        if (theme) {
+            document.documentElement.dataset.docsRsTheme = theme;
+        }
+    }
+
+    window.addEventListener("storage", ev => {
+        if (ev.key === "rustdoc-theme") {
+            applyTheme(ev.newValue);
+        }
+    });
+
+    // see ./storage-change-detection.html for details
+    window.addEventListener("message", ev => {
+        if (ev.data && ev.data.storage && ev.data.storage.key === "rustdoc-theme") {
+            applyTheme(ev.data.storage.value);
+        }
+    });
+
+    applyTheme(window.localStorage.getItem("rustdoc-theme"));
+})();</script><script defer type="text/javascript" nonce="ZHt2dMWDmH+AOdbvDLDBvszMHQ8Z3/Ujh/7Ji8Cms2hLQo4L" src="/-/static/menu.js?0-0-0-a68728e7-2026-03-08"></script>
+        <script defer type="text/javascript" nonce="ZHt2dMWDmH+AOdbvDLDBvszMHQ8Z3/Ujh/7Ji8Cms2hLQo4L" src="/-/static/index.js?0-0-0-a68728e7-2026-03-08"></script>
+    </head>
+
+    <body class="">
+<div class="nav-container">
+    <div class="container">
+        <div class="pure-menu pure-menu-horizontal" role="navigation" aria-label="Main navigation">
+            <form action="/releases/search"
+                  method="GET"
+                  id="nav-search-form"
+                  class="landing-search-form-nav  ">
+
+                
+                <a href="/" class="pure-menu-heading pure-menu-link docsrs-logo" aria-label="Docs.rs">
+                    <span title="Docs.rs"><span class="fa fa-solid fa-cubes " aria-hidden="true"></span></span>
+                    <span class="title">Docs.rs</span>
+                </a><ul class="pure-menu-list">
+    <script id="crate-metadata" type="application/json">
+        
+        {
+            "name": "bitget_sdk",
+            "version": "0.1.1"
+        }
+    </script><li class="pure-menu-item">
+            <a href="/crate/bitget_sdk/latest" class="pure-menu-link crate-name" title="Bitget Exchange API SDK for Rust">
+                <span class="fa fa-solid fa-cube " aria-hidden="true"></span>
+                <span class="title">bitget_sdk-0.1.1</span>
+            </a>
+        </li><li class="pure-menu-item pure-menu-has-children">
+                <a href="#" class="pure-menu-link" aria-label="Platform">
+                    <span class="fa fa-solid fa-gears " aria-hidden="true"></span>
+                    <span class="title">Platform</span>
+                </a>
+
+                
+                <ul class="pure-menu-children" id="platforms" data-url="/crate/bitget_sdk/latest/menus/platforms/"><li class="pure-menu-item">
+            <a href="/bitget_sdk/latest/bitget_sdk/" class="pure-menu-link" data-fragment="retain" rel="">x86_64-unknown-linux-gnu</a>
+        </li></ul>
+            </li><li class="pure-menu-item">
+                <a href="/crate/bitget_sdk/latest/features" title="Browse available feature flags of bitget_sdk-0.1.1" class="pure-menu-link">
+                    <span class="fa fa-solid fa-flag " aria-hidden="true"></span>
+                    <span class="title">Feature flags</span>
+                </a>
+            </li>
+        
+    
+</ul><div class="spacer"></div>
+                
+                
+
+<ul class="pure-menu-list">
+                    <li class="pure-menu-item pure-menu-has-children">
+                        <a href="#" class="pure-menu-link" aria-label="docs.rs">docs.rs</a>
+                        <ul class="pure-menu-children aligned-icons"><li class="pure-menu-item"><a class="pure-menu-link" href="/about"><span class="fa fa-solid fa-circle-info " aria-hidden="true"></span> About docs.rs</a></li><li class="pure-menu-item"><a class="pure-menu-link" href="/about/badges"><span class="fa fa-brands fa-fonticons " aria-hidden="true"></span> Badges</a></li><li class="pure-menu-item"><a class="pure-menu-link" href="/about/builds"><span class="fa fa-solid fa-gears " aria-hidden="true"></span> Builds</a></li><li class="pure-menu-item"><a class="pure-menu-link" href="/about/metadata"><span class="fa fa-solid fa-table " aria-hidden="true"></span> Metadata</a></li><li class="pure-menu-item"><a class="pure-menu-link" href="/about/redirections"><span class="fa fa-solid fa-road " aria-hidden="true"></span> Shorthand URLs</a></li><li class="pure-menu-item"><a class="pure-menu-link" href="/about/download"><span class="fa fa-solid fa-download " aria-hidden="true"></span> Download</a></li><li class="pure-menu-item"><a class="pure-menu-link" href="/about/rustdoc-json"><span class="fa fa-solid fa-file-code " aria-hidden="true"></span> Rustdoc JSON</a></li><li class="pure-menu-item"><a class="pure-menu-link" href="/releases/queue"><span class="fa fa-solid fa-gears " aria-hidden="true"></span> Build queue</a></li><li class="pure-menu-item"><a class="pure-menu-link" href="https://foundation.rust-lang.org/policies/privacy-policy/#docs.rs" target="_blank"><span class="fa fa-solid fa-shield-halved " aria-hidden="true"></span> Privacy policy</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="pure-menu-list"><li class="pure-menu-item pure-menu-has-children">
+                        <a href="#" class="pure-menu-link" aria-label="Rust">Rust</a>
+                        <ul class="pure-menu-children">
+                            <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.rust-lang.org/" target="_blank">Rust website</a></li>
+                            <li class="pure-menu-item"><a class="pure-menu-link" href="https://doc.rust-lang.org/book/" target="_blank">The Book</a></li>
+
+                            <li class="pure-menu-item"><a class="pure-menu-link" href="https://doc.rust-lang.org/std/" target="_blank">Standard Library API Reference</a></li>
+
+                            <li class="pure-menu-item"><a class="pure-menu-link" href="https://doc.rust-lang.org/rust-by-example/" target="_blank">Rust by Example</a></li>
+
+                            <li class="pure-menu-item"><a class="pure-menu-link" href="https://doc.rust-lang.org/cargo/guide/" target="_blank">The Cargo Guide</a></li>
+
+                            <li class="pure-menu-item"><a class="pure-menu-link" href="https://doc.rust-lang.org/nightly/clippy" target="_blank">Clippy Documentation</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <div id="search-input-nav">
+                    <label for="nav-search">
+                        <span class="fa fa-solid fa-magnifying-glass " aria-hidden="true"></span>
+                    </label>
+
+                    
+                    
+                    <input id="nav-search" name="query" type="text" aria-label="Find crate by search query" tabindex="-1"
+                        placeholder="Find crate"
+                        >
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+    
+    <div class="docsrs-package-container">
+        <div class="container">
+            <div class="description-container">
+                
+
+                
+                <h1 id="crate-title">
+                    bitget_sdk 0.1.1
+                    <span id="clipboard" class="svg-clipboard" title="Copy crate name and version information"></span>
+                </h1>
+
+                
+                <div class="description">Bitget Exchange API SDK for Rust</div>
+
+
+                <div class="pure-menu pure-menu-horizontal">
+                    <ul class="pure-menu-list">
+                        
+                        <li class="pure-menu-item"><a href="/crate/bitget_sdk/latest"
+                                class="pure-menu-link pure-menu-active">
+                                <span class="fa fa-solid fa-cube " aria-hidden="true"></span>
+                                <span class="title"> Crate</span>
+                            </a>
+                        </li>
+
+                        
+                        <li class="pure-menu-item">
+                            <a href="/crate/bitget_sdk/latest/source/"
+                                class="pure-menu-link">
+                                <span class="fa fa-regular fa-folder-open " aria-hidden="true"></span>
+                                <span class="title"> Source</span>
+                            </a>
+                        </li>
+
+                        
+                        <li class="pure-menu-item">
+                            <a href="/crate/bitget_sdk/latest/builds"
+                                class="pure-menu-link">
+                                <span class="fa fa-solid fa-gears " aria-hidden="true"></span>
+                                <span class="title"> Builds</span>
+                            </a>
+                        </li>
+
+                        
+                        <li class="pure-menu-item">
+                            <a href="/crate/bitget_sdk/latest/features"
+                               class="pure-menu-link">
+                                <span class="fa fa-solid fa-flag " aria-hidden="true"></span>
+                                <span class="title">Feature flags</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div><a href="/bitget_sdk/latest/bitget_sdk/" class="doc-link">
+                    <span class="fa fa-solid fa-book " aria-hidden="true"></span> Documentation
+                </a></div>
+    </div>
+<div class="container package-page-container">
+        <div class="pure-g">
+            <div class="pure-u-1 pure-u-sm-7-24 pure-u-md-5-24">
+                <div class="pure-menu package-menu">
+                    <ul class="pure-menu-list">
+                            
+                            
+                            <li class="pure-menu-heading">Coverage</li>
+                            <li class="pure-menu-item text-center"><b>70.34%</b><br>
+                                <span class="documented-info"><b>102</b> out of <b>145</b> items documented</span><span class="documented-info"><b>0</b> out of <b>56</b> items with examples</span></li><li class="pure-menu-heading">Size</li>
+                            <li class="pure-menu-item">
+                                <span class="documented-info">Source code size: 89.57 kB
+                                    <span class="size" tabindex=0><span class="fa fa-solid fa-circle-info " aria-hidden="true"></span><span class="info">This is the summed size of all the files inside the crates.io package for this release.</span>
+                                    </span>
+                                </span>
+                            </li><li class="pure-menu-item">
+                                    <span class="documented-info">Documentation size: 2.17 MB
+                                        <span class="size" tabindex=0><span class="fa fa-solid fa-circle-info " aria-hidden="true"></span><span class="info">This is the summed size of all files generated by rustdoc for all configured targets</span>
+                                        </span>
+                                    </span>
+                                </li><li class="pure-menu-heading">Ø build duration</li><li class="pure-menu-item">
+                                    <span class="documented-info">this release: 1m 1s
+                                        <span class="size" tabindex=0><span class="fa fa-solid fa-circle-info " aria-hidden="true"></span><span class="info">Average build duration of <b>successful</b> builds.</span>
+                                        </span>
+                                    </span>
+                                </li><li class="pure-menu-item">
+                                    <span class="documented-info">all releases: 1m
+                                        <span class="size" tabindex=0><span class="fa fa-solid fa-circle-info " aria-hidden="true"></span><span class="info">Average build duration of <b>successful</b> builds in releases after 2024-10-23.</span>
+                                        </span>
+                                    </span>
+                                </li><li class="pure-menu-heading">Links</li>
+                        <li class="pure-menu-item">
+                                <a href="https://github.com/blockchain-toolbox/bitget-rs" class="pure-menu-link">
+                                    
+                                    <span class="fa fa-solid fa-code-branch " aria-hidden="true"></span>
+                                        
+                                            blockchain-toolbox/bitget-rs
+                                        
+                                        <br>
+                                        <span class="fa fa-solid fa-star left-margin" aria-hidden="true"></span> 1
+                                        <span class="fa fa-solid fa-code-branch " aria-hidden="true"></span> 0
+                                        <span class="fa fa-solid fa-circle-exclamation " aria-hidden="true"></span> 0
+
+                                    </a>
+                            </li>
+                        <li class="pure-menu-item">
+                            <a href="https://crates.io/crates/bitget_sdk" class="pure-menu-link"
+                                title="See bitget_sdk on crates.io">
+                                <span class="fa fa-solid fa-cube " aria-hidden="true"></span> crates.io
+                            </a>
+                        </li>
+
+                        <li class="pure-menu-heading">Dependencies</li>
+                        <li class="pure-menu-item">
+                            <div class="pure-menu pure-menu-scrollable sub-menu">
+                                <ul class="pure-menu-list">
+                                    
+                                    <li class="pure-menu-item"><a href="/crate/anyhow/^1" class="pure-menu-link">
+                anyhow ^1
+                
+                    <i class="dependencies normal">normal</i>
+                    
+                
+            </a>
+        </li><li class="pure-menu-item"><a href="/crate/base64/^0.21" class="pure-menu-link">
+                base64 ^0.21
+                
+                    <i class="dependencies normal">normal</i>
+                    
+                
+            </a>
+        </li><li class="pure-menu-item"><a href="/crate/chrono/^0.4" class="pure-menu-link">
+                chrono ^0.4
+                
+                    <i class="dependencies normal">normal</i>
+                    
+                
+            </a>
+        </li><li class="pure-menu-item"><a href="/crate/futures-util/^0.3" class="pure-menu-link">
+                futures-util ^0.3
+                
+                    <i class="dependencies normal">normal</i>
+                    
+                
+            </a>
+        </li><li class="pure-menu-item"><a href="/crate/hmac/^0.12" class="pure-menu-link">
+                hmac ^0.12
+                
+                    <i class="dependencies normal">normal</i>
+                    
+                
+            </a>
+        </li><li class="pure-menu-item"><a href="/crate/reqwest/^0.11" class="pure-menu-link">
+                reqwest ^0.11
+                
+                    <i class="dependencies normal">normal</i>
+                    
+                
+            </a>
+        </li><li class="pure-menu-item"><a href="/crate/serde/^1" class="pure-menu-link">
+                serde ^1
+                
+                    <i class="dependencies normal">normal</i>
+                    
+                
+            </a>
+        </li><li class="pure-menu-item"><a href="/crate/serde_json/^1" class="pure-menu-link">
+                serde_json ^1
+                
+                    <i class="dependencies normal">normal</i>
+                    
+                
+            </a>
+        </li><li class="pure-menu-item"><a href="/crate/sha2/^0.10" class="pure-menu-link">
+                sha2 ^0.10
+                
+                    <i class="dependencies normal">normal</i>
+                    
+                
+            </a>
+        </li><li class="pure-menu-item"><a href="/crate/tokio/^1" class="pure-menu-link">
+                tokio ^1
+                
+                    <i class="dependencies normal">normal</i>
+                    
+                
+            </a>
+        </li><li class="pure-menu-item"><a href="/crate/tokio-tungstenite/^0.20" class="pure-menu-link">
+                tokio-tungstenite ^0.20
+                
+                    <i class="dependencies normal">normal</i>
+                    
+                
+            </a>
+        </li><li class="pure-menu-item"><a href="/crate/tracing/^0.1" class="pure-menu-link">
+                tracing ^0.1
+                
+                    <i class="dependencies normal">normal</i>
+                    
+                
+            </a>
+        </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="pure-menu-heading">Versions</li>
+                        <li class="pure-menu-item">
+                            <div class="pure-menu pure-menu-scrollable sub-menu">
+                                <ul class="pure-menu-list">
+                                    
+                                    
+        
+         
+        <li class="pure-menu-item">
+            <a
+                href="/crate/bitget_sdk/0.1.1"
+                
+                rel="nofollow"
+                class="pure-menu-link"
+                
+                
+            ><b>0.1.1</b> (2025-06-17)</a>
+        </li>
+        
+         
+        <li class="pure-menu-item">
+            <a
+                href="/crate/bitget_sdk/0.1.0"
+                
+                rel="nofollow"
+                class="pure-menu-link"
+                
+                
+            ><b>0.1.0</b> (2025-06-17)</a>
+        </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        
+                        <li class="pure-menu-heading">Owners</li>
+                        <li class="pure-menu-item"><a href="https://crates.io/users/hazeli7777">
+                                    <img src="https://avatars.githubusercontent.com/u/204871304?v=4" alt="hazeli7777" class="owner">
+                                </a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pure-u-1 pure-u-sm-17-24 pure-u-md-19-24 package-details" id="main">
+                <h1>Bitget SDK for Rust</h1>
+<p>高性能、模块化的 Bitget 交易所 API SDK，支持现货下单、撤单、资产、行情、WebSocket 等全量功能，适用于量化、自动化交易开发。</p>
+<h2>特性</h2>
+<ul>
+<li>完全模块化，代码结构清晰</li>
+<li>支持 REST v2 现货下单、撤单、批量撤单、资产查询、订单查询等</li>
+<li>支持 WebSocket 行情与订单推送</li>
+<li>错误处理统一采用 anyhow，日志统一 tracing</li>
+<li>详细注释，便于二次开发</li>
+</ul>
+<h2>快速开始</h2>
+<pre><code class="language-toml"><span class="syntax-source syntax-toml"><span class="syntax-punctuation syntax-definition syntax-table syntax-begin syntax-toml">[</span><span class="syntax-meta syntax-tag syntax-table syntax-toml"><span class="syntax-entity syntax-name syntax-table syntax-toml">dependencies</span></span><span class="syntax-punctuation syntax-definition syntax-table syntax-end syntax-toml">]</span>
+<span class="syntax-meta syntax-tag syntax-key syntax-toml"><span class="syntax-entity syntax-name syntax-tag syntax-toml">bitget_sdk</span></span> <span class="syntax-punctuation syntax-definition syntax-key-value syntax-toml">=</span> <span class="syntax-punctuation syntax-definition syntax-inline-table syntax-begin syntax-toml">{</span> <span class="syntax-meta syntax-tag syntax-key syntax-toml"><span class="syntax-entity syntax-name syntax-tag syntax-toml">path</span></span> <span class="syntax-punctuation syntax-definition syntax-key-value syntax-toml">=</span> <span class="syntax-string syntax-quoted syntax-double syntax-basic syntax-toml"><span class="syntax-punctuation syntax-definition syntax-string syntax-begin syntax-toml">&quot;</span>./bitget_sdk<span class="syntax-punctuation syntax-definition syntax-string syntax-end syntax-toml">&quot;</span></span> <span class="syntax-punctuation syntax-definition syntax-inline-table syntax-end syntax-toml">}</span>
+</span></code></pre>
+<pre><code class="language-rust"><span class="syntax-source syntax-rust"><span class="syntax-keyword syntax-other syntax-rust">use</span> <span class="syntax-meta syntax-path syntax-rust">bitget_sdk<span class="syntax-punctuation syntax-accessor syntax-rust">::</span></span>BitgetClient<span class="syntax-punctuation syntax-terminator syntax-rust">;</span>
+<span class="syntax-keyword syntax-other syntax-rust">use</span> <span class="syntax-meta syntax-path syntax-rust">bitget_sdk<span class="syntax-punctuation syntax-accessor syntax-rust">::</span></span><span class="syntax-meta syntax-path syntax-rust">order_api<span class="syntax-punctuation syntax-accessor syntax-rust">::</span></span><span class="syntax-keyword syntax-operator syntax-arithmetic syntax-rust">*</span><span class="syntax-punctuation syntax-terminator syntax-rust">;</span>
+
+<span class="syntax-storage syntax-type syntax-rust">let</span> client <span class="syntax-keyword syntax-operator syntax-assignment syntax-rust">=</span> <span class="syntax-meta syntax-path syntax-rust">BitgetClient<span class="syntax-punctuation syntax-accessor syntax-rust">::</span></span>new<span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span>api_key<span class="syntax-punctuation syntax-separator syntax-rust">,</span> api_secret<span class="syntax-punctuation syntax-separator syntax-rust">,</span> passphrase</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span><span class="syntax-punctuation syntax-terminator syntax-rust">;</span>
+<span class="syntax-storage syntax-type syntax-rust">let</span> resp <span class="syntax-keyword syntax-operator syntax-assignment syntax-rust">=</span> client<span class="syntax-punctuation syntax-accessor syntax-dot syntax-rust">.</span><span class="syntax-support syntax-function syntax-rust">place_spot_order_v2</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span><span class="syntax-keyword syntax-operator syntax-range syntax-rust">...</span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span><span class="syntax-keyword syntax-operator syntax-rust">?</span><span class="syntax-punctuation syntax-terminator syntax-rust">;</span>
+</span></code></pre>
+<h2>目录结构</h2>
+<ul>
+<li>client.rs         // HTTP请求签名与发送</li>
+<li>asset_api.rs      // 资产相关接口</li>
+<li>order_api.rs      // 下单/撤单接口</li>
+<li>order_query_api.rs// 订单查询</li>
+<li>ws_api.rs         // WebSocket 行情/订单</li>
+<li>...</li>
+</ul>
+<h2>依赖</h2>
+<ul>
+<li>anyhow</li>
+<li>serde / serde_json</li>
+<li>tracing</li>
+<li>reqwest</li>
+<li>tokio</li>
+</ul>
+<h2>贡献与许可</h2>
+<p>欢迎 issue/PR，MIT License。</p>
+
+
+                </div>
+        </div>
+    </div></body>
+</html>

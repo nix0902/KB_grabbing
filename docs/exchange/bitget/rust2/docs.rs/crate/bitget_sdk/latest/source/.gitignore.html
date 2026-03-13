@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="generator" content="docs.rs 0.0.0 (a68728e7 2026-03-08 )"><link rel="stylesheet" href="https://docs.rs/-/static/vendored.css?0-0-0-a68728e7-2026-03-08" media="all" />
+        <link rel="stylesheet" href="https://docs.rs/-/static/style.css?0-0-0-a68728e7-2026-03-08" media="all" />
+        <link rel="stylesheet" href="https://docs.rs/-/static/font-awesome.css?0-0-0-a68728e7-2026-03-08" media="all" />
+
+        <link rel="search" href="https://docs.rs/-/static/opensearch.xml" type="application/opensearchdescription+xml" title="Docs.rs" />
+
+        <title>bitget_sdk 0.1.1 - Docs.rs</title><script nonce="eNFqrDrtJRYgG7bI/GJqhfBZNqbxuHaU95AxYUXF0eZahA1k">(function() {
+    function applyTheme(theme) {
+        if (theme) {
+            document.documentElement.dataset.docsRsTheme = theme;
+        }
+    }
+
+    window.addEventListener("storage", ev => {
+        if (ev.key === "rustdoc-theme") {
+            applyTheme(ev.newValue);
+        }
+    });
+
+    // see ./storage-change-detection.html for details
+    window.addEventListener("message", ev => {
+        if (ev.data && ev.data.storage && ev.data.storage.key === "rustdoc-theme") {
+            applyTheme(ev.data.storage.value);
+        }
+    });
+
+    applyTheme(window.localStorage.getItem("rustdoc-theme"));
+})();</script><script defer type="text/javascript" nonce="eNFqrDrtJRYgG7bI/GJqhfBZNqbxuHaU95AxYUXF0eZahA1k" src="https://docs.rs/-/static/menu.js?0-0-0-a68728e7-2026-03-08"></script>
+        <script defer type="text/javascript" nonce="eNFqrDrtJRYgG7bI/GJqhfBZNqbxuHaU95AxYUXF0eZahA1k" src="https://docs.rs/-/static/index.js?0-0-0-a68728e7-2026-03-08"></script>
+    </head>
+
+    <body class="flex">
+<div class="nav-container">
+    <div class="container">
+        <div class="pure-menu pure-menu-horizontal" role="navigation" aria-label="Main navigation">
+            <form action="https://docs.rs/releases/search"
+                  method="GET"
+                  id="nav-search-form"
+                  class="landing-search-form-nav  ">
+
+                
+                <a href="https://docs.rs/" class="pure-menu-heading pure-menu-link docsrs-logo" aria-label="Docs.rs">
+                    <span title="Docs.rs"><span class="fa fa-solid fa-cubes " aria-hidden="true"></span></span>
+                    <span class="title">Docs.rs</span>
+                </a><ul class="pure-menu-list">
+    <script id="crate-metadata" type="application/json">
+        
+        {
+            "name": "bitget_sdk",
+            "version": "0.1.1"
+        }
+    </script><li class="pure-menu-item">
+            <a href="https://docs.rs/crate/bitget_sdk/latest" class="pure-menu-link crate-name" title="Bitget Exchange API SDK for Rust">
+                <span class="fa fa-solid fa-cube " aria-hidden="true"></span>
+                <span class="title">bitget_sdk-0.1.1</span>
+            </a>
+        </li><li class="pure-menu-item pure-menu-has-children">
+                <a href=".gitignore.html#" class="pure-menu-link" aria-label="Platform">
+                    <span class="fa fa-solid fa-gears " aria-hidden="true"></span>
+                    <span class="title">Platform</span>
+                </a>
+
+                
+                <ul class="pure-menu-children" id="platforms" data-url="/crate/bitget_sdk/latest/menus/platforms/"><li class="pure-menu-item">
+            <a href="https://docs.rs/bitget_sdk/latest/bitget_sdk/" class="pure-menu-link" data-fragment="retain" rel="">x86_64-unknown-linux-gnu</a>
+        </li></ul>
+            </li><li class="pure-menu-item">
+                <a href="https://docs.rs/crate/bitget_sdk/latest/features" title="Browse available feature flags of bitget_sdk-0.1.1" class="pure-menu-link">
+                    <span class="fa fa-solid fa-flag " aria-hidden="true"></span>
+                    <span class="title">Feature flags</span>
+                </a>
+            </li>
+        
+    
+</ul><div class="spacer"></div>
+                
+                
+
+<ul class="pure-menu-list">
+                    <li class="pure-menu-item pure-menu-has-children">
+                        <a href=".gitignore.html#" class="pure-menu-link" aria-label="docs.rs">docs.rs</a>
+                        <ul class="pure-menu-children aligned-icons"><li class="pure-menu-item"><a class="pure-menu-link" href="https://docs.rs/about"><span class="fa fa-solid fa-circle-info " aria-hidden="true"></span> About docs.rs</a></li><li class="pure-menu-item"><a class="pure-menu-link" href="https://docs.rs/about/badges"><span class="fa fa-brands fa-fonticons " aria-hidden="true"></span> Badges</a></li><li class="pure-menu-item"><a class="pure-menu-link" href="https://docs.rs/about/builds"><span class="fa fa-solid fa-gears " aria-hidden="true"></span> Builds</a></li><li class="pure-menu-item"><a class="pure-menu-link" href="https://docs.rs/about/metadata"><span class="fa fa-solid fa-table " aria-hidden="true"></span> Metadata</a></li><li class="pure-menu-item"><a class="pure-menu-link" href="https://docs.rs/about/redirections"><span class="fa fa-solid fa-road " aria-hidden="true"></span> Shorthand URLs</a></li><li class="pure-menu-item"><a class="pure-menu-link" href="https://docs.rs/about/download"><span class="fa fa-solid fa-download " aria-hidden="true"></span> Download</a></li><li class="pure-menu-item"><a class="pure-menu-link" href="https://docs.rs/about/rustdoc-json"><span class="fa fa-solid fa-file-code " aria-hidden="true"></span> Rustdoc JSON</a></li><li class="pure-menu-item"><a class="pure-menu-link" href="https://docs.rs/releases/queue"><span class="fa fa-solid fa-gears " aria-hidden="true"></span> Build queue</a></li><li class="pure-menu-item"><a class="pure-menu-link" href="https://foundation.rust-lang.org/policies/privacy-policy/#docs.rs" target="_blank"><span class="fa fa-solid fa-shield-halved " aria-hidden="true"></span> Privacy policy</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="pure-menu-list"><li class="pure-menu-item pure-menu-has-children">
+                        <a href=".gitignore.html#" class="pure-menu-link" aria-label="Rust">Rust</a>
+                        <ul class="pure-menu-children">
+                            <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.rust-lang.org/" target="_blank">Rust website</a></li>
+                            <li class="pure-menu-item"><a class="pure-menu-link" href="https://doc.rust-lang.org/book/" target="_blank">The Book</a></li>
+
+                            <li class="pure-menu-item"><a class="pure-menu-link" href="https://doc.rust-lang.org/std/" target="_blank">Standard Library API Reference</a></li>
+
+                            <li class="pure-menu-item"><a class="pure-menu-link" href="https://doc.rust-lang.org/rust-by-example/" target="_blank">Rust by Example</a></li>
+
+                            <li class="pure-menu-item"><a class="pure-menu-link" href="https://doc.rust-lang.org/cargo/guide/" target="_blank">The Cargo Guide</a></li>
+
+                            <li class="pure-menu-item"><a class="pure-menu-link" href="https://doc.rust-lang.org/nightly/clippy" target="_blank">Clippy Documentation</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <div id="search-input-nav">
+                    <label for="nav-search">
+                        <span class="fa fa-solid fa-magnifying-glass " aria-hidden="true"></span>
+                    </label>
+
+                    
+                    
+                    <input id="nav-search" name="query" type="text" aria-label="Find crate by search query" tabindex="-1"
+                        placeholder="Find crate"
+                        >
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+    
+    <div class="docsrs-package-container">
+        <div class="container">
+            <div class="description-container">
+                
+
+                
+                <h1 id="crate-title">
+                    bitget_sdk 0.1.1
+                    <span id="clipboard" class="svg-clipboard" title="Copy crate name and version information"></span>
+                </h1>
+
+                
+                <div class="description">Bitget Exchange API SDK for Rust</div>
+
+
+                <div class="pure-menu pure-menu-horizontal">
+                    <ul class="pure-menu-list">
+                        
+                        <li class="pure-menu-item"><a href="https://docs.rs/crate/bitget_sdk/latest"
+                                class="pure-menu-link">
+                                <span class="fa fa-solid fa-cube " aria-hidden="true"></span>
+                                <span class="title"> Crate</span>
+                            </a>
+                        </li>
+
+                        
+                        <li class="pure-menu-item">
+                            <a href=".gitignore.html"
+                                class="pure-menu-link pure-menu-active">
+                                <span class="fa fa-regular fa-folder-open " aria-hidden="true"></span>
+                                <span class="title"> Source</span>
+                            </a>
+                        </li>
+
+                        
+                        <li class="pure-menu-item">
+                            <a href="https://docs.rs/crate/bitget_sdk/latest/builds"
+                                class="pure-menu-link">
+                                <span class="fa fa-solid fa-gears " aria-hidden="true"></span>
+                                <span class="title"> Builds</span>
+                            </a>
+                        </li>
+
+                        
+                        <li class="pure-menu-item">
+                            <a href="https://docs.rs/crate/bitget_sdk/latest/features"
+                               class="pure-menu-link">
+                                <span class="fa fa-solid fa-flag " aria-hidden="true"></span>
+                                <span class="title">Feature flags</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div><a href="https://docs.rs/bitget_sdk/latest/bitget_sdk/" class="doc-link">
+                    <span class="fa fa-solid fa-book " aria-hidden="true"></span> Documentation
+                </a></div>
+    </div>
+
+    <div class="container package-page-container small-bottom-pad">
+        <div class="pure-g">
+            <div id="side-menu" class="pure-u-1 pure-u-sm-7-24 pure-u-md-5-24 source-view">
+                <div class="pure-menu package-menu">
+                    <ul class="pure-menu-list">
+                        
+                        
+                            <li class="pure-menu-item toggle-source">
+                                <button aria-label="Hide source sidebar" title="Hide source sidebar" aria-expanded="true"><span class="left"><span class="fa fa-solid fa-chevron-left " aria-hidden="true"></span></span><span class="right"><span class="fa fa-solid fa-chevron-right " aria-hidden="true"></span></span> <span class="text">Hide files</span></button>
+                            </li>
+                        
+                        <li class="pure-menu-item">
+                                
+                                <a href="src/index.html" class="pure-menu-link">
+                                    <span class="fa fa-regular fa-folder-open " aria-hidden="true"></span>
+
+                                    <span class="text">src</span>
+                                </a>
+                            </li><li class="pure-menu-item">
+                                
+                                <a href=".cargo_vcs_info.json.html" class="pure-menu-link">
+                                    <span class="fa fa-regular fa-file " aria-hidden="true"></span><span class="text">.cargo_vcs_info.json</span>
+                                </a>
+                            </li><li class="pure-menu-item">
+                                
+                                <a href=".gitignore.html" class="pure-menu-link">
+                                    
+                                        <span class="fa fa-brands fa-git-alt " aria-hidden="true"></span>
+
+                                    
+
+                                    <span class="text">.gitignore</span>
+                                </a>
+                            </li><li class="pure-menu-item">
+                                
+                                <a href="Cargo.lock.html" class="pure-menu-link">
+                                    <span class="fa fa-solid fa-lock " aria-hidden="true"></span>
+
+                                    
+                                    <span class="text">Cargo.lock</span>
+                                </a>
+                            </li><li class="pure-menu-item">
+                                
+                                <a href="Cargo.toml.html" class="pure-menu-link">
+                                    <span class="fa fa-regular fa-file-lines " aria-hidden="true"></span>
+
+                                        
+                                    <span class="text">Cargo.toml</span>
+                                </a>
+                            </li><li class="pure-menu-item">
+                                
+                                <a href="Cargo.toml.orig.html" class="pure-menu-link">
+                                    <span class="fa fa-regular fa-file-lines " aria-hidden="true"></span>
+
+                                        
+                                    <span class="text">Cargo.toml.orig</span>
+                                </a>
+                            </li><li class="pure-menu-item">
+                                
+                                <a href="README.md.html" class="pure-menu-link">
+                                    
+                                        <span class="fa fa-brands fa-markdown " aria-hidden="true"></span>
+
+                                    
+                                    <span class="text">README.md</span>
+                                </a>
+                            </li></ul>
+                </div>
+            </div>
+
+            
+                
+                    
+                
+                <div id="source-code-container" class="pure-u-1 pure-u-sm-17-24 pure-u-md-19-24">
+                    <div data-nosnippet class="source-code"><pre id="line-numbers"><code><a href=".gitignore.html#1" id="1">1</a>
+<a href=".gitignore.html#2" id="2">2</a>
+<a href=".gitignore.html#3" id="3">3</a>
+<a href=".gitignore.html#4" id="4">4</a>
+<a href=".gitignore.html#5" id="5">5</a>
+<a href=".gitignore.html#6" id="6">6</a>
+<a href=".gitignore.html#7" id="7">7</a>
+<a href=".gitignore.html#8" id="8">8</a>
+<a href=".gitignore.html#9" id="9">9</a>
+<a href=".gitignore.html#10" id="10">10</a>
+<a href=".gitignore.html#11" id="11">11</a>
+<a href=".gitignore.html#12" id="12">12</a>
+<a href=".gitignore.html#13" id="13">13</a>
+</code></pre></div>
+                    <div id="source-code" class="source-code"><pre><code><span class="syntax-text syntax-git syntax-ignore"><span class="syntax-comment syntax-line syntax-git"><span class="syntax-punctuation syntax-definition syntax-comment syntax-git">#</span> Generated by Cargo
+</span><span class="syntax-comment syntax-line syntax-git"><span class="syntax-punctuation syntax-definition syntax-comment syntax-git">#</span> will have compiled files and executables
+</span><span class="syntax-string syntax-unquoted syntax-git syntax-ignore"><span class="syntax-entity syntax-name syntax-pattern syntax-git syntax-ignore">target<span class="syntax-punctuation syntax-separator syntax-path syntax-fnmatch syntax-git">/</span></span></span>
+
+<span class="syntax-comment syntax-line syntax-git"><span class="syntax-punctuation syntax-definition syntax-comment syntax-git">#</span> Remove Cargo.lock from gitignore if creating an executable, leave it for libraries
+</span><span class="syntax-comment syntax-line syntax-git"><span class="syntax-punctuation syntax-definition syntax-comment syntax-git">#</span> More information here https://doc.rust-lang.org/cargo/guide/cargo-toml-vs-cargo-lock.html
+</span><span class="syntax-string syntax-unquoted syntax-git syntax-ignore"><span class="syntax-entity syntax-name syntax-pattern syntax-git syntax-ignore">Cargo<span class="syntax-punctuation syntax-separator syntax-path syntax-extension syntax-fnmatch syntax-git">.</span>lock</span></span>
+
+<span class="syntax-comment syntax-line syntax-git"><span class="syntax-punctuation syntax-definition syntax-comment syntax-git">#</span> These are backup files generated by rustfmt
+</span><span class="syntax-string syntax-unquoted syntax-git syntax-ignore"><span class="syntax-entity syntax-name syntax-pattern syntax-git syntax-ignore"><span class="syntax-keyword syntax-operator syntax-path syntax-asterisk syntax-fnmatch syntax-git">*</span><span class="syntax-keyword syntax-operator syntax-path syntax-asterisk syntax-fnmatch syntax-git">*</span><span class="syntax-punctuation syntax-separator syntax-path syntax-fnmatch syntax-git">/</span><span class="syntax-keyword syntax-operator syntax-path syntax-asterisk syntax-fnmatch syntax-git">*</span>.rs<span class="syntax-punctuation syntax-separator syntax-path syntax-extension syntax-fnmatch syntax-git">.</span>bk</span></span>
+
+<span class="syntax-comment syntax-line syntax-git"><span class="syntax-punctuation syntax-definition syntax-comment syntax-git">#</span> MSVC Windows builds of rustc generate these, which store debugging information
+</span><span class="syntax-string syntax-unquoted syntax-git syntax-ignore"><span class="syntax-entity syntax-name syntax-pattern syntax-git syntax-ignore"><span class="syntax-keyword syntax-operator syntax-path syntax-asterisk syntax-fnmatch syntax-git">*</span><span class="syntax-punctuation syntax-separator syntax-path syntax-extension syntax-fnmatch syntax-git">.</span>pdb</span></span></span></code></pre></div>
+                </div></div>
+    </div>
+        <script nonce="eNFqrDrtJRYgG7bI/GJqhfBZNqbxuHaU95AxYUXF0eZahA1k" type="text/javascript" src="https://docs.rs/-/static/source.js?0-0-0-a68728e7-2026-03-08"></script>
+    </body>
+</html>

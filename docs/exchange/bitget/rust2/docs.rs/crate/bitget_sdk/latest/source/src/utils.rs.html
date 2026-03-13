@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="generator" content="docs.rs 0.0.0 (a68728e7 2026-03-08 )"><link rel="stylesheet" href="https://docs.rs/-/static/vendored.css?0-0-0-a68728e7-2026-03-08" media="all" />
+        <link rel="stylesheet" href="https://docs.rs/-/static/style.css?0-0-0-a68728e7-2026-03-08" media="all" />
+        <link rel="stylesheet" href="https://docs.rs/-/static/font-awesome.css?0-0-0-a68728e7-2026-03-08" media="all" />
+
+        <link rel="search" href="https://docs.rs/-/static/opensearch.xml" type="application/opensearchdescription+xml" title="Docs.rs" />
+
+        <title>bitget_sdk 0.1.1 - Docs.rs</title><script nonce="kAvkxs8z1/AlbeGT6wIeO3K/sfaEFBp2fQH6fC0O0IdF4OB/">(function() {
+    function applyTheme(theme) {
+        if (theme) {
+            document.documentElement.dataset.docsRsTheme = theme;
+        }
+    }
+
+    window.addEventListener("storage", ev => {
+        if (ev.key === "rustdoc-theme") {
+            applyTheme(ev.newValue);
+        }
+    });
+
+    // see ./storage-change-detection.html for details
+    window.addEventListener("message", ev => {
+        if (ev.data && ev.data.storage && ev.data.storage.key === "rustdoc-theme") {
+            applyTheme(ev.data.storage.value);
+        }
+    });
+
+    applyTheme(window.localStorage.getItem("rustdoc-theme"));
+})();</script><script defer type="text/javascript" nonce="kAvkxs8z1/AlbeGT6wIeO3K/sfaEFBp2fQH6fC0O0IdF4OB/" src="https://docs.rs/-/static/menu.js?0-0-0-a68728e7-2026-03-08"></script>
+        <script defer type="text/javascript" nonce="kAvkxs8z1/AlbeGT6wIeO3K/sfaEFBp2fQH6fC0O0IdF4OB/" src="https://docs.rs/-/static/index.js?0-0-0-a68728e7-2026-03-08"></script>
+    </head>
+
+    <body class="flex">
+<div class="nav-container">
+    <div class="container">
+        <div class="pure-menu pure-menu-horizontal" role="navigation" aria-label="Main navigation">
+            <form action="https://docs.rs/releases/search"
+                  method="GET"
+                  id="nav-search-form"
+                  class="landing-search-form-nav  ">
+
+                
+                <a href="https://docs.rs/" class="pure-menu-heading pure-menu-link docsrs-logo" aria-label="Docs.rs">
+                    <span title="Docs.rs"><span class="fa fa-solid fa-cubes " aria-hidden="true"></span></span>
+                    <span class="title">Docs.rs</span>
+                </a><ul class="pure-menu-list">
+    <script id="crate-metadata" type="application/json">
+        
+        {
+            "name": "bitget_sdk",
+            "version": "0.1.1"
+        }
+    </script><li class="pure-menu-item">
+            <a href="https://docs.rs/crate/bitget_sdk/latest" class="pure-menu-link crate-name" title="Bitget Exchange API SDK for Rust">
+                <span class="fa fa-solid fa-cube " aria-hidden="true"></span>
+                <span class="title">bitget_sdk-0.1.1</span>
+            </a>
+        </li><li class="pure-menu-item pure-menu-has-children">
+                <a href="utils.rs.html#" class="pure-menu-link" aria-label="Platform">
+                    <span class="fa fa-solid fa-gears " aria-hidden="true"></span>
+                    <span class="title">Platform</span>
+                </a>
+
+                
+                <ul class="pure-menu-children" id="platforms" data-url="/crate/bitget_sdk/latest/menus/platforms/"><li class="pure-menu-item">
+            <a href="https://docs.rs/bitget_sdk/latest/bitget_sdk/" class="pure-menu-link" data-fragment="retain" rel="">x86_64-unknown-linux-gnu</a>
+        </li></ul>
+            </li><li class="pure-menu-item">
+                <a href="https://docs.rs/crate/bitget_sdk/latest/features" title="Browse available feature flags of bitget_sdk-0.1.1" class="pure-menu-link">
+                    <span class="fa fa-solid fa-flag " aria-hidden="true"></span>
+                    <span class="title">Feature flags</span>
+                </a>
+            </li>
+        
+    
+</ul><div class="spacer"></div>
+                
+                
+
+<ul class="pure-menu-list">
+                    <li class="pure-menu-item pure-menu-has-children">
+                        <a href="utils.rs.html#" class="pure-menu-link" aria-label="docs.rs">docs.rs</a>
+                        <ul class="pure-menu-children aligned-icons"><li class="pure-menu-item"><a class="pure-menu-link" href="https://docs.rs/about"><span class="fa fa-solid fa-circle-info " aria-hidden="true"></span> About docs.rs</a></li><li class="pure-menu-item"><a class="pure-menu-link" href="https://docs.rs/about/badges"><span class="fa fa-brands fa-fonticons " aria-hidden="true"></span> Badges</a></li><li class="pure-menu-item"><a class="pure-menu-link" href="https://docs.rs/about/builds"><span class="fa fa-solid fa-gears " aria-hidden="true"></span> Builds</a></li><li class="pure-menu-item"><a class="pure-menu-link" href="https://docs.rs/about/metadata"><span class="fa fa-solid fa-table " aria-hidden="true"></span> Metadata</a></li><li class="pure-menu-item"><a class="pure-menu-link" href="https://docs.rs/about/redirections"><span class="fa fa-solid fa-road " aria-hidden="true"></span> Shorthand URLs</a></li><li class="pure-menu-item"><a class="pure-menu-link" href="https://docs.rs/about/download"><span class="fa fa-solid fa-download " aria-hidden="true"></span> Download</a></li><li class="pure-menu-item"><a class="pure-menu-link" href="https://docs.rs/about/rustdoc-json"><span class="fa fa-solid fa-file-code " aria-hidden="true"></span> Rustdoc JSON</a></li><li class="pure-menu-item"><a class="pure-menu-link" href="https://docs.rs/releases/queue"><span class="fa fa-solid fa-gears " aria-hidden="true"></span> Build queue</a></li><li class="pure-menu-item"><a class="pure-menu-link" href="https://foundation.rust-lang.org/policies/privacy-policy/#docs.rs" target="_blank"><span class="fa fa-solid fa-shield-halved " aria-hidden="true"></span> Privacy policy</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="pure-menu-list"><li class="pure-menu-item pure-menu-has-children">
+                        <a href="utils.rs.html#" class="pure-menu-link" aria-label="Rust">Rust</a>
+                        <ul class="pure-menu-children">
+                            <li class="pure-menu-item"><a class="pure-menu-link" href="https://www.rust-lang.org/" target="_blank">Rust website</a></li>
+                            <li class="pure-menu-item"><a class="pure-menu-link" href="https://doc.rust-lang.org/book/" target="_blank">The Book</a></li>
+
+                            <li class="pure-menu-item"><a class="pure-menu-link" href="https://doc.rust-lang.org/std/" target="_blank">Standard Library API Reference</a></li>
+
+                            <li class="pure-menu-item"><a class="pure-menu-link" href="https://doc.rust-lang.org/rust-by-example/" target="_blank">Rust by Example</a></li>
+
+                            <li class="pure-menu-item"><a class="pure-menu-link" href="https://doc.rust-lang.org/cargo/guide/" target="_blank">The Cargo Guide</a></li>
+
+                            <li class="pure-menu-item"><a class="pure-menu-link" href="https://doc.rust-lang.org/nightly/clippy" target="_blank">Clippy Documentation</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <div id="search-input-nav">
+                    <label for="nav-search">
+                        <span class="fa fa-solid fa-magnifying-glass " aria-hidden="true"></span>
+                    </label>
+
+                    
+                    
+                    <input id="nav-search" name="query" type="text" aria-label="Find crate by search query" tabindex="-1"
+                        placeholder="Find crate"
+                        >
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+    
+    <div class="docsrs-package-container">
+        <div class="container">
+            <div class="description-container">
+                
+
+                
+                <h1 id="crate-title">
+                    bitget_sdk 0.1.1
+                    <span id="clipboard" class="svg-clipboard" title="Copy crate name and version information"></span>
+                </h1>
+
+                
+                <div class="description">Bitget Exchange API SDK for Rust</div>
+
+
+                <div class="pure-menu pure-menu-horizontal">
+                    <ul class="pure-menu-list">
+                        
+                        <li class="pure-menu-item"><a href="https://docs.rs/crate/bitget_sdk/latest"
+                                class="pure-menu-link">
+                                <span class="fa fa-solid fa-cube " aria-hidden="true"></span>
+                                <span class="title"> Crate</span>
+                            </a>
+                        </li>
+
+                        
+                        <li class="pure-menu-item">
+                            <a href="utils.rs.html"
+                                class="pure-menu-link pure-menu-active">
+                                <span class="fa fa-regular fa-folder-open " aria-hidden="true"></span>
+                                <span class="title"> Source</span>
+                            </a>
+                        </li>
+
+                        
+                        <li class="pure-menu-item">
+                            <a href="https://docs.rs/crate/bitget_sdk/latest/builds"
+                                class="pure-menu-link">
+                                <span class="fa fa-solid fa-gears " aria-hidden="true"></span>
+                                <span class="title"> Builds</span>
+                            </a>
+                        </li>
+
+                        
+                        <li class="pure-menu-item">
+                            <a href="https://docs.rs/crate/bitget_sdk/latest/features"
+                               class="pure-menu-link">
+                                <span class="fa fa-solid fa-flag " aria-hidden="true"></span>
+                                <span class="title">Feature flags</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div><a href="https://docs.rs/bitget_sdk/latest/bitget_sdk/" class="doc-link">
+                    <span class="fa fa-solid fa-book " aria-hidden="true"></span> Documentation
+                </a></div>
+    </div>
+
+    <div class="container package-page-container small-bottom-pad">
+        <div class="pure-g">
+            <div id="side-menu" class="pure-u-1 pure-u-sm-7-24 pure-u-md-5-24 source-view">
+                <div class="pure-menu package-menu">
+                    <ul class="pure-menu-list">
+                        
+                        
+                            <li class="pure-menu-item toggle-source">
+                                <button aria-label="Hide source sidebar" title="Hide source sidebar" aria-expanded="true"><span class="left"><span class="fa fa-solid fa-chevron-left " aria-hidden="true"></span></span><span class="right"><span class="fa fa-solid fa-chevron-right " aria-hidden="true"></span></span> <span class="text">Hide files</span></button>
+                            </li>
+                        
+                        <li class="pure-menu-item">
+                                <a href="../index.html" class="pure-menu-link"><span class="fa fa-regular fa-folder-open " aria-hidden="true"></span> <span class="text">..</span></a>
+                            </li><li class="pure-menu-item">
+                                
+                                <a href="account_api.rs.html" class="pure-menu-link">
+                                    <span class="fa fa-brands fa-rust " aria-hidden="true"></span>
+
+                                    <span class="text">account_api.rs</span>
+                                </a>
+                            </li><li class="pure-menu-item">
+                                
+                                <a href="asset_api.rs.html" class="pure-menu-link">
+                                    <span class="fa fa-brands fa-rust " aria-hidden="true"></span>
+
+                                    <span class="text">asset_api.rs</span>
+                                </a>
+                            </li><li class="pure-menu-item">
+                                
+                                <a href="client.rs.html" class="pure-menu-link">
+                                    <span class="fa fa-brands fa-rust " aria-hidden="true"></span>
+
+                                    <span class="text">client.rs</span>
+                                </a>
+                            </li><li class="pure-menu-item">
+                                
+                                <a href="consts.rs.html" class="pure-menu-link">
+                                    <span class="fa fa-brands fa-rust " aria-hidden="true"></span>
+
+                                    <span class="text">consts.rs</span>
+                                </a>
+                            </li><li class="pure-menu-item">
+                                
+                                <a href="error.rs.html" class="pure-menu-link">
+                                    <span class="fa fa-brands fa-rust " aria-hidden="true"></span>
+
+                                    <span class="text">error.rs</span>
+                                </a>
+                            </li><li class="pure-menu-item">
+                                
+                                <a href="exceptions.rs.html" class="pure-menu-link">
+                                    <span class="fa fa-brands fa-rust " aria-hidden="true"></span>
+
+                                    <span class="text">exceptions.rs</span>
+                                </a>
+                            </li><li class="pure-menu-item">
+                                
+                                <a href="fund_flow_api.rs.html" class="pure-menu-link">
+                                    <span class="fa fa-brands fa-rust " aria-hidden="true"></span>
+
+                                    <span class="text">fund_flow_api.rs</span>
+                                </a>
+                            </li><li class="pure-menu-item">
+                                
+                                <a href="history_api.rs.html" class="pure-menu-link">
+                                    <span class="fa fa-brands fa-rust " aria-hidden="true"></span>
+
+                                    <span class="text">history_api.rs</span>
+                                </a>
+                            </li><li class="pure-menu-item">
+                                
+                                <a href="lib.rs.html" class="pure-menu-link">
+                                    <span class="fa fa-brands fa-rust " aria-hidden="true"></span>
+
+                                    <span class="text">lib.rs</span>
+                                </a>
+                            </li><li class="pure-menu-item">
+                                
+                                <a href="market_api.rs.html" class="pure-menu-link">
+                                    <span class="fa fa-brands fa-rust " aria-hidden="true"></span>
+
+                                    <span class="text">market_api.rs</span>
+                                </a>
+                            </li><li class="pure-menu-item">
+                                
+                                <a href="order_api.rs.html" class="pure-menu-link">
+                                    <span class="fa fa-brands fa-rust " aria-hidden="true"></span>
+
+                                    <span class="text">order_api.rs</span>
+                                </a>
+                            </li><li class="pure-menu-item">
+                                
+                                <a href="order_query_api.rs.html" class="pure-menu-link">
+                                    <span class="fa fa-brands fa-rust " aria-hidden="true"></span>
+
+                                    <span class="text">order_query_api.rs</span>
+                                </a>
+                            </li><li class="pure-menu-item">
+                                
+                                <a href="transfer_api.rs.html" class="pure-menu-link">
+                                    <span class="fa fa-brands fa-rust " aria-hidden="true"></span>
+
+                                    <span class="text">transfer_api.rs</span>
+                                </a>
+                            </li><li class="pure-menu-item">
+                                
+                                <a href="utils.rs.html" class="pure-menu-link">
+                                    <span class="fa fa-brands fa-rust " aria-hidden="true"></span>
+
+                                    <span class="text">utils.rs</span>
+                                </a>
+                            </li><li class="pure-menu-item">
+                                
+                                <a href="ws_api.rs.html" class="pure-menu-link">
+                                    <span class="fa fa-brands fa-rust " aria-hidden="true"></span>
+
+                                    <span class="text">ws_api.rs</span>
+                                </a>
+                            </li></ul>
+                </div>
+            </div>
+
+            
+                
+                    
+                
+                <div id="source-code-container" class="pure-u-1 pure-u-sm-17-24 pure-u-md-19-24">
+                    <div data-nosnippet class="source-code"><pre id="line-numbers"><code><a href="utils.rs.html#1" id="1">1</a>
+<a href="utils.rs.html#2" id="2">2</a>
+<a href="utils.rs.html#3" id="3">3</a>
+<a href="utils.rs.html#4" id="4">4</a>
+<a href="utils.rs.html#5" id="5">5</a>
+<a href="utils.rs.html#6" id="6">6</a>
+<a href="utils.rs.html#7" id="7">7</a>
+<a href="utils.rs.html#8" id="8">8</a>
+<a href="utils.rs.html#9" id="9">9</a>
+<a href="utils.rs.html#10" id="10">10</a>
+<a href="utils.rs.html#11" id="11">11</a>
+<a href="utils.rs.html#12" id="12">12</a>
+<a href="utils.rs.html#13" id="13">13</a>
+<a href="utils.rs.html#14" id="14">14</a>
+<a href="utils.rs.html#15" id="15">15</a>
+<a href="utils.rs.html#16" id="16">16</a>
+<a href="utils.rs.html#17" id="17">17</a>
+<a href="utils.rs.html#18" id="18">18</a>
+<a href="utils.rs.html#19" id="19">19</a>
+<a href="utils.rs.html#20" id="20">20</a>
+<a href="utils.rs.html#21" id="21">21</a>
+<a href="utils.rs.html#22" id="22">22</a>
+<a href="utils.rs.html#23" id="23">23</a>
+<a href="utils.rs.html#24" id="24">24</a>
+<a href="utils.rs.html#25" id="25">25</a>
+<a href="utils.rs.html#26" id="26">26</a>
+<a href="utils.rs.html#27" id="27">27</a>
+<a href="utils.rs.html#28" id="28">28</a>
+<a href="utils.rs.html#29" id="29">29</a>
+<a href="utils.rs.html#30" id="30">30</a>
+<a href="utils.rs.html#31" id="31">31</a>
+<a href="utils.rs.html#32" id="32">32</a>
+<a href="utils.rs.html#33" id="33">33</a>
+<a href="utils.rs.html#34" id="34">34</a>
+<a href="utils.rs.html#35" id="35">35</a>
+<a href="utils.rs.html#36" id="36">36</a>
+<a href="utils.rs.html#37" id="37">37</a>
+<a href="utils.rs.html#38" id="38">38</a>
+<a href="utils.rs.html#39" id="39">39</a>
+<a href="utils.rs.html#40" id="40">40</a>
+<a href="utils.rs.html#41" id="41">41</a>
+<a href="utils.rs.html#42" id="42">42</a>
+<a href="utils.rs.html#43" id="43">43</a>
+<a href="utils.rs.html#44" id="44">44</a>
+<a href="utils.rs.html#45" id="45">45</a>
+<a href="utils.rs.html#46" id="46">46</a>
+<a href="utils.rs.html#47" id="47">47</a>
+<a href="utils.rs.html#48" id="48">48</a>
+<a href="utils.rs.html#49" id="49">49</a>
+<a href="utils.rs.html#50" id="50">50</a>
+<a href="utils.rs.html#51" id="51">51</a>
+<a href="utils.rs.html#52" id="52">52</a>
+<a href="utils.rs.html#53" id="53">53</a>
+<a href="utils.rs.html#54" id="54">54</a>
+<a href="utils.rs.html#55" id="55">55</a>
+<a href="utils.rs.html#56" id="56">56</a>
+<a href="utils.rs.html#57" id="57">57</a>
+<a href="utils.rs.html#58" id="58">58</a>
+<a href="utils.rs.html#59" id="59">59</a>
+<a href="utils.rs.html#60" id="60">60</a>
+<a href="utils.rs.html#61" id="61">61</a>
+<a href="utils.rs.html#62" id="62">62</a>
+<a href="utils.rs.html#63" id="63">63</a>
+<a href="utils.rs.html#64" id="64">64</a>
+<a href="utils.rs.html#65" id="65">65</a>
+<a href="utils.rs.html#66" id="66">66</a>
+<a href="utils.rs.html#67" id="67">67</a>
+<a href="utils.rs.html#68" id="68">68</a>
+<a href="utils.rs.html#69" id="69">69</a>
+<a href="utils.rs.html#70" id="70">70</a>
+<a href="utils.rs.html#71" id="71">71</a>
+<a href="utils.rs.html#72" id="72">72</a>
+<a href="utils.rs.html#73" id="73">73</a>
+<a href="utils.rs.html#74" id="74">74</a>
+<a href="utils.rs.html#75" id="75">75</a>
+<a href="utils.rs.html#76" id="76">76</a>
+<a href="utils.rs.html#77" id="77">77</a>
+<a href="utils.rs.html#78" id="78">78</a>
+<a href="utils.rs.html#79" id="79">79</a>
+<a href="utils.rs.html#80" id="80">80</a>
+<a href="utils.rs.html#81" id="81">81</a>
+<a href="utils.rs.html#82" id="82">82</a>
+<a href="utils.rs.html#83" id="83">83</a>
+<a href="utils.rs.html#84" id="84">84</a>
+<a href="utils.rs.html#85" id="85">85</a>
+<a href="utils.rs.html#86" id="86">86</a>
+<a href="utils.rs.html#87" id="87">87</a>
+<a href="utils.rs.html#88" id="88">88</a>
+<a href="utils.rs.html#89" id="89">89</a>
+<a href="utils.rs.html#90" id="90">90</a>
+<a href="utils.rs.html#91" id="91">91</a>
+<a href="utils.rs.html#92" id="92">92</a>
+<a href="utils.rs.html#93" id="93">93</a>
+<a href="utils.rs.html#94" id="94">94</a>
+<a href="utils.rs.html#95" id="95">95</a>
+<a href="utils.rs.html#96" id="96">96</a>
+<a href="utils.rs.html#97" id="97">97</a>
+<a href="utils.rs.html#98" id="98">98</a>
+<a href="utils.rs.html#99" id="99">99</a>
+<a href="utils.rs.html#100" id="100">100</a>
+<a href="utils.rs.html#101" id="101">101</a>
+<a href="utils.rs.html#102" id="102">102</a>
+<a href="utils.rs.html#103" id="103">103</a>
+<a href="utils.rs.html#104" id="104">104</a>
+<a href="utils.rs.html#105" id="105">105</a>
+</code></pre></div>
+                    <div id="source-code" class="source-code"><pre><code><span class="syntax-source syntax-rust"><span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">//!</span> Bitget 工具函数
+</span><span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">//!</span>
+</span><span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">//!</span> 该模块提供了 Bitget API 使用的各种工具函数
+</span><span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">//!</span> 包括签名、时间戳、header 构造等
+</span>
+<span class="syntax-keyword syntax-other syntax-rust">use</span> <span class="syntax-meta syntax-path syntax-rust">anyhow<span class="syntax-punctuation syntax-accessor syntax-rust">::</span></span><span class="syntax-meta syntax-block syntax-rust"><span class="syntax-punctuation syntax-section syntax-block syntax-begin syntax-rust">{</span><span class="syntax-support syntax-type syntax-rust">Result</span><span class="syntax-punctuation syntax-separator syntax-rust">,</span> anyhow</span><span class="syntax-meta syntax-block syntax-rust"><span class="syntax-punctuation syntax-section syntax-block syntax-end syntax-rust">}</span></span><span class="syntax-punctuation syntax-terminator syntax-rust">;</span>
+<span class="syntax-keyword syntax-other syntax-rust">use</span> <span class="syntax-meta syntax-path syntax-rust">base64<span class="syntax-punctuation syntax-accessor syntax-rust">::</span></span><span class="syntax-meta syntax-block syntax-rust"><span class="syntax-punctuation syntax-section syntax-block syntax-begin syntax-rust">{</span>Engine <span class="syntax-keyword syntax-operator syntax-rust">as</span> <span class="syntax-keyword syntax-operator syntax-rust">_</span><span class="syntax-punctuation syntax-separator syntax-rust">,</span> <span class="syntax-meta syntax-path syntax-rust">engine<span class="syntax-punctuation syntax-accessor syntax-rust">::</span></span>general_purpose</span><span class="syntax-meta syntax-block syntax-rust"><span class="syntax-punctuation syntax-section syntax-block syntax-end syntax-rust">}</span></span><span class="syntax-punctuation syntax-terminator syntax-rust">;</span>
+<span class="syntax-keyword syntax-other syntax-rust">use</span> <span class="syntax-meta syntax-path syntax-rust">chrono<span class="syntax-punctuation syntax-accessor syntax-rust">::</span></span>Utc<span class="syntax-punctuation syntax-terminator syntax-rust">;</span>
+<span class="syntax-keyword syntax-other syntax-rust">use</span> <span class="syntax-meta syntax-path syntax-rust">hmac<span class="syntax-punctuation syntax-accessor syntax-rust">::</span></span><span class="syntax-meta syntax-block syntax-rust"><span class="syntax-punctuation syntax-section syntax-block syntax-begin syntax-rust">{</span>Hmac<span class="syntax-punctuation syntax-separator syntax-rust">,</span> Mac</span><span class="syntax-meta syntax-block syntax-rust"><span class="syntax-punctuation syntax-section syntax-block syntax-end syntax-rust">}</span></span><span class="syntax-punctuation syntax-terminator syntax-rust">;</span>
+<span class="syntax-keyword syntax-other syntax-rust">use</span> <span class="syntax-meta syntax-path syntax-rust">sha2<span class="syntax-punctuation syntax-accessor syntax-rust">::</span></span>Sha256<span class="syntax-punctuation syntax-terminator syntax-rust">;</span>
+<span class="syntax-keyword syntax-other syntax-rust">use</span> <span class="syntax-meta syntax-path syntax-rust">std<span class="syntax-punctuation syntax-accessor syntax-rust">::</span></span><span class="syntax-meta syntax-path syntax-rust">collections<span class="syntax-punctuation syntax-accessor syntax-rust">::</span></span>BTreeMap<span class="syntax-punctuation syntax-terminator syntax-rust">;</span>
+
+<span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span> 将参数序列化为 URL 查询字符串（按 key 排序）
+</span><span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span>
+</span><span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span> # 参数
+</span><span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span> * `params` - 要序列化的参数映射
+</span><span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span>
+</span><span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span> # 返回
+</span><span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span> 返回序列化后的 URL 查询字符串，如 &quot;?key1=value1&amp;key2=value2&quot;
+</span><span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span> 如果参数为空，返回空字符串
+</span><span class="syntax-meta syntax-function syntax-rust"><span class="syntax-meta syntax-function syntax-rust"><span class="syntax-storage syntax-modifier syntax-rust">pub</span> <span class="syntax-storage syntax-type syntax-function syntax-rust">fn</span> </span><span class="syntax-entity syntax-name syntax-function syntax-rust">parse_params_to_str</span></span><span class="syntax-meta syntax-function syntax-rust"><span class="syntax-meta syntax-function syntax-parameters syntax-rust"><span class="syntax-punctuation syntax-section syntax-parameters syntax-begin syntax-rust">(</span><span class="syntax-variable syntax-parameter syntax-rust">params</span><span class="syntax-punctuation syntax-separator syntax-rust">:</span> <span class="syntax-keyword syntax-operator syntax-rust">&amp;</span><span class="syntax-meta syntax-generic syntax-rust">BTreeMap<span class="syntax-punctuation syntax-definition syntax-generic syntax-begin syntax-rust">&lt;</span><span class="syntax-support syntax-type syntax-rust">String</span>, <span class="syntax-support syntax-type syntax-rust">String</span><span class="syntax-punctuation syntax-definition syntax-generic syntax-end syntax-rust">&gt;</span></span></span><span class="syntax-meta syntax-function syntax-rust"><span class="syntax-meta syntax-function syntax-parameters syntax-rust"><span class="syntax-punctuation syntax-section syntax-parameters syntax-end syntax-rust">)</span></span></span></span><span class="syntax-meta syntax-function syntax-rust"> <span class="syntax-meta syntax-function syntax-return-type syntax-rust"><span class="syntax-punctuation syntax-separator syntax-rust">-&gt;</span> String</span> </span><span class="syntax-meta syntax-function syntax-rust"><span class="syntax-meta syntax-block syntax-rust"><span class="syntax-punctuation syntax-section syntax-block syntax-begin syntax-rust">{</span>
+    <span class="syntax-keyword syntax-control syntax-rust">if</span> params<span class="syntax-punctuation syntax-accessor syntax-dot syntax-rust">.</span><span class="syntax-support syntax-function syntax-rust">is_empty</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span> <span class="syntax-meta syntax-block syntax-rust"><span class="syntax-punctuation syntax-section syntax-block syntax-begin syntax-rust">{</span>
+        <span class="syntax-keyword syntax-control syntax-rust">return</span> <span class="syntax-string syntax-quoted syntax-double syntax-rust"><span class="syntax-punctuation syntax-definition syntax-string syntax-begin syntax-rust">&quot;</span><span class="syntax-punctuation syntax-definition syntax-string syntax-end syntax-rust">&quot;</span></span><span class="syntax-punctuation syntax-accessor syntax-dot syntax-rust">.</span><span class="syntax-support syntax-function syntax-rust">to_string</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span><span class="syntax-punctuation syntax-terminator syntax-rust">;</span>
+    </span><span class="syntax-meta syntax-block syntax-rust"><span class="syntax-punctuation syntax-section syntax-block syntax-end syntax-rust">}</span></span>
+    <span class="syntax-storage syntax-type syntax-rust">let</span> <span class="syntax-storage syntax-modifier syntax-rust">mut</span> s <span class="syntax-keyword syntax-operator syntax-assignment syntax-rust">=</span> <span class="syntax-support syntax-type syntax-rust">String</span><span class="syntax-meta syntax-path syntax-rust"><span class="syntax-punctuation syntax-accessor syntax-rust">::</span></span>from<span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span><span class="syntax-string syntax-quoted syntax-double syntax-rust"><span class="syntax-punctuation syntax-definition syntax-string syntax-begin syntax-rust">&quot;</span>?<span class="syntax-punctuation syntax-definition syntax-string syntax-end syntax-rust">&quot;</span></span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span><span class="syntax-punctuation syntax-terminator syntax-rust">;</span>
+    <span class="syntax-keyword syntax-control syntax-rust">for</span> <span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span>i<span class="syntax-punctuation syntax-separator syntax-rust">,</span> <span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span>k<span class="syntax-punctuation syntax-separator syntax-rust">,</span> v</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span> <span class="syntax-keyword syntax-operator syntax-rust">in</span> params<span class="syntax-punctuation syntax-accessor syntax-dot syntax-rust">.</span><span class="syntax-support syntax-function syntax-rust">iter</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span><span class="syntax-punctuation syntax-accessor syntax-dot syntax-rust">.</span><span class="syntax-support syntax-function syntax-rust">enumerate</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span> <span class="syntax-meta syntax-block syntax-rust"><span class="syntax-punctuation syntax-section syntax-block syntax-begin syntax-rust">{</span>
+        <span class="syntax-keyword syntax-control syntax-rust">if</span> i <span class="syntax-keyword syntax-operator syntax-comparison syntax-rust">&gt;</span> <span class="syntax-constant syntax-numeric syntax-integer syntax-decimal syntax-rust">0</span> <span class="syntax-meta syntax-block syntax-rust"><span class="syntax-punctuation syntax-section syntax-block syntax-begin syntax-rust">{</span>
+            s<span class="syntax-punctuation syntax-accessor syntax-dot syntax-rust">.</span><span class="syntax-support syntax-function syntax-rust">push</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span><span class="syntax-string syntax-quoted syntax-single syntax-rust"><span class="syntax-punctuation syntax-definition syntax-string syntax-begin syntax-rust">&#39;</span>&amp;<span class="syntax-punctuation syntax-definition syntax-string syntax-end syntax-rust">&#39;</span></span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span><span class="syntax-punctuation syntax-terminator syntax-rust">;</span>
+        </span><span class="syntax-meta syntax-block syntax-rust"><span class="syntax-punctuation syntax-section syntax-block syntax-end syntax-rust">}</span></span>
+        s<span class="syntax-punctuation syntax-accessor syntax-dot syntax-rust">.</span><span class="syntax-support syntax-function syntax-rust">push_str</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span><span class="syntax-keyword syntax-operator syntax-bitwise syntax-rust">&amp;</span><span class="syntax-support syntax-macro syntax-rust">format!</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-string syntax-quoted syntax-double syntax-rust"><span class="syntax-punctuation syntax-definition syntax-string syntax-begin syntax-rust">&quot;</span><span class="syntax-constant syntax-other syntax-placeholder syntax-rust">{k}</span>=<span class="syntax-constant syntax-other syntax-placeholder syntax-rust">{v}</span><span class="syntax-punctuation syntax-definition syntax-string syntax-end syntax-rust">&quot;</span></span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span><span class="syntax-punctuation syntax-terminator syntax-rust">;</span>
+    </span><span class="syntax-meta syntax-block syntax-rust"><span class="syntax-punctuation syntax-section syntax-block syntax-end syntax-rust">}</span></span>
+    s
+</span><span class="syntax-meta syntax-block syntax-rust"><span class="syntax-punctuation syntax-section syntax-block syntax-end syntax-rust">}</span></span></span>
+
+<span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span> 获取当前 UTC 毫秒时间戳字符串
+</span><span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span>
+</span><span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span> # 返回
+</span><span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span> 返回当前 UTC 时间的毫秒时间戳字符串
+</span><span class="syntax-meta syntax-function syntax-rust"><span class="syntax-meta syntax-function syntax-rust"><span class="syntax-storage syntax-modifier syntax-rust">pub</span> <span class="syntax-storage syntax-type syntax-function syntax-rust">fn</span> </span><span class="syntax-entity syntax-name syntax-function syntax-rust">get_timestamp</span></span><span class="syntax-meta syntax-function syntax-rust"><span class="syntax-meta syntax-function syntax-parameters syntax-rust"><span class="syntax-punctuation syntax-section syntax-parameters syntax-begin syntax-rust">(</span></span><span class="syntax-meta syntax-function syntax-rust"><span class="syntax-meta syntax-function syntax-parameters syntax-rust"><span class="syntax-punctuation syntax-section syntax-parameters syntax-end syntax-rust">)</span></span></span></span><span class="syntax-meta syntax-function syntax-rust"> <span class="syntax-meta syntax-function syntax-return-type syntax-rust"><span class="syntax-punctuation syntax-separator syntax-rust">-&gt;</span> String</span> </span><span class="syntax-meta syntax-function syntax-rust"><span class="syntax-meta syntax-block syntax-rust"><span class="syntax-punctuation syntax-section syntax-block syntax-begin syntax-rust">{</span>
+    <span class="syntax-meta syntax-path syntax-rust">Utc<span class="syntax-punctuation syntax-accessor syntax-rust">::</span></span>now<span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span><span class="syntax-punctuation syntax-accessor syntax-dot syntax-rust">.</span><span class="syntax-support syntax-function syntax-rust">timestamp_millis</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span><span class="syntax-punctuation syntax-accessor syntax-dot syntax-rust">.</span><span class="syntax-support syntax-function syntax-rust">to_string</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span>
+</span><span class="syntax-meta syntax-block syntax-rust"><span class="syntax-punctuation syntax-section syntax-block syntax-end syntax-rust">}</span></span></span>
+
+<span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span> 构造待签名字符串
+</span><span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span>
+</span><span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span> # 参数
+</span><span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span> * `timestamp` - 时间戳字符串
+</span><span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span> * `method` - 请求方法（GET/POST）
+</span><span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span> * `request_path` - 请求路径
+</span><span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span> * `body` - 请求体内容
+</span><span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span>
+</span><span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span> # 返回
+</span><span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span> 返回待签名的字符串
+</span><span class="syntax-meta syntax-function syntax-rust"><span class="syntax-meta syntax-function syntax-rust"><span class="syntax-storage syntax-modifier syntax-rust">pub</span> <span class="syntax-storage syntax-type syntax-function syntax-rust">fn</span> </span><span class="syntax-entity syntax-name syntax-function syntax-rust">pre_hash</span></span><span class="syntax-meta syntax-function syntax-rust"><span class="syntax-meta syntax-function syntax-parameters syntax-rust"><span class="syntax-punctuation syntax-section syntax-parameters syntax-begin syntax-rust">(</span><span class="syntax-variable syntax-parameter syntax-rust">timestamp</span><span class="syntax-punctuation syntax-separator syntax-rust">:</span> <span class="syntax-keyword syntax-operator syntax-rust">&amp;</span><span class="syntax-storage syntax-type syntax-rust">str</span>, <span class="syntax-variable syntax-parameter syntax-rust">method</span><span class="syntax-punctuation syntax-separator syntax-rust">:</span> <span class="syntax-keyword syntax-operator syntax-rust">&amp;</span><span class="syntax-storage syntax-type syntax-rust">str</span>, <span class="syntax-variable syntax-parameter syntax-rust">request_path</span><span class="syntax-punctuation syntax-separator syntax-rust">:</span> <span class="syntax-keyword syntax-operator syntax-rust">&amp;</span><span class="syntax-storage syntax-type syntax-rust">str</span>, <span class="syntax-variable syntax-parameter syntax-rust">body</span><span class="syntax-punctuation syntax-separator syntax-rust">:</span> <span class="syntax-keyword syntax-operator syntax-rust">&amp;</span><span class="syntax-storage syntax-type syntax-rust">str</span></span><span class="syntax-meta syntax-function syntax-rust"><span class="syntax-meta syntax-function syntax-parameters syntax-rust"><span class="syntax-punctuation syntax-section syntax-parameters syntax-end syntax-rust">)</span></span></span></span><span class="syntax-meta syntax-function syntax-rust"> <span class="syntax-meta syntax-function syntax-return-type syntax-rust"><span class="syntax-punctuation syntax-separator syntax-rust">-&gt;</span> String</span> </span><span class="syntax-meta syntax-function syntax-rust"><span class="syntax-meta syntax-block syntax-rust"><span class="syntax-punctuation syntax-section syntax-block syntax-begin syntax-rust">{</span>
+    <span class="syntax-support syntax-macro syntax-rust">format!</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-string syntax-quoted syntax-double syntax-rust"><span class="syntax-punctuation syntax-definition syntax-string syntax-begin syntax-rust">&quot;</span><span class="syntax-constant syntax-other syntax-placeholder syntax-rust">{timestamp}</span><span class="syntax-constant syntax-other syntax-placeholder syntax-rust">{method}</span><span class="syntax-constant syntax-other syntax-placeholder syntax-rust">{request_path}</span><span class="syntax-constant syntax-other syntax-placeholder syntax-rust">{body}</span><span class="syntax-punctuation syntax-definition syntax-string syntax-end syntax-rust">&quot;</span></span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span>
+</span><span class="syntax-meta syntax-block syntax-rust"><span class="syntax-punctuation syntax-section syntax-block syntax-end syntax-rust">}</span></span></span>
+
+<span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span> HMAC-SHA256 签名并 base64 编码
+</span><span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span>
+</span><span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span> # 参数
+</span><span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span> * `pre_hash` - 待签名字符串
+</span><span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span> * `secret` - 密钥
+</span><span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span>
+</span><span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span> # 返回
+</span><span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span> 返回签名结果字符串或错误
+</span><span class="syntax-meta syntax-function syntax-rust"><span class="syntax-meta syntax-function syntax-rust"><span class="syntax-storage syntax-modifier syntax-rust">pub</span> <span class="syntax-storage syntax-type syntax-function syntax-rust">fn</span> </span><span class="syntax-entity syntax-name syntax-function syntax-rust">sign</span></span><span class="syntax-meta syntax-function syntax-rust"><span class="syntax-meta syntax-function syntax-parameters syntax-rust"><span class="syntax-punctuation syntax-section syntax-parameters syntax-begin syntax-rust">(</span><span class="syntax-variable syntax-parameter syntax-rust">pre_hash</span><span class="syntax-punctuation syntax-separator syntax-rust">:</span> <span class="syntax-keyword syntax-operator syntax-rust">&amp;</span><span class="syntax-storage syntax-type syntax-rust">str</span>, <span class="syntax-variable syntax-parameter syntax-rust">secret</span><span class="syntax-punctuation syntax-separator syntax-rust">:</span> <span class="syntax-keyword syntax-operator syntax-rust">&amp;</span><span class="syntax-storage syntax-type syntax-rust">str</span></span><span class="syntax-meta syntax-function syntax-rust"><span class="syntax-meta syntax-function syntax-parameters syntax-rust"><span class="syntax-punctuation syntax-section syntax-parameters syntax-end syntax-rust">)</span></span></span></span><span class="syntax-meta syntax-function syntax-rust"> <span class="syntax-meta syntax-function syntax-return-type syntax-rust"><span class="syntax-punctuation syntax-separator syntax-rust">-&gt;</span> <span class="syntax-meta syntax-generic syntax-rust"><span class="syntax-support syntax-type syntax-rust">Result</span><span class="syntax-punctuation syntax-definition syntax-generic syntax-begin syntax-rust">&lt;</span><span class="syntax-support syntax-type syntax-rust">String</span><span class="syntax-punctuation syntax-definition syntax-generic syntax-end syntax-rust">&gt;</span></span></span> </span><span class="syntax-meta syntax-function syntax-rust"><span class="syntax-meta syntax-block syntax-rust"><span class="syntax-punctuation syntax-section syntax-block syntax-begin syntax-rust">{</span>
+    <span class="syntax-storage syntax-type syntax-rust">let</span> <span class="syntax-storage syntax-modifier syntax-rust">mut</span> mac <span class="syntax-keyword syntax-operator syntax-assignment syntax-rust">=</span> <span class="syntax-meta syntax-path syntax-rust">Hmac<span class="syntax-punctuation syntax-accessor syntax-rust">::</span></span><span class="syntax-meta syntax-generic syntax-rust"><span class="syntax-punctuation syntax-definition syntax-generic syntax-begin syntax-rust">&lt;</span>Sha256<span class="syntax-punctuation syntax-definition syntax-generic syntax-end syntax-rust">&gt;</span></span><span class="syntax-meta syntax-path syntax-rust"><span class="syntax-punctuation syntax-accessor syntax-rust">::</span></span>new_from_slice<span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span>secret<span class="syntax-punctuation syntax-accessor syntax-dot syntax-rust">.</span><span class="syntax-support syntax-function syntax-rust">as_bytes</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span>
+        <span class="syntax-punctuation syntax-accessor syntax-dot syntax-rust">.</span><span class="syntax-support syntax-function syntax-rust">map_err</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span><span class="syntax-meta syntax-function syntax-closure syntax-rust"><span class="syntax-meta syntax-function syntax-parameters syntax-rust"><span class="syntax-punctuation syntax-section syntax-parameters syntax-begin syntax-rust">|</span></span></span><span class="syntax-meta syntax-function syntax-closure syntax-rust"><span class="syntax-meta syntax-function syntax-parameters syntax-rust"><span class="syntax-variable syntax-parameter syntax-rust">e</span><span class="syntax-punctuation syntax-section syntax-parameters syntax-end syntax-rust">|</span></span> </span><span class="syntax-meta syntax-function syntax-closure syntax-rust"><span class="syntax-support syntax-macro syntax-rust">anyhow!</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span><span class="syntax-string syntax-quoted syntax-double syntax-rust"><span class="syntax-punctuation syntax-definition syntax-string syntax-begin syntax-rust">&quot;</span>HMAC 初始化失败: {:?}<span class="syntax-punctuation syntax-definition syntax-string syntax-end syntax-rust">&quot;</span></span><span class="syntax-punctuation syntax-separator syntax-rust">,</span> e</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span></span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span><span class="syntax-keyword syntax-operator syntax-rust">?</span><span class="syntax-punctuation syntax-terminator syntax-rust">;</span>
+    mac<span class="syntax-punctuation syntax-accessor syntax-dot syntax-rust">.</span><span class="syntax-support syntax-function syntax-rust">update</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span>pre_hash<span class="syntax-punctuation syntax-accessor syntax-dot syntax-rust">.</span><span class="syntax-support syntax-function syntax-rust">as_bytes</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span><span class="syntax-punctuation syntax-terminator syntax-rust">;</span>
+    <span class="syntax-storage syntax-type syntax-rust">let</span> result <span class="syntax-keyword syntax-operator syntax-assignment syntax-rust">=</span> mac<span class="syntax-punctuation syntax-accessor syntax-dot syntax-rust">.</span><span class="syntax-support syntax-function syntax-rust">finalize</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span><span class="syntax-punctuation syntax-accessor syntax-dot syntax-rust">.</span><span class="syntax-support syntax-function syntax-rust">into_bytes</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span><span class="syntax-punctuation syntax-terminator syntax-rust">;</span>
+    <span class="syntax-support syntax-type syntax-rust">Ok</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span><span class="syntax-meta syntax-path syntax-rust">general_purpose<span class="syntax-punctuation syntax-accessor syntax-rust">::</span></span><span class="syntax-constant syntax-other syntax-rust">STANDARD</span><span class="syntax-punctuation syntax-accessor syntax-dot syntax-rust">.</span><span class="syntax-support syntax-function syntax-rust">encode</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span>result</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span>
+</span><span class="syntax-meta syntax-block syntax-rust"><span class="syntax-punctuation syntax-section syntax-block syntax-end syntax-rust">}</span></span></span>
+
+<span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span> 构造请求头
+</span><span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span>
+</span><span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span> # 参数
+</span><span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span> * `api_key` - API 密钥
+</span><span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span> * `sign` - 签名结果
+</span><span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span> * `timestamp` - 时间戳
+</span><span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span> * `passphrase` - API 密码短语
+</span><span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span>
+</span><span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span> # 返回
+</span><span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span> 返回请求头键值对列表
+</span><span class="syntax-meta syntax-function syntax-rust"><span class="syntax-meta syntax-function syntax-rust"><span class="syntax-storage syntax-modifier syntax-rust">pub</span> <span class="syntax-storage syntax-type syntax-function syntax-rust">fn</span> </span><span class="syntax-entity syntax-name syntax-function syntax-rust">get_header</span></span><span class="syntax-meta syntax-function syntax-rust"><span class="syntax-meta syntax-function syntax-parameters syntax-rust"><span class="syntax-punctuation syntax-section syntax-parameters syntax-begin syntax-rust">(</span>
+    <span class="syntax-variable syntax-parameter syntax-rust">api_key</span><span class="syntax-punctuation syntax-separator syntax-rust">:</span> <span class="syntax-keyword syntax-operator syntax-rust">&amp;</span><span class="syntax-storage syntax-type syntax-rust">str</span>,
+    <span class="syntax-variable syntax-parameter syntax-rust">sign</span><span class="syntax-punctuation syntax-separator syntax-rust">:</span> <span class="syntax-keyword syntax-operator syntax-rust">&amp;</span><span class="syntax-storage syntax-type syntax-rust">str</span>,
+    <span class="syntax-variable syntax-parameter syntax-rust">timestamp</span><span class="syntax-punctuation syntax-separator syntax-rust">:</span> <span class="syntax-keyword syntax-operator syntax-rust">&amp;</span><span class="syntax-storage syntax-type syntax-rust">str</span>,
+    <span class="syntax-variable syntax-parameter syntax-rust">passphrase</span><span class="syntax-punctuation syntax-separator syntax-rust">:</span> <span class="syntax-keyword syntax-operator syntax-rust">&amp;</span><span class="syntax-storage syntax-type syntax-rust">str</span>,
+</span><span class="syntax-meta syntax-function syntax-rust"><span class="syntax-meta syntax-function syntax-parameters syntax-rust"><span class="syntax-punctuation syntax-section syntax-parameters syntax-end syntax-rust">)</span></span></span></span><span class="syntax-meta syntax-function syntax-rust"> <span class="syntax-meta syntax-function syntax-return-type syntax-rust"><span class="syntax-punctuation syntax-separator syntax-rust">-&gt;</span> <span class="syntax-meta syntax-generic syntax-rust"><span class="syntax-support syntax-type syntax-rust">Vec</span><span class="syntax-punctuation syntax-definition syntax-generic syntax-begin syntax-rust">&lt;</span><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span>String, String<span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span><span class="syntax-punctuation syntax-definition syntax-generic syntax-end syntax-rust">&gt;</span></span></span> </span><span class="syntax-meta syntax-function syntax-rust"><span class="syntax-meta syntax-block syntax-rust"><span class="syntax-punctuation syntax-section syntax-block syntax-begin syntax-rust">{</span>
+    <span class="syntax-support syntax-macro syntax-rust">vec!</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">[</span>
+        <span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span><span class="syntax-string syntax-quoted syntax-double syntax-rust"><span class="syntax-punctuation syntax-definition syntax-string syntax-begin syntax-rust">&quot;</span>Content-Type<span class="syntax-punctuation syntax-definition syntax-string syntax-end syntax-rust">&quot;</span></span><span class="syntax-punctuation syntax-accessor syntax-dot syntax-rust">.</span><span class="syntax-support syntax-function syntax-rust">to_string</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span><span class="syntax-punctuation syntax-separator syntax-rust">,</span> <span class="syntax-string syntax-quoted syntax-double syntax-rust"><span class="syntax-punctuation syntax-definition syntax-string syntax-begin syntax-rust">&quot;</span>application/json<span class="syntax-punctuation syntax-definition syntax-string syntax-end syntax-rust">&quot;</span></span><span class="syntax-punctuation syntax-accessor syntax-dot syntax-rust">.</span><span class="syntax-support syntax-function syntax-rust">to_string</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span><span class="syntax-punctuation syntax-separator syntax-rust">,</span>
+        <span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span><span class="syntax-string syntax-quoted syntax-double syntax-rust"><span class="syntax-punctuation syntax-definition syntax-string syntax-begin syntax-rust">&quot;</span>ACCESS-KEY<span class="syntax-punctuation syntax-definition syntax-string syntax-end syntax-rust">&quot;</span></span><span class="syntax-punctuation syntax-accessor syntax-dot syntax-rust">.</span><span class="syntax-support syntax-function syntax-rust">to_string</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span><span class="syntax-punctuation syntax-separator syntax-rust">,</span> api_key<span class="syntax-punctuation syntax-accessor syntax-dot syntax-rust">.</span><span class="syntax-support syntax-function syntax-rust">to_string</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span><span class="syntax-punctuation syntax-separator syntax-rust">,</span>
+        <span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span><span class="syntax-string syntax-quoted syntax-double syntax-rust"><span class="syntax-punctuation syntax-definition syntax-string syntax-begin syntax-rust">&quot;</span>ACCESS-SIGN<span class="syntax-punctuation syntax-definition syntax-string syntax-end syntax-rust">&quot;</span></span><span class="syntax-punctuation syntax-accessor syntax-dot syntax-rust">.</span><span class="syntax-support syntax-function syntax-rust">to_string</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span><span class="syntax-punctuation syntax-separator syntax-rust">,</span> sign<span class="syntax-punctuation syntax-accessor syntax-dot syntax-rust">.</span><span class="syntax-support syntax-function syntax-rust">to_string</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span><span class="syntax-punctuation syntax-separator syntax-rust">,</span>
+        <span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span><span class="syntax-string syntax-quoted syntax-double syntax-rust"><span class="syntax-punctuation syntax-definition syntax-string syntax-begin syntax-rust">&quot;</span>ACCESS-TIMESTAMP<span class="syntax-punctuation syntax-definition syntax-string syntax-end syntax-rust">&quot;</span></span><span class="syntax-punctuation syntax-accessor syntax-dot syntax-rust">.</span><span class="syntax-support syntax-function syntax-rust">to_string</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span><span class="syntax-punctuation syntax-separator syntax-rust">,</span> timestamp<span class="syntax-punctuation syntax-accessor syntax-dot syntax-rust">.</span><span class="syntax-support syntax-function syntax-rust">to_string</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span><span class="syntax-punctuation syntax-separator syntax-rust">,</span>
+        <span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span><span class="syntax-string syntax-quoted syntax-double syntax-rust"><span class="syntax-punctuation syntax-definition syntax-string syntax-begin syntax-rust">&quot;</span>ACCESS-PASSPHRASE<span class="syntax-punctuation syntax-definition syntax-string syntax-end syntax-rust">&quot;</span></span><span class="syntax-punctuation syntax-accessor syntax-dot syntax-rust">.</span><span class="syntax-support syntax-function syntax-rust">to_string</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span><span class="syntax-punctuation syntax-separator syntax-rust">,</span> passphrase<span class="syntax-punctuation syntax-accessor syntax-dot syntax-rust">.</span><span class="syntax-support syntax-function syntax-rust">to_string</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span><span class="syntax-punctuation syntax-separator syntax-rust">,</span>
+    <span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">]</span></span>
+</span><span class="syntax-meta syntax-block syntax-rust"><span class="syntax-punctuation syntax-section syntax-block syntax-end syntax-rust">}</span></span></span>
+
+<span class="syntax-comment syntax-line syntax-documentation syntax-rust"><span class="syntax-punctuation syntax-definition syntax-comment syntax-rust">///</span> 构建查询字符串
+</span><span class="syntax-meta syntax-function syntax-rust"><span class="syntax-meta syntax-function syntax-rust"><span class="syntax-storage syntax-modifier syntax-rust">pub</span> <span class="syntax-storage syntax-type syntax-function syntax-rust">fn</span> </span><span class="syntax-entity syntax-name syntax-function syntax-rust">build_query</span></span><span class="syntax-meta syntax-function syntax-rust"><span class="syntax-meta syntax-function syntax-parameters syntax-rust"><span class="syntax-punctuation syntax-section syntax-parameters syntax-begin syntax-rust">(</span><span class="syntax-variable syntax-parameter syntax-rust">params</span><span class="syntax-punctuation syntax-separator syntax-rust">:</span> <span class="syntax-keyword syntax-operator syntax-rust">&amp;</span><span class="syntax-meta syntax-generic syntax-rust">BTreeMap<span class="syntax-punctuation syntax-definition syntax-generic syntax-begin syntax-rust">&lt;</span><span class="syntax-support syntax-type syntax-rust">String</span>, <span class="syntax-support syntax-type syntax-rust">String</span><span class="syntax-punctuation syntax-definition syntax-generic syntax-end syntax-rust">&gt;</span></span></span><span class="syntax-meta syntax-function syntax-rust"><span class="syntax-meta syntax-function syntax-parameters syntax-rust"><span class="syntax-punctuation syntax-section syntax-parameters syntax-end syntax-rust">)</span></span></span></span><span class="syntax-meta syntax-function syntax-rust"> <span class="syntax-meta syntax-function syntax-return-type syntax-rust"><span class="syntax-punctuation syntax-separator syntax-rust">-&gt;</span> String</span> </span><span class="syntax-meta syntax-function syntax-rust"><span class="syntax-meta syntax-block syntax-rust"><span class="syntax-punctuation syntax-section syntax-block syntax-begin syntax-rust">{</span>
+    params
+        <span class="syntax-punctuation syntax-accessor syntax-dot syntax-rust">.</span><span class="syntax-support syntax-function syntax-rust">iter</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span>
+        <span class="syntax-punctuation syntax-accessor syntax-dot syntax-rust">.</span><span class="syntax-support syntax-function syntax-rust">map</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span><span class="syntax-meta syntax-function syntax-closure syntax-rust"><span class="syntax-meta syntax-function syntax-parameters syntax-rust"><span class="syntax-punctuation syntax-section syntax-parameters syntax-begin syntax-rust">|</span></span></span><span class="syntax-meta syntax-function syntax-closure syntax-rust"><span class="syntax-meta syntax-function syntax-parameters syntax-rust"><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-variable syntax-parameter syntax-rust">k</span><span class="syntax-punctuation syntax-separator syntax-rust">,</span> <span class="syntax-variable syntax-parameter syntax-rust">v</span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span><span class="syntax-punctuation syntax-section syntax-parameters syntax-end syntax-rust">|</span></span> </span><span class="syntax-meta syntax-function syntax-closure syntax-rust"><span class="syntax-support syntax-macro syntax-rust">format!</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-string syntax-quoted syntax-double syntax-rust"><span class="syntax-punctuation syntax-definition syntax-string syntax-begin syntax-rust">&quot;</span><span class="syntax-constant syntax-other syntax-placeholder syntax-rust">{}</span>=<span class="syntax-constant syntax-other syntax-placeholder syntax-rust">{}</span><span class="syntax-punctuation syntax-definition syntax-string syntax-end syntax-rust">&quot;</span></span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-separator syntax-rust">,</span> k<span class="syntax-punctuation syntax-separator syntax-rust">,</span> v<span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span></span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span>
+        <span class="syntax-punctuation syntax-accessor syntax-dot syntax-rust">.</span><span class="syntax-meta syntax-path syntax-rust">collect<span class="syntax-punctuation syntax-accessor syntax-rust">::</span></span><span class="syntax-meta syntax-generic syntax-rust"><span class="syntax-punctuation syntax-definition syntax-generic syntax-begin syntax-rust">&lt;</span><span class="syntax-meta syntax-generic syntax-rust"><span class="syntax-support syntax-type syntax-rust">Vec</span><span class="syntax-punctuation syntax-definition syntax-generic syntax-begin syntax-rust">&lt;</span><span class="syntax-keyword syntax-operator syntax-rust">_</span><span class="syntax-punctuation syntax-definition syntax-generic syntax-end syntax-rust">&gt;</span></span><span class="syntax-punctuation syntax-definition syntax-generic syntax-end syntax-rust">&gt;</span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span>
+        <span class="syntax-punctuation syntax-accessor syntax-dot syntax-rust">.</span><span class="syntax-support syntax-function syntax-rust">join</span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-begin syntax-rust">(</span><span class="syntax-string syntax-quoted syntax-double syntax-rust"><span class="syntax-punctuation syntax-definition syntax-string syntax-begin syntax-rust">&quot;</span>&amp;<span class="syntax-punctuation syntax-definition syntax-string syntax-end syntax-rust">&quot;</span></span></span><span class="syntax-meta syntax-group syntax-rust"><span class="syntax-punctuation syntax-section syntax-group syntax-end syntax-rust">)</span></span>
+</span><span class="syntax-meta syntax-block syntax-rust"><span class="syntax-punctuation syntax-section syntax-block syntax-end syntax-rust">}</span></span></span>
+</span></code></pre></div>
+                </div></div>
+    </div>
+        <script nonce="kAvkxs8z1/AlbeGT6wIeO3K/sfaEFBp2fQH6fC0O0IdF4OB/" type="text/javascript" src="https://docs.rs/-/static/source.js?0-0-0-a68728e7-2026-03-08"></script>
+    </body>
+</html>
