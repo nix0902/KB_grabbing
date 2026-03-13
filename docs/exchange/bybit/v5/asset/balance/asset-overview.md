@@ -1,0 +1,693 @@
+---
+title: "Asset Overview"
+url: "https://bybit-exchange.github.io/docs/v5/asset/balance/asset-overview"
+source: "https://bybit-exchange.github.io/docs/"
+fetched: "2026-03-10T08:54:54+00:00"
+---
+
+# Asset Overview
+
+Source: [https://bybit-exchange.github.io/docs/v5/asset/balance/asset-overview](https://bybit-exchange.github.io/docs/v5/asset/balance/asset-overview)
+
+
+[Skip to main content](#){.skipToContent_fXgn}
+
+
+
+
+![](data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHZpZXdib3g9IjAgMCAzMCAzMCIgYXJpYS1oaWRkZW49InRydWUiPjxwYXRoIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgc3Ryb2tlLXdpZHRoPSIyIiBkPSJNNCA3aDIyTTQgMTVoMjJNNCAyM2gyMiIgLz48L3N2Zz4=)
+
+[](/docs/){.navbar__brand}
+
+
+![Bybit Logo](/docs/img/logo_lightmode.png){.themedImage_ToTc .themedImage--light_HNdA}![Bybit Logo](/docs/img/logo_darkmode.png){.themedImage_ToTc .themedImage--dark_i4oU}
+
+
+[V5 API](/docs/v5/guide){.navbar__item .navbar__link .navbar__link--active aria-current="page"}[P2P Trading](/docs/p2p/guide){.navbar__item .navbar__link}[Bybit Pay![](data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTMuNSIgaGVpZ2h0PSIxMy41IiBhcmlhLWhpZGRlbj0idHJ1ZSIgdmlld2JveD0iMCAwIDI0IDI0IiBjbGFzcz0iaWNvbkV4dGVybmFsTGlua19uUElVIj48cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiIGQ9Ik0yMSAxM3YxMGgtMjF2LTE5aDEydjJoLTEwdjE1aDE3di04aDJ6bTMtMTJoLTEwLjk4OGw0LjAzNSA0LTYuOTc3IDcuMDcgMi44MjggMi44MjggNi45NzctNy4wNyA0LjEyNSA0LjE3MnYtMTF6IiAvPjwvc3ZnPg==){.iconExternalLink_nPIU}](https://bybit-exchange.github.io/pay-docs){.navbar__item .navbar__link target="_blank" rel="noopener noreferrer" docid="bybit_pay"}[Tax API V3](/docs/v3/intro){.navbar__item .navbar__link}
+
+
+
+
+[Extras](#){.navbar__link aria-haspopup="true" aria-expanded="false" role="button"}
+
+-   [Pilot Features](/docs/pilot-feature){.dropdown__link}
+-   [Changelog](/docs/changelog/v5){.dropdown__link}
+-   [API Explorer](/docs/api-explorer/v5/category){.dropdown__link}
+-   [FAQ](/docs/faq){.dropdown__link}
+
+
+
+[![](data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgYXJpYS1oaWRkZW49InRydWUiIGNsYXNzPSJpY29uTGFuZ3VhZ2VfbmxYayI+PHBhdGggZmlsbD0iY3VycmVudENvbG9yIiBkPSJNMTIuODcgMTUuMDdsLTIuNTQtMi41MS4wMy0uMDNjMS43NC0xLjk0IDIuOTgtNC4xNyAzLjcxLTYuNTNIMTdWNGgtN1YySDh2MkgxdjEuOTloMTEuMTdDMTEuNSA3LjkyIDEwLjQ0IDkuNzUgOSAxMS4zNSA4LjA3IDEwLjMyIDcuMyA5LjE5IDYuNjkgOGgtMmMuNzMgMS42MyAxLjczIDMuMTcgMi45OCA0LjU2bC01LjA5IDUuMDJMNCAxOWw1LTUgMy4xMSAzLjExLjc2LTIuMDR6TTE4LjUgMTBoLTJMMTIgMjJoMmwxLjEyLTNoNC43NUwyMSAyMmgybC00LjUtMTJ6bS0yLjYyIDdsMS42Mi00LjMzTDE5LjEyIDE3aC0zLjI0eiIgLz48L3N2Zz4=){.iconLanguage_nlXk}English](#){.navbar__link aria-haspopup="true" aria-expanded="false" role="button"}
+
+-   [English](/docs/v5/asset/balance/asset-overview){.dropdown__link .dropdown__link--active target="_self" rel="noopener noreferrer" lang="en"}
+-   [中文（台灣）](/docs/zh-TW/v5/asset/balance/asset-overview){.dropdown__link target="_self" rel="noopener noreferrer" lang="zh-TW"}
+
+
+
+![](data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgY2xhc3M9ImxpZ2h0VG9nZ2xlSWNvbl9weWhSIj48cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiIGQ9Ik0xMiw5YzEuNjUsMCwzLDEuMzUsMywzcy0xLjM1LDMtMywzcy0zLTEuMzUtMy0zUzEwLjM1LDksMTIsOSBNMTIsN2MtMi43NiwwLTUsMi4yNC01LDVzMi4yNCw1LDUsNXM1LTIuMjQsNS01IFMxNC43Niw3LDEyLDdMMTIsN3ogTTIsMTNsMiwwYzAuNTUsMCwxLTAuNDUsMS0xcy0wLjQ1LTEtMS0xbC0yLDBjLTAuNTUsMC0xLDAuNDUtMSwxUzEuNDUsMTMsMiwxM3ogTTIwLDEzbDIsMGMwLjU1LDAsMS0wLjQ1LDEtMSBzLTAuNDUtMS0xLTFsLTIsMGMtMC41NSwwLTEsMC40NS0xLDFTMTkuNDUsMTMsMjAsMTN6IE0xMSwydjJjMCwwLjU1LDAuNDUsMSwxLDFzMS0wLjQ1LDEtMVYyYzAtMC41NS0wLjQ1LTEtMS0xUzExLDEuNDUsMTEsMnogTTExLDIwdjJjMCwwLjU1LDAuNDUsMSwxLDFzMS0wLjQ1LDEtMXYtMmMwLTAuNTUtMC40NS0xLTEtMUMxMS40NSwxOSwxMSwxOS40NSwxMSwyMHogTTUuOTksNC41OGMtMC4zOS0wLjM5LTEuMDMtMC4zOS0xLjQxLDAgYy0wLjM5LDAuMzktMC4zOSwxLjAzLDAsMS40MWwxLjA2LDEuMDZjMC4zOSwwLjM5LDEuMDMsMC4zOSwxLjQxLDBzMC4zOS0xLjAzLDAtMS40MUw1Ljk5LDQuNTh6IE0xOC4zNiwxNi45NSBjLTAuMzktMC4zOS0xLjAzLTAuMzktMS40MSwwYy0wLjM5LDAuMzktMC4zOSwxLjAzLDAsMS40MWwxLjA2LDEuMDZjMC4zOSwwLjM5LDEuMDMsMC4zOSwxLjQxLDBjMC4zOS0wLjM5LDAuMzktMS4wMywwLTEuNDEgTDE4LjM2LDE2Ljk1eiBNMTkuNDIsNS45OWMwLjM5LTAuMzksMC4zOS0xLjAzLDAtMS40MWMtMC4zOS0wLjM5LTEuMDMtMC4zOS0xLjQxLDBsLTEuMDYsMS4wNmMtMC4zOSwwLjM5LTAuMzksMS4wMywwLDEuNDEgczEuMDMsMC4zOSwxLjQxLDBMMTkuNDIsNS45OXogTTcuMDUsMTguMzZjMC4zOS0wLjM5LDAuMzktMS4wMywwLTEuNDFjLTAuMzktMC4zOS0xLjAzLTAuMzktMS40MSwwbC0xLjA2LDEuMDYgYy0wLjM5LDAuMzktMC4zOSwxLjAzLDAsMS40MXMxLjAzLDAuMzksMS40MSwwTDcuMDUsMTguMzZ6IiAvPjwvc3ZnPg==){.lightToggleIcon_pyhR}![](data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgY2xhc3M9ImRhcmtUb2dnbGVJY29uX3dmZ1IiPjxwYXRoIGZpbGw9ImN1cnJlbnRDb2xvciIgZD0iTTkuMzcsNS41MUM5LjE5LDYuMTUsOS4xLDYuODIsOS4xLDcuNWMwLDQuMDgsMy4zMiw3LjQsNy40LDcuNGMwLjY4LDAsMS4zNS0wLjA5LDEuOTktMC4yN0MxNy40NSwxNy4xOSwxNC45MywxOSwxMiwxOSBjLTMuODYsMC03LTMuMTQtNy03QzUsOS4wNyw2LjgxLDYuNTUsOS4zNyw1LjUxeiBNMTIsM2MtNC45NywwLTksNC4wMy05LDlzNC4wMyw5LDksOXM5LTQuMDMsOS05YzAtMC40Ni0wLjA0LTAuOTItMC4xLTEuMzYgYy0wLjk4LDEuMzctMi41OCwyLjI2LTQuNCwyLjI2Yy0yLjk4LDAtNS40LTIuNDItNS40LTUuNGMwLTEuODEsMC44OS0zLjQyLDIuMjYtNC40QzEyLjkyLDMuMDQsMTIuNDYsMywxMiwzTDEyLDN6IiAvPjwvc3ZnPg==){.darkToggleIcon_wfgR}
+
+
+
+[![](data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIGNsYXNzPSJEb2NTZWFyY2gtU2VhcmNoLUljb24iIHZpZXdib3g9IjAgMCAyMCAyMCI+PHBhdGggZD0iTTE0LjM4NiAxNC4zODZsNC4wODc3IDQuMDg3Ny00LjA4NzctNC4wODc3Yy0yLjk0MTggMi45NDE5LTcuNzExNSAyLjk0MTktMTAuNjUzMyAwLTIuOTQxOS0yLjk0MTgtMi45NDE5LTcuNzExNSAwLTEwLjY1MzMgMi45NDE4LTIuOTQxOSA3LjcxMTUtMi45NDE5IDEwLjY1MzMgMCAyLjk0MTkgMi45NDE4IDIuOTQxOSA3LjcxMTUgMCAxMC42NTMzeiIgc3Ryb2tlPSJjdXJyZW50Q29sb3IiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiAvPjwvc3ZnPg==){.DocSearch-Search-Icon}[Search]{.DocSearch-Button-Placeholder}]{.DocSearch-Button-Container}[]{.DocSearch-Button-Keys}
+
+
+
+
+
+
+
+
+
+
+-   [Integration Guidance](/docs/v5/guide){.menu__link}
+
+-   [Get Announcement](/docs/v5/announcement){.menu__link}
+
+-   [Self Match Prevention](/docs/v5/smp){.menu__link}
+
+-   [How To Start Copy Trading](/docs/v5/copytrade){.menu__link}
+
+-   [Demo Trading Service](/docs/v5/demo){.menu__link}
+
+-   [Get System Status](/docs/v5/system-status){.menu__link}
+
+-   
+    [Market](/docs/v5/market/time){.menu__link .menu__link--sublist .menu__link--sublist-caret aria-expanded="false"}
+    
+
+-   
+    [Trade](/docs/v5/order/create-order){.menu__link .menu__link--sublist .menu__link--sublist-caret aria-expanded="false"}
+    
+
+-   
+    [Position](/docs/v5/position){.menu__link .menu__link--sublist .menu__link--sublist-caret aria-expanded="false"}
+    
+
+-   
+    [Pre-upgrade](/docs/v5/pre-upgrade/order-list){.menu__link .menu__link--sublist .menu__link--sublist-caret aria-expanded="false"}
+    
+
+-   
+    [Account](/docs/v5/account/wallet-balance){.menu__link .menu__link--sublist .menu__link--sublist-caret aria-expanded="false"}
+    
+
+-   
+    [Asset](/docs/v5/asset/fund-history){.menu__link .menu__link--sublist .menu__link--sublist-caret .menu__link--active aria-expanded="true"}
+    
+
+    -   [Funding Account Transaction History](/docs/v5/asset/fund-history){.menu__link tabindex="0"}
+
+    -   [Get Delivery Record (2 years)](/docs/v5/asset/delivery){.menu__link tabindex="0"}
+
+    -   [Get USDC Session Settlement (2 years)](/docs/v5/asset/settlement){.menu__link tabindex="0"}
+
+    -   [Get Coin Exchange Records](/docs/v5/asset/exchange){.menu__link tabindex="0"}
+
+    -   [Get Coin Info](/docs/v5/asset/coin-info){.menu__link tabindex="0"}
+
+    -   [Get Sub UID](/docs/v5/asset/sub-uid-list){.menu__link tabindex="0"}
+
+    -   
+        [Balances](/docs/v5/asset/balance/account-coin-balance){.menu__link .menu__link--sublist .menu__link--sublist-caret .menu__link--active aria-expanded="true" tabindex="0"}
+        
+
+        -   [Get Single Coin Balance](/docs/v5/asset/balance/account-coin-balance){.menu__link tabindex="0"}
+        -   [Get All Coins Balance](/docs/v5/asset/balance/all-balance){.menu__link tabindex="0"}
+        -   [Get Withdrawable Amount](/docs/v5/asset/balance/delay-amount){.menu__link tabindex="0"}
+        -   [Asset Overview](/docs/v5/asset/balance/asset-overview){.menu__link .menu__link--active aria-current="page" tabindex="0"}
+
+    -   
+        [Transfer](/docs/v5/asset/transfer/create-inter-transfer){.menu__link .menu__link--sublist .menu__link--sublist-caret aria-expanded="false" tabindex="0"}
+        
+
+    -   
+        [Deposit](/docs/v5/asset/deposit/set-deposit-acct){.menu__link .menu__link--sublist .menu__link--sublist-caret aria-expanded="false" tabindex="0"}
+        
+
+    -   
+        [Withdraw](/docs/v5/asset/withdraw/withdraw-address){.menu__link .menu__link--sublist .menu__link--sublist-caret aria-expanded="false" tabindex="0"}
+        
+
+    -   
+        [Convert](/docs/v5/asset/convert/guideline){.menu__link .menu__link--sublist .menu__link--sublist-caret aria-expanded="false" tabindex="0"}
+        
+
+    -   
+        [Convert Small Balances](/docs/v5/asset/convert-small-balance/small-balanc-coins){.menu__link .menu__link--sublist .menu__link--sublist-caret aria-expanded="false" tabindex="0"}
+        
+
+    -   
+        [Fiat-Convert](/docs/v5/asset/fiat-convert/query-coin-list){.menu__link .menu__link--sublist .menu__link--sublist-caret aria-expanded="false" tabindex="0"}
+        
+
+-   
+    [User](/docs/v5/user/sign-agreement){.menu__link .menu__link--sublist .menu__link--sublist-caret aria-expanded="false"}
+    
+
+-   
+    [Spread Trading](/docs/v5/spread/market/instrument){.menu__link .menu__link--sublist .menu__link--sublist-caret aria-expanded="false"}
+    
+
+-   
+    [RFQ Trading](/docs/v5/rfq/basic-workflow){.menu__link .menu__link--sublist .menu__link--sublist-caret aria-expanded="false"}
+    
+
+-   
+    [Affiliate](/docs/v5/affiliate/affiliate-user-list){.menu__link .menu__link--sublist .menu__link--sublist-caret aria-expanded="false"}
+    
+
+-   
+    [Spot Margin Trade (UTA)](/docs/v5/spot-margin-uta/vip-margin){.menu__link .menu__link--sublist .menu__link--sublist-caret aria-expanded="false"}
+    
+
+-   
+    [Crypto Loan (New)](/docs/v5/new-crypto-loan/loan-coin){.menu__link .menu__link--sublist .menu__link--sublist-caret aria-expanded="false"}
+    
+
+-   
+    [Crypto Loan (legacy)](/docs/v5/crypto-loan/collateral-coin){.menu__link .menu__link--sublist .menu__link--sublist-caret aria-expanded="false"}
+    
+
+-   
+    [Institutional Loan](/docs/v5/otc/margin-product-info){.menu__link .menu__link--sublist .menu__link--sublist-caret aria-expanded="false"}
+    
+
+-   
+    [Broker](/docs/v5/broker/api-broker/guidance){.menu__link .menu__link--sublist .menu__link--sublist-caret aria-expanded="false"}
+    
+
+-   
+    [Earn](/docs/v5/earn/product-info){.menu__link .menu__link--sublist .menu__link--sublist-caret aria-expanded="false"}
+    
+
+-   
+    [SBE](/docs/v5/sbe/sbe-basic-info){.menu__link .menu__link--sublist .menu__link--sublist-caret aria-expanded="false"}
+    
+
+-   
+    [WebSocket Stream](/docs/v5/ws/connect){.menu__link .menu__link--sublist .menu__link--sublist-caret aria-expanded="false"}
+    
+
+-   
+    [Rate Limit](/docs/v5/rate-limit){.menu__link .menu__link--sublist .menu__link--sublist-caret aria-expanded="false"}
+    
+
+-   [Enums Definitions](/docs/v5/enum){.menu__link}
+
+-   [Error Codes](/docs/v5/error){.menu__link}
+
+-   
+    [Abandoned Endpoints](/docs/v5/abandon/asset-info){.menu__link .menu__link--sublist .menu__link--sublist-caret aria-expanded="false"}
+    
+
+![](data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iY29sbGFwc2VTaWRlYmFyQnV0dG9uSWNvbl9rdjBfIj48ZyBmaWxsPSIjN2E3YTdhIj48cGF0aCBkPSJNOS45OTIgMTAuMDIzYzAgLjItLjA2Mi4zOTktLjE3Mi41NDdsLTQuOTk2IDcuNDkyYS45ODIuOTgyIDAgMDEtLjgyOC40NTRIMWMtLjU1IDAtMS0uNDUzLTEtMSAwLS4yLjA1OS0uNDAzLjE2OC0uNTUxbDQuNjI5LTYuOTQyTC4xNjggMy4wNzhBLjkzOS45MzkgMCAwMTAgMi41MjhjMC0uNTQ4LjQ1LS45OTcgMS0uOTk3aDIuOTk2Yy4zNTIgMCAuNjQ5LjE4LjgyOC40NUw5LjgyIDkuNDcyYy4xMS4xNDguMTcyLjM0Ny4xNzIuNTV6bTAgMCIgLz48cGF0aCBkPSJNMTkuOTggMTAuMDIzYzAgLjItLjA1OC4zOTktLjE2OC41NDdsLTQuOTk2IDcuNDkyYS45ODcuOTg3IDAgMDEtLjgyOC40NTRoLTNjLS41NDcgMC0uOTk2LS40NTMtLjk5Ni0xIDAtLjIuMDU5LS40MDMuMTY4LS41NTFsNC42MjUtNi45NDItNC42MjUtNi45NDVhLjkzOS45MzkgMCAwMS0uMTY4LS41NSAxIDEgMCAwMS45OTYtLjk5N2gzYy4zNDggMCAuNjQ5LjE4LjgyOC40NWw0Ljk5NiA3LjQ5MmMuMTEuMTQ4LjE2OC4zNDcuMTY4LjU1em0wIDAiIC8+PC9nPjwvc3ZnPg==){.collapseSidebarButtonIcon_kv0_}
+
+
+
+
+
+
+
+-   [![](data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMjQgMjQiIGNsYXNzPSJicmVhZGNydW1iSG9tZUljb25fT1ZndCI+PHBhdGggZD0iTTEwIDE5di01aDR2NWMwIC41NS40NSAxIDEgMWgzYy41NSAwIDEtLjQ1IDEtMXYtN2gxLjdjLjQ2IDAgLjY4LS41Ny4zMy0uODdMMTIuNjcgMy42Yy0uMzgtLjM0LS45Ni0uMzQtMS4zNCAwbC04LjM2IDcuNTNjLS4zNC4zLS4xMy44Ny4zMy44N0g1djdjMCAuNTUuNDUgMSAxIDFoM2MuNTUgMCAxLS40NSAxLTF6IiBmaWxsPSJjdXJyZW50Q29sb3IiIC8+PC9zdmc+){.breadcrumbHomeIcon_OVgt}](/docs/){.breadcrumbs__link aria-label="Home page"}
+-   [Asset]{.breadcrumbs__link}
+-   [Balances]{.breadcrumbs__link}
+-   [Asset Overview]{.breadcrumbs__link itemprop="name"}
+
+
+On this page
+
+
+
+<div>
+
+# Asset Overview
+
+</div>
+
+
+
+Query master account or one subaccounts\' total assets and detailed asset holdings across different accounts and product categories.
+
+### HTTP Request[​](#http-request "Direct link to heading"){.hash-link} 
+
+GET `/v5/asset/asset-overview`
+
+
+
+[![](data:image/svg+xml;base64,PHN2ZyB2aWV3Ym94PSIwIDAgMTQgMTYiPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTcgMi4zYzMuMTQgMCA1LjcgMi41NiA1LjcgNS43cy0yLjU2IDUuNy01LjcgNS43QTUuNzEgNS43MSAwIDAgMSAxLjMgOGMwLTMuMTQgMi41Ni01LjcgNS43LTUuN3pNNyAxQzMuMTQgMSAwIDQuMTQgMCA4czMuMTQgNyA3IDcgNy0zLjE0IDctNy0zLjE0LTctNy03em0xIDNINnY1aDJWNHptMCA2SDZ2Mmgydi0yeiIgLz48L3N2Zz4=)]{.admonitionIcon_kALy}info
+
+
+
+For `accountType=Alpha`, on-chain assets are not included in the returned data in current version.
+
+
+
+### Request Parameters[​](#request-parameters "Direct link to heading"){.hash-link} 
+
+  Parameter   Required   Type     Comments
+  ----------- ---------- -------- ----------------------------------------------------------------------------------------
+  memberId    false      string   User ID. When using master API key to query sub account assets, this field is required
+
+### Response Parameters[​](#response-parameters "Direct link to heading"){.hash-link} 
+
+  Parameter                                          Type     Comments
+  -------------------------------------------------- -------- ---------------------------------------------------------------------------------------------------------------------------
+  totalEquity                                        string   Total equity across all accounts, valued in the user\'s valuation currency
+  list                                               array    Account holdings list
+  \> [accountType](/docs/v5/enum#assetaccounttype)   string   Account type
+  \> totalEquity                                     string   Total equity of this account
+  \> valuationCurrency                               string   Valuation currency for this account
+  \> snapshotTime                                    string   Data snapshot time, Unix timestamp (ms)
+  \> coinDetail                                      array    Coin-level holdings. Returned for accounts without sub-categories
+  \>\> coin                                          string   Coin name
+  \>\> equity                                        string   Coin equity amount
+  \> categories                                      array    Sub-category breakdown. Returned for accounts that have product sub-categories (e.g. `Earn`, `TradingBot`, `CopyTrading`)
+  \>\> [category](/docs/v5/enum#assetcategory)       string   Sub-category name
+  \>\> equity                                        string   Total equity of this sub-category
+  \>\> coinDetail                                    array    Coin-level holdings within this sub-category
+  \>\>\> coin                                        string   Coin name
+  \>\>\> equity                                      string   Coin equity amount
+
+------------------------------------------------------------------------
+
+### Request Example[​](#request-example "Direct link to heading"){.hash-link} 
+
+
+-   HTTP
+-   Python
+-   Node.js
+
+
+
+
+
+``` {.prism-code .language-http .codeBlock_bY9V .thin-scrollbar tabindex="0"}
+GET /v5/asset/asset-overview HTTP/1.1
+Host: api-testnet.bybit.com
+X-BAPI-SIGN: XXXXX
+X-BAPI-API-KEY: xxxxxxxxxxxxxxxxxx
+X-BAPI-TIMESTAMP: 1739433600000
+X-BAPI-RECV-WINDOW: 5000
+```
+
+
+[![](data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iY29weUJ1dHRvbkljb25feTk3TiIgdmlld2JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTksMjFIOFY3SDE5TTE5LDVIOEEyLDIgMCAwLDAgNiw3VjIxQTIsMiAwIDAsMCA4LDIzSDE5QTIsMiAwIDAsMCAyMSwyMVY3QTIsMiAwIDAsMCAxOSw1TTE2LDFINEEyLDIgMCAwLDAgMiwzVjE3SDRWM0gxNlYxWiIgLz48L3N2Zz4=){.copyButtonIcon_y97N}![](data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iY29weUJ1dHRvblN1Y2Nlc3NJY29uX0xqZFMiIHZpZXdib3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTIxLDdMOSwxOUwzLjUsMTMuNUw0LjkxLDEyLjA5TDksMTYuMTdMMTkuNTksNS41OUwyMSw3WiIgLz48L3N2Zz4=){.copyButtonSuccessIcon_LjdS}]{.copyButtonIcons_eSgA aria-hidden="true"}
+
+
+
+
+
+
+
+
+``` {.prism-code .language-python .codeBlock_bY9V .thin-scrollbar tabindex="0"}
+```
+
+
+[![](data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iY29weUJ1dHRvbkljb25feTk3TiIgdmlld2JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTksMjFIOFY3SDE5TTE5LDVIOEEyLDIgMCAwLDAgNiw3VjIxQTIsMiAwIDAsMCA4LDIzSDE5QTIsMiAwIDAsMCAyMSwyMVY3QTIsMiAwIDAsMCAxOSw1TTE2LDFINEEyLDIgMCAwLDAgMiwzVjE3SDRWM0gxNlYxWiIgLz48L3N2Zz4=){.copyButtonIcon_y97N}![](data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iY29weUJ1dHRvblN1Y2Nlc3NJY29uX0xqZFMiIHZpZXdib3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTIxLDdMOSwxOUwzLjUsMTMuNUw0LjkxLDEyLjA5TDksMTYuMTdMMTkuNTksNS41OUwyMSw3WiIgLz48L3N2Zz4=){.copyButtonSuccessIcon_LjdS}]{.copyButtonIcons_eSgA aria-hidden="true"}
+
+
+
+
+
+
+
+
+``` {.prism-code .language-n4js .codeBlock_bY9V .thin-scrollbar tabindex="0"}
+```
+
+
+[![](data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iY29weUJ1dHRvbkljb25feTk3TiIgdmlld2JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTksMjFIOFY3SDE5TTE5LDVIOEEyLDIgMCAwLDAgNiw3VjIxQTIsMiAwIDAsMCA4LDIzSDE5QTIsMiAwIDAsMCAyMSwyMVY3QTIsMiAwIDAsMCAxOSw1TTE2LDFINEEyLDIgMCAwLDAgMiwzVjE3SDRWM0gxNlYxWiIgLz48L3N2Zz4=){.copyButtonIcon_y97N}![](data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iY29weUJ1dHRvblN1Y2Nlc3NJY29uX0xqZFMiIHZpZXdib3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTIxLDdMOSwxOUwzLjUsMTMuNUw0LjkxLDEyLjA5TDksMTYuMTdMMTkuNTksNS41OUwyMSw3WiIgLz48L3N2Zz4=){.copyButtonSuccessIcon_LjdS}]{.copyButtonIcons_eSgA aria-hidden="true"}
+
+
+
+
+
+
+
+### Response Example[​](#response-example "Direct link to heading"){.hash-link} 
+
+
+
+``` {.prism-code .language-json .codeBlock_bY9V .thin-scrollbar tabindex="0"}
+{
+    "retCode": 0,
+    "retMsg": "Success",
+    "result": {
+        "totalEquity": "7457023",
+        "list": [
+            {
+                "totalEquity": "20429.51",
+                "valuationCurrency": "USD",
+                "accountType": "CryptoLoans",
+                "coinDetail": [
+                    {
+                        "equity": "-0.00100377",
+                        "coin": "BTC"
+                    },
+                    {
+                        "equity": "50",
+                        "coin": "MNT"
+                    },
+                    {
+                        "equity": "20383.9175",
+                        "coin": "USDT"
+                    }
+                ],
+                "snapshotTime": "1772449024908"
+            },
+            {
+                "totalEquity": "20888.1",
+                "valuationCurrency": "USD",
+                "accountType": "Earn",
+                "snapshotTime": "1772449024908",
+                "categories": [
+                    {
+                        "coinDetail": [
+                            {
+                                "equity": "0.3",
+                                "coin": "BTC"
+                            },
+                            {
+                                "equity": "100",
+                                "coin": "MNT"
+                            },
+                            {
+                                "equity": "200",
+                                "coin": "USDT"
+                            }
+                        ],
+                        "category": "Easy Earn",
+                        "equity": "20888.1"
+                    }
+                ]
+            },
+            {
+                "totalEquity": "120.53",
+                "valuationCurrency": "USD",
+                "accountType": "TradingBot",
+                "snapshotTime": "1772449024908",
+                "categories": [
+                    {
+                        "coinDetail": [
+                            {
+                                "equity": "4",
+                                "coin": "USDT"
+                            }
+                        ],
+                        "category": "Futures Grid Bot",
+                        "equity": "4"
+                    },
+                    {
+                        "coinDetail": [
+                            {
+                                "equity": "101.5392",
+                                "coin": "USDT"
+                            }
+                        ],
+                        "category": "Futures Combo Bot",
+                        "equity": "101.53"
+                    },
+                    {
+                        "coinDetail": [
+                            {
+                                "equity": "14.9923",
+                                "coin": "USDT"
+                            }
+                        ],
+                        "category": "Futures Martingale Bot",
+                        "equity": "14.99"
+                    }
+                ]
+            },
+            {
+                "totalEquity": "7175590.45",
+                "valuationCurrency": "USD",
+                "accountType": "FundingAccount",
+                "coinDetail": [
+                    {
+                        "equity": "100",
+                        "coin": "AED"
+                    },
+                    {
+                        "equity": "97.99999988",
+                        "coin": "BTC"
+                    },
+                    {
+                        "equity": "101",
+                        "coin": "SOL"
+                    },
+                    {
+                        "equity": "9950",
+                        "coin": "MNT"
+                    },
+                    {
+                        "equity": "10000",
+                        "coin": "TON"
+                    },
+                    {
+                        "equity": "98.9",
+                        "coin": "ETH"
+                    },
+                    {
+                        "equity": "12220.5558",
+                        "coin": "USDT"
+                    },
+                    {
+                        "equity": "100000",
+                        "coin": "USDC"
+                    },
+                    {
+                        "equity": "9000",
+                        "coin": "NEAR"
+                    },
+                    {
+                        "equity": "89490",
+                        "coin": "ADA"
+                    }
+                ],
+                "snapshotTime": "1772449024908"
+            },
+            {
+                "totalEquity": "254.37",
+                "valuationCurrency": "USD",
+                "accountType": "BybitPayLater",
+                "coinDetail": [
+                    {
+                        "equity": "178",
+                        "coin": "USDT"
+                    },
+                    {
+                        "equity": "76.371564",
+                        "coin": "USDC"
+                    }
+                ],
+                "snapshotTime": "1772449024908"
+            },
+            {
+                "totalEquity": "213399.38",
+                "valuationCurrency": "USD",
+                "accountType": "UnifiedTradingAccount",
+                "coinDetail": [
+                    {
+                        "equity": "37283.5394",
+                        "coin": "USDT"
+                    },
+                    {
+                        "equity": "399.6",
+                        "coin": "AED"
+                    },
+                    {
+                        "equity": "2.62897721",
+                        "coin": "BTC"
+                    },
+                    {
+                        "equity": "1",
+                        "coin": "ETH"
+                    }
+                ],
+                "snapshotTime": "1772449024908"
+            },
+            {
+                "totalEquity": "4491.24",
+                "valuationCurrency": "USD",
+                "accountType": "CopyTrading",
+                "snapshotTime": "1772449024908",
+                "categories": [
+                    {
+                        "coinDetail": [
+                            {
+                                "equity": "1379.2463",
+                                "coin": "USDT"
+                            }
+                        ],
+                        "category": "Copy Trading Classic",
+                        "equity": "1379.24"
+                    },
+                    {
+                        "coinDetail": [
+                            {
+                                "equity": "2111",
+                                "coin": "USDT"
+                            }
+                        ],
+                        "category": "Copy Trading TradFi",
+                        "equity": "2111"
+                    },
+                    {
+                        "coinDetail": [
+                            {
+                                "equity": "1001",
+                                "coin": "USDT"
+                            }
+                        ],
+                        "category": "Copy Trading Pro",
+                        "equity": "1001"
+                    }
+                ]
+            },
+            {
+                "totalEquity": "8304.15",
+                "valuationCurrency": "USD",
+                "accountType": "CryptoLoans_legacy",
+                "coinDetail": [
+                    {
+                        "equity": "0.13",
+                        "coin": "BTC"
+                    },
+                    {
+                        "equity": "0.14",
+                        "coin": "ETH"
+                    },
+                    {
+                        "equity": "-1000.5547",
+                        "coin": "USDT"
+                    }
+                ],
+                "snapshotTime": "1772449024908"
+            },
+            {
+                "totalEquity": "339.1",
+                "valuationCurrency": "USD",
+                "accountType": "Launchpool",
+                "coinDetail": [
+                    {
+                        "equity": "100",
+                        "coin": "MNT"
+                    },
+                    {
+                        "equity": "111",
+                        "coin": "USDT"
+                    }
+                ],
+                "snapshotTime": "1772449024908"
+            },
+            {
+                "totalEquity": "13121.13",
+                "valuationCurrency": "USD",
+                "accountType": "TradFi",
+                "coinDetail": [
+                    {
+                        "equity": "13121.13",
+                        "coin": "USDT"
+                    }
+                ],
+                "snapshotTime": "1772449024908"
+            },
+            {
+                "totalEquity": "85.02",
+                "valuationCurrency": "USD",
+                "accountType": "MarginStakedSOL",
+                "coinDetail": [
+                    {
+                        "equity": "34.05211088",
+                        "coin": "SOL"
+                    }
+                ],
+                "snapshotTime": "1772449024908"
+            }
+        ]
+    },
+    "retExtInfo": {},
+    "time": 1772449025426
+}
+```
+
+
+[![](data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iY29weUJ1dHRvbkljb25feTk3TiIgdmlld2JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTksMjFIOFY3SDE5TTE5LDVIOEEyLDIgMCAwLDAgNiw3VjIxQTIsMiAwIDAsMCA4LDIzSDE5QTIsMiAwIDAsMCAyMSwyMVY3QTIsMiAwIDAsMCAxOSw1TTE2LDFINEEyLDIgMCAwLDAgMiwzVjE3SDRWM0gxNlYxWiIgLz48L3N2Zz4=){.copyButtonIcon_y97N}![](data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iY29weUJ1dHRvblN1Y2Nlc3NJY29uX0xqZFMiIHZpZXdib3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTIxLDdMOSwxOUwzLjUsMTMuNUw0LjkxLDEyLjA5TDksMTYuMTdMMTkuNTksNS41OUwyMSw3WiIgLz48L3N2Zz4=){.copyButtonSuccessIcon_LjdS}]{.copyButtonIcons_eSgA aria-hidden="true"}
+
+
+
+
+
+
+
+
+
+
+
+[](/docs/v5/asset/balance/delay-amount){.pagination-nav__link .pagination-nav__link--prev}
+
+
+Previous
+
+
+
+Get Withdrawable Amount
+
+
+[](/docs/v5/asset/transfer/create-inter-transfer){.pagination-nav__link .pagination-nav__link--next}
+
+
+Next
+
+
+
+Create Internal Transfer
+
+
+
+
+
+
+
+-   [HTTP Request](#http-request){.table-of-contents__link .toc-highlight}
+-   [Request Parameters](#request-parameters){.table-of-contents__link .toc-highlight}
+-   [Response Parameters](#response-parameters){.table-of-contents__link .toc-highlight}
+-   [Request Example](#request-example){.table-of-contents__link .toc-highlight}
+-   [Response Example](#response-example){.table-of-contents__link .toc-highlight}
+
+
+
+
+
+
+
+
+
+
+
+
+Community
+
+
+-   [Telegram -- English![](data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTMuNSIgaGVpZ2h0PSIxMy41IiBhcmlhLWhpZGRlbj0idHJ1ZSIgdmlld2JveD0iMCAwIDI0IDI0IiBjbGFzcz0iaWNvbkV4dGVybmFsTGlua19uUElVIj48cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiIGQ9Ik0yMSAxM3YxMGgtMjF2LTE5aDEydjJoLTEwdjE1aDE3di04aDJ6bTMtMTJoLTEwLjk4OGw0LjAzNSA0LTYuOTc3IDcuMDcgMi44MjggMi44MjggNi45NzctNy4wNyA0LjEyNSA0LjE3MnYtMTF6IiAvPjwvc3ZnPg==){.iconExternalLink_nPIU}](https://t.me/BybitAPI){.footer__link-item target="_blank" rel="noopener noreferrer"}
+-   [Telegram -- Chinese![](data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTMuNSIgaGVpZ2h0PSIxMy41IiBhcmlhLWhpZGRlbj0idHJ1ZSIgdmlld2JveD0iMCAwIDI0IDI0IiBjbGFzcz0iaWNvbkV4dGVybmFsTGlua19uUElVIj48cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiIGQ9Ik0yMSAxM3YxMGgtMjF2LTE5aDEydjJoLTEwdjE1aDE3di04aDJ6bTMtMTJoLTEwLjk4OGw0LjAzNSA0LTYuOTc3IDcuMDcgMi44MjggMi44MjggNi45NzctNy4wNyA0LjEyNSA0LjE3MnYtMTF6IiAvPjwvc3ZnPg==){.iconExternalLink_nPIU}](https://t.me/BybitChineseAPI){.footer__link-item target="_blank" rel="noopener noreferrer"}
+-   [Discord![](data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTMuNSIgaGVpZ2h0PSIxMy41IiBhcmlhLWhpZGRlbj0idHJ1ZSIgdmlld2JveD0iMCAwIDI0IDI0IiBjbGFzcz0iaWNvbkV4dGVybmFsTGlua19uUElVIj48cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiIGQ9Ik0yMSAxM3YxMGgtMjF2LTE5aDEydjJoLTEwdjE1aDE3di04aDJ6bTMtMTJoLTEwLjk4OGw0LjAzNSA0LTYuOTc3IDcuMDcgMi44MjggMi44MjggNi45NzctNy4wNyA0LjEyNSA0LjE3MnYtMTF6IiAvPjwvc3ZnPg==){.iconExternalLink_nPIU}](https://discord.gg/VBwVwS2HUs){.footer__link-item target="_blank" rel="noopener noreferrer"}
+
+
+
+
+GitHub
+
+
+-   [API usage examples![](data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTMuNSIgaGVpZ2h0PSIxMy41IiBhcmlhLWhpZGRlbj0idHJ1ZSIgdmlld2JveD0iMCAwIDI0IDI0IiBjbGFzcz0iaWNvbkV4dGVybmFsTGlua19uUElVIj48cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiIGQ9Ik0yMSAxM3YxMGgtMjF2LTE5aDEydjJoLTEwdjE1aDE3di04aDJ6bTMtMTJoLTEwLjk4OGw0LjAzNSA0LTYuOTc3IDcuMDcgMi44MjggMi44MjggNi45NzctNy4wNyA0LjEyNSA0LjE3MnYtMTF6IiAvPjwvc3ZnPg==){.iconExternalLink_nPIU}](https://github.com/bybit-exchange/api-usage-examples){.footer__link-item target="_blank" rel="noopener noreferrer"}
+-   [Postman collection![](data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTMuNSIgaGVpZ2h0PSIxMy41IiBhcmlhLWhpZGRlbj0idHJ1ZSIgdmlld2JveD0iMCAwIDI0IDI0IiBjbGFzcz0iaWNvbkV4dGVybmFsTGlua19uUElVIj48cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiIGQ9Ik0yMSAxM3YxMGgtMjF2LTE5aDEydjJoLTEwdjE1aDE3di04aDJ6bTMtMTJoLTEwLjk4OGw0LjAzNSA0LTYuOTc3IDcuMDcgMi44MjggMi44MjggNi45NzctNy4wNyA0LjEyNSA0LjE3MnYtMTF6IiAvPjwvc3ZnPg==){.iconExternalLink_nPIU}](https://github.com/bybit-exchange/QuickStartWithPostman){.footer__link-item target="_blank" rel="noopener noreferrer"}
+-   [Official Python SDK -- pybit![](data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTMuNSIgaGVpZ2h0PSIxMy41IiBhcmlhLWhpZGRlbj0idHJ1ZSIgdmlld2JveD0iMCAwIDI0IDI0IiBjbGFzcz0iaWNvbkV4dGVybmFsTGlua19uUElVIj48cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiIGQ9Ik0yMSAxM3YxMGgtMjF2LTE5aDEydjJoLTEwdjE1aDE3di04aDJ6bTMtMTJoLTEwLjk4OGw0LjAzNSA0LTYuOTc3IDcuMDcgMi44MjggMi44MjggNi45NzctNy4wNyA0LjEyNSA0LjE3MnYtMTF6IiAvPjwvc3ZnPg==){.iconExternalLink_nPIU}](https://github.com/bybit-exchange/pybit){.footer__link-item target="_blank" rel="noopener noreferrer"}
+-   [Community Node.js SDK -- bybit-api![](data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTMuNSIgaGVpZ2h0PSIxMy41IiBhcmlhLWhpZGRlbj0idHJ1ZSIgdmlld2JveD0iMCAwIDI0IDI0IiBjbGFzcz0iaWNvbkV4dGVybmFsTGlua19uUElVIj48cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiIGQ9Ik0yMSAxM3YxMGgtMjF2LTE5aDEydjJoLTEwdjE1aDE3di04aDJ6bTMtMTJoLTEwLjk4OGw0LjAzNSA0LTYuOTc3IDcuMDcgMi44MjggMi44MjggNi45NzctNy4wNyA0LjEyNSA0LjE3MnYtMTF6IiAvPjwvc3ZnPg==){.iconExternalLink_nPIU}](https://www.npmjs.com/package/bybit-api){.footer__link-item target="_blank" rel="noopener noreferrer"}
+-   [Official Go SDK -- bybit-go-api![](data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTMuNSIgaGVpZ2h0PSIxMy41IiBhcmlhLWhpZGRlbj0idHJ1ZSIgdmlld2JveD0iMCAwIDI0IDI0IiBjbGFzcz0iaWNvbkV4dGVybmFsTGlua19uUElVIj48cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiIGQ9Ik0yMSAxM3YxMGgtMjF2LTE5aDEydjJoLTEwdjE1aDE3di04aDJ6bTMtMTJoLTEwLjk4OGw0LjAzNSA0LTYuOTc3IDcuMDcgMi44MjggMi44MjggNi45NzctNy4wNyA0LjEyNSA0LjE3MnYtMTF6IiAvPjwvc3ZnPg==){.iconExternalLink_nPIU}](https://github.com/bybit-exchange/bybit.go.api){.footer__link-item target="_blank" rel="noopener noreferrer"}
+-   [Official Java SDK -- bybit-java-api![](data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTMuNSIgaGVpZ2h0PSIxMy41IiBhcmlhLWhpZGRlbj0idHJ1ZSIgdmlld2JveD0iMCAwIDI0IDI0IiBjbGFzcz0iaWNvbkV4dGVybmFsTGlua19uUElVIj48cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiIGQ9Ik0yMSAxM3YxMGgtMjF2LTE5aDEydjJoLTEwdjE1aDE3di04aDJ6bTMtMTJoLTEwLjk4OGw0LjAzNSA0LTYuOTc3IDcuMDcgMi44MjggMi44MjggNi45NzctNy4wNyA0LjEyNSA0LjE3MnYtMTF6IiAvPjwvc3ZnPg==){.iconExternalLink_nPIU}](https://github.com/bybit-exchange/bybit-java-api){.footer__link-item target="_blank" rel="noopener noreferrer"}
+-   [Official .Net SDK -- bybit.net.api![](data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTMuNSIgaGVpZ2h0PSIxMy41IiBhcmlhLWhpZGRlbj0idHJ1ZSIgdmlld2JveD0iMCAwIDI0IDI0IiBjbGFzcz0iaWNvbkV4dGVybmFsTGlua19uUElVIj48cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiIGQ9Ik0yMSAxM3YxMGgtMjF2LTE5aDEydjJoLTEwdjE1aDE3di04aDJ6bTMtMTJoLTEwLjk4OGw0LjAzNSA0LTYuOTc3IDcuMDcgMi44MjggMi44MjggNi45NzctNy4wNyA0LjEyNSA0LjE3MnYtMTF6IiAvPjwvc3ZnPg==){.iconExternalLink_nPIU}](https://github.com/bybit-exchange/bybit.net.api){.footer__link-item target="_blank" rel="noopener noreferrer"}
+
+
+

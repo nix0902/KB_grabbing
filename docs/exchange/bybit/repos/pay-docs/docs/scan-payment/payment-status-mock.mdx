@@ -1,0 +1,113 @@
+---
+title: Payment Status Mock (only sandbox testnet)
+sidebar_label: Payment Status Mock (sandbox)
+sidebar_position: 4
+---
+### HTTP Request
+POST `/v5/bybitpay/paystatus/mock`
+
+### Request Parameters
+| Parameter | Required | Type | Comments|
+|:----- |:-------|:-----|------ |
+|merchantId |**true** |string |Onboarding merchant UID|
+|clientId |false|string |Merchant client ID|
+|[paymentType](data-model/payment-type)|**true** |string|Payment type|
+|merchantTradeNo|false |string|<li>"paymentType"=`E_COMMERCE`: it is merchant order number; "paymentType"=`E_COMMERCE_REFUND`: it is merchant refund order number</li><li><b>required</b> if "payId" is not provided</li>|
+|payId|false |string|<li>"paymentType"=`E_COMMERCE`: it is Bybit pay ID; "paymentType"=`E_COMMERCE_REFUND`: it is Bybit refund ID</li><li><b>required</b> if "merchantTradeNo" is not provided</li>|
+|status|**true** |string|Order status|
+
+### Response Parameters
+| Parameter | Type | Comments|
+|:----- |:-----|----- |
+|order |&lt;[PayOrderType](data-model/pay-order)&gt; |Bybit PayOrder Detail|
+
+### Request Example
+
+#### Mock Payment Success
+```http
+POST /v5/bybitpay/paystatus/mock HTTP/1.1
+Host: api-testnet.bybit.com
+X-BAPI-SIGN: XXXXX
+X-BAPI-API-KEY: xxxxxxxxxxxxxxxxxx
+X-BAPI-TIMESTAMP: 1736233200000
+X-BAPI-RECV-WINDOW: 5000
+Content-Type: application/json
+
+{
+    "merchantId": "305142568",
+    "clientId": "client_001",
+    "paymentType": "E_COMMERCE",
+    "payId": "01JY2KM5QNPXR8S4HTJZT9BC12",
+    "status": "PAY_SUCCESS"
+}
+```
+
+#### Mock Payment Failed
+```http
+POST /v5/bybitpay/paystatus/mock HTTP/1.1
+Host: api-testnet.bybit.com
+X-BAPI-SIGN: XXXXX
+X-BAPI-API-KEY: xxxxxxxxxxxxxxxxxx
+X-BAPI-TIMESTAMP: 1736233200000
+X-BAPI-RECV-WINDOW: 5000
+Content-Type: application/json
+
+{
+    "merchantId": "305142568",
+    "paymentType": "E_COMMERCE",
+    "merchantTradeNo": "af8c2d1-5b3e-4a9f-b6c7-8d2e1f3a4b5c",
+    "status": "PAY_FAILED"
+}
+```
+
+### Response Example
+
+#### Payment Success Response
+```json
+{
+    "retCode": 100000,
+    "retMsg": "success",
+    "result": {
+        "order": {
+            "merchantId": "305142568",
+            "clientId": "client_001",
+            "paymentType": "E_COMMERCE",
+            "merchantTradeNo": "af8c2d1-5b3e-4a9f-b6c7-8d2e1f3a4b5c",
+            "payId": "01JY2KM5QNPXR8S4HTJZT9BC12",
+            "status": "PAY_SUCCESS",
+            "amount": "100",
+            "currency": "USDT",
+            "currencyType": "crypto",
+            "createTime": 1736233200,
+            "paymentTime": 1736233260,
+            "finishTime": 1736233260,
+            "refundOrders": []
+        }
+    }
+}
+```
+
+#### Payment Failed Response
+```json
+{
+    "retCode": 100000,
+    "retMsg": "success",
+    "result": {
+        "order": {
+            "merchantId": "305142568",
+            "clientId": "client_001",
+            "paymentType": "E_COMMERCE",
+            "merchantTradeNo": "bf9d3e2-6c4f-5b0e-c8d9-9e3f2a4b6d7e",
+            "payId": "01JY2KM5QNPXR8S4HTJZT9BC13",
+            "status": "PAY_FAILED",
+            "amount": "50",
+            "currency": "USDT",
+            "currencyType": "crypto",
+            "createTime": 1736233300,
+            "paymentTime": 0,
+            "finishTime": 1736233500,
+            "refundOrders": []
+        }
+    }
+}
+```

@@ -1,0 +1,21 @@
+---
+title: PayOrderType
+sidebar_label: PayOrder
+sidebar_position: 3
+---
+| Parameter | Required | Type | Comments|
+|:----- |:-------|:-----|------ |
+|merchantId|**true**|string|Merchant ID|
+|clientId|false|string|Merchant Client ID, support different business type|
+|[paymentType](payment-type#)|false|string|Payment type|
+|merchantTradeNo|**true**|string|Merchant order number|
+|payId|**true**|string|Bybit pay ID|
+|status|**true**|string|Order status, [State Machine](../order-status)|
+|amount|**true**|string|Order amount|
+|currency|**true**|string|Order currency. Crypto scale: 8, examples: `9.00000001` USDT|
+|currencyType|**true**|string|Order Type (`fiat` or `crypto`)|
+|createTime|**true**|number|Order creation timestamp (second)|
+|paymentTime|**true**|number|Order payment timestamp (second)|
+|finishTime|**true**|number|Order completion timestamp (second)|
+|refundOrders|**true**|array&lt;[RefundOrderType](refund-order)&gt;|Refund orders|
+|remark|false|string|Payment remark, max 50 characters|

@@ -1,0 +1,31 @@
+name: Go
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Go
+      uses: actions/setup-go@v4
+      with:
+        go-version: '1.21'   # Bybit API 要求 1.21+
+
+    - name: Build
+      run: |
+        go list ./... \
+          | grep -v "examples" \
+          | grep -v "unit_test" \
+          | xargs -L1 go build -v
+
+
+    - name: Test
+      run: |
+        go list ./... | grep -v "examples" | xargs -L1 go test -v
