@@ -1,0 +1,714 @@
+Title: 更新日志 | Bitget API
+URL: https://www.bitget.com/zh-CN/api-doc/common/changelog
+
+跳到主要内容
+公共
+现货
+合约
+经纪商
+代理商
+杠杆
+跟单
+理财
+机构借贷
+统一账户
+简体中文
+简介
+V2优化说明
+更新日志
+快速入门
+FAQ
+SDK
+参数签名
+参数签名代码示例
+Websocket接口
+公告
+API域名
+基础配置
+税务
+模拟盘
+P2P
+交易大数据
+虚拟子账户
+资产
+闪兑
+小额兑换BGB
+更新日志
+更新日志
+[1月29日, 2026] 获取划转记录启用idLessThan翻页模式​
+
+接口:
+
+/api/v2/spot/account/transferRecords
+
+调整内容：
+
+获取划转记录启用idLessThan翻页模式，弃用pageNum
+[1月7日, 2026] WebSocket 经典账户(v2) 深度频道 books1 推送频率优化​
+
+Websocket: 深度频道
+调整内容: 深度频道 books1 推送频率优化为10ms
+
+[1月6日, 2026] 返回参数orderSource枚举值新增off_close下架平仓​
+
+接口:
+
+/api/v2/mix/order/orders-pending, /api/v2/mix/order/orders-history
+
+调整内容：
+
+返回参数orderSource枚举值新增off_close下架平仓
+[11月27日, 2025] 合约历史委托新增返回值强平价格​
+
+接口:
+
+/api/v2/mix/order/orders-history
+
+调整内容：
+
+合约历史委托新增返回值强平价格liqPrice字段
+[11月26日, 2025] Websocket 新增ADL通知频道​
+
+Websocket: ADL通知频道
+调整内容: Websocket 新增ADL通知频道
+
+[11月26日, 2025] 新增FAQ Q15​
+
+调整内容:新增FAQ Q15
+
+[11月19日, 2025] 获取合约信息接口返回值新增isRwa字段​
+
+接口:
+
+/api/v2/mix/market/contracts
+
+调整内容：
+
+获取合约信息接口返回值新增isRwa字段
+[11月8日, 2025] WebSocket 新增合约权益频道​
+
+Websocket: 合约权益频道
+调整内容: WebSocket 新增合约权益频道
+
+[11月8日, 2025] WebSocket 支持 Broker API Code​
+
+Websocket: 下单频道
+调整内容: 下单频道支持传Broker API Code获得返佣
+
+[11月7日, 2025] 新增获取最大可开接口​
+
+接口:
+
+/api/v2/mix/account/max-open
+
+调整内容：
+
+新增获取最大可开接口
+[11月7日, 2025] 新增获取预估强平价接口​
+
+接口:
+
+/api/v2/mix/account/liq-price
+
+调整内容：
+
+新增获取预估强平价接口
+[11月6日, 2025] 新增经纪商佣金查询接口​
+
+接口:
+
+/api/v2/broker/total-commission
+/api/v2/broker/order-commission
+/api/v2/broker/rebate-info
+
+调整内容：
+
+新增经纪商佣金查询接口
+[10月21日, 2025] 新增合约查询逐仓模式交易对接口​
+
+接口: /api/v2/mix/account/isolated-symbols
+调整内容：
+
+新增合约查询逐仓模式交易对接口
+[10月21日, 2025] 现货历史计划委托接口优化​
+
+接口: /api/v2/spot/trade/history-plan-order
+调整内容：
+
+请求参数 symbol、 startTime 、endTime 改为非必填
+[10月14日, 2025] 预告：经典账户错误码优化​
+
+影响范围：
+经典账户 v2 相关 API
+优化内容：
+
+
+统一错误码映射：解决 “不同错误码对应相同错误信息” 问题，确保一码一信息，减少识别混淆。
+
+规范错误信息匹配：修正 “不同错误信息对应相同错误码” 问题，实现信息与码精准对应，提升排查效率。
+
+[9月11日, 2025] 新增联合保证金相关接口​
+
+新增内容：
+
+新增 — 查询联合保证金切换单币种保证金所需USDT额度 /api/v2/mix/account/switch-union-usdt
+新增 — 联合保证金兑换还款接口 /api/v2/mix/account/union-convert
+新增 — 联合保证金配置参数接口 /api/v2/mix/account/union-config
+新增 — 联合保证金币种划转限制接口 /api/v2/mix/account/transfer-limits
+新增 — WS账户频道新增联合保证金参数： unionTotalMargin 保证金金额 unionAvailable 保证金可用 unionMm 维持保证金 assetMode 账户模式
+新增 — WS仓位频道新增 assetMode 账户模式参数
+[9月4日, 2025] 预告: 获取子母账户划转记录transferId 字段调整 为 子母账户划转时返回的 transferId​
+
+接口: /api/v2/spot/account/sub-main-trans-record
+调整内容：
+
+transferId 调整前生成规则：自增ID
+transferId 调整后生成规则：雪花算法
+[9月2日, 2025] 查询升级状态接口新增失败原因字段​
+
+接口：/api/v2/spot/account/upgrade-status
+调整内容：
+
+查询升级状态接口新增失败原因字段
+[8月28日, 2025] 预告：WebSocket 经典账户(v2) 深度频道 books1 推送频率优化​
+
+Websocket: 深度频道
+调整内容: 深度频道 books1 推送频率优化为20ms ，优化的交易对为：BTCUSDT, ETHUSDT, XRPUSDT ,SOLUSDT ,SUIUSDT,DOGEUSDT,ADAUSDT,PEPEUSDT ,LINKUSDT ,HBARUSDT
+
+[8月11日, 2025] 代理商佣金接口查询支持扣减手续费​
+
+接口：/api/broker/v1/agent/commission-distribution;/api/broker/v1/agent/customer-commissions;
+调整内容：
+
+代理商佣金接口支持查询扣减手续费明细
+[8月11日, 2025] API全局限频规则调整​
+
+调整内容：
+
+总体有6000次/IP/分钟的限频规则,限频触发后，需要1分钟恢复调整为需要5分钟恢复
+[8月6日, 2025] 获取子账户的合约账户资产信息新增 unrealizedPL 字段​
+
+接口：/api/v2/broker/account/subaccount-future-assets
+调整内容：
+
+获取子账户的合约账户资产信息新增 unrealizedPL 字段
+[8月6日, 2025] 获取历史成交明细新增保证金币种 marginCoin 字段​
+
+接口：/api/v2/mix/order/fill-history
+调整内容：
+
+获取历史成交明细返回值新增保证金币种 marginCoin 字段
+[8月4日, 2025] 删除合约模拟币对​
+
+删除合约模拟币对，请使用模拟盘进行模拟交易
+
+[7月31日, 2025] 合约下单接口逻辑优化​
+
+接口： /api/v2/mix/order/place-order
+
+调整内容： 优化前: 双向持仓下，若已有数量等于持仓的限价平仓单，新增市价平仓单将因仓位不足报错，且不会自动取消已占用仓位的限价单 优化后: 双向持仓下，若已有数量等于持仓的限价平仓单，新增市价平仓单会自动取消已占用仓位的限价单（与Web/APP一致）
+
+[7月29日, 2025] 优化ADL接口排名逻辑​
+
+接口：/api/v2/mix/position/adlRank 调整内容：
+
+服务端优化ADL接口排名逻辑，新增 “rank” 字段，并将 “adlRank” 字段标记为过时（不推荐使用）。
+[7月16日, 2025] 新增账户模式切换API​
+
+接口：/api/v2/spot/account/upgrade, /api/v2/spot/account/upgrade-status 调整内容：
+
+新增账户模式切换API
+[7月14日, 2025] 合约调整杠杆接口支持分别设置多空杠杆倍数​
+
+接口： /api/v2/mix/account/set-leverage
+新增内容：
+
+A合约调整杠杆接口支持分别设置多空杠杆倍数。
+[7月14日, 2025] 仓位止盈止损接口支持分别设置止盈及止损自定义ID​
+
+接口： /api/v2/mix/order/place-pos-tpsl
+新增内容：
+
+仓位止盈止损接口支持分别设置止盈及止损自定义ID。
+[7月14日, 2025] 获取合约历史持仓列表新增持仓模式字段​
+
+接口： /api/v2/mix/position/history-position
+新增内容：
+
+接口返回参数新增posMode持仓模式，枚举值包含one_way_mode单向持仓和hedge_mode双向持仓
+[7月8日, 2025] websocket合约仓位频道新增标记价格参数​
+
+频道: 合约仓位频道 调整：
+
+websocket合约仓位频道新增标记价格参数
+[7月1日, 2025] websocket新增下单和撤单频道​
+
+频道: 下单频道 、撤单频道
+
+调整：
+
+websocket新增下单和撤单频道
+[6月17日, 2025] 现货获取合并交易深度、现货获取交易深度、合约合并深度接口 ts字段调整​
+
+接口：/api/v2/mix/market/merge-depth,/api/v2/spot/market/orderbook,/api/v2/spot/market/merge-depth
+
+调整内容：
+
+现货获取合并交易深度、现货获取交易深度、合约合并深度接口 ts字段调整为撮合引擎时间戳
+[6月16日, 2025] ADL排名接口新增持仓方向​
+
+接口：/api/v2/mix/position/adlRank
+新增内容：
+
+ADL排名接口新增持仓方向 holdSide 字段。
+[6月9日, 2025] 获取合约信息接口新增最大下单数量字段​
+
+接口：/api/v2/mix/market/contracts
+新增内容：
+
+新增单笔市价单最大下单数量字段maxMarketOrderQty，单笔限价单最大下单数量字段maxOrderQty。
+[5月19日, 2025] 关于常规发布日的更新​
+
+当前后端固定的常规发布日为每周二、周三和周四的14:00 - 17:00 pm (UTC +8)(紧急发布除外)。
+在常规发布时间段内，RestAPI可能会收到45001，40725，40808报错响应, 用户在收到报错响应后重试即可，Websocket可能会在发布期间断连，请websocket用户在代码中添加重连机制。
+
+[5月19日, 2025] 现货下单计划委托接口调整​
+
+接口：/api/v2/spot/trade/place-plan-order
+
+调整内容：
+
+force 字段下单时无效，删除去该字段
+[5月14日, 2025] 新版带单员创建带单API Key接口新增带单币对范围描述​
+
+接口：/api/v2/copy/mix-trader/create-copy-api
+新增内容：
+
+新增带单币对范围描述。
+[5月9日, 2025] 获取当前资金费率入参调整​
+
+接口：/api/v2/mix/market/current-fund-rate
+
+调整内容：
+
+获取当前资金费率入参 symbol 改成非必填
+[5月9日, 2025] 获取子账户现货资产接口优化​
+
+接口：/api/v2/spot/account/subaccount-assets
+
+调整内容：
+
+增加分页参数 idLessThan 分页游标 limit 每页条目数
+增加返回字段 id 游标ID
+[5月9日, 2025] 查询公告接口优化​
+
+接口：/api/v2/public/annoucements
+
+调整内容：
+
+新增公告类型
+product_updates: 产品更新
+security: 安全
+api_trading: API交易
+增加分页参数 cursor 游标ID limit 每页条目数
+废弃公告类型 trading_competitions_promotions 交易比赛和活动
+废弃返回字段 annDesc 公告描述
+[5月8日, 2025] 新增杠杆利率记录接口；​
+
+接口： /api/v2/margin/interest-rate-record 调整内容：
+
+新增杠杆利率记录接口，支持用户基于交易对查询利率记录数据
+[5月8日, 2025] 现货/合约公共成交明细查询范围优化；​
+
+接口： /api/v2/spot/market/fills-history; /api/v2/mix/market/fills-history；
+
+调整内容：
+
+将时间跨度由7天调整为90天，即支持查询最近三个月的公共成交数据；
+[5月8日, 2025] 合约下单新增预设止盈止损执行价；​
+
+接口： /api/v2/mix/order/place-order
+
+调整内容：
+
+新增入参
+presetStopSurplusExecutePrice 预设止盈执行价格
+presetStopLossExecutePrice 预设止损执行价格
+[5月8日, 2025] websocket全仓/逐仓杠杆订单频道推送增加utime;​
+
+频道： 全仓杠杆订单频道 、逐仓杠杆订单频道
+
+调整内容：
+
+推送增加utime
+[4月30日, 2025] ws 合约成交明细，现货/合约深度频道增加推送字段​
+
+频道：合约成交明细，现货深度频道，合约深度频道
+
+调整内容：
+
+合约成交明细推送信息增加 clientOid 字段
+现货深度频道、合约深度频道推送信息增加 seq 字段
+[4月23日, 2025] 获取账单流水新增账单类型枚举​
+
+接口：/api/v2/spot/account/bills
+
+调整内容：
+
+获取账单流水入参和返回值新增账单类型 groupType 枚举
+[4月21日, 2025] 删除错误码code 40882​
+
+删除内容：
+
+删除错误码code 40882 : 您当前为交易员身份，不能切换为全仓模式|400|
+[4月14日, 2025] 新增获取独立经纪商(ND Broker)子账户充提记录接口​
+
+接口：/api/v2/broker/all-sub-deposit-withdrawal
+
+调整内容：
+
+新增获取独立经纪商(ND Broker)获取子账户最近90天的充值、提币记录
+[4月10日, 2025] 虚拟子账户API Key相关接口调整​
+
+接口：/api/v2/user/create-virtual-subaccount-apikey，/api/v2/user/modify-virtual-subaccount-apikey，/api/v2/user/virtual-subaccount-apikey-list
+
+调整内容：
+
+新建、修改、查询子账户API key接口 permList 添加 transfer钱包划转权限
+修改、查询子账户API Key接口新增支持普通子账户
+[4月10日, 2025] 现货获取交易对信息接口响应信息调整​
+
+接口：/api/v2/spot/public/symbols
+
+调整内容：
+
+接口响应新增offTime字段
+maxTradeAmount响应参数固定返回 900000000000000000000，请忽略这个响应参数
+[04.09, 2025] 新增ADL排名接口；​
+
+接口：/api/v2/mix/position/adlRank
+新增内容：
+
+支持获取用户各个交易对的ADL排名。
+[04.08, 2025] 新增 新版带单员创建带单API Key接口；新版跟随者跟单设置接口；​
+
+接口：/api/v2/copy/mix-trader/create-copy-api
+新增内容：
+
+新版带单员创建带单API Key接口。
+
+接口：/api/v2/copy/mix-follower/copy-settings
+新增内容：
+
+新版跟随者跟单设置接口。
+[04.02,2025] 预估利息及可借数量入参调整​
+
+接口：/api/v2/earn/loan/public/hour-interest, /api/v2/earn/loan/borrow
+
+新增内容： 入参质押天数调整为
+SEVEN: 7天
+THIRTY: 30天
+FLEXIBLE: 活期
+[03.27, 2025] 合约账户信息接口、资金费率接口返回值新增字段；现货成交明细入参调整；​
+
+接口：/api/v2/mix/account/accounts
+新增内容：
+
+合约账户接口信息返回值新增联合保证金当前币种最大可转出 available 字段。
+
+接口：/api/v2/mix/market/current-fund-rate
+新增内容：
+
+获取当前资金费率接口返回值新增 结算周期、资金费率上下限、下次更新时间参数。
+
+接口：/api/v2/spot/trade/fills
+变更内容：
+
+请求参数中的symbol由必填修改为非必填。
+[03.22, 2025] Websocket 合约账户频道新增响应字段​
+
+频道：合约 - 私有频道 - 账户频道
+改动点：推送信息新增"crossedRiskRate"（全仓时风险率）和"unrealizedPL"（未实现盈亏）字段
+
+[03.20, 2025] 现货订单查询类接口, 根据ClientOid可查询订单信息调整为只能查询2小时内数据​
+
+接口：现货查询订单信息类接口
+改动点：通过ClientOid只能查询2小时内订单信息
+
+[03.18,2025] 修改子账户ApiKey权限 入参说明调整​
+
+接口：/api/v2/broker/manage/modify-subaccount-apikey
+变更内容：
+
+修改子账户Apikey权限 入参 permType 权限类型 改为必填。
+[03.12,2025] 获取合约主动买卖量信息 period入参调整​
+
+接口：/api/v2/mix/market/long-short
+变更内容：
+
+入参 period 字段 1d 改为 1Dutc。
+[03.11,2025] 合约新增OI 限仓信息API​
+
+接口：/api/v2/mix/market/oi-limit
+新增内容：
+
+合约新增OI 限仓信息API。
+[02.19,2025] 添加现货杠杆公有频道instId描述​
+
+变更内容：
+
+添加现货杠杆公有频道instId描述 只支持：default(全部币对)
+[02.18,2025] Broker子账户充值记录添加userId响应字段​
+
+接口：/api/v2/broker/subaccount-deposit
+变更内容：
+
+Broker子账户充值记录添加userId响应字段
+[02.07,2025] 新增经典账户模拟盘调用说明​
+
+新增内容：
+
+Websocket 订阅模拟盘消息方法说明
+RestApi 调用模拟盘进行API交易方法说明
+[02.03,2025] 合约错误码新增code 22067​
+
+新增内容：
+
+合约错误码新增code 22067 : ADL处理中，禁止操作
+[01.16,2025] 合约财务记录增加futureTaxType参数枚举​
+
+接口：/api/v2/tax/future-record
+新增内容：
+
+增加返回值futureTaxType参数枚举类型和说明
+[01.15,2025] Bitget 关于 USDC 永续合约指数价格由 USD 计价调整为 USDC 计价的公告​
+
+主要调整
+
+指数价格和标记价格：USDC 永续合约的指数价格和标记价格将采用 USDC 报价。
+订单簿报价：USDC 永续合约的订单簿报价也将采用 USDC 计价。
+
+详情请参考：https://www.bitget.com/zh-CN/support/articles/12560603820643
+
+[12.24,2024] 【闪兑】接口限频调整​
+
+/api/v2/convert/trade, 限频从10次/秒/UID，调整成5次/秒/UID
+
+[12.16,2024] 现货账户获取划转记录接口废弃idLessThan参数，新增pageNum参数​
+
+接口：现货账户获取划转记录接口 改动点：现货账户获取划转记录接口废弃idLessThan参数，新增pageNum参数，实现分页
+
+[11.22, 2024] Websocket连接限制规则更新​
+
+连接说明：
+连接限制：300次连接请求/IP/5分钟，单个IP最多可以创建100个连接
+订阅限制：240次/小时/连接，单个连接最多可以订阅1000个频道
+
+为了保持连接有效且稳定，建议您进行以下操作：
+
+Websocket连接强制24小时断一次，请您在代码中添加重连机制
+用户设置一个定时器，每30秒发送字符串"ping", 并期待一个字符串"pong"作为回应。如果未收到字符串"pong"响应，请重新连接
+如果2分钟内服务端没收到"ping"，会自动断开连接
+Websocket服务器每秒每连接最多接受10个消息。消息包括:
+字符串"ping"
+JSON格式的消息，比如订阅，断开订阅
+如果用户发送的消息超过限制，连接会被断开连接。反复被断开连接的IP有可能被服务器屏蔽
+为了保持连接的稳定性，强烈建议单个连接不要订阅超过50个频道。订阅频道数越少的连接，稳定性会更高。
+[10.17,2024] 合约和现货的获取行情接口，更新change24h字段计算方式​
+
+接口：
+
+/api/v2/spot/market/tickers 现货获取行情信息接口
+/api/v2/mix/market/ticker 合约获取单个交易对行情接口
+/api/v2/mix/market/tickers 合约获取全部交易对行情接口
+
+改动点：
+API响应中的change24h字段的计算将会从东八区0点到当前时间的涨跌幅更换成当前时间往前推24小时的涨跌幅数值
+
+[09.24,2024] U本位联合保证金需求相关API上线​
+
+接口：U本位联合保证金需求相关API上线，涉及设置保证金模式接口，合约账号查询接口，合约仓位查询接口
+
+[08.28,2024] p2p商家广告单接口调整limit参数最大值为20​
+
+接口：p2p商家广告单接口 改动点：调整limit参数最大值为20
+
+[08.15,2024] API接口限频调整​
+接口	原始限频	修改后限频
+/api/v2/copy/mix-trader/order-close-positions	10次/秒/UID	5次/秒/UID
+/api/v2/copy/mix-trader/order-current-track	10次/秒/UID	5次/秒/UID
+/api/v2/copy/mix-follower/query-current-orders	10次/秒/UID	5次/秒/UID
+/api/v2/copy/mix-follower/query-history-orders	20次/秒/UID	5次/秒/UID
+/api/v2/copy/mix-trader/order-history-track	10次/秒/UID	5次/秒/UID
+/api/v2/copy/mix-trader/profits-group-coin-date	20次/秒/UID	5次/秒/UID
+/api/v2/copy/mix-trader/profit-history-summarys	20次/秒/UID	5次/秒/UID
+/api/v2/copy/mix-trader/profit-history-details	20次/秒/UID	5次/秒/UID
+/api/v2/copy/mix-trader/profit-details	20次/秒/UID	5次/秒/UID
+/api/v2/copy/mix-trader/order-modify-tpsl	10次/秒/UID	5次/秒/UID
+/api/v2/copy/mix-trader/order-total-detail	10次/秒/UID	5次/秒/UID
+/api/v2/copy/mix-broker/query-traders	10次/秒/UID	5次/秒/UID
+/api/v2/copy/mix-follower/settings	10次/秒/UID	5次/秒/UID
+/api/v2/copy/mix-follower/close-positions	10次/秒/UID	5次/秒/UID
+/api/v2/copy/mix-follower/setting-tpsl	20次/秒/UID	5次/秒/UID
+/api/v2/copy/mix-follower/query-settings	10次/秒/UID	5次/秒/UID
+/api/v2/copy/mix-follower/cancel-trader	10次/秒/UID	5次/秒/UID
+/api/v2/copy/mix-trader/config-settings-base	10次/秒/UID	5次/秒/UID
+/api/v2/copy/mix-follower/query-traders	10次/秒/UID	5次/秒/UID
+/api/v2/copy/mix-trader/config-query-followers	10次/秒/UID	5次/秒/UID
+/api/v2/copy/mix-trader/config-remove-follower	10次/秒/UID	5次/秒/UID
+/api/v2/copy/mix-trader/config-query-symbols	20次/秒/UID	5次/秒/UID
+/api/v2/copy/mix-trader/config-setting-symbols	10次/秒/UID	5次/秒/UID
+/api/v2/copy/mix-broker/query-history-traces	10次/秒/UID	5次/秒/UID
+/api/v2/spot/trade/batch-cancel-plan-order	10次/秒/UID	5次/秒/UID
+/api/v2/spot/account/deduct-info	10次/秒/UID	5次/秒/UID
+/api/v2/copy/spot-follower/query-current-orders	10次/秒/UID	5次/秒/UID
+/api/v2/copy/spot-follower/query-settings	10次/秒/UID	5次/秒/UID
+/api/v2/copy/spot-follower/query-history-orders	10次/秒/UID	5次/秒/UID
+/api/v2/copy/spot-follower/query-traders	10次/秒/UID	5次/秒/UID
+/api/v2/copy/spot-trader/config-query-settings	10次/秒/UID	5次/秒/UID
+/api/v2/copy/spot-trader/order-history-track	10次/秒/UID	5次/秒/UID
+/api/v2/copy/spot-trader/profit-summarys	10次/秒/UID	5次/秒/UID
+/api/v2/copy/spot-trader/profit-history-details	10次/秒/UID	5次/秒/UID
+/api/v2/copy/spot-trader/profit-details	10次/秒/UID	5次/秒/UID
+/api/v2/copy/spot-trader/order-total-detail	10次/秒/UID	5次/秒/UID
+/api/v2/user/virtual-subaccount-apikey-list	10次/秒/UID	5次/秒/UID
+/api/v2/broker/account/subaccount-withdrawal	10次/秒/UID	1次/秒/UID
+/api/v2/spot/account/switch-deduct	10次/秒/UID	1次/秒/UID
+/api/v2/copy/spot-follower/order-close-tracking	10次/秒/UID	1次/秒/UID
+/api/v2/copy/spot-follower/cancel-trader	10次/秒/UID	1次/秒/UID
+/api/v2/copy/spot-follower/stop-order	10次/秒/UID	1次/秒/UID
+/api/v2/copy/spot-follower/settings	10次/秒/UID	1次/秒/UID
+/api/v2/copy/spot-follower/setting-tpsl	10次/秒/UID	1次/秒/UID
+/api/v2/copy/spot-trader/order-close-tracking	10次/秒/UID	1次/秒/UID
+/api/v2/copy/spot-trader/config-setting-symbols	10次/秒/UID	1次/秒/UID
+/api/v2/copy/spot-trader/config-remove-follower	10次/秒/UID	1次/秒/UID
+/api/v2/copy/spot-trader/order-modify-tpsl	10次/秒/UID	1次/秒/UID
+[07.03,2024] 提币和获取充值地址支持比特币闪电网络​
+
+接口：提币，获取充币地址，获取子账户充币地址 改动点：获取充币地址支持获取比特币闪电网络发票地址，提币接口支持比特币闪电网络发票地址提币
+
+[06.25,2024] 获取p2p商家列表接口调整​
+
+获取p2p商家列表接口不再返回merchantId字段
+
+[03.15,2024] 历史计划委托的记录时效及查询时间范围调整​
+
+接口：获取历史计划委托
+
+改动点：
+
+startTime和endTime间隔调整为90天
+仅支持90天内的历史记录查询
+[02.06,2024] Websocket现货订单频道推送参数新增newSize​
+
+现货订单频道推送新增newSize参数，后续会逐步替换size参数
+
+newSize表示订单委托数量。规则如下:
+
+当orderType=limit时，newSize表示base coin数量;
+当orderType=market且side=buy时，newSize表示quote coin数量；
+当orderType=market且side=sell时，newSize表示base coin数量
+[01.19,2024] 税务接口查询时间范围调整​
+
+接口：现货财务记录，合约财务记录，杠杆财务记录，p2p财务记录 改动点：startTime和endTime间隔由一年调整为30天
+
+[12.27,2023] Broker子账户提币接口调整​
+
+请求参数dest不再支持传入internal_transfer
+请求参数toType移除
+
+[11.16,2023] 批量撤单接口响应新增errorCode参数​
+
+批量撤单接口新增响应参数errorCode
+
+您的阅读体验如何？
+★
+★
+★
+★
+★
+反馈建议
+上一页
+V2优化说明
+下一页
+快速入门
+1月29日, 2026 获取划转记录启用idLessThan翻页模式
+1月7日, 2026 WebSocket 经典账户(v2) 深度频道 books1 推送频率优化
+1月6日, 2026 返回参数orderSource枚举值新增off_close下架平仓
+11月27日, 2025 合约历史委托新增返回值强平价格
+11月26日, 2025 Websocket 新增ADL通知频道
+11月26日, 2025 新增FAQ Q15
+11月19日, 2025 获取合约信息接口返回值新增isRwa字段
+11月8日, 2025 WebSocket 新增合约权益频道
+11月8日, 2025 WebSocket 支持 Broker API Code
+11月7日, 2025 新增获取最大可开接口
+11月7日, 2025 新增获取预估强平价接口
+11月6日, 2025 新增经纪商佣金查询接口
+10月21日, 2025 新增合约查询逐仓模式交易对接口
+10月21日, 2025 现货历史计划委托接口优化
+10月14日, 2025 预告：经典账户错误码优化
+9月11日, 2025 新增联合保证金相关接口
+9月4日, 2025 预告: 获取子母账户划转记录transferId 字段调整 为 子母账户划转时返回的 transferId
+9月2日, 2025 查询升级状态接口新增失败原因字段
+8月28日, 2025 预告：WebSocket 经典账户(v2) 深度频道 books1 推送频率优化
+8月11日, 2025 代理商佣金接口查询支持扣减手续费
+8月11日, 2025 API全局限频规则调整
+8月6日, 2025 获取子账户的合约账户资产信息新增 unrealizedPL 字段
+8月6日, 2025 获取历史成交明细新增保证金币种 marginCoin 字段
+8月4日, 2025 删除合约模拟币对
+7月31日, 2025 合约下单接口逻辑优化
+7月29日, 2025 优化ADL接口排名逻辑
+7月16日, 2025 新增账户模式切换API
+7月14日, 2025 合约调整杠杆接口支持分别设置多空杠杆倍数
+7月14日, 2025 仓位止盈止损接口支持分别设置止盈及止损自定义ID
+7月14日, 2025 获取合约历史持仓列表新增持仓模式字段
+7月8日, 2025 websocket合约仓位频道新增标记价格参数
+7月1日, 2025 websocket新增下单和撤单频道
+6月17日, 2025 现货获取合并交易深度、现货获取交易深度、合约合并深度接口 ts字段调整
+6月16日, 2025 ADL排名接口新增持仓方向
+6月9日, 2025 获取合约信息接口新增最大下单数量字段
+5月19日, 2025 关于常规发布日的更新
+5月19日, 2025 现货下单计划委托接口调整
+5月14日, 2025 新版带单员创建带单API Key接口新增带单币对范围描述
+5月9日, 2025 获取当前资金费率入参调整
+5月9日, 2025 获取子账户现货资产接口优化
+5月9日, 2025 查询公告接口优化
+5月8日, 2025 新增杠杆利率记录接口；
+5月8日, 2025 现货/合约公共成交明细查询范围优化；
+5月8日, 2025 合约下单新增预设止盈止损执行价；
+5月8日, 2025 websocket全仓/逐仓杠杆订单频道推送增加utime;
+4月30日, 2025 ws 合约成交明细，现货/合约深度频道增加推送字段
+4月23日, 2025 获取账单流水新增账单类型枚举
+4月21日, 2025 删除错误码code 40882
+4月14日, 2025 新增获取独立经纪商(ND Broker)子账户充提记录接口
+4月10日, 2025 虚拟子账户API Key相关接口调整
+4月10日, 2025 现货获取交易对信息接口响应信息调整
+04.09, 2025 新增ADL排名接口；
+04.08, 2025 新增 新版带单员创建带单API Key接口；新版跟随者跟单设置接口；
+04.02,2025 预估利息及可借数量入参调整
+03.27, 2025 合约账户信息接口、资金费率接口返回值新增字段；现货成交明细入参调整；
+03.22, 2025 Websocket 合约账户频道新增响应字段
+03.20, 2025 现货订单查询类接口, 根据ClientOid可查询订单信息调整为只能查询2小时内数据
+03.18,2025 修改子账户ApiKey权限 入参说明调整
+03.12,2025 获取合约主动买卖量信息 period入参调整
+03.11,2025 合约新增OI 限仓信息API
+02.19,2025 添加现货杠杆公有频道instId描述
+02.18,2025 Broker子账户充值记录添加userId响应字段
+02.07,2025 新增经典账户模拟盘调用说明
+02.03,2025 合约错误码新增code 22067
+01.16,2025 合约财务记录增加futureTaxType参数枚举
+01.15,2025 Bitget 关于 USDC 永续合约指数价格由 USD 计价调整为 USDC 计价的公告
+12.24,2024 【闪兑】接口限频调整
+12.16,2024 现货账户获取划转记录接口废弃idLessThan参数，新增pageNum参数
+11.22, 2024 Websocket连接限制规则更新
+10.17,2024 合约和现货的获取行情接口，更新change24h字段计算方式
+09.24,2024 U本位联合保证金需求相关API上线
+08.28,2024 p2p商家广告单接口调整limit参数最大值为20
+08.15,2024 API接口限频调整
+07.03,2024 提币和获取充值地址支持比特币闪电网络
+06.25,2024 获取p2p商家列表接口调整
+03.15,2024 历史计划委托的记录时效及查询时间范围调整
+02.06,2024 Websocket现货订单频道推送参数新增newSize
+01.19,2024 税务接口查询时间范围调整
+12.27,2023 Broker子账户提币接口调整
+11.16,2023 批量撤单接口响应新增errorCode参数

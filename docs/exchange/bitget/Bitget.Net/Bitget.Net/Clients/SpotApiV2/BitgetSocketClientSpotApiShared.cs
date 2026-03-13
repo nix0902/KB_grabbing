@@ -1,0 +1,273 @@
+using Bitget.Net.Interfaces.Clients.SpotApiV2;
+using CryptoExchange.Net.Objects;
+using CryptoExchange.Net.Objects.Sockets;
+using CryptoExchange.Net.SharedApis;
+using Bitget.Net.Enums.V2;
+using CryptoExchange.Net;
+
+namespace Bitget.Net.Clients.SpotApiV2
+{
+    internal partial class BitgetSocketClientSpotApi : IBitgetSocketClientSpotApiShared
+    {
+        private const string _topicId = "BitgetSpot";
+
+        public string Exchange => BitgetExchange.ExchangeName;
+        public TradingMode[] SupportedTradingModes { get; } = new[] { TradingMode.Spot };
+
+        public void SetDefaultExchangeParameter(string key, object value) => ExchangeParameters.SetStaticParameter(Exchange, key, value);
+        public void ResetDefaultExchangeParameters() => ExchangeParameters.ResetStaticParameters();
+
+        #region Ticker client
+        SubscribeTickerOptions ITickerSocketClient.SubscribeTickerOptions { get; } = new SubscribeTickerOptions()
+        {
+            SupportsMultipleSymbols = true,
+            MaxSymbolCount = 50
+        };
+        async Task<ExchangeResult<UpdateSubscription>> ITickerSocketClient.SubscribeToTickerUpdatesAsync(SubscribeTickerRequest request, Action<DataEvent<SharedSpotTicker>> handler, CancellationToken ct)
+        {
+            var validationError = ((ITickerSocketClient)this).SubscribeTickerOptions.ValidateRequest(Exchange, request, request.TradingMode, SupportedTradingModes);
+            if (validationError != null)
+                return new ExchangeResult<UpdateSubscription>(Exchange, validationError);
+
+            var symbols = request.Symbols?.Length > 0 ? request.Symbols.Select(x => x.GetSymbol(FormatSymbol)).ToArray() : [request.Symbol!.GetSymbol(FormatSymbol)];
+            var result = await SubscribeToTickerUpdatesAsync(symbols, update =>
+            {
+                foreach (var item in update.Data)
+                {
+                    handler(update.ToType(new SharedSpotTicker(ExchangeSymbolCache.ParseSymbol(_topicId, item.Symbol), item.Symbol, item.LastPrice, item.HighPrice24h, item.LowPrice24h, item.BaseVolume, item.ChangePercentage * 100)
+                    {
+                        QuoteVolume = item.QuoteVolume
+                    }));
+                }
+            }, ct).ConfigureAwait(false);
+            
+            return new ExchangeResult<UpdateSubscription>(Exchange, result);
+        }
+
+        #endregion
+
+        #region Trade client
+
+        EndpointOptions<SubscribeTradeRequest> ITradeSocketClient.SubscribeTradeOptions { get; } = new EndpointOptions<SubscribeTradeRequest>(false)
+        {
+            SupportsMultipleSymbols = true,
+            MaxSymbolCount = 50
+        };
+        async Task<ExchangeResult<UpdateSubscription>> ITradeSocketClient.SubscribeToTradeUpdatesAsync(SubscribeTradeRequest request, Action<DataEvent<SharedTrade[]>> handler, CancellationToken ct)
+        {
+            var validationError = ((ITradeSocketClient)this).SubscribeTradeOptions.ValidateRequest(Exchange, request, request.TradingMode, SupportedTradingModes);
+            if (validationError != null)
+                return new ExchangeResult<UpdateSubscription>(Exchange, validationError);
+
+            var symbols = request.Symbols?.Length > 0 ? request.Symbols.Select(x => x.GetSymbol(FormatSymbol)).ToArray() : [request.Symbol!.GetSymbol(FormatSymbol)];
+            var result = await SubscribeToTradeUpdatesAsync(symbols, update =>
+            {
+                if (update.UpdateType == SocketUpdateType.Snapshot)
+                    return;
+
+                handler(update.ToType<SharedTrade[]>(update.Data.Select(x => 
+                new SharedTrade(ExchangeSymbolCache.ParseSymbol(_topicId, update.Symbol), update.Symbol!, x.Quantity, x.Price, x.Timestamp)
+                {
+                    Side = x.Side == OrderSide.Buy ? SharedOrderSide.Buy : SharedOrderSide.Sell
+                }).ToArray()));
+            }, ct).ConfigureAwait(false);
+            
+            return new ExchangeResult<UpdateSubscription>(Exchange, result);
+        }
+        #endregion
+
+        #region Book Ticker client
+
+        EndpointOptions<SubscribeBookTickerRequest> IBookTickerSocketClient.SubscribeBookTickerOptions { get; } = new EndpointOptions<SubscribeBookTickerRequest>(false)
+        {
+            SupportsMultipleSymbols = true,
+            MaxSymbolCount = 50
+        };
+        async Task<ExchangeResult<UpdateSubscription>> IBookTickerSocketClient.SubscribeToBookTickerUpdatesAsync(SubscribeBookTickerRequest request, Action<DataEvent<SharedBookTicker>> handler, CancellationToken ct)
+        {
+            var validationError = ((IBookTickerSocketClient)this).SubscribeBookTickerOptions.ValidateRequest(Exchange, request, request.TradingMode, SupportedTradingModes);
+            if (validationError != null)
+                return new ExchangeResult<UpdateSubscription>(Exchange, validationError);
+
+            var symbols = request.Symbols?.Length > 0 ? request.Symbols.Select(x => x.GetSymbol(FormatSymbol)).ToArray() : [request.Symbol!.GetSymbol(FormatSymbol)];
+            var result = await SubscribeToTickerUpdatesAsync(symbols, update =>
+            {
+                foreach (var item in update.Data)
+                {
+                    handler(update.ToType(
+                        new SharedBookTicker(ExchangeSymbolCache.ParseSymbol(_topicId, item.Symbol), 
+                        item.Symbol,
+                        item.BestAskPrice,
+                        item.BestAskQuantity,
+                        item.BestBidPrice,
+                        item.BestBidQuantity)));
+                }
+            }, ct).ConfigureAwait(false);
+            
+            return new ExchangeResult<UpdateSubscription>(Exchange, result);
+        }
+        #endregion
+
+        #region Balance client
+        EndpointOptions<SubscribeBalancesRequest> IBalanceSocketClient.SubscribeBalanceOptions { get; } = new EndpointOptions<SubscribeBalancesRequest>(false);
+        async Task<ExchangeResult<UpdateSubscription>> IBalanceSocketClient.SubscribeToBalanceUpdatesAsync(SubscribeBalancesRequest request, Action<DataEvent<SharedBalance[]>> handler, CancellationToken ct)
+        {
+            var validationError = ((IBalanceSocketClient)this).SubscribeBalanceOptions.ValidateRequest(Exchange, request, request.TradingMode, SupportedTradingModes);
+            if (validationError != null)
+                return new ExchangeResult<UpdateSubscription>(Exchange, validationError);
+            var result = await SubscribeToBalanceUpdatesAsync(
+                update =>
+                {
+                    if (update.UpdateType == SocketUpdateType.Snapshot)
+                        return;
+
+                    handler(update.ToType<SharedBalance[]>(update.Data.Select(x => new SharedBalance(x.Asset, x.Available, x.Available + (x.Locked ?? 0) + (x.Frozen ?? 0))).ToArray()));
+                },
+                ct: ct).ConfigureAwait(false);
+
+            return new ExchangeResult<UpdateSubscription>(Exchange, result);
+        }
+        #endregion
+
+        #region Spot Order client
+
+        EndpointOptions<SubscribeSpotOrderRequest> ISpotOrderSocketClient.SubscribeSpotOrderOptions { get; } = new EndpointOptions<SubscribeSpotOrderRequest>(false);
+        async Task<ExchangeResult<UpdateSubscription>> ISpotOrderSocketClient.SubscribeToSpotOrderUpdatesAsync(SubscribeSpotOrderRequest request, Action<DataEvent<SharedSpotOrder[]>> handler, CancellationToken ct)
+        {
+            var validationError = ((ISpotOrderSocketClient)this).SubscribeSpotOrderOptions.ValidateRequest(Exchange, request, TradingMode.Spot, SupportedTradingModes);
+            if (validationError != null)
+                return new ExchangeResult<UpdateSubscription>(Exchange, validationError);
+
+            var result = await SubscribeToOrderUpdatesAsync(
+                update => handler(update.ToType<SharedSpotOrder[]>(update.Data.Select(x =>
+                    new SharedSpotOrder(
+                        ExchangeSymbolCache.ParseSymbol(_topicId, x.Symbol),
+                        x.Symbol,
+                        x.OrderId.ToString(),
+                        x.OrderType == OrderType.Limit ? SharedOrderType.Limit : x.OrderType == OrderType.Market ? SharedOrderType.Market : SharedOrderType.Other,
+                        x.Side == OrderSide.Buy ? SharedOrderSide.Buy : SharedOrderSide.Sell,
+                        x.Status == OrderStatus.Canceled ? SharedOrderStatus.Canceled : (x.Status == OrderStatus.Live || x.Status == OrderStatus.New || x.Status == OrderStatus.PartiallyFilled) ? SharedOrderStatus.Open : SharedOrderStatus.Filled,
+                        x.CreateTime)
+                    {
+                        ClientOrderId = x.ClientOrderId?.ToString(),
+                        OrderQuantity = new SharedOrderQuantity(x.OrderType == OrderType.Market && x.Side == OrderSide.Buy ? null : x.OrderQuantity, x.Notional),
+                        QuantityFilled = new SharedOrderQuantity(x.QuantityFilled),
+                        TimeInForce = x.TimeInForce == TimeInForce.ImmediateOrCancel ? SharedTimeInForce.ImmediateOrCancel : x.TimeInForce == TimeInForce.FillOrKill ? SharedTimeInForce.FillOrKill: SharedTimeInForce.GoodTillCanceled,
+                        AveragePrice = x.AveragePrice == 0 ? null : x.AveragePrice,
+                        UpdateTime = x.UpdateTime,
+                        Fee = x.Fees.Any() ? x.Fees.Sum(f => f.Fee) : 0,
+                        FeeAsset = x.FeeAsset,
+                        OrderPrice = x.Price,
+                        LastTrade = x.TradeId == null ? null : new SharedUserTrade(ExchangeSymbolCache.ParseSymbol(_topicId, x.Symbol), x.Symbol, x.OrderId, x.TradeId, x.Side == OrderSide.Buy ? SharedOrderSide.Buy : SharedOrderSide.Sell, x.BaseVolume!.Value, x.LastTradePrice!.Value, x.LastTradeTime!.Value)
+                        {
+                            Fee = x.LastTradeFee == null ? null : Math.Abs(x.LastTradeFee.Value),
+                            FeeAsset = x.FeeAsset,
+                            Role = x.LastTradeRole == Role.Taker ? SharedRole.Taker : SharedRole.Maker,
+                            ClientOrderId = x.ClientOrderId
+                        }
+                    }
+                ).ToArray())),
+                ct: ct).ConfigureAwait(false);
+
+            return new ExchangeResult<UpdateSubscription>(Exchange, result);
+        }
+        #endregion
+
+        #region User Trade client
+
+        EndpointOptions<SubscribeUserTradeRequest> IUserTradeSocketClient.SubscribeUserTradeOptions { get; } = new EndpointOptions<SubscribeUserTradeRequest>(false);
+        async Task<ExchangeResult<UpdateSubscription>> IUserTradeSocketClient.SubscribeToUserTradeUpdatesAsync(SubscribeUserTradeRequest request, Action<DataEvent<SharedUserTrade[]>> handler, CancellationToken ct)
+        {
+            var validationError = ((IUserTradeSocketClient)this).SubscribeUserTradeOptions.ValidateRequest(Exchange, request, TradingMode.Spot, SupportedTradingModes);
+            if (validationError != null)
+                return new ExchangeResult<UpdateSubscription>(Exchange, validationError);
+
+            var result = await SubscribeToUserTradeUpdatesAsync(
+                update => handler(update.ToType<SharedUserTrade[]>(update.Data.Select(x =>
+                    new SharedUserTrade(
+                        ExchangeSymbolCache.ParseSymbol(_topicId, x.Symbol),
+                        x.Symbol,
+                        x.OrderId.ToString(),
+                        x.TradeId.ToString(),
+                        x.Side == OrderSide.Buy ? SharedOrderSide.Buy : SharedOrderSide.Sell,
+                        x.Quantity,
+                        x.Price,
+                        x.UpdateTime ?? x.CreateTime)
+                    {
+                        Fee = Math.Abs(x.Fees.First().TotalFee),
+                        FeeAsset = x.Fees.First().FeeAsset,
+                        Role = x.Role == Role.Maker ? SharedRole.Maker : SharedRole.Taker
+                    }
+                ).ToArray())),
+                ct: ct).ConfigureAwait(false);
+
+            return new ExchangeResult<UpdateSubscription>(Exchange, result);
+        }
+        #endregion
+
+        #region Kline client
+        SubscribeKlineOptions IKlineSocketClient.SubscribeKlineOptions { get; } = new SubscribeKlineOptions(false,
+            SharedKlineInterval.OneMinute,
+            SharedKlineInterval.ThreeMinutes,
+            SharedKlineInterval.FiveMinutes,
+            SharedKlineInterval.FifteenMinutes,
+            SharedKlineInterval.ThirtyMinutes,
+            SharedKlineInterval.OneHour,
+            SharedKlineInterval.FourHours,
+            SharedKlineInterval.SixHours,
+            SharedKlineInterval.TwelveHours,
+            SharedKlineInterval.OneDay,
+            SharedKlineInterval.OneWeek,
+            SharedKlineInterval.OneMonth)
+        {
+            SupportsMultipleSymbols = true,
+            MaxSymbolCount = 50
+        };
+        async Task<ExchangeResult<UpdateSubscription>> IKlineSocketClient.SubscribeToKlineUpdatesAsync(SubscribeKlineRequest request, Action<DataEvent<SharedKline>> handler, CancellationToken ct)
+        {
+            var interval = (Enums.BitgetStreamKlineIntervalV2)request.Interval;
+            if (!Enum.IsDefined(typeof(Enums.BitgetStreamKlineIntervalV2), interval))
+                return new ExchangeResult<UpdateSubscription>(Exchange, ArgumentError.Invalid(nameof(GetKlinesRequest.Interval), "Interval not supported"));
+
+            var validationError = ((IKlineSocketClient)this).SubscribeKlineOptions.ValidateRequest(Exchange, request, request.TradingMode, SupportedTradingModes);
+            if (validationError != null)
+                return new ExchangeResult<UpdateSubscription>(Exchange, validationError);
+
+            var symbols = request.Symbols?.Length > 0 ? request.Symbols.Select(x => x.GetSymbol(FormatSymbol)).ToArray() : [request.Symbol!.GetSymbol(FormatSymbol)];
+            var result = await SubscribeToKlineUpdatesAsync(symbols, interval, update =>
+            {
+                if (update.UpdateType == SocketUpdateType.Snapshot)
+                    return;
+
+                foreach (var item in update.Data)
+                    handler(update.ToType(new SharedKline(ExchangeSymbolCache.ParseSymbol(_topicId, update.Symbol), update.Symbol!, item.OpenTime, item.ClosePrice, item.HighPrice, item.LowPrice, item.OpenPrice, item.Volume)));
+            }, ct).ConfigureAwait(false);            
+
+            return new ExchangeResult<UpdateSubscription>(Exchange, result);
+        }
+        #endregion
+
+        #region Order Book client
+        SubscribeOrderBookOptions IOrderBookSocketClient.SubscribeOrderBookOptions { get; } = new SubscribeOrderBookOptions(false, new[] { 1, 5, 15 })
+        {
+            SupportsMultipleSymbols = true,
+            MaxSymbolCount = 50
+        };
+        async Task<ExchangeResult<UpdateSubscription>> IOrderBookSocketClient.SubscribeToOrderBookUpdatesAsync(SubscribeOrderBookRequest request, Action<DataEvent<SharedOrderBook>> handler, CancellationToken ct)
+        {
+            var validationError = ((IOrderBookSocketClient)this).SubscribeOrderBookOptions.ValidateRequest(Exchange, request, request.TradingMode, SupportedTradingModes);
+            if (validationError != null)
+                return new ExchangeResult<UpdateSubscription>(Exchange, validationError);
+
+            var symbols = request.Symbols?.Length > 0 ? request.Symbols.Select(x => x.GetSymbol(FormatSymbol)).ToArray() : [request.Symbol!.GetSymbol(FormatSymbol)];
+            var result = await SubscribeToOrderBookUpdatesAsync(symbols, request.Limit ?? 15, update =>
+            {
+                foreach(var item in update.Data)
+                    handler(update.ToType(new SharedOrderBook(item.Asks, item.Bids)));
+            }, ct).ConfigureAwait(false);
+            
+            return new ExchangeResult<UpdateSubscription>(Exchange, result);
+        }
+        #endregion
+    }
+}

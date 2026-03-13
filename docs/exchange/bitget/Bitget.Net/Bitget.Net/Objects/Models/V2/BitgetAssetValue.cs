@@ -1,0 +1,23 @@
+using CryptoExchange.Net.Converters.SystemTextJson;
+using System.Text.Json.Serialization;
+
+namespace Bitget.Net.Objects.Models.V2
+{
+    /// <summary>
+    /// Asset valudation
+    /// </summary>
+    [SerializationModel]
+    public record BitgetAssetValue
+    {
+        /// <summary>
+        /// ["<c>accountType</c>"] Account type
+        /// </summary>
+        [JsonPropertyName("accountType")]
+        public string AccountType { get; set; } = string.Empty;
+        /// <summary>
+        /// ["<c>usdtBalance</c>"] Usdt value
+        /// </summary>
+        [JsonPropertyName("usdtBalance")]
+        public decimal UsdtBalance { get; set; }
+    }
+}

@@ -1,0 +1,285 @@
+Title: Websocket接口 | Bitget API
+URL: https://www.bitget.com/zh-CN/api-doc/common/websocket-intro
+
+跳到主要内容
+公共
+现货
+合约
+经纪商
+代理商
+杠杆
+跟单
+理财
+机构借贷
+统一账户
+简体中文
+简介
+V2优化说明
+更新日志
+快速入门
+FAQ
+SDK
+参数签名
+参数签名代码示例
+Websocket接口
+公告
+API域名
+基础配置
+税务
+模拟盘
+P2P
+交易大数据
+虚拟子账户
+资产
+闪兑
+小额兑换BGB
+Websocket接口
+Websocket接口
+概述​
+
+WebSocket是HTML5一种新的协议(Protocol)。它实现了客户端与服务器全双工通信， 使得数据可以快速地双向传播。通过一次简单的握手就 可以建立客户端和服务器连接， 服务器根据业务规则可以主动推送信息给客户端。其优点如下：
+
+客户端和服务器进行数据传输时，请求头信息比较小，大概2个字节。
+
+客户端和服务器皆可以主动地发送数据给对方。
+
+不需要多次创建TCP请求和销毁，节约宽带和服务器的资源。
+
+强烈建议开发者使用WebSocket API获取市场行情和买卖深度等信息。
+
+域名	WebSocket API	建议使用
+公共频道	wss://ws.bitget.com/v2/ws/public	主域名， 公共频道
+私有频道	wss://ws.bitget.com/v2/ws/private	主域名， 私有频道
+连接​
+
+连接说明：
+
+连接限制：300次连接请求/IP/5分钟，单个IP最多可以创建100个连接
+
+订阅限制：240次/小时/连接，单个连接最多可以订阅1000个频道
+
+为了保持连接有效且稳定，建议您进行以下操作：
+
+用户设置一个定时器，每30秒发送字符串"ping", 并期待一个字符串"pong"作为回应。如果未收到字符串"pong"响应，请重新连接
+如果2分钟内服务端没收到"ping"，会自动断开连接
+Websocket服务器每秒每连接最多接受10个消息。消息包括:
+字符串"ping"
+JSON格式的消息，比如订阅，断开订阅
+如果用户发送的消息超过限制，连接会被断开连接。反复被断开连接的IP有可能被服务器屏蔽
+为了保持连接的稳定性，强烈建议单个连接不要订阅超过50个频道。订阅频道数越少的连接，稳定性会更高。
+登录​
+
+api_key:用于调用API的用户身份唯一标示，需要用户申请
+
+passphrase:API Key 的密码,如果没有口令的话传入空字符串("")即可
+
+timestamp: Unix 毫秒时间戳 ，时间戳30秒后会过期
+
+sign:为签名字符串，签名规则参照如下:
+
+Message即(待签名字符串)为： timestamp+method+requestPath
+
+其中timestamp示例:
+
+const timestamp = '' + Date.now()
+
+method一律默认为'GET'
+
+requestPath 一律默认为 /user/verify
+
+请求在时间戳之后30秒会失效，如果您的服务器时间和API服务器时间有偏差，推荐使用 REST API查询 服务器时间，然后设置时间戳
+
+签名方式说明参考API概述里的验证部分
+
+生成最终签名的步骤​
+HMAC​
+
+第1步，将待签名字符串使用私钥secretkey进行hmac sha256加密
+
+Signature = hmac_sha256(secretkey, Message)
+
+
+第2步，对于Signature进行base64编码
+
+Signature = base64.encode(Signature)
+
+RSA​
+RSA示例代码
+
+第一步，使用RSA私钥privateKey对待签名字符串进行SHA-256签名。
+
+第二步，对生成的签名字符串进行编码为 base64 string，得到签名字符串进行接口请求。
+
+如果登录失败会自动断开链接
+
+请求格式说明
+{
+  "op":"login",
+  "args":[
+    {
+      "apiKey":"<api_key>",
+      "passphrase":"<passphrase>",
+      "timestamp":"<timestamp>",
+      "sign":"<sign>"
+    }
+  ]
+}   
+
+请求示例
+{
+  "op":"login",
+  "args":[
+    {
+      "apiKey":"xx_xxx",
+      "passphrase":"12345678",
+      "timestamp":"1538054050",
+      "sign":"8RCOqCJAhhEh4PWcZB/96QojLDqMAg4qNynIixFzS3E="
+    }
+  ]
+}
+
+成功返回示例
+{
+  "event":"login",
+  "code":"0",
+  "msg":""
+}
+
+失败返回示例
+{
+  "event":"error",
+  "code":"30005",
+  "msg":"login fail"
+}
+
+订阅​
+
+订阅说明
+
+请求格式说明
+{
+  "op":"subscribe",
+  "args":[
+    "<SubscriptionTopic> "
+  ]
+}
+
+
+WebSocket 频道： 公共频道
+
+公共频道无需登录，包括行情频道，K线频道，交易数据频道，深度数据频道等。
+
+instId 取值参考 symbol 或 default
+
+用户可以选择订阅一个或者多个频道，一次订阅多个频道总长度不能超过4096个字节。
+
+请求示例
+{
+  "op":"subscribe",
+  "args":[
+    {
+      "instType":"USDT-FUTURES",
+      "channel":"ticker",
+      "instId":"BTCUSDT"
+    },
+    {
+      "instType":"USDT-FUTURES",
+      "channel":"candle1m",
+      "instId":"BTCUSDT"
+    }
+  ]
+}
+
+
+请求参数
+
+参数	类型	是否必须	描述
+op	String	是	操作，subscribe
+args	Array	是	请求订阅的频道列表
+> instType	String	否	产品类型 MC：公共频道
+> channel	String	是	频道名
+> instId	String	否	产品ID或产品名称
+{
+  "event":"subscribe",
+  "arg":{
+    "instType":"USDT-FUTURES",
+    "channel":"ticker",
+    "instId":"BTCUSDT"
+  }
+}
+
+
+返回参数
+
+参数	类型	是否必须	描述
+event	String	是	事件，subscribe
+arg	Object	否	订阅的频道
+> instType	String	否	产品类型
+> channel	String	是	频道名
+> instId	String	否	产品ID
+code	String	否	错误码
+msg	String	否	错误消息
+取消订阅​
+
+可以取消一个或者多个频道
+
+请求格式说明
+{
+  "op":"unsubscribe",
+  "args":[
+    "< SubscriptionTopic > "
+  ]
+}
+
+请求示例
+{
+  "op":"unsubscribe",
+  "args":[
+    {
+      "instType":"USDT-FUTURES",
+      "channel":"ticker",
+      "instId":"BTCUSDT"
+    },
+    {
+      "instType":"USDT-FUTURES",
+      "channel":"candle1D",
+      "instId":"BTCUSDT"
+    }
+  ]
+}
+
+
+请求参数
+
+参数	类型	是否必须	描述
+op	String	是	操作，unsubscribe
+args	Array	是	取消订阅的频道列表
+> instType	String	是	产品类型 MC：公共频道
+> channel	String	是	频道名
+> instId	String	是	产品ID
+返回示例
+{
+  "event":"unsubscribe",
+  "arg":{
+    "instType":"USDT-FUTURES",
+    "channel":"ticker",
+    "instId":"BTCUSDT"
+  }
+}
+
+您的阅读体验如何？
+★
+★
+★
+★
+★
+反馈建议
+上一页
+请求交互
+下一页
+查询公告
+概述
+连接
+登录
+订阅
+取消订阅

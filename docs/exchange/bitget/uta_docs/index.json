@@ -1,0 +1,810 @@
+{
+  "total_pages": 134,
+  "scraped_at": "2026-03-13 14:02:18",
+  "pages": {
+    "https://www.bitget.com/api-doc/uta/intro": {
+      "section": "intro",
+      "title": "Unified Trading Account | Bitget API",
+      "file": "intro.md",
+      "chars": 3701
+    },
+    "https://www.bitget.com/api-doc/uta/guide": {
+      "section": "guide",
+      "title": "Quick Start | Bitget API",
+      "file": "guide.md",
+      "chars": 3810
+    },
+    "https://www.bitget.com/api-doc/uta/changelog": {
+      "section": "changelog",
+      "title": "Change Log | Bitget API",
+      "file": "changelog.md",
+      "chars": 24297
+    },
+    "https://www.bitget.com/api-doc/uta/enum": {
+      "section": "enum",
+      "title": "Enumeration | Bitget API",
+      "file": "enum.md",
+      "chars": 11956
+    },
+    "https://www.bitget.com/api-doc/uta/public/Instruments": {
+      "section": "public",
+      "title": "Get Instruments | Bitget API",
+      "file": "public.md",
+      "chars": 6675
+    },
+    "https://www.bitget.com/api-doc/uta/error-code/websocket": {
+      "section": "error-code",
+      "title": "WebSocket Error Code | Bitget API",
+      "file": "error-code.md",
+      "chars": 27022
+    },
+    "https://www.bitget.com/api-doc/uta/public/Tickers": {
+      "section": "public",
+      "title": "Get Tickers | Bitget API",
+      "file": "public.md",
+      "chars": 3245
+    },
+    "https://www.bitget.com/api-doc/uta/public/OrderBook": {
+      "section": "public",
+      "title": "Get OrderBook | Bitget API",
+      "file": "public.md",
+      "chars": 2108
+    },
+    "https://www.bitget.com/api-doc/uta/public/RPI-OrderBook": {
+      "section": "public",
+      "title": "Get RPI OrderBook | Bitget API",
+      "file": "public.md",
+      "chars": 2452
+    },
+    "https://www.bitget.com/api-doc/uta/public/Fills": {
+      "section": "public",
+      "title": "Get Recent Public Fills | Bitget API",
+      "file": "public.md",
+      "chars": 2161
+    },
+    "https://www.bitget.com/api-doc/uta/public/Get-Proof-Of-Reserves": {
+      "section": "public",
+      "title": "Get Proof Of Reserves | Bitget API",
+      "file": "public.md",
+      "chars": 2268
+    },
+    "https://www.bitget.com/api-doc/uta/public/Get-Open-Interest": {
+      "section": "public",
+      "title": "Get Open Interest | Bitget API",
+      "file": "public.md",
+      "chars": 1653
+    },
+    "https://www.bitget.com/api-doc/uta/public/Get-Candle-Data": {
+      "section": "public",
+      "title": "Get Kline/Candlestick | Bitget API",
+      "file": "public.md",
+      "chars": 2403
+    },
+    "https://www.bitget.com/api-doc/uta/public/Get-History-Candle-Data": {
+      "section": "public",
+      "title": "Get Kline/Candlestick History | Bitget API",
+      "file": "public.md",
+      "chars": 2524
+    },
+    "https://www.bitget.com/api-doc/uta/public/Get-Current-Funding-Rate": {
+      "section": "public",
+      "title": "Get Current Funding Rate | Bitget API",
+      "file": "public.md",
+      "chars": 1976
+    },
+    "https://www.bitget.com/api-doc/uta/public/Get-History-Funding-Rate": {
+      "section": "public",
+      "title": "Get Funding Rate History | Bitget API",
+      "file": "public.md",
+      "chars": 2041
+    },
+    "https://www.bitget.com/api-doc/uta/public/Get-Risk-Reserve": {
+      "section": "public",
+      "title": "Get Risk Reserve | Bitget API",
+      "file": "public.md",
+      "chars": 2161
+    },
+    "https://www.bitget.com/api-doc/uta/public/Get-Discount-Rate": {
+      "section": "public",
+      "title": "Get Discount Rate | Bitget API",
+      "file": "public.md",
+      "chars": 1611
+    },
+    "https://www.bitget.com/api-doc/uta/public/Get-Margin-Loans": {
+      "section": "public",
+      "title": "Get Margin Loan | Bitget API",
+      "file": "public.md",
+      "chars": 1372
+    },
+    "https://www.bitget.com/api-doc/uta/public/Get-Position-Tier-Data": {
+      "section": "public",
+      "title": "Get Position Tier | Bitget API",
+      "file": "public.md",
+      "chars": 1933
+    },
+    "https://www.bitget.com/api-doc/uta/public/Get-Contracts-Oi": {
+      "section": "public",
+      "title": "Get Open Interest Limit | Bitget API",
+      "file": "public.md",
+      "chars": 1776
+    },
+    "https://www.bitget.com/api-doc/uta/public/Get-Index-Components": {
+      "section": "public",
+      "title": "Get Index Price Components | Bitget API",
+      "file": "public.md",
+      "chars": 2411
+    },
+    "https://www.bitget.com/api-doc/uta/public/Get-Fee-Group": {
+      "section": "public",
+      "title": "Get Market Maker Fee Group | Bitget API",
+      "file": "public.md",
+      "chars": 3015
+    },
+    "https://www.bitget.com/api-doc/uta/public/Get-Score-Weights": {
+      "section": "public",
+      "title": "Get Market Maker Score Weight | Bitget API",
+      "file": "public.md",
+      "chars": 1856
+    },
+    "https://www.bitget.com/api-doc/uta/error-code/restapi": {
+      "section": "error-code",
+      "title": "Rest API Error Code | Bitget API",
+      "file": "error-code.md",
+      "chars": 10679
+    },
+    "https://www.bitget.com/api-doc/uta/account/Get-Account": {
+      "section": "account",
+      "title": "Get Account Assets | Bitget API",
+      "file": "account.md",
+      "chars": 3100
+    },
+    "https://www.bitget.com/api-doc/uta/websocket/private/ADL-Notification-Channel": {
+      "section": "websocket",
+      "title": "ADL Notification Channel | Bitget API",
+      "file": "websocket.md",
+      "chars": 2275
+    },
+    "https://www.bitget.com/api-doc/uta/account/Get-Account-Funding-Assets": {
+      "section": "account",
+      "title": "Get Account Funding Assets | Bitget API",
+      "file": "account.md",
+      "chars": 1805
+    },
+    "https://www.bitget.com/api-doc/uta/account/Get-Account-Setting": {
+      "section": "account",
+      "title": "Get Account Info | Bitget API",
+      "file": "account.md",
+      "chars": 3892
+    },
+    "https://www.bitget.com/api-doc/uta/account/Change-Leverage": {
+      "section": "account",
+      "title": "Set Leverage | Bitget API",
+      "file": "account.md",
+      "chars": 1950
+    },
+    "https://www.bitget.com/api-doc/uta/account/Change-Position-Mode": {
+      "section": "account",
+      "title": "Set Holding Mode | Bitget API",
+      "file": "account.md",
+      "chars": 1661
+    },
+    "https://www.bitget.com/api-doc/uta/account/Get-Financial-Records": {
+      "section": "account",
+      "title": "Get Financial Records | Bitget API",
+      "file": "account.md",
+      "chars": 3085
+    },
+    "https://www.bitget.com/api-doc/uta/account/Get-Repayable-Coins": {
+      "section": "account",
+      "title": "Get Repayable Coins | Bitget API",
+      "file": "account.md",
+      "chars": 1704
+    },
+    "https://www.bitget.com/api-doc/uta/account/Get-Payment-Coins": {
+      "section": "account",
+      "title": "Get Payment Coins | Bitget API",
+      "file": "account.md",
+      "chars": 1646
+    },
+    "https://www.bitget.com/api-doc/uta/account/Repay": {
+      "section": "account",
+      "title": "Repay | Bitget API",
+      "file": "account.md",
+      "chars": 1726
+    },
+    "https://www.bitget.com/api-doc/uta/account/Get-Convert-Records": {
+      "section": "account",
+      "title": "Get Convert Records | Bitget API",
+      "file": "account.md",
+      "chars": 3019
+    },
+    "https://www.bitget.com/api-doc/uta/account/Switch-Deduct": {
+      "section": "account",
+      "title": "Switch Deduct | Bitget API",
+      "file": "account.md",
+      "chars": 1392
+    },
+    "https://www.bitget.com/api-doc/uta/account/Deposit-Account": {
+      "section": "account",
+      "title": "Set Up Deposit Account | Bitget API",
+      "file": "account.md",
+      "chars": 1797
+    },
+    "https://www.bitget.com/api-doc/uta/account/Get-Deduct-Info": {
+      "section": "account",
+      "title": "Get Deduct Info | Bitget API",
+      "file": "account.md",
+      "chars": 1365
+    },
+    "https://www.bitget.com/api-doc/uta/account/Get-Account-Fee-Rate": {
+      "section": "account",
+      "title": "Get Account Fee Rate | Bitget API",
+      "file": "account.md",
+      "chars": 1780
+    },
+    "https://www.bitget.com/api-doc/uta/account/Switch-Account": {
+      "section": "account",
+      "title": "Switch Account | Bitget API",
+      "file": "account.md",
+      "chars": 1685
+    },
+    "https://www.bitget.com/api-doc/uta/account/Get-Switch-Status": {
+      "section": "account",
+      "title": "Get Switch Status | Bitget API",
+      "file": "account.md",
+      "chars": 1467
+    },
+    "https://www.bitget.com/api-doc/uta/account/Get-Max-Transferable": {
+      "section": "account",
+      "title": "Get Max Transferable | Bitget API",
+      "file": "account.md",
+      "chars": 1640
+    },
+    "https://www.bitget.com/api-doc/uta/account/Get-OI-Limit": {
+      "section": "account",
+      "title": "Get OI Limit | Bitget API",
+      "file": "account.md",
+      "chars": 1795
+    },
+    "https://www.bitget.com/api-doc/uta/account/Adjust-Account-Mode": {
+      "section": "account",
+      "title": "Adjust Account Mode | Bitget API",
+      "file": "account.md",
+      "chars": 1861
+    },
+    "https://www.bitget.com/api-doc/uta/websocket/private/Account-Channel": {
+      "section": "websocket",
+      "title": "Account | Bitget API",
+      "file": "websocket.md",
+      "chars": 3716
+    },
+    "https://www.bitget.com/api-doc/uta/websocket/private/Positions-Channel": {
+      "section": "websocket",
+      "title": "Position | Bitget API",
+      "file": "websocket.md",
+      "chars": 4492
+    },
+    "https://www.bitget.com/api-doc/uta/websocket/private/Fill-Channel": {
+      "section": "websocket",
+      "title": "Fill | Bitget API",
+      "file": "websocket.md",
+      "chars": 3503
+    },
+    "https://www.bitget.com/api-doc/uta/websocket/private/Order-Channel": {
+      "section": "websocket",
+      "title": "Order | Bitget API",
+      "file": "websocket.md",
+      "chars": 8889
+    },
+    "https://www.bitget.com/api-doc/uta/websocket/private/Place-Order-Channel": {
+      "section": "websocket",
+      "title": "Place Order | Bitget API",
+      "file": "websocket.md",
+      "chars": 7715
+    },
+    "https://www.bitget.com/api-doc/uta/websocket/private/Modify-Order-Channel": {
+      "section": "websocket",
+      "title": "Modify Order | Bitget API",
+      "file": "websocket.md",
+      "chars": 3374
+    },
+    "https://www.bitget.com/api-doc/uta/websocket/private/Batch-Modify-Order-Channel": {
+      "section": "websocket",
+      "title": "Batch Modify Order | Bitget API",
+      "file": "websocket.md",
+      "chars": 3136
+    },
+    "https://www.bitget.com/api-doc/uta/websocket/private/Batch-Place-Order-Channel": {
+      "section": "websocket",
+      "title": "Batch Place Order Channel | Bitget API",
+      "file": "websocket.md",
+      "chars": 5003
+    },
+    "https://www.bitget.com/api-doc/uta/websocket/private/Cancel-Order-Channel": {
+      "section": "websocket",
+      "title": "Cancel Order | Bitget API",
+      "file": "websocket.md",
+      "chars": 1960
+    },
+    "https://www.bitget.com/api-doc/uta/websocket/private/Batch-Cancel-Order-Channel": {
+      "section": "websocket",
+      "title": "Batch Cancel Order | Bitget API",
+      "file": "websocket.md",
+      "chars": 2333
+    },
+    "https://www.bitget.com/api-doc/uta/account/sub-account/SubAccount-Create": {
+      "section": "account",
+      "title": "Create Sub-account | Bitget API",
+      "file": "account.md",
+      "chars": 2573
+    },
+    "https://www.bitget.com/api-doc/uta/websocket/public/Liquidation-Channel": {
+      "section": "websocket",
+      "title": "Liquidation Channel | Bitget API",
+      "file": "websocket.md",
+      "chars": 2577
+    },
+    "https://www.bitget.com/api-doc/uta/account/sub-account/SubAccount-Freeze": {
+      "section": "account",
+      "title": "Freeze/Unfreeze Sub-account | Bitget API",
+      "file": "account.md",
+      "chars": 1799
+    },
+    "https://www.bitget.com/api-doc/uta/account/sub-account/Get-SubAccount-Unified-Assets": {
+      "section": "account",
+      "title": "Get SubAccount Unified Assets | Bitget API",
+      "file": "account.md",
+      "chars": 2645
+    },
+    "https://www.bitget.com/api-doc/uta/account/sub-account/SubAccount-Get": {
+      "section": "account",
+      "title": "Get Sub-account List | Bitget API",
+      "file": "account.md",
+      "chars": 3439
+    },
+    "https://www.bitget.com/api-doc/uta/account/sub-account/SubAccount-API-Create": {
+      "section": "account",
+      "title": "Create Sub-account API Key | Bitget API",
+      "file": "account.md",
+      "chars": 3207
+    },
+    "https://www.bitget.com/api-doc/uta/account/sub-account/SubAccount-API-Update": {
+      "section": "account",
+      "title": "Modify Sub-account API Key | Bitget API",
+      "file": "account.md",
+      "chars": 3264
+    },
+    "https://www.bitget.com/api-doc/uta/account/sub-account/SubAccount-API-Delete": {
+      "section": "account",
+      "title": "Delete Sub-account API Key | Bitget API",
+      "file": "account.md",
+      "chars": 2216
+    },
+    "https://www.bitget.com/api-doc/uta/account/sub-account/SubAccount-API-Get": {
+      "section": "account",
+      "title": "Get Sub-account API Keys | Bitget API",
+      "file": "account.md",
+      "chars": 2807
+    },
+    "https://www.bitget.com/api-doc/uta/websocket/public/Tickers-Channel": {
+      "section": "websocket",
+      "title": "Tickers Channel | Bitget API",
+      "file": "websocket.md",
+      "chars": 4673
+    },
+    "https://www.bitget.com/api-doc/uta/websocket/public/Candlesticks-Channel": {
+      "section": "websocket",
+      "title": "Candlestick Channel | Bitget API",
+      "file": "websocket.md",
+      "chars": 3033
+    },
+    "https://www.bitget.com/api-doc/uta/websocket/public/Order-Book-Channel": {
+      "section": "websocket",
+      "title": "Depth Channel | Bitget API",
+      "file": "websocket.md",
+      "chars": 4717
+    },
+    "https://www.bitget.com/api-doc/uta/websocket/public/New-Trades-Channel": {
+      "section": "websocket",
+      "title": "Public Trades Channel | Bitget API",
+      "file": "websocket.md",
+      "chars": 2773
+    },
+    "https://www.bitget.com/api-doc/uta/websocket/public/RPI-OrderBook-Channel": {
+      "section": "websocket",
+      "title": "RPI Depth Channel | Bitget API",
+      "file": "websocket.md",
+      "chars": 5400
+    },
+    "https://www.bitget.com/api-doc/uta/account/transfer/Get-Transfer-Coins": {
+      "section": "account",
+      "title": "Get Transferable Coins | Bitget API",
+      "file": "account.md",
+      "chars": 2341
+    },
+    "https://www.bitget.com/api-doc/uta/broker/Get-Subaccount-Apikey": {
+      "section": "broker",
+      "title": "Get Broker Sub-Account API Key | Bitget API",
+      "file": "broker.md",
+      "chars": 1998
+    },
+    "https://www.bitget.com/api-doc/uta/account/transfer/": {
+      "section": "account",
+      "title": "Transfer | Bitget API",
+      "file": "account.md",
+      "chars": 2624
+    },
+    "https://www.bitget.com/api-doc/uta/account/transfer/SubAccount-Transfer": {
+      "section": "account",
+      "title": "Main-Sub Account Transfer | Bitget API",
+      "file": "account.md",
+      "chars": 3931
+    },
+    "https://www.bitget.com/api-doc/uta/account/transfer/SubAccount-Transfer-Get": {
+      "section": "account",
+      "title": "Get the transfer records of Main-Sub account | Bitget API",
+      "file": "account.md",
+      "chars": 4634
+    },
+    "https://www.bitget.com/api-doc/uta/account/transfer/Sub-Master-Transfer": {
+      "section": "account",
+      "title": "Sub-Main Account Transfer | Bitget API",
+      "file": "account.md",
+      "chars": 2188
+    },
+    "https://www.bitget.com/api-doc/uta/broker/Create-Subaccount": {
+      "section": "broker",
+      "title": "Create Broker Sub-Account | Bitget API",
+      "file": "broker.md",
+      "chars": 2424
+    },
+    "https://www.bitget.com/api-doc/uta/broker/Get-Subaccount-List": {
+      "section": "broker",
+      "title": "Get Broker Sub-Account List | Bitget API",
+      "file": "broker.md",
+      "chars": 2773
+    },
+    "https://www.bitget.com/api-doc/uta/broker/Modify-Subaccount": {
+      "section": "broker",
+      "title": "Modify Broker Sub-Account | Bitget API",
+      "file": "broker.md",
+      "chars": 2458
+    },
+    "https://www.bitget.com/api-doc/uta/broker/Subaccount-Withdrawal": {
+      "section": "broker",
+      "title": "Broker Subaccount Withdrawal | Bitget API",
+      "file": "broker.md",
+      "chars": 2445
+    },
+    "https://www.bitget.com/api-doc/uta/broker/Subaccount-Deposit-Address": {
+      "section": "broker",
+      "title": "Get Broker Subaccount Deposit Address | Bitget API",
+      "file": "broker.md",
+      "chars": 2107
+    },
+    "https://www.bitget.com/api-doc/uta/broker/Get-All-Subaccount-Deposit-Withdrawal": {
+      "section": "broker",
+      "title": "Get All Broker Subaccount Deposit Withdrawal | Bitget API",
+      "file": "broker.md",
+      "chars": 2904
+    },
+    "https://www.bitget.com/api-doc/uta/broker/Get-Broker-Commission": {
+      "section": "broker",
+      "title": "Get Broker Commission | Bitget API",
+      "file": "broker.md",
+      "chars": 2942
+    },
+    "https://www.bitget.com/api-doc/uta/broker/Create-Subaccount-Apikey": {
+      "section": "broker",
+      "title": "Create Broker Sub-Account API Key | Bitget API",
+      "file": "broker.md",
+      "chars": 2570
+    },
+    "https://www.bitget.com/api-doc/uta/broker/Modify-Subaccount-Apikey": {
+      "section": "broker",
+      "title": "Modify Broker Sub-Account API Key | Bitget API",
+      "file": "broker.md",
+      "chars": 2569
+    },
+    "https://www.bitget.com/api-doc/uta/broker/Delete-Subaccount-Apikey": {
+      "section": "broker",
+      "title": "Delete Broker Subaccount Apikey | Bitget API",
+      "file": "broker.md",
+      "chars": 1757
+    },
+    "https://www.bitget.com/api-doc/uta/account/deposit/Get-Deposit-Address": {
+      "section": "account",
+      "title": "Get Deposit Address | Bitget API",
+      "file": "account.md",
+      "chars": 2071
+    },
+    "https://www.bitget.com/api-doc/uta/loan/Bind-Uid": {
+      "section": "loan",
+      "title": "Bind/Unbind UID to Risk Unit | Bitget API",
+      "file": "loan.md",
+      "chars": 2535
+    },
+    "https://www.bitget.com/api-doc/uta/account/deposit/Get-Sub-Deposit-Address": {
+      "section": "account",
+      "title": "Get Sub Deposit Address | Bitget API",
+      "file": "account.md",
+      "chars": 2106
+    },
+    "https://www.bitget.com/api-doc/uta/account/deposit/Get-Deposit-Records": {
+      "section": "account",
+      "title": "Get Deposit Records | Bitget API",
+      "file": "account.md",
+      "chars": 3548
+    },
+    "https://www.bitget.com/api-doc/uta/account/deposit/Get-Sub-Deposit-Records": {
+      "section": "account",
+      "title": "Get Sub Deposit Records | Bitget API",
+      "file": "account.md",
+      "chars": 3520
+    },
+    "https://www.bitget.com/api-doc/uta/loan/Get-Transfered": {
+      "section": "loan",
+      "title": "Get Transferred Quantity | Bitget API",
+      "file": "loan.md",
+      "chars": 1366
+    },
+    "https://www.bitget.com/api-doc/uta/loan/Get-Symbols": {
+      "section": "loan",
+      "title": "Get Trade Symbols | Bitget API",
+      "file": "loan.md",
+      "chars": 2747
+    },
+    "https://www.bitget.com/api-doc/uta/loan/Get-Risk-Unit": {
+      "section": "loan",
+      "title": "Get Risk Unit | Bitget API",
+      "file": "loan.md",
+      "chars": 1217
+    },
+    "https://www.bitget.com/api-doc/uta/loan/Get-Repaid-History": {
+      "section": "loan",
+      "title": "Get Repayment Orders | Bitget API",
+      "file": "loan.md",
+      "chars": 2347
+    },
+    "https://www.bitget.com/api-doc/uta/loan/Get-Product-Infos": {
+      "section": "loan",
+      "title": "Get Product Info | Bitget API",
+      "file": "loan.md",
+      "chars": 2324
+    },
+    "https://www.bitget.com/api-doc/uta/loan/Get-Loan-Order": {
+      "section": "loan",
+      "title": "Get Loan Orders | Bitget API",
+      "file": "loan.md",
+      "chars": 2189
+    },
+    "https://www.bitget.com/api-doc/uta/loan/Get-LTV-Convert": {
+      "section": "loan",
+      "title": "Get LTV | Bitget API",
+      "file": "loan.md",
+      "chars": 2437
+    },
+    "https://www.bitget.com/api-doc/uta/loan/Get-Ensure-Coins": {
+      "section": "loan",
+      "title": "Get Margin Coin Info | Bitget API",
+      "file": "loan.md",
+      "chars": 2230
+    },
+    "https://www.bitget.com/api-doc/uta/account/withdrawal/": {
+      "section": "account",
+      "title": "Withdrawal | Bitget API",
+      "file": "account.md",
+      "chars": 3285
+    },
+    "https://www.bitget.com/api-doc/uta/crypto-loans/Get-Loan-Reduces": {
+      "section": "crypto-loans",
+      "title": "Get Loan Reduces | Bitget API",
+      "file": "crypto-loans.md",
+      "chars": 2470
+    },
+    "https://www.bitget.com/api-doc/uta/account/withdrawal/Get-Withdrawal-Records": {
+      "section": "account",
+      "title": "Get Withdrawal Records | Bitget API",
+      "file": "account.md",
+      "chars": 3996
+    },
+    "https://www.bitget.com/api-doc/uta/crypto-loans/Get-Loan-Coins": {
+      "section": "crypto-loans",
+      "title": "Get Loan Coins | Bitget API",
+      "file": "crypto-loans.md",
+      "chars": 2777
+    },
+    "https://www.bitget.com/api-doc/uta/crypto-loans/Get-Loan-Interest": {
+      "section": "crypto-loans",
+      "title": "Get Loan Interest | Bitget API",
+      "file": "crypto-loans.md",
+      "chars": 1461
+    },
+    "https://www.bitget.com/api-doc/uta/crypto-loans/Borrow-Coins": {
+      "section": "crypto-loans",
+      "title": "Borrow Coins | Bitget API",
+      "file": "crypto-loans.md",
+      "chars": 1547
+    },
+    "https://www.bitget.com/api-doc/uta/crypto-loans/Get-Borrow-Ongoing": {
+      "section": "crypto-loans",
+      "title": "Get Borrow Ongoing | Bitget API",
+      "file": "crypto-loans.md",
+      "chars": 2122
+    },
+    "https://www.bitget.com/api-doc/uta/crypto-loans/Get-Borrow-History": {
+      "section": "crypto-loans",
+      "title": "Get Borrow History | Bitget API",
+      "file": "crypto-loans.md",
+      "chars": 2217
+    },
+    "https://www.bitget.com/api-doc/uta/crypto-loans/Repay-Coins": {
+      "section": "crypto-loans",
+      "title": "Repay Coins | Bitget API",
+      "file": "crypto-loans.md",
+      "chars": 2025
+    },
+    "https://www.bitget.com/api-doc/uta/crypto-loans/Get-Repay-History": {
+      "section": "crypto-loans",
+      "title": "Get Repay History | Bitget API",
+      "file": "crypto-loans.md",
+      "chars": 2085
+    },
+    "https://www.bitget.com/api-doc/uta/crypto-loans/Revise-Pledge": {
+      "section": "crypto-loans",
+      "title": "Revise Pledge | Bitget API",
+      "file": "crypto-loans.md",
+      "chars": 1616
+    },
+    "https://www.bitget.com/api-doc/uta/crypto-loans/Get-Pledge-Rate-History": {
+      "section": "crypto-loans",
+      "title": "Get Pledge Rate History | Bitget API",
+      "file": "crypto-loans.md",
+      "chars": 2222
+    },
+    "https://www.bitget.com/api-doc/uta/crypto-loans/Get-Loan-Debts": {
+      "section": "crypto-loans",
+      "title": "Get Loan Debts | Bitget API",
+      "file": "crypto-loans.md",
+      "chars": 1696
+    },
+    "https://www.bitget.com/api-doc/uta/trade/Place-Order": {
+      "section": "trade",
+      "title": "Place Order | Bitget API",
+      "file": "trade.md",
+      "chars": 7856
+    },
+    "https://www.bitget.com/api-doc/uta/tax/Get-Tax-Records": {
+      "section": "tax",
+      "title": "Get Unified Account Tax Records | Bitget API",
+      "file": "tax.md",
+      "chars": 3024
+    },
+    "https://www.bitget.com/api-doc/uta/trade/Modify-Order": {
+      "section": "trade",
+      "title": "Modify Order | Bitget API",
+      "file": "trade.md",
+      "chars": 2551
+    },
+    "https://www.bitget.com/api-doc/uta/trade/Cancel-Order": {
+      "section": "trade",
+      "title": "Cancel Order | Bitget API",
+      "file": "trade.md",
+      "chars": 1923
+    },
+    "https://www.bitget.com/api-doc/uta/trade/Place-Batch": {
+      "section": "trade",
+      "title": "Batch Order | Bitget API",
+      "file": "trade.md",
+      "chars": 6406
+    },
+    "https://www.bitget.com/api-doc/uta/trade/Batch-Modify-Orders": {
+      "section": "trade",
+      "title": "Batch Modify Orders | Bitget API",
+      "file": "trade.md",
+      "chars": 3151
+    },
+    "https://www.bitget.com/api-doc/uta/trade/Cancel-Batch": {
+      "section": "trade",
+      "title": "Batch Cancel | Bitget API",
+      "file": "trade.md",
+      "chars": 2606
+    },
+    "https://www.bitget.com/api-doc/uta/trade/Cancel-All-Order": {
+      "section": "trade",
+      "title": "Cancel All Orders | Bitget API",
+      "file": "trade.md",
+      "chars": 1898
+    },
+    "https://www.bitget.com/api-doc/uta/trade/Close-All-Positions": {
+      "section": "trade",
+      "title": "Close All Positions | Bitget API",
+      "file": "trade.md",
+      "chars": 2037
+    },
+    "https://www.bitget.com/api-doc/uta/trade/Get-Order-Details": {
+      "section": "trade",
+      "title": "Get Order Details | Bitget API",
+      "file": "trade.md",
+      "chars": 4097
+    },
+    "https://www.bitget.com/api-doc/uta/trade/Get-Order-Pending": {
+      "section": "trade",
+      "title": "Get Open Orders | Bitget API",
+      "file": "trade.md",
+      "chars": 8769
+    },
+    "https://www.bitget.com/api-doc/uta/trade/Get-Order-History": {
+      "section": "trade",
+      "title": "Get Order History | Bitget API",
+      "file": "trade.md",
+      "chars": 9190
+    },
+    "https://www.bitget.com/api-doc/uta/trade/Get-Order-Fills": {
+      "section": "trade",
+      "title": "Get Fill History | Bitget API",
+      "file": "trade.md",
+      "chars": 3841
+    },
+    "https://www.bitget.com/api-doc/uta/trade/Get-Position": {
+      "section": "trade",
+      "title": "Get Position Info | Bitget API",
+      "file": "trade.md",
+      "chars": 4108
+    },
+    "https://www.bitget.com/api-doc/uta/trade/Get-Position-History": {
+      "section": "trade",
+      "title": "Get Positions History | Bitget API",
+      "file": "trade.md",
+      "chars": 3895
+    },
+    "https://www.bitget.com/api-doc/uta/trade/Get-Max-Open-Available": {
+      "section": "trade",
+      "title": "Get Max Open Available | Bitget API",
+      "file": "trade.md",
+      "chars": 2917
+    },
+    "https://www.bitget.com/api-doc/uta/trade/Get-Position-ADL-Rank": {
+      "section": "trade",
+      "title": "Get Position ADL Rank | Bitget API",
+      "file": "trade.md",
+      "chars": 1708
+    },
+    "https://www.bitget.com/api-doc/uta/trade/CountDown-Cancel-All": {
+      "section": "trade",
+      "title": "CountDown Cancel All | Bitget API",
+      "file": "trade.md",
+      "chars": 2455
+    },
+    "https://www.bitget.com/api-doc/uta/strategy/Get-History-Strategy-Orders": {
+      "section": "strategy",
+      "title": "History Strategy Orders | Bitget API",
+      "file": "strategy.md",
+      "chars": 3383
+    },
+    "https://www.bitget.com/api-doc/uta/strategy/Place-Strategy-Order": {
+      "section": "strategy",
+      "title": "Place Strategy Order | Bitget API",
+      "file": "strategy.md",
+      "chars": 3195
+    },
+    "https://www.bitget.com/api-doc/uta/strategy/Modify-Strategy-Order": {
+      "section": "strategy",
+      "title": "Modify Strategy Order | Bitget API",
+      "file": "strategy.md",
+      "chars": 2592
+    },
+    "https://www.bitget.com/api-doc/uta/strategy/Cancel-Strategy-Order": {
+      "section": "strategy",
+      "title": "Cancel Strategy Order | Bitget API",
+      "file": "strategy.md",
+      "chars": 1543
+    },
+    "https://www.bitget.com/api-doc/uta/strategy/Get-Unfilled-Strategy-Orders": {
+      "section": "strategy",
+      "title": "Unfilled Strategy Orders | Bitget API",
+      "file": "strategy.md",
+      "chars": 2856
+    }
+  }
+}
