@@ -1,0 +1,312 @@
+{
+  "info": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/info",
+    "section": "info",
+    "preview": "API DOCUMENT\nBROKER\nLegacy API Docs\nAI Skills Hub\n Introduce\n Quick Start\n Swap\n Spot\n Coin-M Futures\n Account and Wallet\n Agent\n Copy Trade\n CHANGE LOGS\nWelcome to the BingXAPI.\nYou can use our API to access market data endpoints of spot trading. The market data API is publicly accessible and provi"
+  },
+  "quick-start": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/quick-start",
+    "section": "quick-start",
+    "preview": "API DOCUMENT\nBROKER\nLegacy API Docs\nAI Skills Hub\n Introduce\n Quick Start\n Swap\n Spot\n Coin-M Futures\n Account and Wallet\n Agent\n Copy Trade\n CHANGE LOGS"
+  },
+  "signature-authentication": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/signature-authentication",
+    "section": "signature-authentication",
+    "preview": "API DOCUMENT\nBROKER\nLegacy API Docs\nAI Skills Hub\n Introduce\n Quick Start\n Swap\n Spot\n Coin-M Futures\n Account and Wallet\n Agent\n Copy Trade\n CHANGE LOGS"
+  },
+  "basic-information": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/basic-information",
+    "section": "basic-information",
+    "preview": "API DOCUMENT\nBROKER\nLegacy API Docs\nAI Skills Hub\n Introduce\n Quick Start\n Swap\n Spot\n Coin-M Futures\n Account and Wallet\n Agent\n Copy Trade\n CHANGE LOGS"
+  },
+  "faq": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/faq",
+    "section": "faq",
+    "preview": "API DOCUMENT\nBROKER\nLegacy API Docs\nAI Skills Hub\n Introduce\n Quick Start\n Swap\n Spot\n Coin-M Futures\n Account and Wallet\n Agent\n Copy Trade\n CHANGE LOGS"
+  },
+  "swap_market_symbols": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/swap/market/symbols",
+    "section": "swap/market/symbols",
+    "preview": "API DOCUMENT\nBROKER\nLegacy API Docs\nAI Skills Hub\n Introduce\n Quick Start\n Swap\n Spot\n Coin-M Futures\n Account and Wallet\n Agent\n Copy Trade\n CHANGE LOGS"
+  },
+  "swap_market_depth": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/swap/market/depth",
+    "section": "swap/market/depth",
+    "preview": "API DOCUMENT\nBROKER\nLegacy API Docs\nAI Skills Hub\n Introduce\n Quick Start\n Swap\n Spot\n Coin-M Futures\n Account and Wallet\n Agent\n Copy Trade\n CHANGE LOGS"
+  },
+  "swap_market_trades": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/swap/market/trades",
+    "section": "swap/market/trades",
+    "preview": "API DOCUMENT\nBROKER\nLegacy API Docs\nAI Skills Hub\n Introduce\n Quick Start\n Swap\n Spot\n Coin-M Futures\n Account and Wallet\n Agent\n Copy Trade\n CHANGE LOGS"
+  },
+  "swap_market_mark-price": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/swap/market/mark-price",
+    "section": "swap/market/mark-price",
+    "preview": "API DOCUMENT\nBROKER\nLegacy API Docs\nAI Skills Hub\n Introduce\n Quick Start\n Swap\n Spot\n Coin-M Futures\n Account and Wallet\n Agent\n Copy Trade\n CHANGE LOGS"
+  },
+  "swap_market_funding-rate": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/swap/market/funding-rate",
+    "section": "swap/market/funding-rate",
+    "preview": "API DOCUMENT\nBROKER\nLegacy API Docs\nAI Skills Hub\n Introduce\n Quick Start\n Swap\n Spot\n Coin-M Futures\n Account and Wallet\n Agent\n Copy Trade\n CHANGE LOGS"
+  },
+  "swap_market_kline": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/swap/market/kline",
+    "section": "swap/market/kline",
+    "preview": "API DOCUMENT\nBROKER\nLegacy API Docs\nAI Skills Hub\n Introduce\n Quick Start\n Swap\n Spot\n Coin-M Futures\n Account and Wallet\n Agent\n Copy Trade\n CHANGE LOGS"
+  },
+  "swap_market_open-interest": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/swap/market/open-interest",
+    "section": "swap/market/open-interest",
+    "preview": "API DOCUMENT\nBROKER\nLegacy API Docs\nAI Skills Hub\n Introduce\n Quick Start\n Swap\n Spot\n Coin-M Futures\n Account and Wallet\n Agent\n Copy Trade\n CHANGE LOGS"
+  },
+  "swap_market_ticker": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/swap/market/ticker",
+    "section": "swap/market/ticker",
+    "preview": "API DOCUMENT\nBROKER\nLegacy API Docs\nAI Skills Hub\n Introduce\n Quick Start\n Swap\n Spot\n Coin-M Futures\n Account and Wallet\n Agent\n Copy Trade\n CHANGE LOGS"
+  },
+  "swap_trade_test-order": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/swap/trade/test-order",
+    "section": "swap/trade/test-order",
+    "preview": "API DOCUMENT\nBROKER\nLegacy API Docs\nAI Skills Hub\n Introduce\n Quick Start\n Swap\n Spot\n Coin-M Futures\n Account and Wallet\n Agent\n Copy Trade\n CHANGE LOGS"
+  },
+  "swap_trade_order": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/swap/trade/order",
+    "section": "swap/trade/order",
+    "preview": "API DOCUMENT\nBROKER\nLegacy API Docs\nAI Skills Hub\n Introduce\n Quick Start\n Swap\n Spot\n Coin-M Futures\n Account and Wallet\n Agent\n Copy Trade\n CHANGE LOGS"
+  },
+  "swap_trade_modify-order": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/swap/trade/modify-order",
+    "section": "swap/trade/modify-order",
+    "preview": "API DOCUMENT\nBROKER\nLegacy API Docs\nAI Skills Hub\n Introduce\n Quick Start\n Swap\n Spot\n Coin-M Futures\n Account and Wallet\n Agent\n Copy Trade\n CHANGE LOGS"
+  },
+  "swap_trade_batch-orders": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/swap/trade/batch-orders",
+    "section": "swap/trade/batch-orders",
+    "preview": "API DOCUMENT\nBROKER\nLegacy API Docs\nAI Skills Hub\n Introduce\n Quick Start\n Swap\n Spot\n Coin-M Futures\n Account and Wallet\n Agent\n Copy Trade\n CHANGE LOGS"
+  },
+  "swap_trade_close-all-positions": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/swap/trade/close-all-positions",
+    "section": "swap/trade/close-all-positions",
+    "preview": "API DOCUMENT\nBROKER\nLegacy API Docs\nAI Skills Hub\n Introduce\n Quick Start\n Swap\n Spot\n Coin-M Futures\n Account and Wallet\n Agent\n Copy Trade\n CHANGE LOGS"
+  },
+  "swap_trade_cancel-order": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/swap/trade/cancel-order",
+    "section": "swap/trade/cancel-order",
+    "preview": "API DOCUMENT\nBROKER\nLegacy API Docs\nAI Skills Hub\n Introduce\n Quick Start\n Swap\n Spot\n Coin-M Futures\n Account and Wallet\n Agent\n Copy Trade\n CHANGE LOGS"
+  },
+  "swap_trade_cancel-batch-orders": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/swap/trade/cancel-batch-orders",
+    "section": "swap/trade/cancel-batch-orders",
+    "preview": "API DOCUMENT\nBROKER\nLegacy API Docs\nAI Skills Hub\n Introduce\n Quick Start\n Swap\n Spot\n Coin-M Futures\n Account and Wallet\n Agent\n Copy Trade\n CHANGE LOGS"
+  },
+  "swap_trade_cancel-all-orders": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/swap/trade/cancel-all-orders",
+    "section": "swap/trade/cancel-all-orders",
+    "preview": "API DOCUMENT\nBROKER\nLegacy API Docs\nAI Skills Hub\n Introduce\n Quick Start\n Swap\n Spot\n Coin-M Futures\n Account and Wallet\n Agent\n Copy Trade\n CHANGE LOGS"
+  },
+  "swap_trade_open-orders": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/swap/trade/open-orders",
+    "section": "swap/trade/open-orders",
+    "preview": "API DOCUMENT\nBROKER\nLegacy API Docs\nAI Skills Hub\n Introduce\n Quick Start\n Swap\n Spot\n Coin-M Futures\n Account and Wallet\n Agent\n Copy Trade\n CHANGE LOGS"
+  },
+  "swap_trade_order-status": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/swap/trade/order-status",
+    "section": "swap/trade/order-status",
+    "preview": "API DOCUMENT\nBROKER\nLegacy API Docs\nAI Skills Hub\n Introduce\n Quick Start\n Swap\n Spot\n Coin-M Futures\n Account and Wallet\n Agent\n Copy Trade\n CHANGE LOGS"
+  },
+  "swap_trade_order-detail": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/swap/trade/order-detail",
+    "section": "swap/trade/order-detail",
+    "preview": "API DOCUMENT\nBROKER\nLegacy API Docs\nAI Skills Hub\n Introduce\n Quick Start\n Swap\n Spot\n Coin-M Futures\n Account and Wallet\n Agent\n Copy Trade\n CHANGE LOGS"
+  },
+  "swap_trade_leverage": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/swap/trade/leverage",
+    "section": "swap/trade/leverage",
+    "preview": "API DOCUMENT\nBROKER\nLegacy API Docs\nAI Skills Hub\n Introduce\n Quick Start\n Swap\n Spot\n Coin-M Futures\n Account and Wallet\n Agent\n Copy Trade\n CHANGE LOGS"
+  },
+  "swap_trade_set-leverage": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/swap/trade/set-leverage",
+    "section": "swap/trade/set-leverage",
+    "preview": "API DOCUMENT\nBROKER\nLegacy API Docs\nAI Skills Hub\n Introduce\n Quick Start\n Swap\n Spot\n Coin-M Futures\n Account and Wallet\n Agent\n Copy Trade\n CHANGE LOGS"
+  },
+  "swap_trade_position": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/swap/trade/position",
+    "section": "swap/trade/position",
+    "preview": "API DOCUMENT\nBROKER\nLegacy API Docs\nAI Skills Hub\n Introduce\n Quick Start\n Swap\n Spot\n Coin-M Futures\n Account and Wallet\n Agent\n Copy Trade\n CHANGE LOGS"
+  },
+  "swap_trade_force-orders": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/swap/trade/force-orders",
+    "section": "swap/trade/force-orders",
+    "preview": "API DOCUMENT\nBROKER\nLegacy API Docs\nAI Skills Hub\n Introduce\n Quick Start\n Swap\n Spot\n Coin-M Futures\n Account and Wallet\n Agent\n Copy Trade\n CHANGE LOGS"
+  },
+  "swap_trade_history-orders": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/swap/trade/history-orders",
+    "section": "swap/trade/history-orders",
+    "preview": "API DOCUMENT\nBROKER\nLegacy API Docs\nAI Skills Hub\n Introduce\n Quick Start\n Swap\n Spot\n Coin-M Futures\n Account and Wallet\n Agent\n Copy Trade\n CHANGE LOGS"
+  },
+  "swap_account_balance": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/swap/account/balance",
+    "section": "swap/account/balance",
+    "preview": "API DOCUMENT\nBROKER\nLegacy API Docs\nAI Skills Hub\n Introduce\n Quick Start\n Swap\n Spot\n Coin-M Futures\n Account and Wallet\n Agent\n Copy Trade\n CHANGE LOGS"
+  },
+  "swap_account_position": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/swap/account/position",
+    "section": "swap/account/position",
+    "preview": "API DOCUMENT\nBROKER\nLegacy API Docs\nAI Skills Hub\n Introduce\n Quick Start\n Swap\n Spot\n Coin-M Futures\n Account and Wallet\n Agent\n Copy Trade\n CHANGE LOGS"
+  },
+  "swap_ws_depth": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/swap/ws/depth",
+    "section": "swap/ws/depth",
+    "preview": "API DOCUMENT\nBROKER\nLegacy API Docs\nAI Skills Hub\n Introduce\n Quick Start\n Swap\n Spot\n Coin-M Futures\n Account and Wallet\n Agent\n Copy Trade\n CHANGE LOGS"
+  },
+  "swap_ws_trade": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/swap/ws/trade",
+    "section": "swap/ws/trade",
+    "preview": "API DOCUMENT\nBROKER\nLegacy API Docs\nAI Skills Hub\n Introduce\n Quick Start\n Swap\n Spot\n Coin-M Futures\n Account and Wallet\n Agent\n Copy Trade\n CHANGE LOGS"
+  },
+  "swap_ws_kline": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/swap/ws/kline",
+    "section": "swap/ws/kline",
+    "preview": "API DOCUMENT\nBROKER\nLegacy API Docs\nAI Skills Hub\n Introduce\n Quick Start\n Swap\n Spot\n Coin-M Futures\n Account and Wallet\n Agent\n Copy Trade\n CHANGE LOGS"
+  },
+  "swap_ws_ticker": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/swap/ws/ticker",
+    "section": "swap/ws/ticker",
+    "preview": "API DOCUMENT\nBROKER\nLegacy API Docs\nAI Skills Hub\n Introduce\n Quick Start\n Swap\n Spot\n Coin-M Futures\n Account and Wallet\n Agent\n Copy Trade\n CHANGE LOGS"
+  },
+  "swap_ws_account": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/swap/ws/account",
+    "section": "swap/ws/account",
+    "preview": "API DOCUMENT\nBROKER\nLegacy API Docs\nAI Skills Hub\n Introduce\n Quick Start\n Swap\n Spot\n Coin-M Futures\n Account and Wallet\n Agent\n Copy Trade\n CHANGE LOGS"
+  },
+  "spot_market_symbols": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/spot/market/symbols",
+    "section": "spot/market/symbols",
+    "preview": "API DOCUMENT\nBROKER\nLegacy API Docs\nAI Skills Hub\n Introduce\n Quick Start\n Swap\n Spot\n Coin-M Futures\n Account and Wallet\n Agent\n Copy Trade\n CHANGE LOGS"
+  },
+  "spot_market_trades": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/spot/market/trades",
+    "section": "spot/market/trades",
+    "preview": "API DOCUMENT\nBROKER\nLegacy API Docs\nAI Skills Hub\n Introduce\n Quick Start\n Swap\n Spot\n Coin-M Futures\n Account and Wallet\n Agent\n Copy Trade\n CHANGE LOGS"
+  },
+  "spot_market_depth": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/spot/market/depth",
+    "section": "spot/market/depth",
+    "preview": "API DOCUMENT\nBROKER\nLegacy API Docs\nAI Skills Hub\n Introduce\n Quick Start\n Swap\n Spot\n Coin-M Futures\n Account and Wallet\n Agent\n Copy Trade\n CHANGE LOGS"
+  },
+  "spot_market_kline": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/spot/market/kline",
+    "section": "spot/market/kline",
+    "preview": "API DOCUMENT\nBROKER\nLegacy API Docs\nAI Skills Hub\n Introduce\n Quick Start\n Swap\n Spot\n Coin-M Futures\n Account and Wallet\n Agent\n Copy Trade\n CHANGE LOGS"
+  },
+  "spot_market_ticker": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/spot/market/ticker",
+    "section": "spot/market/ticker",
+    "preview": "API DOCUMENT\nBROKER\nLegacy API Docs\nAI Skills Hub\n Introduce\n Quick Start\n Swap\n Spot\n Coin-M Futures\n Account and Wallet\n Agent\n Copy Trade\n CHANGE LOGS"
+  },
+  "spot_trade_order": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/spot/trade/order",
+    "section": "spot/trade/order",
+    "preview": "API DOCUMENT\nBROKER\nLegacy API Docs\nAI Skills Hub\n Introduce\n Quick Start\n Swap\n Spot\n Coin-M Futures\n Account and Wallet\n Agent\n Copy Trade\n CHANGE LOGS"
+  },
+  "spot_trade_cancel-order": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/spot/trade/cancel-order",
+    "section": "spot/trade/cancel-order",
+    "preview": "API DOCUMENT\nBROKER\nLegacy API Docs\nAI Skills Hub\n Introduce\n Quick Start\n Swap\n Spot\n Coin-M Futures\n Account and Wallet\n Agent\n Copy Trade\n CHANGE LOGS"
+  },
+  "spot_trade_open-orders": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/spot/trade/open-orders",
+    "section": "spot/trade/open-orders",
+    "preview": "API DOCUMENT\nBROKER\nLegacy API Docs\nAI Skills Hub\n Introduce\n Quick Start\n Swap\n Spot\n Coin-M Futures\n Account and Wallet\n Agent\n Copy Trade\n CHANGE LOGS"
+  },
+  "spot_trade_order-history": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/spot/trade/order-history",
+    "section": "spot/trade/order-history",
+    "preview": "API DOCUMENT\nBROKER\nLegacy API Docs\nAI Skills Hub\n Introduce\n Quick Start\n Swap\n Spot\n Coin-M Futures\n Account and Wallet\n Agent\n Copy Trade\n CHANGE LOGS"
+  },
+  "spot_account_assets": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/spot/account/assets",
+    "section": "spot/account/assets",
+    "preview": "API DOCUMENT\nBROKER\nLegacy API Docs\nAI Skills Hub\n Introduce\n Quick Start\n Swap\n Spot\n Coin-M Futures\n Account and Wallet\n Agent\n Copy Trade\n CHANGE LOGS"
+  },
+  "spot_account_transfer": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/spot/account/transfer",
+    "section": "spot/account/transfer",
+    "preview": "API DOCUMENT\nBROKER\nLegacy API Docs\nAI Skills Hub\n Introduce\n Quick Start\n Swap\n Spot\n Coin-M Futures\n Account and Wallet\n Agent\n Copy Trade\n CHANGE LOGS"
+  },
+  "spot_ws_trade": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/spot/ws/trade",
+    "section": "spot/ws/trade",
+    "preview": "API DOCUMENT\nBROKER\nLegacy API Docs\nAI Skills Hub\n Introduce\n Quick Start\n Swap\n Spot\n Coin-M Futures\n Account and Wallet\n Agent\n Copy Trade\n CHANGE LOGS"
+  },
+  "spot_ws_kline": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/spot/ws/kline",
+    "section": "spot/ws/kline",
+    "preview": "API DOCUMENT\nBROKER\nLegacy API Docs\nAI Skills Hub\n Introduce\n Quick Start\n Swap\n Spot\n Coin-M Futures\n Account and Wallet\n Agent\n Copy Trade\n CHANGE LOGS"
+  },
+  "spot_ws_depth": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/spot/ws/depth",
+    "section": "spot/ws/depth",
+    "preview": "API DOCUMENT\nBROKER\nLegacy API Docs\nAI Skills Hub\n Introduce\n Quick Start\n Swap\n Spot\n Coin-M Futures\n Account and Wallet\n Agent\n Copy Trade\n CHANGE LOGS"
+  },
+  "spot_ws_account": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/spot/ws/account",
+    "section": "spot/ws/account",
+    "preview": "API DOCUMENT\nBROKER\nLegacy API Docs\nAI Skills Hub\n Introduce\n Quick Start\n Swap\n Spot\n Coin-M Futures\n Account and Wallet\n Agent\n Copy Trade\n CHANGE LOGS"
+  },
+  "coin-futures_market_contract": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/coin-futures/market/contract",
+    "section": "coin-futures/market/contract",
+    "preview": "API DOCUMENT\nBROKER\nLegacy API Docs\nAI Skills Hub\n Introduce\n Quick Start\n Swap\n Spot\n Coin-M Futures\n Account and Wallet\n Agent\n Copy Trade\n CHANGE LOGS"
+  },
+  "coin-futures_market_kline": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/coin-futures/market/kline",
+    "section": "coin-futures/market/kline",
+    "preview": "API DOCUMENT\nBROKER\nLegacy API Docs\nAI Skills Hub\n Introduce\n Quick Start\n Swap\n Spot\n Coin-M Futures\n Account and Wallet\n Agent\n Copy Trade\n CHANGE LOGS"
+  },
+  "coin-futures_trade_order": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/coin-futures/trade/order",
+    "section": "coin-futures/trade/order",
+    "preview": "API DOCUMENT\nBROKER\nLegacy API Docs\nAI Skills Hub\n Introduce\n Quick Start\n Swap\n Spot\n Coin-M Futures\n Account and Wallet\n Agent\n Copy Trade\n CHANGE LOGS"
+  },
+  "coin-futures_account_assets": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/coin-futures/account/assets",
+    "section": "coin-futures/account/assets",
+    "preview": "API DOCUMENT\nBROKER\nLegacy API Docs\nAI Skills Hub\n Introduce\n Quick Start\n Swap\n Spot\n Coin-M Futures\n Account and Wallet\n Agent\n Copy Trade\n CHANGE LOGS"
+  },
+  "account_fund": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/account/fund",
+    "section": "account/fund",
+    "preview": "API DOCUMENT\nBROKER\nLegacy API Docs\nAI Skills Hub\n Introduce\n Quick Start\n Swap\n Spot\n Coin-M Futures\n Account and Wallet\n Agent\n Copy Trade\n CHANGE LOGS"
+  },
+  "account_wallet": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/account/wallet",
+    "section": "account/wallet",
+    "preview": "API DOCUMENT\nBROKER\nLegacy API Docs\nAI Skills Hub\n Introduce\n Quick Start\n Swap\n Spot\n Coin-M Futures\n Account and Wallet\n Agent\n Copy Trade\n CHANGE LOGS"
+  },
+  "account_sub-account": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/account/sub-account",
+    "section": "account/sub-account",
+    "preview": "API DOCUMENT\nBROKER\nLegacy API Docs\nAI Skills Hub\n Introduce\n Quick Start\n Swap\n Spot\n Coin-M Futures\n Account and Wallet\n Agent\n Copy Trade\n CHANGE LOGS"
+  },
+  "agent_users": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/agent/users",
+    "section": "agent/users",
+    "preview": "API DOCUMENT\nBROKER\nLegacy API Docs\nAI Skills Hub\n Introduce\n Quick Start\n Swap\n Spot\n Coin-M Futures\n Account and Wallet\n Agent\n Copy Trade\n CHANGE LOGS"
+  },
+  "agent_commission": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/agent/commission",
+    "section": "agent/commission",
+    "preview": "API DOCUMENT\nBROKER\nLegacy API Docs\nAI Skills Hub\n Introduce\n Quick Start\n Swap\n Spot\n Coin-M Futures\n Account and Wallet\n Agent\n Copy Trade\n CHANGE LOGS"
+  },
+  "copy-trade_overview": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/copy-trade/overview",
+    "section": "copy-trade/overview",
+    "preview": "API DOCUMENT\nBROKER\nLegacy API Docs\nAI Skills Hub\n Introduce\n Quick Start\n Swap\n Spot\n Coin-M Futures\n Account and Wallet\n Agent\n Copy Trade\n CHANGE LOGS"
+  },
+  "copy-trade_profit": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/copy-trade/profit",
+    "section": "copy-trade/profit",
+    "preview": "API DOCUMENT\nBROKER\nLegacy API Docs\nAI Skills Hub\n Introduce\n Quick Start\n Swap\n Spot\n Coin-M Futures\n Account and Wallet\n Agent\n Copy Trade\n CHANGE LOGS"
+  }
+}

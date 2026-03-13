@@ -1,0 +1,1014 @@
+[
+  {
+    "text": "API DOCUMENT",
+    "classList": "el-menu-item top-nav-item is-active"
+  },
+  {
+    "text": "BROKER",
+    "classList": "el-menu-item top-nav-item"
+  },
+  {
+    "text": "Legacy API Docs",
+    "classList": "el-menu-item top-nav-item"
+  },
+  {
+    "text": "AI Skills Hub",
+    "classList": "el-menu-item top-nav-item"
+  },
+  {
+    "text": "Introduce",
+    "classList": "el-menu-item is-active"
+  },
+  {
+    "text": "Quick Start",
+    "classList": "el-submenu__title"
+  },
+  {
+    "text": "Signature Authentication",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Basic Information",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "FAQ",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "WebSocket Rules",
+    "classList": "el-submenu__title"
+  },
+  {
+    "text": "WebSocket Rules",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Generate Listen Key",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Extend Listen Key Validity",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Close Listen Key",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Swap",
+    "classList": "el-submenu__title"
+  },
+  {
+    "text": "Market Data",
+    "classList": "el-submenu__title"
+  },
+  {
+    "text": "USDT-M Perp Futures symbols",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Order Book",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Recent Trades List",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Mark Price and Funding Rate",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Get Funding Rate History",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Kline/Candlestick Data",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Open Interest Statistics",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "24hr Ticker Price Change Statistics",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Query historical transaction orders",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Symbol Order Book Ticker",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Mark Price Kline/Candlestick Data",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Symbol Price Ticker",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Trading Rules",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Trades Endpoints",
+    "classList": "el-submenu__title"
+  },
+  {
+    "text": "Test Order",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Place order",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Modify Order",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Place multiple orders",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Close All Positions",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Cancel Order",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Cancel multiple orders",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Cancel All Open Orders",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Current All Open Orders",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Query pending order status",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Query Order details",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Query Margin Type",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Change Margin Type",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Query Leverage and Available Positions",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Set Leverage",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "User's Force Orders",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Query Order history",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Modify Isolated Position Margin",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Query historical transaction orders",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Set Position Mode",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Query position mode",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Cancel an Existing Order and Send a New Orde",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Cancel orders in batches and place orders in batches",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Cancel All After",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Close position by position ID",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "All Orders",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Position and Maintenance Margin Ratio",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Query historical transaction details",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Query Position History",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Isolated Margin Change History",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Apply VST",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Place TWAP Order",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Query TWAP Entrusted Order",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Query TWAP Historical Orders",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "TWAP Order Details",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Cancel TWAP Order",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Switch Multi-Assets Mode",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Query Multi-Assets Mode",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Query Multi-Assets Rules",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Query Multi-Assets Margin",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "One-Click Reverse Position",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Hedge mode Position - Automatic Margin Addition",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Account Endpoints",
+    "classList": "el-submenu__title"
+  },
+  {
+    "text": "Query account data",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Query position data",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Get Account Profit and Loss Fund Flow",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Export fund flow",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Query Trading Commission Rate",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Websocket Market Data",
+    "classList": "el-submenu__title"
+  },
+  {
+    "text": "Partial Order Book Depth",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Subscribe the Latest Trade Detail",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Subscribe K-Line Data",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Subscribe to 24-hour price changes",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Subscribe to latest price changes",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Subscribe to latest mark price changes",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Subscribe to the Book Ticker Streams",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Incremental Depth Information",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Websocket Account Data",
+    "classList": "el-submenu__title"
+  },
+  {
+    "text": "Order update push",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Account balance and position update push",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Configuration updates such as leverage and margin mode",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Spot",
+    "classList": "el-submenu__title"
+  },
+  {
+    "text": "Market Data",
+    "classList": "el-submenu__title"
+  },
+  {
+    "text": "Spot trading symbols",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Recent Trades List",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Order Book",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Kline/Candlestick Data",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "24hr Ticker Price Change Statistics",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Order Book aggregation",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Symbol Price Ticker",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Symbol Order Book Ticker",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Historical K-line",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Old Trade Lookup",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Account Endpoints",
+    "classList": "el-submenu__title"
+  },
+  {
+    "text": "Query Assets",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Asset transfer records",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Main Accoun internal transfer",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Asset Transfer New",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Query transferable currency",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Asset transfer records new",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Query Fund Account Assets",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Main account internal transfer records",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Asset overview",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Wallet deposits and withdrawals",
+    "classList": "el-submenu__title"
+  },
+  {
+    "text": "Deposit records",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Withdraw records",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Query currency deposit and withdrawal data",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Withdraw",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Main Account Deposit Address",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Deposit risk control records",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Trades Endpoints",
+    "classList": "el-submenu__title"
+  },
+  {
+    "text": "Place order",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Place multiple orders",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Cancel Order",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Cancel multiple orders",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Cancel all Open Orders on a Symbol",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Cancel an Existing Order and Send a New Order",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Query Order details",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Current Open Orders",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Query Order history",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Query transaction details",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Query Trading Commission Rate",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Cancel All After",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Create an OCO Order",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Cancel an OCO Order List",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Query an OCO Order List",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Query All Open OCO Orders",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Query OCO Historical Order List",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Websocket Market Data",
+    "classList": "el-submenu__title"
+  },
+  {
+    "text": "Subscription transaction by transaction",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "K-line Streamst",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Subscribe Market Depth Data",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Subscribe to 24-hour Price Change",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Spot Latest Trade Price",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Spot Best Order Book",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Incremental and Full Depth Information",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Websocket Account Data",
+    "classList": "el-submenu__title"
+  },
+  {
+    "text": "order update event",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Subscription account balance push",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Coin-M Futures",
+    "classList": "el-submenu__title"
+  },
+  {
+    "text": "Market Data",
+    "classList": "el-submenu__title"
+  },
+  {
+    "text": "Contract Information",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Price & Current Funding Rate",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Get Swap Open Positions",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Get K-line Data",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Query Depth Data",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Query 24-Hour Price Change",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Trades Endpoints",
+    "classList": "el-submenu__title"
+  },
+  {
+    "text": "Trade order",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Query Trade Commission Rate",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Query Leverage",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Modify Leverage",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Cancel all orders",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Close all positions in bulk",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Query warehouse",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Query Account Assets",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Query force orders",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Query Order Trade Detail",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Cancel an Order",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Query all current pending orders",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Query Order",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "User's History Orders",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Query Margin Type",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Set Margin Type",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Adjust Isolated Margin",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Websocket Market Data",
+    "classList": "el-submenu__title"
+  },
+  {
+    "text": "Subscription transaction by transaction",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Subscribe to the Latest Transaction Price",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Subscribe to Mark Price",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Subscribe to Limited Depth",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Subscribe to Best Bid and Ask",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Subscribe to Latest Trading Pair K-Line",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Subscribe to 24-Hour Price Change",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Websocket Account Data",
+    "classList": "el-submenu__title"
+  },
+  {
+    "text": "Account balance and position update push",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Order update push",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Configuration updates such as leverage and margin mode",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Account and Wallet",
+    "classList": "el-submenu__title"
+  },
+  {
+    "text": "Fund Account",
+    "classList": "el-submenu__title"
+  },
+  {
+    "text": "Query Assets",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Asset transfer records",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Main Accoun internal transfer",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Asset Transfer New",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Query transferable currency",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Asset transfer records new",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Query Fund Account Assets",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Main account internal transfer records",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Asset overview",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Wallet Deposits and Withdrawals",
+    "classList": "el-submenu__title"
+  },
+  {
+    "text": "Deposit records",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Withdraw records",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Query currency deposit and withdrawal data",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Withdraw",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Main Account Deposit Address",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Deposit risk control records",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Sub-account Management",
+    "classList": "el-submenu__title"
+  },
+  {
+    "text": "Create Sub-account",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Query API KEY Permissions",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Query Account UID",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Query Sub-account List",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Query Sub-account Asset Account",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Create Sub-account API Key",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Query API Key Information",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Edit Sub-Account API Key",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Delete Sub-Account API Key",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Freeze/Unfreeze Sub-Account",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Authorize Sub-Account Internal Transfer",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Sub-account Internal Transfer",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Main Accoun internal transfer",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Query Sub-account Deposit Address",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Query Sub-account Deposit Address",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Get Sub-account Deposit Records",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Query Sub-account Internal Transfer Records",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Query Sub-Mother Account Transfer History",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Query Sub-Mother Account Transferable Amount",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Sub-Mother Account Asset Transfer Interface",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Batch Query Sub-Account Asset Overview",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Agent",
+    "classList": "el-submenu__title"
+  },
+  {
+    "text": "Query Invited Users",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Daily commission details",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Query agent user information",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Query the deposit details of invited users",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Query API transaction commission （non-invitation relationship）",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Query partner information",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Invitation code data",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Superior verification",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Copy Trade",
+    "classList": "el-submenu__title"
+  },
+  {
+    "text": "USDT-M Perpetual Contracts",
+    "classList": "el-submenu__title"
+  },
+  {
+    "text": "Trader’s current order",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Traders close positions according to the order number",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Traders set take profit and stop loss based on order numbers",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Personal Trading Overview",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Profit Overview",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Profit Details",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Set Commission Rate",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Trader Gets Copy Trading Pairs",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Spot Trading",
+    "classList": "el-submenu__title"
+  },
+  {
+    "text": "Trader sells spot assets based on buy order number",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Personal Trading Overview",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Profit Summary",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Profit Details",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "Query Historical Orders",
+    "classList": "el-menu-item"
+  },
+  {
+    "text": "CHANGE LOGS",
+    "classList": "el-menu-item"
+  }
+]

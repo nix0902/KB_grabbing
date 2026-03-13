@@ -1,0 +1,227 @@
+{
+  "introduction": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/info",
+    "text_length": 637,
+    "has_api_content": true
+  },
+  "quick_start": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/quick-start",
+    "text_length": 153,
+    "has_api_content": false
+  },
+  "signature": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/signature-authentication",
+    "text_length": 153,
+    "has_api_content": false
+  },
+  "basic_info": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/basic-information",
+    "text_length": 153,
+    "has_api_content": false
+  },
+  "faq": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/faq",
+    "text_length": 153,
+    "has_api_content": false
+  },
+  "ws_rules": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/ws-rules",
+    "text_length": 153,
+    "has_api_content": false
+  },
+  "listen_key": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/listenKey",
+    "text_length": 153,
+    "has_api_content": false
+  },
+  "swap_symbols": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/swap/market/symbols",
+    "text_length": 153,
+    "has_api_content": false
+  },
+  "swap_depth": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/swap/market/depth",
+    "text_length": 153,
+    "has_api_content": false
+  },
+  "swap_trades": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/swap/market/trades",
+    "text_length": 153,
+    "has_api_content": false
+  },
+  "swap_mark_price": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/swap/market/mark-price",
+    "text_length": 153,
+    "has_api_content": false
+  },
+  "swap_funding_rate": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/swap/market/funding-rate",
+    "text_length": 153,
+    "has_api_content": false
+  },
+  "swap_kline": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/swap/market/kline",
+    "text_length": 153,
+    "has_api_content": false
+  },
+  "swap_ticker": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/swap/market/ticker",
+    "text_length": 153,
+    "has_api_content": false
+  },
+  "swap_order": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/swap/trade/order",
+    "text_length": 153,
+    "has_api_content": false
+  },
+  "swap_cancel_order": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/swap/trade/cancel-order",
+    "text_length": 153,
+    "has_api_content": false
+  },
+  "swap_open_orders": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/swap/trade/open-orders",
+    "text_length": 153,
+    "has_api_content": false
+  },
+  "swap_order_history": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/swap/trade/history-orders",
+    "text_length": 153,
+    "has_api_content": false
+  },
+  "swap_position": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/swap/account/position",
+    "text_length": 153,
+    "has_api_content": false
+  },
+  "swap_balance": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/swap/account/balance",
+    "text_length": 153,
+    "has_api_content": false
+  },
+  "spot_symbols": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/spot/market/symbols",
+    "text_length": 153,
+    "has_api_content": false
+  },
+  "spot_depth": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/spot/market/depth",
+    "text_length": 153,
+    "has_api_content": false
+  },
+  "spot_trades": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/spot/market/trades",
+    "text_length": 153,
+    "has_api_content": false
+  },
+  "spot_kline": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/spot/market/kline",
+    "text_length": 153,
+    "has_api_content": false
+  },
+  "spot_ticker": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/spot/market/ticker",
+    "text_length": 153,
+    "has_api_content": false
+  },
+  "spot_order": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/spot/trade/order",
+    "text_length": 153,
+    "has_api_content": false
+  },
+  "spot_cancel_order": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/spot/trade/cancel-order",
+    "text_length": 153,
+    "has_api_content": false
+  },
+  "spot_open_orders": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/spot/trade/open-orders",
+    "text_length": 153,
+    "has_api_content": false
+  },
+  "spot_order_history": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/spot/trade/history-orders",
+    "text_length": 153,
+    "has_api_content": false
+  },
+  "spot_balance": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/spot/account/balance",
+    "text_length": 153,
+    "has_api_content": false
+  },
+  "spot_transfer": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/spot/account/transfer",
+    "text_length": 153,
+    "has_api_content": false
+  },
+  "account_assets": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/account/assets",
+    "text_length": 153,
+    "has_api_content": false
+  },
+  "account_transfer": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/account/transfer",
+    "text_length": 153,
+    "has_api_content": false
+  },
+  "account_deposit": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/account/deposit",
+    "text_length": 153,
+    "has_api_content": false
+  },
+  "account_withdraw": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/account/withdraw",
+    "text_length": 153,
+    "has_api_content": false
+  },
+  "subaccount_create": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/subAccount/create",
+    "text_length": 153,
+    "has_api_content": false
+  },
+  "subaccount_list": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/subAccount/list",
+    "text_length": 153,
+    "has_api_content": false
+  },
+  "ws_swap_depth": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/ws/swap/depth",
+    "text_length": 153,
+    "has_api_content": false
+  },
+  "ws_swap_trade": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/ws/swap/trade",
+    "text_length": 153,
+    "has_api_content": false
+  },
+  "ws_swap_kline": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/ws/swap/kline",
+    "text_length": 153,
+    "has_api_content": false
+  },
+  "ws_swap_account": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/ws/swap/account",
+    "text_length": 153,
+    "has_api_content": false
+  },
+  "ws_spot_depth": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/ws/spot/depth",
+    "text_length": 153,
+    "has_api_content": false
+  },
+  "ws_spot_trade": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/ws/spot/trade",
+    "text_length": 153,
+    "has_api_content": false
+  },
+  "ws_spot_kline": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/ws/spot/kline",
+    "text_length": 153,
+    "has_api_content": false
+  },
+  "ws_spot_account": {
+    "url": "https://bingx-api.github.io/docs-v3/#/en/ws/spot/account",
+    "text_length": 153,
+    "has_api_content": false
+  }
+}
